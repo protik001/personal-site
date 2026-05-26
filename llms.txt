@@ -1,0 +1,111 @@
+# Protik Roychowdhury — protik.info
+
+> VP Product at Intellect | Three-time founder | ICF-certified coach | Academic researcher
+
+## About
+
+Protik Roychowdhury is VP Product at Intellect, Asia's largest mental health platform serving 4M+ users across APAC, ANZ, China, and Latam. He leads a 20+ person product, design, content, localisation, and AI team. He drove enterprise revenue to $20M ARR by leading the pivot from consumer app to B2B2C care ecosystem, shipped GenAI features (triage, session prep, treatment plans), and co-authored 3 academic papers on AI in mental health.
+
+Before Intellect, Protik was Principal PM for Growth, Engagement & Loyalty (GEL) at Grab ($3.8B+ revenue superapp), where he increased ARPU by 2% via personalisation and gamification, boosted onboarding success by 15pp, built engagement tools unlocking $2.5M in ad revenue, and delivered $4.5M in cost savings on the Driver Rentals product for 30K+ vehicles. He held product leadership roles at Ola (India's largest ride-hailing platform — reduced revenue leakage by INR 9.7M, improved driver earnings by 12%), Fabelio (Indonesia e-commerce — increased showroom conversions by 18pp, first senior product hire), and Exotel (India's leading cloud telephony platform).
+
+Protik is a three-time founder: Croak.it! (voice-based social platform, 1M recordings, 200K downloads, acquired by Exotel), Bhalu.com (hyperlocal task marketplace — post odd jobs, anyone could fulfil them; 2009-2011, built in college), and Athlete Diaries / The Players' Diary (India's version of The Players' Tribune).
+
+He is an IIT Kharagpur alumnus (B.Tech Hons, Metallurgical & Materials Engineering, GPA 8.19) and an ICF-certified career coach working with product managers, founders, and senior leaders. Also a Certified Mental Health First Aider (MHFA).
+
+## Areas of Expertise
+
+- AI Product Management & GenAI Feature Shipping
+- Marketplace Design & Supply-Demand Optimisation (Grab, Ola, Fabelio)
+- Growth, Engagement & Loyalty (GEL) — Consumer Lifecycle
+- Personalisation, Experimentation & A/B Testing at Scale
+- Mental Health Technology & Digital Therapeutics
+- Platform Products & E-commerce
+- Product-Led Growth & Conversion Optimisation
+- Multi-Market Operating Model Design (APAC, ANZ, China, EMEA, Latam)
+- Conversational AI & LLMs
+- Human-Centred Design & Behavioural Science
+- Team Building & Scaling (3→20+ person product orgs)
+- Platform Governance, Build/Buy & Vendor Strategy
+- Executive Coaching (ICF certified) & Portfolio-Level Product Leadership
+- Startup Founding & Exits (Croak.it! acquired by Exotel)
+- Cross-Border Product Localisation (20+ languages, APAC markets)
+- Regulated Technology (Health, Finance)
+- Data-Driven OKR Leadership & Pod Structures
+- B2B2C Business Model & Enterprise Revenue
+
+## Academic Publications
+
+- "The RISE Protocol: A Proposed Framework to Reduce Time-to-Intervention in AI-Driven Mental Health Risk Detection" — JMIR Preprints, Aug 2025. Sole author. DOI: 10.2196/preprints.82983
+- "The Provider GPA: A Composite Framework for Evaluating Digital Therapist Quality Through Engagement, Reliability, and Client Feedback" — medRxiv, Sep 2025. Co-authored with Oliver Sündermann. DOI: 10.1101/2025.09.01.25334495
+- "Bias in Large Language Models for Mental Health: Evidence from Vignette-Based Evaluation Across Nine Models" — PsyArXiv, Sep 2025. Co-authored with Lerh, Fang, Sündermann, Sinha & Chauhan. DOI: 10.31234/osf.io/ykn2c
+
+## Speaking Topics
+
+- AI in mental health: personalisation, ethics, and the human-AI balance
+- Product leadership and the future of product management
+- Shipping AI features in regulated industries without destroying trust
+- The founder-to-operator journey: identity, ego, and growth
+- Cross-border product localisation and hyper-personalisation
+- Payments, marketplace design, and product-led growth in APAC
+
+## Blog Posts (On-Site)
+
+- "Payments at Scale: What I Learned Leading Fintech Products at Grab" — May 2026. Lessons from leading GEL and Driver Rentals at Grab: payments infrastructure, engagement monetisation, $4.5M cost savings, multi-market fintech. https://protik.info/blog/payments-at-scale-lessons-from-grab
+- "Marketplace Lessons from Ola: Supply-Demand, Fraud, and Driver Economics" — May 2026. Two-sided marketplace design at India's largest ride-hailing platform: fraud prevention (INR 9.7M/month saved), driver incentive redesign (+12% earnings), dynamic pricing, India-scale complexity. https://protik.info/blog/marketplace-lessons-from-ola
+
+## Blog Posts (Medium)
+
+- "The Great Unbundling of Product Management: Why 2026 Belongs to the Impact Architect" — Jan 2026, 3 min. https://medium.com/@protik/the-great-unbundling-of-product-management-why-2026-belongs-to-the-impact-architect-faddb1f6b372
+- "The ROI of Care: Investing in Mental Health as Infrastructure for Performance" — May 2025, 4 min. https://medium.com/@protik/the-roi-of-care-investing-in-mental-health-as-infrastructure-for-performance-607dbb31461c
+- "What Humans Still Do Best, And Why That Should Shape the Future of AI in Mental Health" — May 2025, 4 min. https://medium.com/@protik/what-humans-still-do-best-and-why-that-should-shape-the-future-of-ai-in-mental-health-55f846638d79
+- "Designing for Trust in Mental Health Apps: Why UX Is Care" — May 2025, 5 min. https://medium.com/@protik/designing-for-trust-in-mental-health-apps-why-ux-is-care-07fa5191d9e6
+- "When AI Becomes an Echo Chamber: The Ethical Risk to Mental Health" — May 2025, 4 min. https://medium.com/@protik/when-ai-becomes-an-echo-chamber-the-ethical-risk-to-mental-health-dd2037f68d16
+- "How AI is Personalising Mental Health Support at Scale" — Apr 2025, 4 min. https://medium.com/@protik/how-ai-is-personalising-mental-health-support-at-scale-61ffac672eee
+
+## Featured In (with links)
+
+- Economic Times: https://m.economictimes.com/small-biz/startups/exotel-to-buy-singapores-social-media-startup-croak-it/articleshow/46105110.cms
+- Business Standard: https://www.business-standard.com/article/companies/cloud-telephony-start-up-exotel-acquires-voice-recognition-platform-croak-it-115020401288_1.html
+- Financial Express: https://www.financialexpress.com/business/industry-sporting-spirit-246292/
+- Inc42 (interview): https://inc42.com/startups/interviews/inc42-gets-candid-with-the-iit-kgp-startup-croak-it/
+- Inc42 (acquisition): https://inc42.com/buzz/exotel-buys-singapore-based-croak-voice-based-social-media-startup/
+- Inc42 (product): https://inc42.com/startups/an-iit-kgp-startup-croak-it-wants-to-be-the-instagram-for-sounds-launches-talk-button-for-websites/
+- e27: https://e27.co/indias-exotel-acquires-singapores-voice-based-social-media-app-croak-20150203/
+- YourStory (founder profile): https://yourstory.com/2012/11/croaking-it-up-with-protik-roychowdhury-a-day-in-the-life-of-an-entrepreneur
+- YourStory (Talk Button): https://yourstory.com/2013/06/croak-it-launches-talk-button-will-let-users-speak-with-you-on-the-site
+- Tech in Asia: https://www.techinasia.com/exotel-buys-croak-it
+- Tech Wire Asia: https://techwireasia.com/2012/06/croak-it-enables-one-click-voice-to-web-communication/
+- Martechvibe (video): https://martechvibe.com/video/cross-border-success-through-hyper-localisation-and-geo-targeting/
+
+## Podcast Appearances
+
+- The Product Un-Censored Show, Episode 43 — Apple Podcasts: https://podcasts.apple.com/ca/podcast/episode-43-protik-roychowdhury-intellect/id1515068055?i=1000652937970 | Spotify: https://open.spotify.com/episode/1eYApnSYVFd5f7sXuu4j1Y
+
+## Intellect Articles (Company Blog)
+
+- "AI, Mental Health and Humanity: Why the Future of Care is Hybrid" — Jun 2025. https://intellect.co/read/ai-mental-health-humanity
+- "AI Therapy and the Echo Chamber: Risks, Ethics, and What We're Doing About It" — May 2025. https://intellect.co/read/ai-therapy-echo-chamber
+- "AI and Mental Health: How Personalisation is Changing the Game" — May 2025. https://intellect.co/read/ai-mental-health-personalisation
+
+## Contact & Profiles
+
+- Website: https://protik.info
+- Email: protik@intellect.co
+- Calendly: https://calendly.com/protik001/30min
+- LinkedIn: https://www.linkedin.com/in/protik001
+- X/Twitter: https://www.x.com/protik
+- Medium: https://medium.com/@protik
+- Crunchbase: https://www.crunchbase.com/person/protik-roychowdhury
+- ORCID: https://orcid.org/0009-0009-4497-9269
+- The Org: https://theorg.com/org/intellect-co/org-chart/protik-roychowdhury
+
+## Pages
+
+- Home: https://protik.info/
+- About: https://protik.info/about
+- Publications & Media: https://protik.info/publications
+- Blog: https://protik.info/blog
+- Coaching: https://protik.info/coaching
+- Blog Post — Grab Fintech/Payments: https://protik.info/blog/payments-at-scale-lessons-from-grab
+- Blog Post — Ola Marketplace/Supply-Demand: https://protik.info/blog/marketplace-lessons-from-ola
+- Contact: https://protik.info/contact

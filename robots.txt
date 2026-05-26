@@ -1,0 +1,28 @@
+# robots.txt for protik.info
+# Welcome all crawlers including LLM bots
+
+User-agent: *
+Allow: /
+Disallow:
+
+# Sitemap
+Sitemap: https://protik.info/sitemap.xml
+
+# LLM crawlers — explicitly welcomed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /

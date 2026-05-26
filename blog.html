@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Protik Roychowdhury — AI, Marketplaces & Product Leadership</title>
+  <meta name="description" content="Articles by Protik Roychowdhury on marketplace design, AI in mental health, product management, and growth — from building products at Grab, Ola, and Intellect.">
+  <meta name="author" content="Protik Roychowdhury">
+  <link rel="canonical" href="https://protik.info/blog">
+
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="Blog — Protik Roychowdhury">
+  <meta property="og:description" content="Articles on AI products, marketplace design, product management, and building at scale across APAC.">
+  <meta property="og:url" content="https://protik.info/blog">
+  <meta property="og:image" content="https://protik.info/images/HeadShot.jpeg">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Protik Roychowdhury's Blog",
+    "description": "Articles on AI in mental health, product management, and the future of care.",
+    "author": {
+      "@type": "Person",
+      "name": "Protik Roychowdhury",
+      "url": "https://protik.info"
+    },
+    "blogPost": [
+      {
+        "@type": "BlogPosting",
+        "headline": "Payments at Scale: What I Learned Leading Fintech Products at Grab",
+        "datePublished": "2026-05-25",
+        "author": { "@type": "Person", "name": "Protik Roychowdhury" },
+        "url": "https://protik.info/blog/payments-at-scale-lessons-from-grab",
+        "description": "Lessons from leading Growth, Engagement & Loyalty and Driver Rentals at Grab — building payments infrastructure, financial services, and engagement loops across Southeast Asia."
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Marketplace Lessons from Ola: Supply-Demand, Fraud, and Driver Economics",
+        "datePublished": "2026-05-25",
+        "author": { "@type": "Person", "name": "Protik Roychowdhury" },
+        "url": "https://protik.info/blog/marketplace-lessons-from-ola",
+        "description": "Product lessons from supply-demand optimisation, dynamic pricing, fraud prevention, and two-sided marketplace design at India's largest ride-hailing platform."
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "The Great Unbundling of Product Management: Why 2026 Belongs to the Impact Architect",
+        "datePublished": "2026-01-05",
+        "author": { "@type": "Person", "name": "Protik Roychowdhury" },
+        "url": "https://medium.com/@protik/the-great-unbundling-of-product-management-why-2026-belongs-to-the-impact-architect-faddb1f6b372",
+        "description": "AI didn't kill Product Management. It exposed the bureaucracy. 2026 belongs to PMs who design intent, not process."
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "The ROI of Care: Investing in Mental Health as Infrastructure for Performance",
+        "datePublished": "2025-05-28",
+        "author": { "@type": "Person", "name": "Protik Roychowdhury" },
+        "url": "https://medium.com/@protik/the-roi-of-care-investing-in-mental-health-as-infrastructure-for-performance-607dbb31461c",
+        "description": "Mental healthcare as a performance multiplier instead of a cost can supercharge productivity, reduce burnout and absenteeism."
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "What Humans Still Do Best, And Why That Should Shape the Future of AI in Mental Health",
+        "datePublished": "2025-05-16",
+        "author": { "@type": "Person", "name": "Protik Roychowdhury" },
+        "url": "https://medium.com/@protik/what-humans-still-do-best-and-why-that-should-shape-the-future-of-ai-in-mental-health-55f846638d79",
+        "description": "The future of care isn't human vs AI — it's dynamic orchestration."
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Designing for Trust in Mental Health Apps: Why UX Is Care",
+        "datePublished": "2025-05-12",
+        "author": { "@type": "Person", "name": "Protik Roychowdhury" },
+        "url": "https://medium.com/@protik/designing-for-trust-in-mental-health-apps-why-ux-is-care-07fa5191d9e6",
+        "description": "In mental health apps, UX isn't polish — it's care. Trust is the outcome."
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "When AI Becomes an Echo Chamber: The Ethical Risk to Mental Health",
+        "datePublished": "2025-05-01",
+        "author": { "@type": "Person", "name": "Protik Roychowdhury" },
+        "url": "https://medium.com/@protik/when-ai-becomes-an-echo-chamber-the-ethical-risk-to-mental-health-dd2037f68d16",
+        "description": "AI can support mental health — or it can quietly reinforce emotional bias."
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "How AI is Personalising Mental Health Support at Scale",
+        "datePublished": "2025-04-26",
+        "author": { "@type": "Person", "name": "Protik Roychowdhury" },
+        "url": "https://medium.com/@protik/how-ai-is-personalising-mental-health-support-at-scale-61ffac672eee",
+        "description": "How machine learning enables truly personalised mental health interventions across languages and cultures."
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .blog-card {
+      display: block;
+      text-decoration: none;
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 2rem 0;
+      transition: all 0.2s ease;
+    }
+    .blog-card:first-child { padding-top: 0; }
+    .blog-card:last-child { border-bottom: none; }
+    .blog-card:hover h3 { color: var(--text-muted); }
+    .blog-meta {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 0.6rem;
+    }
+    .blog-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.6rem;
+      transition: color 0.2s ease;
+    }
+    .blog-card .preview {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 0.8rem;
+    }
+    .blog-card .read-more {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .blog-tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 0.6rem;
+    }
+    .blog-tag {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      background: var(--bg-secondary);
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="index.html" class="nav-logo"><span>P</span><span class="first-rest">rotik</span><span class="logo-space"></span><span>R</span><span class="last-rest">oychowdhury</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="coaching.html">Coaching</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+      </ul>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" style="min-height: auto; padding: 10rem 0 4rem;">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-label"><span class="dot"></span> Blog</div>
+        <h1>Thinking out loud about AI, marketplaces and care</h1>
+        <p>Original articles on payments at scale, marketplace design, AI in mental health, and product leadership — from building products across Grab, Ola, and Intellect.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Posts -->
+  <section>
+    <div class="container" style="max-width: 760px;">
+
+      <!-- On-site Post: Grab Fintech -->
+      <a href="blog/payments-at-scale-lessons-from-grab.html" class="blog-card" id="grab-payments">
+        <div class="blog-meta">May 25, 2026 &middot; 8 min read &middot; protik.info</div>
+        <h3>Payments at Scale: What I Learned Leading Fintech Products at Grab</h3>
+        <p class="preview">Between 2019 and 2022, I led Growth, Engagement & Loyalty and Driver Rentals at Grab — Southeast Asia's leading superapp processing billions in transactions annually. Five lessons on building payments infrastructure, engagement monetisation, and driver financial services across six markets.</p>
+        <div class="blog-tags">
+          <span class="blog-tag">Fintech</span>
+          <span class="blog-tag">Payments</span>
+          <span class="blog-tag">Superapp</span>
+          <span class="blog-tag">Growth</span>
+          <span class="blog-tag">Southeast Asia</span>
+        </div>
+        <span class="read-more">Read on protik.info &rarr;</span>
+      </a>
+
+      <!-- On-site Post: Ola Marketplace -->
+      <a href="blog/marketplace-lessons-from-ola.html" class="blog-card" id="ola-marketplace">
+        <div class="blog-meta">May 25, 2026 &middot; 7 min read &middot; protik.info</div>
+        <h3>Marketplace Lessons from Ola: Supply-Demand, Fraud, and Driver Economics</h3>
+        <p class="preview">From 2016 to 2018, I was a PM at India's largest ride-hailing platform — 100+ cities, millions of daily rides. Lessons on two-sided marketplace design, fraud prevention that saved INR 9.7M/month, incentive systems that improved driver earnings by 12%, and building products for India-scale complexity.</p>
+        <div class="blog-tags">
+          <span class="blog-tag">Marketplace</span>
+          <span class="blog-tag">Supply-Demand</span>
+          <span class="blog-tag">Ride-Hailing</span>
+          <span class="blog-tag">Fraud Prevention</span>
+          <span class="blog-tag">India</span>
+        </div>
+        <span class="read-more">Read on protik.info &rarr;</span>
+      </a>
+
+      <!-- Post 1 -->
+      <a href="https://medium.com/@protik/the-great-unbundling-of-product-management-why-2026-belongs-to-the-impact-architect-faddb1f6b372" target="_blank" rel="noopener" class="blog-card" id="unbundling-pm">
+        <div class="blog-meta">January 2026 &middot; 3 min read &middot; Medium</div>
+        <h3>The Great Unbundling of Product Management: Why 2026 Belongs to the "Impact Architect"</h3>
+        <p class="preview">For the better part of a decade, we've been living in the "Golden Age" of Product Management. But we've reached a point where we have more processes for discussing the work than hours spent doing it. AI didn't kill PM — it exposed the bureaucracy. The PMs who thrive in this decade will move from managing features to architecting outcomes.</p>
+        <div class="blog-tags">
+          <span class="blog-tag">Product Management</span>
+          <span class="blog-tag">AI</span>
+          <span class="blog-tag">Leadership</span>
+        </div>
+        <div class="read-more" style="margin-top: 0.8rem;">Read on Medium &rarr;</div>
+      </a>
+
+      <!-- Post 2 -->
+      <a href="https://medium.com/@protik/the-roi-of-care-investing-in-mental-health-as-infrastructure-for-performance-607dbb31461c" target="_blank" rel="noopener" class="blog-card" id="roi-of-care">
+        <div class="blog-meta">May 2025 &middot; 4 min read &middot; Medium</div>
+        <h3>The ROI of Care: Investing in Mental Health as Infrastructure for Performance</h3>
+        <p class="preview">In boardrooms, mental health is still debated as a cost. But leading organisations should treat it as infrastructure — a system that prevents churn, strengthens teams, and improves performance. When mental health support is accessible and integrated into daily working life, the impact shows up across every business line.</p>
+        <div class="blog-tags">
+          <span class="blog-tag">Mental Health</span>
+          <span class="blog-tag">Performance</span>
+          <span class="blog-tag">Healthcare Technology</span>
+        </div>
+        <div class="read-more" style="margin-top: 0.8rem;">Read on Medium &rarr;</div>
+      </a>
+
+      <!-- Post 3 -->
+      <a href="https://medium.com/@protik/what-humans-still-do-best-and-why-that-should-shape-the-future-of-ai-in-mental-health-55f846638d79" target="_blank" rel="noopener" class="blog-card" id="humans-do-best">
+        <div class="blog-meta">May 2025 &middot; 4 min read &middot; Medium</div>
+        <h3>What Humans Still Do Best, And Why That Should Shape the Future of AI in Mental Health</h3>
+        <p class="preview">AI therapists are fast, scalable, and available 24/7. But healing still needs something more than answers. The endgame isn't co-pilot — it's orchestration. Sometimes AI leads, sometimes it supports, sometimes it steps aside entirely. What we're preserving isn't jobs. It's human values that make care transformative.</p>
+        <div class="blog-tags">
+          <span class="blog-tag">Human-Centred AI</span>
+          <span class="blog-tag">Mental Health</span>
+          <span class="blog-tag">Digital Health</span>
+        </div>
+        <div class="read-more" style="margin-top: 0.8rem;">Read on Medium &rarr;</div>
+      </a>
+
+      <!-- Post 4 -->
+      <a href="https://medium.com/@protik/designing-for-trust-in-mental-health-apps-why-ux-is-care-07fa5191d9e6" target="_blank" rel="noopener" class="blog-card" id="trust-ux">
+        <div class="blog-meta">May 2025 &middot; 5 min read &middot; Medium</div>
+        <h3>Designing for Trust in Mental Health Apps: Why UX Is Care</h3>
+        <p class="preview">When someone opens a mental health app, it's rarely casual. It's often late at night, mid-crisis, after months of hesitation. In those moments, UX is not a wrapper around care — it is the care. Trust doesn't begin when a user meets a coach. It begins the moment they see your sign-up button.</p>
+        <div class="blog-tags">
+          <span class="blog-tag">UX Design</span>
+          <span class="blog-tag">Mental Health</span>
+          <span class="blog-tag">Trust &amp; Safety</span>
+        </div>
+        <div class="read-more" style="margin-top: 0.8rem;">Read on Medium &rarr;</div>
+      </a>
+
+      <!-- Post 5 -->
+      <a href="https://medium.com/@protik/when-ai-becomes-an-echo-chamber-the-ethical-risk-to-mental-health-dd2037f68d16" target="_blank" rel="noopener" class="blog-card" id="echo-chamber">
+        <div class="blog-meta">May 2025 &middot; 4 min read &middot; Medium</div>
+        <h3>When AI Becomes an Echo Chamber: The Ethical Risk to Mental Health</h3>
+        <p class="preview">When people talk about AI transforming healthcare, the conversation usually revolves around speed and scale. In mental health, the stakes are very different. If AI simply affirms users without reflection, it risks doing significant harm. In mental health, AI cannot just be a friendly mirror — it needs to be an ethical guide.</p>
+        <div class="blog-tags">
+          <span class="blog-tag">AI Ethics</span>
+          <span class="blog-tag">Mental Health</span>
+          <span class="blog-tag">Digital Therapy</span>
+        </div>
+        <div class="read-more" style="margin-top: 0.8rem;">Read on Medium &rarr;</div>
+      </a>
+
+      <!-- Post 6 -->
+      <a href="https://medium.com/@protik/how-ai-is-personalising-mental-health-support-at-scale-61ffac672eee" target="_blank" rel="noopener" class="blog-card" id="personalising-at-scale">
+        <div class="blog-meta">April 2025 &middot; 4 min read &middot; Medium</div>
+        <h3>How AI is Personalising Mental Health Support at Scale</h3>
+        <p class="preview">When people think about AI in healthcare, the first thought is usually automation. But when it comes to mental health, automation alone isn't enough. No two journeys are the same. If AI is going to truly transform mental health care, it must become personal. And personalisation at scale is where the real frontier lies.</p>
+        <div class="blog-tags">
+          <span class="blog-tag">AI in Mental Health</span>
+          <span class="blog-tag">Personalisation</span>
+          <span class="blog-tag">HealthTech</span>
+        </div>
+        <div class="read-more" style="margin-top: 0.8rem;">Read on Medium &rarr;</div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Also Published On -->
+  <section class="fade-in">
+    <div class="container" style="max-width: 760px;">
+      <div class="section-header" style="text-align: left;">
+        <div class="overline">Also published on Intellect</div>
+      </div>
+      <div class="grid-3">
+        <a href="https://intellect.co/read/ai-and-mental-health-personalisation/" target="_blank" rel="noopener" class="card" style="text-decoration: none;">
+          <div style="font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.5rem;">Intellect</div>
+          <h3>AI and Mental Health: Why Personalisation Matters</h3>
+        </a>
+        <a href="https://intellect.co/read/ai-mental-health-and-humanity/" target="_blank" rel="noopener" class="card" style="text-decoration: none;">
+          <div style="font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.5rem;">Intellect</div>
+          <h3>AI, Mental Health, and Humanity</h3>
+        </a>
+        <a href="https://intellect.co/read/ai-therapy-echo-chamber/" target="_blank" rel="noopener" class="card" style="text-decoration: none;">
+          <div style="font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.5rem;">Intellect</div>
+          <h3>When AI Therapy Becomes an Echo Chamber</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="fade-in">
+    <div class="container">
+      <div class="newsletter">
+        <h2>Let's work together</h2>
+        <p style="max-width: 500px; margin: 0.5rem auto;">Looking for a speaker, coach, or product advisor? I'd love to hear what you're working on.</p>
+        <div style="display: flex; gap: 0.8rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap;">
+          <a href="https://calendly.com/protik001/30min" class="btn btn-primary" target="_blank" rel="noopener">Book a call &rarr;</a>
+          <a href="mailto:protik@intellect.co" class="btn btn-secondary">Email me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo"><span>P</span><span class="first-rest">rotik</span><span class="logo-space"></span><span>R</span><span class="last-rest">oychowdhury</span></a>
+          <p>VP Product at Intellect. Building AI-powered products that help millions live better lives.</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/protik001" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+            <a href="https://www.x.com/protik" target="_blank" rel="noopener" aria-label="X/Twitter">X</a>
+            <a href="https://medium.com/@protik" target="_blank" rel="noopener" aria-label="Medium">M</a>
+          </div>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="coaching.html">Coaching</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Topics</h4>
+          <ul class="footer-links">
+            <li><a href="publications.html">AI Products</a></li>
+            <li><a href="publications.html">Mental Health Tech</a></li>
+            <li><a href="publications.html">Product Leadership</a></li>
+            <li><a href="coaching.html">Career Coaching</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.linkedin.com/in/protik001" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.x.com/protik" target="_blank" rel="noopener">X / Twitter</a></li>
+            <li><a href="https://medium.com/@protik" target="_blank" rel="noopener">Medium Blog</a></li>
+            <li><a href="contact.html">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Protik Roychowdhury. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function() {
+    // Scroll progress for logo collapse
+    var root = document.documentElement;
+    var ticking = false;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        requestAnimationFrame(function() {
+          root.style.setProperty('--scroll-progress', Math.min(window.scrollY / 180, 1));
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    // Fade-in on scroll
+    var fadeEls = document.querySelectorAll('.fade-in');
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      fadeEls.forEach(function(el) { obs.observe(el); });
+    } else {
+      fadeEls.forEach(function(el) { el.classList.add('is-visible'); });
+    }
+  })();
+  </script>
+
+</body>
+</html>
