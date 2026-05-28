@@ -8,7 +8,7 @@ Disallow:
 # Sitemap
 Sitemap: https://protik.info/sitemap.xml
 
-# LLM crawlers — explicitly welcomed
+# LLM crawlers - explicitly welcomed
 User-agent: GPTBot
 Allow: /
 

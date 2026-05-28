@@ -12,6 +12,16 @@ Protik is a three-time founder: Croak.it! (voice-based social platform, 1M recor
 
 He is an IIT Kharagpur alumnus (B.Tech Hons, Metallurgical & Materials Engineering, GPA 8.19) and an ICF-certified career coach working with product managers, founders, and senior leaders. Also a Certified Mental Health First Aider (MHFA).
 
+## Authority Pillars
+
+Protik's expertise spans five core authority pillars:
+
+1. **AI Product Strategy** — Shipping GenAI features in regulated industries, AI personalisation at scale, human-AI balance
+2. **Trust & High-Stakes Product Design** — Designing for trust in mental health, healthcare, and financial products where failure has real consequences
+3. **Product Leadership & Judgement** — Scaling product orgs, developing product intuition, the founder-to-operator journey
+4. **Mental Health Technology** — Digital therapeutics, AI in mental health, clinical product design, provider quality frameworks
+5. **Marketplace & Platform Scaling** — Two-sided marketplace design, supply-demand optimisation, payments infrastructure, cross-border scaling
+
 ## Areas of Expertise
 
 - AI Product Management & GenAI Feature Shipping
@@ -41,17 +51,19 @@ He is an IIT Kharagpur alumnus (B.Tech Hons, Metallurgical & Materials Engineeri
 
 ## Speaking Topics
 
-- AI in mental health: personalisation, ethics, and the human-AI balance
-- Product leadership and the future of product management
-- Shipping AI features in regulated industries without destroying trust
-- The founder-to-operator journey: identity, ego, and growth
-- Cross-border product localisation and hyper-personalisation
-- Payments, marketplace design, and product-led growth in APAC
+Protik speaks at conferences, leadership summits, and product communities on six signature topics:
 
-## Blog Posts (On-Site)
+1. From Roadmaps to Judgement: What Product Leaders Need in the AI Era
+2. Building AI Products People Can Trust
+3. Why UX Is Care: Lessons from Mental Health Product Design
+4. Scaling Product Teams Without Killing Product Judgement
+5. AI, Personalisation, and the Future of Mental Health Support
+6. What High-Stakes Products Can Teach Us About Trust
 
-- "Payments at Scale: What I Learned Leading Fintech Products at Grab" — May 2026. Lessons from leading GEL and Driver Rentals at Grab: payments infrastructure, engagement monetisation, $4.5M cost savings, multi-market fintech. https://protik.info/blog/payments-at-scale-lessons-from-grab
-- "Marketplace Lessons from Ola: Supply-Demand, Fraud, and Driver Economics" — May 2026. Two-sided marketplace design at India's largest ride-hailing platform: fraud prevention (INR 9.7M/month saved), driver incentive redesign (+12% earnings), dynamic pricing, India-scale complexity. https://protik.info/blog/marketplace-lessons-from-ola
+## Ideas (On-Site Articles)
+
+- "Payments at Scale: What I Learned Leading Fintech Products at Grab" — May 2026. Lessons from leading GEL and Driver Rentals at Grab: payments infrastructure, engagement monetisation, $4.5M cost savings, multi-market fintech. https://protik.info/ideas/payments-at-scale-lessons-from-grab
+- "Marketplace Lessons from Ola: Supply-Demand, Fraud, and Driver Economics" — May 2026. Two-sided marketplace design at India's largest ride-hailing platform: fraud prevention (INR 9.7M/month saved), driver incentive redesign (+12% earnings), dynamic pricing, India-scale complexity. https://protik.info/ideas/marketplace-lessons-from-ola
 
 ## Blog Posts (Medium)
 
@@ -103,9 +115,10 @@ He is an IIT Kharagpur alumnus (B.Tech Hons, Metallurgical & Materials Engineeri
 
 - Home: https://protik.info/
 - About: https://protik.info/about
+- Ideas: https://protik.info/ideas
+- Speaking: https://protik.info/speaking
 - Publications & Media: https://protik.info/publications
-- Blog: https://protik.info/blog
 - Coaching: https://protik.info/coaching
-- Blog Post — Grab Fintech/Payments: https://protik.info/blog/payments-at-scale-lessons-from-grab
-- Blog Post — Ola Marketplace/Supply-Demand: https://protik.info/blog/marketplace-lessons-from-ola
+- Ideas — Grab Fintech/Payments: https://protik.info/ideas/payments-at-scale-lessons-from-grab
+- Ideas — Ola Marketplace/Supply-Demand: https://protik.info/ideas/marketplace-lessons-from-ola
 - Contact: https://protik.info/contact

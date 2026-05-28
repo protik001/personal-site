@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketplace Lessons from Ola: Supply-Demand, Fraud, and Driver Economics at India's Largest Ride-Hailing Platform | Protik Roychowdhury</title>
+  <meta name="description" content="Product lessons from building marketplace products at Ola — supply-demand optimisation, dynamic pricing, fraud prevention, and two-sided marketplace design at India's largest ride-hailing platform.">
+  <meta name="author" content="Protik Roychowdhury">
+  <link rel="canonical" href="https://protik.info/ideas/marketplace-lessons-from-ola">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Marketplace Lessons from Ola: Supply-Demand, Fraud, and Driver Economics">
+  <meta property="og:description" content="Product lessons from supply-demand optimisation, dynamic pricing, fraud prevention, and two-sided marketplace design at India's largest ride-hailing platform.">
+  <meta property="og:url" content="https://protik.info/ideas/marketplace-lessons-from-ola">
+  <meta property="og:image" content="https://protik.info/images/og-card.png">
+  <meta property="article:author" content="Protik Roychowdhury">
+  <meta property="article:published_time" content="2026-05-25">
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Marketplace Lessons from Ola: Supply-Demand, Fraud, and Driver Economics at India's Largest Ride-Hailing Platform",
+    "author": { "@type": "Person", "name": "Protik Roychowdhury", "url": "https://protik.info" },
+    "datePublished": "2026-05-25",
+    "publisher": { "@type": "Person", "name": "Protik Roychowdhury" },
+    "url": "https://protik.info/ideas/marketplace-lessons-from-ola",
+    "description": "Product lessons from building marketplace products at Ola — supply-demand optimisation, dynamic pricing, fraud prevention, and two-sided marketplace design.",
+    "keywords": ["marketplace", "supply-demand", "Ola", "ride-hailing", "dynamic pricing", "fraud prevention", "two-sided marketplace", "product management", "India", "driver economics"]
+  }
+  </script>
+
+  <style>
+    .article-body { max-width: 680px; margin: 0 auto; }
+    .article-body p { font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.5rem; }
+    .article-body h2 { font-size: 1.4rem; color: var(--text-primary); margin: 2.5rem 0 1rem; }
+    .article-body h3 { font-size: 1.15rem; color: var(--text-primary); margin: 2rem 0 0.8rem; }
+    .article-body blockquote { border-left: 2px solid var(--border-color); padding-left: 1.2rem; margin: 1.5rem 0; font-style: italic; color: var(--text-muted); }
+    .article-meta { display: flex; align-items: center; gap: 1rem; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2rem; flex-wrap: wrap; }
+    .article-meta .tag { font-size: 0.75rem; }
+    .article-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-subtle); }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="/" class="nav-logo"><span>P</span><span class="first-rest">rotik</span><span class="logo-space"></span><span>R</span><span class="last-rest">oychowdhury</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/ideas" class="active">Ideas</a></li>
+        <li><a href="/speaking">Speaking</a></li>
+        <li><a href="/publications">Publications</a></li>
+        <li><a href="/coaching">Coaching</a></li>
+        <li><a href="/contact" class="nav-cta">Get in Touch</a></li>
+      </ul>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero" style="min-height: auto; padding: 10rem 0 3rem;">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-label"><span class="dot"></span> Ideas</div>
+        <h1>Marketplace lessons from Ola: supply-demand, fraud, and driver economics</h1>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="article-body">
+        <div class="article-meta">
+          <span>May 25, 2026</span>
+          <span>7 min read</span>
+          <span class="tag">Marketplace</span>
+          <span class="tag">Supply-Demand</span>
+          <span class="tag">Ride-Hailing</span>
+          <span class="tag">Product Management</span>
+        </div>
+
+        <p>From 2016 to 2018, I was a Product Manager at Ola, India's largest ride-hailing platform. At the time, Ola operated across 100+ cities, serving millions of daily rides in one of the most price-sensitive and operationally complex markets in the world. It was my first exposure to two-sided marketplace design at massive scale, and the lessons I learned there inform everything I've built since.</p>
+
+        <p>I worked primarily on driver experience, supply-demand optimisation, and the nascent rentals business. The problems were fundamental: how do you balance supply and demand in real-time across a fragmented market? How do you detect fraud at scale? How do you design incentives that align driver behaviour with platform health?</p>
+
+        <h2>Lesson 1: In a marketplace, fraud is not an edge case — it's a scaling tax</h2>
+
+        <p>One of the first problems I tackled at Ola was revenue leakage. In a ride-hailing marketplace with millions of transactions, fraud takes many forms: fare manipulation, GPS spoofing, fake rides, incentive gaming, and collusion between drivers and riders. Each individual case might be small, but at scale they compound into a serious financial drain.</p>
+
+        <p>I built a fraud-tracking platform that systematically identified patterns of revenue leakage across the marketplace. The platform used a combination of GPS anomaly detection, ride pattern analysis, and driver-rider behaviour correlation to flag suspicious transactions. The impact: we reduced monthly revenue leakage by INR 9.7M (roughly $115,000/month at the time).</p>
+
+        <p>The insight that made this work wasn't technical — it was a framing shift. Most teams treat fraud as a trust-and-safety problem, something to be handled reactively. At Ola's scale, I learned to treat it as a product economics problem. Every rupee lost to fraud is a rupee you can't invest in driver incentives or rider subsidies. Fraud prevention isn't a cost centre; it's a margin multiplier.</p>
+
+        <h2>Lesson 2: Driver economics is the hidden lever of marketplace health</h2>
+
+        <p>The conventional wisdom in ride-hailing is that growth means rider acquisition. But at Ola, the supply side — drivers — was the real constraint. In a market where most drivers are first-generation gig workers with limited financial cushion, their economics directly determine your supply reliability.</p>
+
+        <p>I redesigned Ola's driver incentive system, moving from blunt, time-based bonuses to a more nuanced system that rewarded consistent supply in underserved zones and times. The result: a 12% improvement in average driver earnings, which had a direct downstream effect on supply availability during peak hours.</p>
+
+        <p>The key principle: in a two-sided marketplace, the supply side's financial health is your demand side's service quality. When drivers earn more predictably, they drive more consistently. When they drive more consistently, riders get shorter wait times. When riders get shorter wait times, conversion and retention improve. It's a flywheel, and driver economics is the crank.</p>
+
+        <h2>Lesson 3: Dynamic pricing is a product design problem, not just an algorithm</h2>
+
+        <p>Surge pricing — or dynamic pricing — is one of the most controversial features in ride-hailing. The economics are straightforward: when demand exceeds supply, increase price to balance the market. But the product design is fiendishly complex.</p>
+
+        <p>At Ola, I saw firsthand how poorly communicated dynamic pricing destroys user trust. A rider who sees a 2.5x surge with no context feels cheated. A rider who sees "High demand in your area — your ride will arrive in 3 minutes at a higher price, or wait 10 minutes for a regular fare" feels informed. Same economics, radically different user experience.</p>
+
+        <p>The lesson extends beyond ride-hailing: in any marketplace with variable pricing, transparency is not just a UX nicety — it's a retention mechanism. Users don't object to paying more; they object to feeling manipulated. The product manager's job is to make the marketplace's logic legible.</p>
+
+        <h2>Lesson 4: The first PM hire for a new business unit is a different job</h2>
+
+        <p>At Ola, I was the first PM hired for the Rentals business unit. This was a greenfield product line — Ola renting vehicles directly to drivers who couldn't afford to buy their own, creating a new supply source for the marketplace.</p>
+
+        <p>Being the first PM on a new business unit inside a large company is a unique challenge. You don't have established metrics, OKRs, or team rituals. You don't have product-market fit. What you do have is the parent company's scale, distribution, and data — which is both an advantage and a constraint.</p>
+
+        <p>The temptation is to build a "startup within a company." The reality is more nuanced. You need to move fast like a startup while navigating the governance, compliance, and stakeholder complexity of a large organisation. At Ola, this meant building a rentals product that could leverage the existing driver onboarding flow, the payment infrastructure, and the ride allocation system — while having its own P&L logic and operational cadence.</p>
+
+        <h2>Lesson 5: India-scale marketplaces require a different mental model</h2>
+
+        <p>Operating a marketplace in India — 100+ cities, each with radically different infrastructure, regulation, and user behaviour — is not the same as running one in a single market. The product challenges are fundamentally different from what you'd encounter at, say, a European ride-hailing company.</p>
+
+        <p>In tier-1 cities like Bangalore and Mumbai, the challenge is density and competition. In tier-2 cities, it's supply bootstrapping — convincing drivers to join a platform in a market where ride-hailing itself is a novel concept. In tier-3 cities, it's infrastructure — unreliable GPS, low smartphone penetration, cash-dominant economies.</p>
+
+        <p>This forced a multi-track approach to product development: a core platform with configurable layers for market-specific behaviour. The same ride allocation engine might optimise for shortest wait time in Bangalore and for driver earnings in a supply-constrained tier-2 city. This multi-market thinking — building one platform that serves fundamentally different contexts — became a core skill I later applied at Grab (6 countries) and Intellect (APAC, ANZ, China, EMEA, Latam).</p>
+
+        <h2>What I carry forward</h2>
+
+        <p>Ola was where I learned that marketplace products are alive. They're not static software — they're dynamic systems where every product decision changes the behaviour of both sides of the market simultaneously. Change the incentive structure and you change supply distribution. Change pricing logic and you change demand patterns. Change fraud rules and you change the economics of participation.</p>
+
+        <p>The best marketplace product managers are systems thinkers. They don't optimise features in isolation; they reason about second and third-order effects across the entire ecosystem. That's what two years at Ola, managing millions of daily transactions in one of the world's most complex markets, burned into my product instincts.</p>
+
+        <p>If you're a PM considering a marketplace role: do it early in your career. The lessons compound in every product domain you touch afterward — whether it's a superapp, a health platform, or an AI product. Marketplace thinking is foundational.</p>
+
+        <div class="article-nav">
+          <a href="/ideas/payments-at-scale-lessons-from-grab" style="color: var(--text-muted);">&larr; Previous: Payments at scale at Grab</a>
+          <a href="/ideas" style="color: var(--text-muted);">All posts &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fade-in">
+    <div class="container">
+      <div class="newsletter">
+        <h2>Let's work together</h2>
+        <p style="max-width: 500px; margin: 0.5rem auto;">Looking for a speaker, coach, or product advisor? I'd love to hear what you're working on.</p>
+        <div style="display: flex; gap: 0.8rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap;">
+          <a href="https://calendly.com/protik001/30min" class="btn btn-primary" target="_blank" rel="noopener">Book a call &rarr;</a>
+          <a href="mailto:protik@intellect.co" class="btn btn-secondary">Email me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><span>P</span><span class="first-rest">rotik</span><span class="logo-space"></span><span>R</span><span class="last-rest">oychowdhury</span></a>
+          <p>Product leader building trusted AI and platform products across Asia. VP Product at Intellect.</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/protik001" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+            <a href="https://www.x.com/protik" target="_blank" rel="noopener" aria-label="X/Twitter">X</a>
+            <a href="https://medium.com/@protik" target="_blank" rel="noopener" aria-label="Medium">M</a>
+          </div>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul class="footer-links">
+            <li><a href="/about">About</a></li>
+            <li><a href="/ideas">Ideas</a></li>
+            <li><a href="/speaking">Speaking</a></li>
+            <li><a href="/publications">Publications</a></li>
+            <li><a href="/coaching">Coaching</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Topics</h4>
+          <ul class="footer-links">
+            <li><a href="/ideas">AI Product Strategy</a></li>
+            <li><a href="/ideas">Trust & High-Stakes Design</a></li>
+            <li><a href="/ideas">Product Leadership</a></li>
+            <li><a href="/ideas">Mental Health Tech</a></li>
+            <li><a href="/ideas">Marketplace & Platforms</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.linkedin.com/in/protik001" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.x.com/protik" target="_blank" rel="noopener">X / Twitter</a></li>
+            <li><a href="https://medium.com/@protik" target="_blank" rel="noopener">Medium</a></li>
+            <li><a href="/contact">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Protik Roychowdhury. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function() {
+    // Scroll progress for logo collapse
+    var root = document.documentElement;
+    var ticking = false;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        requestAnimationFrame(function() {
+          root.style.setProperty('--scroll-progress', Math.min(window.scrollY / 180, 1));
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    // Fade-in on scroll
+    var fadeEls = document.querySelectorAll('.fade-in');
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      fadeEls.forEach(function(el) { obs.observe(el); });
+    } else {
+      fadeEls.forEach(function(el) { el.classList.add('is-visible'); });
+    }
+  })();
+  </script>
+
+</body>
+</html>
