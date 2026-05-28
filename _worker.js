@@ -105,24 +105,17 @@ export default {
     const wantsMarkdown = accept.includes('text/markdown');
 
     if (wantsMarkdown) {
-      return handleMarkdownRequest(request, url);
+      return handleMarkdownRequest(request, url, env);
     }
 
-    // 3. Pass everything else through
-    return fetch(request);
+    // 3. Pass everything else through via ASSETS binding (not fetch, which loops through Cloudflare)
+    return env.ASSETS.fetch(request);
   },
 };
 
-async function handleMarkdownRequest(request, url) {
-  // Fetch the original HTML from origin
-  const originRequest = new Request(request.url, {
-    headers: {
-      'Accept': 'text/html',
-      'User-Agent': request.headers.get('User-Agent') || 'Cloudflare-Worker',
-    },
-  });
-
-  const response = await fetch(originRequest);
+async function handleMarkdownRequest(request, url, env) {
+  // Fetch the original HTML from local assets (not external fetch)
+  const response = await env.ASSETS.fetch(request);
 
   if (!response.ok) {
     return response;
