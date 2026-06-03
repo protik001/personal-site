@@ -22,14 +22,25 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Payments at Scale: What I Learned Leading Fintech Products at Grab",
-    "author": { "@type": "Person", "name": "Protik Roychowdhury", "url": "https://protik.info" },
-    "datePublished": "2026-05-25",
-    "publisher": { "@type": "Person", "name": "Protik Roychowdhury" },
-    "url": "https://protik.info/ideas/payments-at-scale-lessons-from-grab",
-    "description": "Lessons from leading Growth, Engagement & Loyalty and Driver Rentals at Grab — building payments infrastructure, financial services, and engagement loops across Southeast Asia.",
-    "keywords": ["fintech", "payments", "Grab", "superapp", "financial services", "Southeast Asia", "product management", "growth", "engagement", "driver economics"]
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://protik.info/#person",
+        "name": "Protik Roychowdhury",
+        "url": "https://protik.info"
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://protik.info/ideas/payments-at-scale-lessons-from-grab",
+        "headline": "Payments at Scale: What I Learned Leading Fintech Products at Grab",
+        "author": { "@id": "https://protik.info/#person" },
+        "publisher": { "@id": "https://protik.info/#person" },
+        "datePublished": "2026-05-25",
+        "url": "https://protik.info/ideas/payments-at-scale-lessons-from-grab",
+        "description": "Lessons from leading Growth, Engagement & Loyalty and Driver Rentals at Grab — building payments infrastructure, financial services, and engagement loops across Southeast Asia.",
+        "keywords": ["fintech", "payments", "Grab", "superapp", "financial services", "Southeast Asia", "product management", "growth", "engagement", "driver economics"]
+      }
+    ]
   }
   </script>
 
@@ -50,12 +61,11 @@
     <div class="container">
       <a href="/" class="nav-logo"><span>P</span><span class="first-rest">rotik</span><span class="logo-space"></span><span>R</span><span class="last-rest">oychowdhury</span></a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/ideas" class="active">Ideas</a></li>
-        <li><a href="/speaking">Speaking</a></li>
-        <li><a href="/publications">Publications</a></li>
+        <li><a href="/media">Media</a></li>
         <li><a href="/coaching">Coaching</a></li>
+        <li><a href="/working-with-me">Manual</a></li>
         <li><a href="/contact" class="nav-cta">Get in Touch</a></li>
       </ul>
       <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">
@@ -101,7 +111,7 @@
 
         <p>On the GEL side, I owned the consumer growth and engagement portfolio across all of Grab's verticals. The temptation in a superapp is to treat growth as a series of campaigns — discounts, promotions, push notifications. We took a different approach.</p>
 
-        <p>We built a systematic growth engine combining personalisation, lifecycle nudges, and gamification. Instead of blanket promotions, we used behavioural analytics and ML-powered segmentation to deliver the right intervention at the right moment in a user's lifecycle. The compounding effect: a 2% increase in ARPU across the platform — which, at Grab's scale of millions of daily users, translates to enormous revenue impact.</p>
+        <p>We stopped running blanket promotions. Instead, we built a growth system that used machine learning to nudge users based on what they actually did on the app. If a user always ordered food on Tuesdays but never used ride-hailing, we target-nudged them exactly then. The compounding effect: a 2% increase in ARPU across the platform — which, at Grab's scale of millions of daily users, translates to enormous revenue impact.</p>
 
         <p>One specific initiative I'm proud of: we redesigned the onboarding funnel using data-driven experimentation and iterative A/B testing. Within three quarters, onboarding success improved by 15 percentage points, reaching 94%. That single improvement had downstream effects on every metric — retention, frequency, lifetime value.</p>
 
@@ -150,7 +160,7 @@
         <p style="max-width: 500px; margin: 0.5rem auto;">Looking for a speaker, coach, or product advisor? I'd love to hear what you're working on.</p>
         <div style="display: flex; gap: 0.8rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap;">
           <a href="https://calendly.com/protik001/30min" class="btn btn-primary" target="_blank" rel="noopener">Book a call &rarr;</a>
-          <a href="mailto:protik@intellect.co" class="btn btn-secondary">Email me</a>
+          <a href="mailto:protik001@gmail.com" class="btn btn-secondary">Email me</a>
         </div>
       </div>
     </div>
@@ -173,9 +183,9 @@
           <ul class="footer-links">
             <li><a href="/about">About</a></li>
             <li><a href="/ideas">Ideas</a></li>
-            <li><a href="/speaking">Speaking</a></li>
-            <li><a href="/publications">Publications</a></li>
+            <li><a href="/media">Media</a></li>
             <li><a href="/coaching">Coaching</a></li>
+            <li><a href="/working-with-me">Manual</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>
         </div>

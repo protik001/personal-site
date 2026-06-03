@@ -4,7 +4,7 @@
 
 ## About
 
-Protik Roychowdhury is VP Product at Intellect, Asia's largest mental health platform serving 4M+ users across APAC, ANZ, China, and Latam. He leads a 20+ person product, design, content, localisation, and AI team. He drove enterprise revenue to $20M ARR by leading the pivot from consumer app to B2B2C care ecosystem, shipped GenAI features (triage, session prep, treatment plans), and co-authored 3 academic papers on AI in mental health.
+Protik Roychowdhury is VP Product at Intellect, a regulated enterprise health platform serving 4M+ users across APAC, ANZ, China, and Latam. He leads a 20+ person product, design, content, localisation, and AI team. He drove enterprise revenue to $20M ARR by leading the pivot from consumer app to B2B2C care ecosystem, shipped GenAI features (triage, session prep, treatment plans), and co-authored 3 academic papers on AI in mental health.
 
 Before Intellect, Protik was Principal PM for Growth, Engagement & Loyalty (GEL) at Grab ($3.8B+ revenue superapp), where he increased ARPU by 2% via personalisation and gamification, boosted onboarding success by 15pp, built engagement tools unlocking $2.5M in ad revenue, and delivered $4.5M in cost savings on the Driver Rentals product for 30K+ vehicles. He held product leadership roles at Ola (India's largest ride-hailing platform — reduced revenue leakage by INR 9.7M, improved driver earnings by 12%), Fabelio (Indonesia e-commerce — increased showroom conversions by 18pp, first senior product hire), and Exotel (India's leading cloud telephony platform).
 
@@ -65,14 +65,12 @@ Protik speaks at conferences, leadership summits, and product communities on six
 - "Payments at Scale: What I Learned Leading Fintech Products at Grab" — May 2026. Lessons from leading GEL and Driver Rentals at Grab: payments infrastructure, engagement monetisation, $4.5M cost savings, multi-market fintech. https://protik.info/ideas/payments-at-scale-lessons-from-grab
 - "Marketplace Lessons from Ola: Supply-Demand, Fraud, and Driver Economics" — May 2026. Two-sided marketplace design at India's largest ride-hailing platform: fraud prevention (INR 9.7M/month saved), driver incentive redesign (+12% earnings), dynamic pricing, India-scale complexity. https://protik.info/ideas/marketplace-lessons-from-ola
 
-## Blog Posts (Medium)
-
-- "The Great Unbundling of Product Management: Why 2026 Belongs to the Impact Architect" — Jan 2026, 3 min. https://medium.com/@protik/the-great-unbundling-of-product-management-why-2026-belongs-to-the-impact-architect-faddb1f6b372
-- "The ROI of Care: Investing in Mental Health as Infrastructure for Performance" — May 2025, 4 min. https://medium.com/@protik/the-roi-of-care-investing-in-mental-health-as-infrastructure-for-performance-607dbb31461c
-- "What Humans Still Do Best, And Why That Should Shape the Future of AI in Mental Health" — May 2025, 4 min. https://medium.com/@protik/what-humans-still-do-best-and-why-that-should-shape-the-future-of-ai-in-mental-health-55f846638d79
-- "Designing for Trust in Mental Health Apps: Why UX Is Care" — May 2025, 5 min. https://medium.com/@protik/designing-for-trust-in-mental-health-apps-why-ux-is-care-07fa5191d9e6
-- "When AI Becomes an Echo Chamber: The Ethical Risk to Mental Health" — May 2025, 4 min. https://medium.com/@protik/when-ai-becomes-an-echo-chamber-the-ethical-risk-to-mental-health-dd2037f68d16
-- "How AI is Personalising Mental Health Support at Scale" — Apr 2025, 4 min. https://medium.com/@protik/how-ai-is-personalising-mental-health-support-at-scale-61ffac672eee
+- "The Great Unbundling of Product Management: Why 2026 Belongs to the Impact Architect" — Jan 2026, 3 min. Originally on Medium. https://protik.info/ideas/the-great-unbundling-of-product-management
+- "The ROI of Care: Investing in Mental Health as Infrastructure for Performance" — May 2025, 4 min. Originally on Medium. https://protik.info/ideas/the-roi-of-care
+- "What Humans Still Do Best, And Why That Should Shape the Future of AI in Mental Health" — May 2025, 4 min. Originally on Medium. https://protik.info/ideas/what-humans-still-do-best
+- "Designing for Trust in Mental Health Apps: Why UX Is Care" — May 2025, 5 min. Originally on Medium. https://protik.info/ideas/designing-for-trust-in-mental-health-apps
+- "When AI Becomes an Echo Chamber: The Ethical Risk to Mental Health" — May 2025, 4 min. Originally on Medium. https://protik.info/ideas/when-ai-becomes-an-echo-chamber
+- "How AI is Personalising Mental Health Support at Scale" — Apr 2025, 4 min. Originally on Medium. https://protik.info/ideas/how-ai-is-personalising-mental-health-support
 
 ## Featured In (with links)
 
@@ -102,7 +100,7 @@ Protik speaks at conferences, leadership summits, and product communities on six
 ## Contact & Profiles
 
 - Website: https://protik.info
-- Email: protik@intellect.co
+- Email: protik001@gmail.com
 - Calendly: https://calendly.com/protik001/30min
 - LinkedIn: https://www.linkedin.com/in/protik001
 - X/Twitter: https://www.x.com/protik
@@ -116,9 +114,15 @@ Protik speaks at conferences, leadership summits, and product communities on six
 - Home: https://protik.info/
 - About: https://protik.info/about
 - Ideas: https://protik.info/ideas
-- Speaking: https://protik.info/speaking
-- Publications & Media: https://protik.info/publications
+- Media (Speaking, Research & Press): https://protik.info/media
 - Coaching: https://protik.info/coaching
+- Working Manual (How I Work): https://protik.info/working-with-me — Protik's public operating manual covering leadership principles, operator and coach modes, collaboration preferences, growth edges, AI-era convictions, and readable signals. Based on the document he shares with every new team.
 - Ideas — Grab Fintech/Payments: https://protik.info/ideas/payments-at-scale-lessons-from-grab
 - Ideas — Ola Marketplace/Supply-Demand: https://protik.info/ideas/marketplace-lessons-from-ola
+- Ideas — The Great Unbundling of Product Management: https://protik.info/ideas/the-great-unbundling-of-product-management
+- Ideas — The ROI of Care: https://protik.info/ideas/the-roi-of-care
+- Ideas — What Humans Still Do Best: https://protik.info/ideas/what-humans-still-do-best
+- Ideas — How AI is Personalising Mental Health Support: https://protik.info/ideas/how-ai-is-personalising-mental-health-support
+- Ideas — Designing for Trust in Mental Health Apps: https://protik.info/ideas/designing-for-trust-in-mental-health-apps
+- Ideas — When AI Becomes an Echo Chamber: https://protik.info/ideas/when-ai-becomes-an-echo-chamber
 - Contact: https://protik.info/contact

@@ -20,21 +20,28 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "name": "Contact Protik Roychowdhury",
-    "description": "Get in touch for speaking, media, advisory, or executive inquiries.",
-    "mainEntity": {
-      "@type": "Person",
-      "@id": "https://protik.info/#person",
-      "name": "Protik Roychowdhury",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "Professional Inquiries",
-        "email": "protik@intellect.co",
-        "url": "https://calendly.com/protik001/30min",
-        "availableLanguage": ["English", "Hindi", "Bengali"]
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://protik.info/#person",
+        "name": "Protik Roychowdhury",
+        "url": "https://protik.info",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "Professional Inquiries",
+          "email": "protik001@gmail.com",
+          "url": "https://calendly.com/protik001/30min",
+          "availableLanguage": ["English", "Hindi", "Bengali"]
+        }
+      },
+      {
+        "@type": "ContactPage",
+        "@id": "https://protik.info/contact",
+        "name": "Contact Protik Roychowdhury",
+        "description": "Get in touch for speaking, media, advisory, or executive inquiries.",
+        "mainEntity": { "@id": "https://protik.info/#person" }
       }
-    }
+    ]
   }
   </script>
 
@@ -66,12 +73,11 @@
     <div class="container">
       <a href="/" class="nav-logo"><span>P</span><span class="first-rest">rotik</span><span class="logo-space"></span><span>R</span><span class="last-rest">oychowdhury</span></a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/ideas">Ideas</a></li>
-        <li><a href="/speaking">Speaking</a></li>
-        <li><a href="/publications">Publications</a></li>
+        <li><a href="/media">Media</a></li>
         <li><a href="/coaching">Coaching</a></li>
+        <li><a href="/working-with-me">Manual</a></li>
         <li><a href="/contact" class="nav-cta active">Get in Touch</a></li>
       </ul>
       <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">
@@ -101,14 +107,14 @@
           <h3>Invite Protik to speak</h3>
           <p>For conferences, panels, fireside chats, podcasts, webinars, and private leadership events. I speak on AI products, trust, product leadership, mental health tech, and marketplace design.</p>
           <a href="https://calendly.com/protik001/30min" class="btn btn-primary" target="_blank" rel="noopener">Book a call &rarr;</a>
-          <a href="mailto:protik@intellect.co?subject=Speaking%20inquiry%20for%20Protik%20Roychowdhury" class="btn btn-secondary" style="margin-left: 0.5rem;">Email &rarr;</a>
+          <a href="mailto:protik001@gmail.com?subject=Speaking%20inquiry%20for%20Protik%20Roychowdhury" class="btn btn-secondary" style="margin-left: 0.5rem;">Email &rarr;</a>
         </div>
 
         <div class="contact-card">
           <div class="contact-label">Media & Podcasts</div>
           <h3>Media or podcast request</h3>
           <p>For interviews, expert commentary, and podcast guest appearances. I can speak to AI in mental health, product leadership in Asia, trust in digital products, and marketplace economics.</p>
-          <a href="mailto:protik@intellect.co?subject=Media%20/%20podcast%20request%20for%20Protik%20Roychowdhury" class="btn btn-primary">Email me &rarr;</a>
+          <a href="mailto:protik001@gmail.com?subject=Media%20/%20podcast%20request%20for%20Protik%20Roychowdhury" class="btn btn-primary">Email me &rarr;</a>
         </div>
 
         <div class="contact-card">
@@ -122,7 +128,7 @@
           <div class="contact-label">Executive & Recruiting</div>
           <h3>Executive opportunities</h3>
           <p>For VP Product, CPO, Head of AI Product, and board/advisory roles. Open to conversations about executive product leadership positions at the right company.</p>
-          <a href="mailto:protik@intellect.co?subject=Executive%20opportunity%20for%20Protik%20Roychowdhury" class="btn btn-primary">Email me &rarr;</a>
+          <a href="mailto:protik001@gmail.com?subject=Executive%20opportunity%20for%20Protik%20Roychowdhury" class="btn btn-primary">Email me &rarr;</a>
           <a href="https://www.linkedin.com/in/protik001" class="btn btn-secondary" target="_blank" rel="noopener" style="margin-left: 0.5rem;">LinkedIn &rarr;</a>
         </div>
 
@@ -145,7 +151,7 @@
           <h3 style="margin-bottom: 1rem;">Details</h3>
           <div class="card" style="margin-bottom: 1rem;">
             <h4>Email</h4>
-            <a href="mailto:protik@intellect.co" style="display: inline-block; margin-top: 0.4rem; font-size: 0.95rem; font-weight: 500; color: var(--accent);">protik@intellect.co &rarr;</a>
+            <a href="mailto:protik001@gmail.com" style="display: inline-block; margin-top: 0.4rem; font-size: 0.95rem; font-weight: 500; color: var(--accent);">protik001@gmail.com &rarr;</a>
           </div>
           <div class="card" style="margin-bottom: 1rem;">
             <h4>Location</h4>
@@ -190,9 +196,9 @@
           <ul class="footer-links">
             <li><a href="/about">About</a></li>
             <li><a href="/ideas">Ideas</a></li>
-            <li><a href="/speaking">Speaking</a></li>
-            <li><a href="/publications">Publications</a></li>
+            <li><a href="/media">Media</a></li>
             <li><a href="/coaching">Coaching</a></li>
+            <li><a href="/working-with-me">Manual</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>
         </div>

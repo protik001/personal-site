@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Designing for Trust in Mental Health Apps: Why UX Is Care | Protik Roychowdhury</title>
+  <meta name="description" content="In mental health products, trust isn't a feature — it's the product. Five UX principles for building experiences that earn trust in high-stakes, vulnerable contexts.">
+  <meta name="author" content="Protik Roychowdhury">
+  <link rel="canonical" href="https://protik.info/ideas/designing-for-trust-in-mental-health-apps">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Designing for Trust in Mental Health Apps: Why UX Is Care">
+  <meta property="og:description" content="In mental health products, trust isn't a feature — it's the product. Five UX principles for building experiences that earn trust in high-stakes, vulnerable contexts.">
+  <meta property="og:url" content="https://protik.info/ideas/designing-for-trust-in-mental-health-apps">
+  <meta property="og:image" content="https://protik.info/images/og-card.png">
+  <meta property="article:author" content="Protik Roychowdhury">
+  <meta property="article:published_time" content="2025-05-15">
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://protik.info/#person",
+        "name": "Protik Roychowdhury",
+        "url": "https://protik.info"
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://protik.info/ideas/designing-for-trust-in-mental-health-apps",
+        "headline": "Designing for Trust in Mental Health Apps: Why UX Is Care",
+        "author": { "@id": "https://protik.info/#person" },
+        "publisher": { "@id": "https://protik.info/#person" },
+        "datePublished": "2025-05-15",
+        "url": "https://protik.info/ideas/designing-for-trust-in-mental-health-apps",
+        "description": "In mental health products, trust isn't a feature — it's the product. Five UX principles for building experiences that earn trust in high-stakes, vulnerable contexts.",
+        "keywords": ["trust", "UX", "mental health", "design", "care", "digital therapeutics", "user experience"]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .article-body { max-width: 680px; margin: 0 auto; }
+    .article-body p { font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.5rem; }
+    .article-body h2 { font-size: 1.4rem; color: var(--text-primary); margin: 2.5rem 0 1rem; }
+    .article-body h3 { font-size: 1.15rem; color: var(--text-primary); margin: 2rem 0 0.8rem; }
+    .article-body blockquote { border-left: 2px solid var(--border-color); padding-left: 1.2rem; margin: 1.5rem 0; font-style: italic; color: var(--text-muted); }
+    .article-meta { display: flex; align-items: center; gap: 1rem; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2rem; flex-wrap: wrap; }
+    .article-meta .tag { font-size: 0.75rem; }
+    .article-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-subtle); }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="/" class="nav-logo"><span>P</span><span class="first-rest">rotik</span><span class="logo-space"></span><span>R</span><span class="last-rest">oychowdhury</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/about">About</a></li>
+        <li><a href="/ideas" class="active">Ideas</a></li>
+        <li><a href="/media">Media</a></li>
+        <li><a href="/coaching">Coaching</a></li>
+        <li><a href="/working-with-me">Manual</a></li>
+        <li><a href="/contact" class="nav-cta">Get in Touch</a></li>
+      </ul>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero" style="min-height: auto; padding: 10rem 0 3rem;">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-label"><span class="dot"></span> Ideas</div>
+        <h1>Designing for trust in mental health apps: why UX is care</h1>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="article-body">
+        <div class="article-meta">
+          <span>May 2025</span>
+          <span>5 min read</span>
+          <span class="tag">Trust</span>
+          <span class="tag">UX</span>
+          <span class="tag">Mental Health</span>
+          <span class="tag">Design</span>
+        </div>
+
+        <p>In most product categories, trust is earned gradually. You try a product, it works, you come back. The stakes of a bad experience are low — a wasted minute, a mild frustration, a quick uninstall.</p>
+
+        <p>Mental health is different.</p>
+
+        <p>When someone opens a mental health app for the first time, they're often in a vulnerable state. They might be anxious, depressed, grieving, or in crisis. They're taking a risk — sharing something deeply personal with a piece of technology. And they're making a judgment, consciously or not: "Is this safe?"</p>
+
+        <p>If the answer is no — if anything in the experience feels clinical, invasive, dismissive, or fake — they leave. And they probably don't come back. In mental health, a bad UX isn't just a conversion problem. It's a care failure.</p>
+
+        <h2>Trust Is the Product</h2>
+
+        <p>At Intellect, I've come to believe that in mental health products, trust isn't a feature — it's the product. Everything we build either earns trust or erodes it. And the margin for error is razor-thin.</p>
+
+        <p>This shows up in every design decision:</p>
+
+        <p><strong>Onboarding.</strong> How much do you ask upfront? Every question is a micro-ask for vulnerability. Ask too much and you feel like an interrogation. Ask too little and the experience feels generic.</p>
+
+        <p><strong>Language.</strong> Clinical language creates distance. Casual language can feel dismissive. The tone has to be warm but not patronising, professional but not cold, clear but not simplistic.</p>
+
+        <p><strong>Matching.</strong> When we connect a user to a therapist, the match quality is a trust event. A bad match doesn't just waste a session — it confirms the user's fear that "this doesn't work for me."</p>
+
+        <p><strong>Data handling.</strong> Users need to know: who sees my data? Can my employer see it? Is my therapist reading my journal entries? These aren't edge cases — they're the first questions people ask.</p>
+
+        <h2>Five UX Principles for Trust</h2>
+
+        <p>Over the past few years, I've distilled five UX principles that guide how we design for trust at Intellect:</p>
+
+        <p><strong>1. Transparency over cleverness.</strong> Every data collection point should be explained in plain language. Every personalisation should feel like a helpful guide, not surveillance. If a user wonders "how does this app know that?" — we've failed.</p>
+
+        <p><strong>2. Control over convenience.</strong> Users should always feel in control of their experience. This means easy opt-outs, adjustable notification preferences, clear data controls, and the ability to switch therapists without friction. Convenience that removes control erodes trust.</p>
+
+        <p><strong>3. Warmth over polish.</strong> A beautifully designed app that feels cold is worse than a simple app that feels warm. In mental health, emotional resonance matters more than visual sophistication. Micro-copy, illustrations, empty states — these are care touchpoints.</p>
+
+        <p><strong>4. Consistency over surprise.</strong> In most products, delightful surprises are a good thing. In mental health, predictability is safety. Users should know what to expect from every interaction. The navigation should be intuitive. The experience should feel stable.</p>
+
+        <p><strong>5. Acknowledgment over optimism.</strong> When a user reports distress, the worst response is forced positivity. "You've got this!" when someone is struggling is dismissive. Better: "That sounds really difficult. Here's what might help." Acknowledgment before action.</p>
+
+        <h2>The Cultural Dimension</h2>
+
+        <p>Trust in mental health is deeply cultural. At Intellect, we serve users across Singapore, Hong Kong, India, Japan, Korea, Australia, and more. What builds trust varies enormously:</p>
+
+        <p>In some cultures, anonymity is paramount — users won't engage if they think their employer might know. In others, family involvement is a sign of care, not intrusion.</p>
+
+        <p>In some markets, clinical credentials build trust. In others, relatable lived experience matters more.</p>
+
+        <p>Language matters in ways that go beyond translation. The way distress is described, the metaphors that resonate, the level of directness that feels respectful — all of these are culturally constructed.</p>
+
+        <p>This means trust can't be designed once and deployed everywhere. It has to be localised at the emotional level, not just the linguistic level.</p>
+
+        <h2>What This Means for Product Leaders</h2>
+
+        <p>If you're building products in any high-stakes domain — health, finance, education, legal — the lessons from mental health UX apply:</p>
+
+        <p><strong>Trust is your conversion funnel.</strong> If people don't trust your product, nothing else matters. No feature, no discount, no marketing campaign will overcome a trust deficit.</p>
+
+        <p><strong>Design for vulnerability.</strong> Your users aren't always in a rational, evaluative state. Design for the worst moment they might be having when they open your product.</p>
+
+        <p><strong>Measure trust, not just engagement.</strong> Engagement metrics can be misleading in mental health. A user who opens the app daily but never accesses clinical support might be engaging out of anxiety, not benefit. Build trust metrics: NPS for therapeutic relationships, qualitative feedback loops, and safety reporting.</p>
+
+        <p><strong>The UX is the care.</strong> In mental health products, every pixel is a clinical decision. The colour palette affects mood. The copy affects self-perception. The notification timing affects anxiety. Treat your UX team as part of the clinical team.</p>
+
+        <p>Mental health product design has taught me something I carry into every product role: the best products don't just solve problems — they make people feel safe enough to engage with their problems. That's the highest bar in UX. And it's worth striving for.</p>
+
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">Originally published on <a href="https://medium.com/@protik/designing-for-trust-in-mental-health-apps-why-ux-is-care-07fa5191d9e6" target="_blank" rel="noopener" style="color: var(--accent);">Medium</a>.</p>
+
+        <div class="article-nav">
+          <a href="/ideas" style="color: var(--text-muted);">&larr; All posts</a>
+          <a href="/ideas/when-ai-becomes-an-echo-chamber" style="color: var(--text-muted);">Next: When AI Becomes an Echo Chamber &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fade-in">
+    <div class="container">
+      <div class="newsletter">
+        <h2>Let's work together</h2>
+        <p style="max-width: 500px; margin: 0.5rem auto;">Looking for a speaker, coach, or product advisor? I'd love to hear what you're working on.</p>
+        <div style="display: flex; gap: 0.8rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap;">
+          <a href="https://calendly.com/protik001/30min" class="btn btn-primary" target="_blank" rel="noopener">Book a call &rarr;</a>
+          <a href="mailto:protik001@gmail.com" class="btn btn-secondary">Email me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><span>P</span><span class="first-rest">rotik</span><span class="logo-space"></span><span>R</span><span class="last-rest">oychowdhury</span></a>
+          <p>Product leader building trusted AI and platform products across Asia. VP Product at Intellect.</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/protik001" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+            <a href="https://www.x.com/protik" target="_blank" rel="noopener" aria-label="X/Twitter">X</a>
+            <a href="https://medium.com/@protik" target="_blank" rel="noopener" aria-label="Medium">M</a>
+          </div>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul class="footer-links">
+            <li><a href="/about">About</a></li>
+            <li><a href="/ideas">Ideas</a></li>
+            <li><a href="/media">Media</a></li>
+            <li><a href="/coaching">Coaching</a></li>
+            <li><a href="/working-with-me">Manual</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Topics</h4>
+          <ul class="footer-links">
+            <li><a href="/ideas">AI Product Strategy</a></li>
+            <li><a href="/ideas">Trust & High-Stakes Design</a></li>
+            <li><a href="/ideas">Product Leadership</a></li>
+            <li><a href="/ideas">Mental Health Tech</a></li>
+            <li><a href="/ideas">Marketplace & Platforms</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.linkedin.com/in/protik001" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.x.com/protik" target="_blank" rel="noopener">X / Twitter</a></li>
+            <li><a href="https://medium.com/@protik" target="_blank" rel="noopener">Medium</a></li>
+            <li><a href="/contact">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Protik Roychowdhury. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function() {
+    // Scroll progress for logo collapse
+    var root = document.documentElement;
+    var ticking = false;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        requestAnimationFrame(function() {
+          root.style.setProperty('--scroll-progress', Math.min(window.scrollY / 180, 1));
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    // Fade-in on scroll
+    var fadeEls = document.querySelectorAll('.fade-in');
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      fadeEls.forEach(function(el) { obs.observe(el); });
+    } else {
+      fadeEls.forEach(function(el) { el.classList.add('is-visible'); });
+    }
+  })();
+  </script>
+
+</body>
+</html>

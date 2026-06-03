@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How I Work — Protik Roychowdhury | Product Leadership Operating Manual</title>
+  <meta name="description" content="Protik Roychowdhury's working manual — operating principles, leadership style, coaching philosophy, and how to collaborate effectively. A public guide for teams, partners, and collaborators.">
+  <meta name="author" content="Protik Roychowdhury">
+  <link rel="canonical" href="https://protik.info/working-with-me">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="How I Work — Protik Roychowdhury">
+  <meta property="og:description" content="Operating principles, leadership style, and coaching philosophy. A public working manual for teams, partners, and collaborators.">
+  <meta property="og:url" content="https://protik.info/working-with-me">
+  <meta property="og:image" content="https://protik.info/images/og-card.png">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://protik.info/#person",
+        "name": "Protik Roychowdhury",
+        "url": "https://protik.info",
+        "knowsAbout": [
+          "Product Leadership",
+          "AI Product Strategy",
+          "Executive Coaching",
+          "Operating Principles",
+          "Team Leadership",
+          "Two-Sided Marketplace Architecture",
+          "Enterprise B2B SaaS"
+        ]
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://protik.info/working-with-me",
+        "name": "How I Work — Protik Roychowdhury",
+        "description": "Protik Roychowdhury's public working manual — operating principles, leadership philosophy, coaching approach, and collaboration guide.",
+        "mainEntity": { "@id": "https://protik.info/#person" },
+        "url": "https://protik.info/working-with-me",
+        "datePublished": "2026-05-28",
+        "dateModified": "2026-05-28"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* --- Manual Page Layout --- */
+    .manual-layout {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 3rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 clamp(1.2rem, 4vw, 2rem);
+    }
+
+    .manual-sidebar {
+      position: sticky;
+      top: 5rem;
+      align-self: start;
+      max-height: calc(100vh - 6rem);
+      overflow-y: auto;
+    }
+
+    .manual-sidebar nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border-left: 1px solid var(--border-subtle);
+      padding-left: 0;
+    }
+
+    .manual-sidebar a {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      padding: 0.45rem 0 0.45rem 1rem;
+      border-left: 2px solid transparent;
+      margin-left: -1px;
+      line-height: 1.4;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .manual-sidebar a:hover {
+      color: var(--text-primary);
+    }
+
+    .manual-sidebar a.active {
+      color: var(--accent);
+      border-left-color: var(--accent);
+      font-weight: 500;
+    }
+
+    .manual-content {
+      max-width: 680px;
+    }
+
+    @media (max-width: 900px) {
+      .manual-layout {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      .manual-sidebar {
+        position: relative;
+        top: 0;
+        border-bottom: 0.5px solid var(--border-subtle);
+        padding-bottom: 1.5rem;
+        margin-bottom: 2rem;
+      }
+      .manual-sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-left: none;
+        gap: 0;
+      }
+      .manual-sidebar a {
+        border-left: none;
+        border-bottom: 2px solid transparent;
+        margin-left: 0;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+      }
+      .manual-sidebar a.active {
+        border-bottom-color: var(--accent);
+        border-left-color: transparent;
+      }
+    }
+
+    /* --- Manual Content Styles --- */
+    .manual-section {
+      margin-bottom: 3.5rem;
+      scroll-margin-top: 5.5rem;
+    }
+
+    .manual-section:last-child {
+      margin-bottom: 2rem;
+    }
+
+    .manual-overline {
+      font-size: 0.65rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+
+    .manual-section h2 {
+      font-size: clamp(1.4rem, 3vw, 1.8rem);
+      margin-bottom: 1rem;
+    }
+
+    .manual-section > p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 1.2rem;
+    }
+
+    .mode-block {
+      margin-bottom: 1.2rem;
+    }
+
+    .mode-block h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .mode-block p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    /* Principles */
+    .principle-item {
+      padding: 1.2rem 0;
+      border-bottom: 0.5px solid var(--border-subtle);
+    }
+
+    .principle-item:last-child { border-bottom: none; }
+
+    .principle-item h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .principle-item p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    /* What I bring — trait rows */
+    .trait-row {
+      margin-bottom: 1.2rem;
+    }
+
+    .trait-label {
+      font-size: 0.65rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      margin-bottom: 0.3rem;
+    }
+
+    .trait-row p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    /* Growth edges */
+    .growth-item {
+      margin-bottom: 1.2rem;
+    }
+
+    .growth-item p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    /* Collaboration */
+    .collab-item {
+      margin-bottom: 1.2rem;
+    }
+
+    .collab-item h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .collab-item p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    /* AI section */
+    .ai-block {
+      background: var(--bg-secondary);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .ai-block p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+
+    .ai-block p:last-child { margin-bottom: 0; }
+
+    .ai-papers {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .ai-papers a {
+      font-size: 0.75rem;
+      color: var(--accent);
+      border: 0.5px solid var(--border-color);
+      padding: 0.3rem 0.7rem;
+      border-radius: var(--radius-pill);
+      background: var(--bg-card);
+      transition: var(--transition);
+    }
+
+    .ai-papers a:hover { border-color: var(--accent); }
+
+    /* Signals */
+    .signal-row {
+      padding: 1rem 0;
+      border-bottom: 0.5px solid var(--border-subtle);
+    }
+
+    .signal-row:last-child { border-bottom: none; }
+
+    .signal-row h4 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .signal-row p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="/" class="nav-logo"><span>P</span><span class="first-rest">rotik</span><span class="logo-space"></span><span>R</span><span class="last-rest">oychowdhury</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/about">About</a></li>
+        <li><a href="/ideas">Ideas</a></li>
+        <li><a href="/media">Media</a></li>
+        <li><a href="/coaching">Coaching</a></li>
+        <li><a href="/working-with-me" class="active">Manual</a></li>
+        <li><a href="/contact" class="nav-cta">Get in Touch</a></li>
+      </ul>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" style="min-height: auto; padding: 10rem 0 3rem;">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-label"><span class="dot"></span> Manual</div>
+        <h1>How I work</h1>
+        <p>I've shared versions of this document with every team I've led. This is the public edition — for anyone considering working with me in any capacity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Manual Content with Sidebar -->
+  <section style="padding-top: 1rem;">
+    <div class="manual-layout">
+
+      <!-- Sidebar TOC -->
+      <aside class="manual-sidebar">
+        <nav id="manualNav">
+          <a href="#two-modes">Two modes</a>
+          <a href="#principles">Principles</a>
+          <a href="#what-i-bring">What I bring</a>
+          <a href="#still-working-on">Still working on</a>
+          <a href="#how-to-work-with-me">How to work with me</a>
+          <a href="#building-in-ai-era">Building in the AI era</a>
+          <a href="#how-to-read-me">How to read me</a>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="manual-content">
+
+        <!-- Two Modes -->
+        <div class="manual-section" id="two-modes">
+          <div class="manual-overline">Two modes</div>
+          <h2>I operate in two registers</h2>
+          <p>I operate in two modes, and knowing which one I'm in is the key to working with me.</p>
+
+          <div class="mode-block">
+            <h3>The operator</h3>
+            <p>Fast, decisive, direct, pushing toward outcomes. This is the muscle I built across a decade of scaling products in high-growth, high-pressure environments. When the problem is messy and the stakes are real, I drive toward clarity and make calls.</p>
+          </div>
+
+          <div class="mode-block">
+            <h3>The coach</h3>
+            <p>I'm ICF-certified, and that training fundamentally changed how I lead. I learned that the most impactful thing a leader can do is sometimes not solve the problem — it's to ask the question that helps someone else find their own answer.</p>
+          </div>
+
+          <p>Knowing when to drive and when to hold space is the hardest judgment call in leadership. I get it wrong sometimes. But I'm always choosing deliberately.</p>
+        </div>
+
+        <!-- Principles -->
+        <div class="manual-section" id="principles">
+          <div class="manual-overline">Principles</div>
+          <h2>What I believe</h2>
+
+          <div class="principle-item">
+            <h3>Think big, start small, move fast</h3>
+            <p>Momentum teaches you more than planning. But speed without direction is chaos — so the "think big" part comes first for a reason.</p>
+          </div>
+
+          <div class="principle-item">
+            <h3>Solve the problem, not the metric</h3>
+            <p>Why are we doing this, and will it contribute to the outcome we actually want? If the dashboard looks good but the user problem is still there, we've failed.</p>
+          </div>
+
+          <div class="principle-item">
+            <h3>The best idea wins</h3>
+            <p>Not the most senior person's idea. Not the loudest voice. Bring clear reasoning and I'll change my mind. I expect the same willingness from everyone.</p>
+          </div>
+
+          <div class="principle-item">
+            <h3>Owners, not renters</h3>
+            <p>I set context, remove obstacles, and hold you to a high bar. You own the work. Propose ideas, challenge decisions, and don't wait for permission to do the right thing.</p>
+          </div>
+
+          <div class="principle-item">
+            <h3>Always write a memo</h3>
+            <p>Verbal agreement is fragile. A written argument forces clarity, creates a record, and respects other people's time. If you want to convince me of something, write it down.</p>
+          </div>
+        </div>
+
+        <!-- What I Bring -->
+        <div class="manual-section" id="what-i-bring">
+          <div class="manual-overline">Strengths</div>
+          <h2>What I bring</h2>
+
+          <div class="trait-row">
+            <div class="trait-label">Operator mode</div>
+            <p>I cut through ambiguity, make decisions when others are stuck, and hold a high bar. I'm at my best when someone needs to create structure out of noise.</p>
+          </div>
+
+          <div class="trait-row">
+            <div class="trait-label">Coach mode</div>
+            <p>I listen. I ask the question you've been avoiding. I won't hand you the answer — I'll help you find it, because that's how the insight sticks. The goal is your growth, not your dependence on me.</p>
+          </div>
+
+          <div class="trait-row">
+            <div class="trait-label">Both modes</div>
+            <p>I'm direct. I say what I think. I genuinely care about the people I work with doing their best work.</p>
+          </div>
+        </div>
+
+        <!-- What I'm Still Working On -->
+        <div class="manual-section" id="still-working-on">
+          <div class="manual-overline">Growth edges</div>
+          <h2>What I'm still working on</h2>
+
+          <div class="growth-item">
+            <p>My pace isn't always comfortable. When things don't move at the speed I expect, my directness can feel like pressure. I work on this — not by becoming less direct, but by being more intentional about timing and delivery.</p>
+          </div>
+
+          <div class="growth-item">
+            <p>I hold strong opinions. I'm genuinely open to changing them, but you need to bring reasoning, not just pushback. Data, logic, or a perspective I hadn't considered — those work.</p>
+          </div>
+
+          <div class="growth-item">
+            <p>Stalling without a clear reason frustrates me. The best way to keep me engaged is to show me the bigger picture is on track, even if today's pace feels slow.</p>
+          </div>
+        </div>
+
+        <!-- How to Work With Me -->
+        <div class="manual-section" id="how-to-work-with-me">
+          <div class="manual-overline">Collaboration</div>
+          <h2>How to work with me</h2>
+
+          <div class="collab-item">
+            <h3>Bring your thinking, not just your questions</h3>
+            <p>Come with a point of view and want to pressure-test it. The fastest way to earn my trust is to show me you've thought hard about the problem.</p>
+          </div>
+
+          <div class="collab-item">
+            <h3>Be direct</h3>
+            <p>I don't decode subtext well, and I don't expect you to decode mine. If something isn't working, say so.</p>
+          </div>
+
+          <div class="collab-item">
+            <h3>Close the loop</h3>
+            <p>I expect follow-through — in action and in communication. The thing I find hardest to work with is silence where there should be a signal.</p>
+          </div>
+        </div>
+
+        <!-- Building in the AI Era -->
+        <div class="manual-section" id="building-in-ai-era">
+          <div class="manual-overline">Conviction</div>
+          <h2>Building in the AI era</h2>
+
+          <div class="ai-block">
+            <p>I build products where last quarter's best practice is already obsolete. That kind of uncertainty is different from normal ambiguity — the ground itself is shifting faster than your roadmap can account for.</p>
+
+            <p>Hold your conviction on the problem loosely. Hold your conviction on the user tightly. The technology will keep changing. The model will get better. But the human need you're solving for is stable. Build your judgment around that anchor.</p>
+
+            <p>I co-authored three academic papers on AI safety — not to be an academic, but because building AI products in high-stakes domains forced rigorous thinking about questions most product leaders hand-wave. When should an AI intervene? When should it defer to a human? How do you design trust into a probabilistic system? These aren't theoretical for me. They're shipping decisions.</p>
+
+            <div class="ai-papers">
+              <a href="/media">The RISE Protocol &rarr;</a>
+              <a href="/media">The Provider GPA &rarr;</a>
+              <a href="/media">Bias in LLMs for Mental Health &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- How to Read Me -->
+        <div class="manual-section" id="how-to-read-me">
+          <div class="manual-overline">Signals</div>
+          <h2>How to read me</h2>
+
+          <div class="signal-row">
+            <h4>Energised</h4>
+            <p>Generating ideas faster than anyone can write them down, pulling people into conversations, compressing timelines.</p>
+          </div>
+
+          <div class="signal-row">
+            <h4>Stressed</h4>
+            <p>More task-focused, shorter in communication, narrowly locked onto what needs to happen next. If you notice this, help me prioritise — don't add more.</p>
+          </div>
+
+          <div class="signal-row">
+            <h4>Disappointed</h4>
+            <p>Quieter than usual. More pointed in feedback. If I seem to disengage rather than push back, something needs to be addressed directly.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="fade-in">
+    <div class="container">
+      <div class="newsletter">
+        <h2>Let's work together</h2>
+        <p style="max-width: 500px; margin: 0.5rem auto;">If this sounds like someone you'd want to work with — on a product team, in a coaching engagement, as an advisor, or on a stage — I'd like to hear from you.</p>
+        <div style="display: flex; gap: 0.8rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap;">
+          <a href="https://calendly.com/protik001/30min" class="btn btn-primary" target="_blank" rel="noopener">Book a conversation &rarr;</a>
+          <a href="mailto:protik001@gmail.com" class="btn btn-secondary">Email me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><span>P</span><span class="first-rest">rotik</span><span class="logo-space"></span><span>R</span><span class="last-rest">oychowdhury</span></a>
+          <p>Product leader building trusted AI and platform products across Asia. VP Product at Intellect.</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/protik001" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+            <a href="https://www.x.com/protik" target="_blank" rel="noopener" aria-label="X/Twitter">X</a>
+            <a href="https://medium.com/@protik" target="_blank" rel="noopener" aria-label="Medium">M</a>
+          </div>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul class="footer-links">
+            <li><a href="/about">About</a></li>
+            <li><a href="/ideas">Ideas</a></li>
+            <li><a href="/media">Media</a></li>
+            <li><a href="/coaching">Coaching</a></li>
+            <li><a href="/working-with-me">Manual</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Topics</h4>
+          <ul class="footer-links">
+            <li><a href="/ideas">AI Product Strategy</a></li>
+            <li><a href="/ideas">Trust & High-Stakes Design</a></li>
+            <li><a href="/ideas">Product Leadership</a></li>
+            <li><a href="/ideas">Mental Health Tech</a></li>
+            <li><a href="/ideas">Marketplace & Platforms</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.linkedin.com/in/protik001" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.x.com/protik" target="_blank" rel="noopener">X / Twitter</a></li>
+            <li><a href="https://medium.com/@protik" target="_blank" rel="noopener">Medium</a></li>
+            <li><a href="/contact">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Protik Roychowdhury. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function() {
+    // Scroll progress for logo collapse
+    var root = document.documentElement;
+    var ticking = false;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        requestAnimationFrame(function() {
+          root.style.setProperty('--scroll-progress', Math.min(window.scrollY / 180, 1));
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    // Fade-in on scroll
+    var fadeEls = document.querySelectorAll('.fade-in');
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      fadeEls.forEach(function(el) { obs.observe(el); });
+    } else {
+      fadeEls.forEach(function(el) { el.classList.add('is-visible'); });
+    }
+
+    // Sidebar active section tracking
+    var sections = document.querySelectorAll('.manual-section');
+    var navLinks = document.querySelectorAll('#manualNav a');
+
+    if (sections.length && navLinks.length) {
+      var sectionObs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.getAttribute('id');
+            navLinks.forEach(function(link) {
+              link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+            });
+          }
+        });
+      }, {
+        rootMargin: '-20% 0px -60% 0px',
+        threshold: 0
+      });
+
+      sections.forEach(function(section) {
+        sectionObs.observe(section);
+      });
+
+      // Smooth scroll for sidebar links
+      navLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          var target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            history.replaceState(null, '', this.getAttribute('href'));
+          }
+        });
+      });
+    }
+  })();
+  </script>
+
+</body>
+</html>

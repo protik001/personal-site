@@ -22,14 +22,25 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Marketplace Lessons from Ola: Supply-Demand, Fraud, and Driver Economics at India's Largest Ride-Hailing Platform",
-    "author": { "@type": "Person", "name": "Protik Roychowdhury", "url": "https://protik.info" },
-    "datePublished": "2026-05-25",
-    "publisher": { "@type": "Person", "name": "Protik Roychowdhury" },
-    "url": "https://protik.info/ideas/marketplace-lessons-from-ola",
-    "description": "Product lessons from building marketplace products at Ola — supply-demand optimisation, dynamic pricing, fraud prevention, and two-sided marketplace design.",
-    "keywords": ["marketplace", "supply-demand", "Ola", "ride-hailing", "dynamic pricing", "fraud prevention", "two-sided marketplace", "product management", "India", "driver economics"]
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://protik.info/#person",
+        "name": "Protik Roychowdhury",
+        "url": "https://protik.info"
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://protik.info/ideas/marketplace-lessons-from-ola",
+        "headline": "Marketplace Lessons from Ola: Supply-Demand, Fraud, and Driver Economics at India's Largest Ride-Hailing Platform",
+        "author": { "@id": "https://protik.info/#person" },
+        "publisher": { "@id": "https://protik.info/#person" },
+        "datePublished": "2026-05-25",
+        "url": "https://protik.info/ideas/marketplace-lessons-from-ola",
+        "description": "Product lessons from building marketplace products at Ola — supply-demand optimisation, dynamic pricing, fraud prevention, and two-sided marketplace design.",
+        "keywords": ["marketplace", "supply-demand", "Ola", "ride-hailing", "dynamic pricing", "fraud prevention", "two-sided marketplace", "product management", "India", "driver economics"]
+      }
+    ]
   }
   </script>
 
@@ -50,12 +61,11 @@
     <div class="container">
       <a href="/" class="nav-logo"><span>P</span><span class="first-rest">rotik</span><span class="logo-space"></span><span>R</span><span class="last-rest">oychowdhury</span></a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/ideas" class="active">Ideas</a></li>
-        <li><a href="/speaking">Speaking</a></li>
-        <li><a href="/publications">Publications</a></li>
+        <li><a href="/media">Media</a></li>
         <li><a href="/coaching">Coaching</a></li>
+        <li><a href="/working-with-me">Manual</a></li>
         <li><a href="/contact" class="nav-cta">Get in Touch</a></li>
       </ul>
       <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">
@@ -152,7 +162,7 @@
         <p style="max-width: 500px; margin: 0.5rem auto;">Looking for a speaker, coach, or product advisor? I'd love to hear what you're working on.</p>
         <div style="display: flex; gap: 0.8rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap;">
           <a href="https://calendly.com/protik001/30min" class="btn btn-primary" target="_blank" rel="noopener">Book a call &rarr;</a>
-          <a href="mailto:protik@intellect.co" class="btn btn-secondary">Email me</a>
+          <a href="mailto:protik001@gmail.com" class="btn btn-secondary">Email me</a>
         </div>
       </div>
     </div>
@@ -175,9 +185,9 @@
           <ul class="footer-links">
             <li><a href="/about">About</a></li>
             <li><a href="/ideas">Ideas</a></li>
-            <li><a href="/speaking">Speaking</a></li>
-            <li><a href="/publications">Publications</a></li>
+            <li><a href="/media">Media</a></li>
             <li><a href="/coaching">Coaching</a></li>
+            <li><a href="/working-with-me">Manual</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>
         </div>

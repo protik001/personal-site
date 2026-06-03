@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Protik Roychowdhury | Product Leader — Trusted AI, Marketplace & High-Stakes Digital Products</title>
-  <meta name="description" content="Protik Roychowdhury is a Singapore-based product leader building trusted AI, marketplace, and high-stakes digital products across Asia. VP Product at Intellect (4M+ users, $20M ARR). Ex-Grab, ex-Ola. Speaker, researcher, ICF-certified coach.">
+  <meta name="description" content="Protik Roychowdhury is a Singapore-based product leader building trusted AI, marketplace, and high-stakes digital products across Asia. VP Product at Intellect. Ex-Grab, ex-Ola. Speaker, researcher, ICF-certified coach.">
   <meta name="author" content="Protik Roychowdhury">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://protik.info/">
@@ -39,8 +39,8 @@
       "name": "Intellect",
       "url": "https://intellect.co"
     },
-    "description": "Singapore-based product leader building trusted AI, marketplace, and high-stakes digital products across Asia. VP Product at Intellect (4M+ users, $20M ARR). Previously led Growth, Engagement & Loyalty at Grab and marketplace products at Ola. Three-time founder (one exit), published researcher, keynote speaker, ICF-certified coach.",
-    "knowsAbout": ["AI Product Strategy", "Trusted AI", "Product Leadership", "Marketplace Design", "Platform Products", "Mental Health Technology", "Digital Therapeutics", "High-Stakes Product Design", "Product Judgement", "Growth & Engagement", "Personalisation", "Supply-Demand Optimisation", "GenAI", "LLMs", "Conversational AI", "Trust & Safety", "Product Governance", "Cross-Border Localisation", "Experimentation & A/B Testing", "Product-Led Growth", "Keynote Speaking", "Human-Centred Design", "Startup Founding", "Team Scaling", "Regulated Technology", "B2B2C", "Coaching"],
+    "description": "Singapore-based product leader building trusted AI, marketplace, and high-stakes digital products across Asia. VP Product at Intellect. Previously led Growth, Engagement & Loyalty at Grab and marketplace products at Ola. Three-time founder (one exit), published researcher, keynote speaker, ICF-certified coach.",
+    "knowsAbout": ["AI Product Strategy", "Trusted AI", "High-Stakes Product Design", "Product Judgement over Process", "Product-Led Growth", "Two-Sided Marketplace Architecture", "Scaling Product Teams", "Shipping AI Features in Regulated Industries", "Personalisation at Scale", "Enterprise B2B SaaS", "Cross-Border Localisation", "Consumer Super-Apps", "Marketplace Design", "Platform Products", "GenAI", "LLMs", "Conversational AI", "Product Governance", "Experimentation & A/B Testing", "0-to-1 Product Development", "Startup Founding", "Executive Coaching"],
     "sameAs": [
       "https://www.linkedin.com/in/protik001",
       "https://www.x.com/protik",
@@ -91,27 +91,46 @@
       color: var(--accent);
       margin-bottom: 0.5rem;
     }
-    .essay-card {
+    .thinking-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .thinking-item {
       display: block;
-      padding: 1.5rem;
-      border: 0.5px solid var(--border-color);
-      border-radius: var(--radius-md);
+      text-decoration: none;
+      padding: 1rem 0;
+      border-bottom: 0.5px solid var(--border-color);
       transition: var(--transition);
     }
-    .essay-card:hover { border-color: var(--accent); }
-    .essay-meta {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      margin-bottom: 0.4rem;
+    .thinking-item:first-child { border-top: 0.5px solid var(--border-color); }
+    .thinking-item:hover { border-bottom-color: var(--accent); }
+    .thinking-item:hover .thinking-title { color: var(--accent); }
+    .thinking-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 0.25rem;
     }
-    .essay-card h3 { font-size: 1rem; margin-bottom: 0.4rem; }
-    .essay-card p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
-    .essay-read {
-      font-size: 0.8rem;
+    .thinking-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      transition: color 0.2s;
+    }
+    .thinking-topic {
+      font-size: 0.7rem;
       font-weight: 500;
-      color: var(--accent);
-      margin-top: 0.8rem;
-      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+    .thinking-desc {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
     }
   </style>
 </head>
@@ -122,12 +141,11 @@
     <div class="container">
       <a href="/" class="nav-logo"><span>P</span><span class="first-rest">rotik</span><span class="logo-space"></span><span>R</span><span class="last-rest">oychowdhury</span></a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="/" class="active">Home</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/ideas">Ideas</a></li>
-        <li><a href="/speaking">Speaking</a></li>
-        <li><a href="/publications">Publications</a></li>
+        <li><a href="/media">Media</a></li>
         <li><a href="/coaching">Coaching</a></li>
+        <li><a href="/working-with-me">Manual</a></li>
         <li><a href="/contact" class="nav-cta">Get in Touch</a></li>
       </ul>
       <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">
@@ -149,68 +167,13 @@
           <p>I'm Protik Roychowdhury. I build trusted AI, marketplace, and high-stakes digital products across Asia. I write and speak about product strategy, trust, personalisation, and scaling teams with judgement.</p>
           <div class="hero-buttons" style="margin-top: 1.5rem;">
             <a href="/ideas" class="btn btn-primary">Read my ideas &rarr;</a>
-            <a href="/speaking" class="btn btn-secondary">Invite me to speak</a>
+            <a href="/media" class="btn btn-secondary">Invite me to speak</a>
           </div>
         </div>
         <div class="hero-portrait">
           <img src="images/HeadShot.jpeg" alt="Protik Roychowdhury — VP Product, Intellect" width="400" height="400" loading="eager">
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Credibility Bar -->
-  <section class="credibility fade-in">
-    <div class="container">
-      <div class="credibility-grid">
-        <div class="credibility-item">
-          <div class="number">15+</div>
-          <div class="label">Years in product</div>
-        </div>
-        <div class="credibility-item">
-          <div class="number">4M+</div>
-          <div class="label">Users reached</div>
-        </div>
-        <div class="credibility-item">
-          <div class="number">$20M</div>
-          <div class="label">ARR scale</div>
-        </div>
-        <div class="credibility-item">
-          <div class="number">6</div>
-          <div class="label">Countries shipped in</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Logos Strip -->
-  <section class="logos-strip fade-in">
-    <div class="container">
-      <div class="logos-label">Experience across</div>
-      <div class="logos-row">
-        <span class="logo-item">Intellect</span>
-        <span class="logo-item">Grab</span>
-        <span class="logo-item">Ola</span>
-        <span class="logo-item">Exotel</span>
-        <span class="logo-item">IIT Kharagpur</span>
-        <span class="logo-divider">|</span>
-        <a class="logo-item press" href="https://m.economictimes.com/small-biz/startups/exotel-to-buy-singapores-social-media-startup-croak-it/articleshow/46105110.cms" target="_blank" rel="noopener">Economic Times</a>
-        <a class="logo-item press" href="https://www.business-standard.com/article/companies/cloud-telephony-start-up-exotel-acquires-voice-recognition-platform-croak-it-115020401288_1.html" target="_blank" rel="noopener">Business Standard</a>
-        <a class="logo-item press" href="https://inc42.com/startups/interviews/inc42-gets-candid-with-the-iit-kgp-startup-croak-it/" target="_blank" rel="noopener">Inc42</a>
-        <a class="logo-item press" href="https://e27.co/indias-exotel-acquires-singapores-voice-based-social-media-app-croak-20150203/" target="_blank" rel="noopener">e27</a>
-        <a class="logo-item press" href="https://yourstory.com/2012/11/croaking-it-up-with-protik-roychowdhury-a-day-in-the-life-of-an-entrepreneur" target="_blank" rel="noopener">YourStory</a>
-        <a class="logo-item press" href="https://www.financialexpress.com/business/industry-sporting-spirit-246292/" target="_blank" rel="noopener">Financial Express</a>
-        <a class="logo-item press" href="https://techwireasia.com/2012/06/croak-it-enables-one-click-voice-to-web-communication/" target="_blank" rel="noopener">Tech Wire Asia</a>
-        <a class="logo-item press" href="https://www.techinasia.com/exotel-buys-croak-it" target="_blank" rel="noopener">Tech in Asia</a>
-        <a class="logo-item press" href="https://martechvibe.com/video/cross-border-success-through-hyper-localisation-and-geo-targeting/" target="_blank" rel="noopener">Martechvibe</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Speaking Banner -->
-  <section class="fade-in" style="padding: 0;">
-    <div class="container">
-      <img src="images/Martechvibe.jpeg" alt="Protik Roychowdhury speaking at Martechvibe Unlocked Summit" width="2048" height="1365" loading="lazy" style="width: 100%; height: clamp(200px, 30vw, 360px); object-fit: cover; border-radius: var(--radius-lg); border: 0.5px solid var(--border-color);">
     </div>
   </section>
 
@@ -251,50 +214,53 @@
     </div>
   </section>
 
-  <!-- Featured Ideas -->
+  <!-- Latest Thinking -->
   <section class="fade-in">
     <div class="container">
       <div class="section-header">
-        <div class="overline">Featured ideas</div>
+        <div class="overline">Latest thinking</div>
         <h2>Recent writing</h2>
       </div>
-      <div class="grid-2">
-        <a href="/ideas/payments-at-scale-lessons-from-grab" class="essay-card">
-          <div class="essay-meta">Marketplace & Platforms &middot; 8 min read</div>
-          <h3>Payments at scale: what I learned leading fintech products at Grab</h3>
-          <p>Building payments infrastructure, engagement monetisation, and driver financial services across Southeast Asia's leading superapp.</p>
-          <span class="essay-read">Read &rarr;</span>
-        </a>
-        <a href="/ideas/marketplace-lessons-from-ola" class="essay-card">
-          <div class="essay-meta">Marketplace & Platforms &middot; 7 min read</div>
-          <h3>Marketplace lessons from Ola: supply-demand, fraud, and driver economics</h3>
-          <p>Two-sided marketplace design at India's largest ride-hailing platform — fraud prevention, incentive design, dynamic pricing, and India-scale complexity.</p>
-          <span class="essay-read">Read &rarr;</span>
-        </a>
-      </div>
+      <ul class="thinking-list">
+        <li>
+          <a href="/ideas/payments-at-scale-lessons-from-grab" class="thinking-item">
+            <div class="thinking-header">
+              <span class="thinking-title">Payments at scale: what I learned leading fintech products at Grab</span>
+              <span class="thinking-topic">Marketplace & Platforms</span>
+            </div>
+            <div class="thinking-desc">Building payments infrastructure, engagement monetisation, and driver financial services across Southeast Asia's leading superapp.</div>
+          </a>
+        </li>
+        <li>
+          <a href="/ideas/marketplace-lessons-from-ola" class="thinking-item">
+            <div class="thinking-header">
+              <span class="thinking-title">Marketplace lessons from Ola: supply-demand, fraud, and driver economics</span>
+              <span class="thinking-topic">Marketplace & Platforms</span>
+            </div>
+            <div class="thinking-desc">Two-sided marketplace design at India's largest ride-hailing platform — fraud prevention, incentive design, dynamic pricing, and India-scale complexity.</div>
+          </a>
+        </li>
+        <li>
+          <a href="/ideas/the-great-unbundling-of-product-management" class="thinking-item">
+            <div class="thinking-header">
+              <span class="thinking-title">The great unbundling of product management</span>
+              <span class="thinking-topic">Product Leadership</span>
+            </div>
+            <div class="thinking-desc">AI didn't kill product management. It exposed the bureaucracy. 2026 belongs to PMs who design intent, not process.</div>
+          </a>
+        </li>
+        <li>
+          <a href="/ideas/designing-for-trust-in-mental-health-apps" class="thinking-item">
+            <div class="thinking-header">
+              <span class="thinking-title">Designing for trust in mental health apps: why UX is care</span>
+              <span class="thinking-topic">Trust & High-Stakes Design</span>
+            </div>
+            <div class="thinking-desc">In mental health, every interface decision is a clinical decision. What building for vulnerable users teaches about product design everywhere.</div>
+          </a>
+        </li>
+      </ul>
       <div style="text-align: center; margin-top: 2rem;">
         <a href="/ideas" class="btn btn-secondary">All ideas &rarr;</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Featured Talks -->
-  <section class="fade-in">
-    <div class="container">
-      <div class="section-header">
-        <div class="overline">Speaking & media</div>
-        <h2>Recent talks and interviews</h2>
-      </div>
-      <div class="grid-2">
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/Km9ek5M0XF4?rel=0" title="Protik Roychowdhury talk" loading="lazy" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/3qjUFzx-vZE?rel=0" title="Protik Roychowdhury interview" loading="lazy" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div style="text-align: center; margin-top: 2rem;">
-        <a href="/speaking" class="btn btn-secondary">Speaking topics & booking &rarr;</a>
       </div>
     </div>
   </section>
@@ -331,9 +297,9 @@
           <ul class="footer-links">
             <li><a href="/about">About</a></li>
             <li><a href="/ideas">Ideas</a></li>
-            <li><a href="/speaking">Speaking</a></li>
-            <li><a href="/publications">Publications</a></li>
+            <li><a href="/media">Media</a></li>
             <li><a href="/coaching">Coaching</a></li>
+            <li><a href="/working-with-me">Manual</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
@@ -365,7 +331,6 @@
 
   <script>
   (function() {
-    // Scroll progress for logo collapse
     var root = document.documentElement;
     var ticking = false;
     window.addEventListener('scroll', function() {
@@ -378,7 +343,6 @@
       }
     }, { passive: true });
 
-    // Fade-in on scroll
     var fadeEls = document.querySelectorAll('.fade-in');
     if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       var obs = new IntersectionObserver(function(entries) {

@@ -20,60 +20,64 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "url": "https://protik.info/coaching",
-    "name": "Product Leadership Coaching",
-    "provider": {
-      "@type": "Person",
-      "name": "Protik Roychowdhury",
-      "jobTitle": "VP Product & ICF-Certified Coach"
-    },
-    "description": "ICF-certified career coaching for product managers, founders, and leaders navigating transitions, scaling impact, and leading with clarity.",
-    "serviceType": "Career Coaching",
-    "areaServed": "Worldwide",
-    "availableChannel": {
-      "@type": "ServiceChannel",
-      "serviceType": "Virtual"
-    }
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@graph": [
       {
-        "@type": "Question",
-        "name": "Who is this coaching for?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Product managers at any level (APM to VP), founders scaling their first product team, and leaders transitioning into product or design roles. If you work in tech and want to grow, this is for you."
+        "@type": "Person",
+        "@id": "https://protik.info/#person",
+        "name": "Protik Roychowdhury",
+        "url": "https://protik.info"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://protik.info/coaching",
+        "url": "https://protik.info/coaching",
+        "name": "Product Leadership Coaching",
+        "provider": { "@id": "https://protik.info/#person" },
+        "description": "ICF-certified career coaching for product managers, founders, and leaders navigating transitions, scaling impact, and leading with clarity.",
+        "serviceType": "Career Coaching",
+        "areaServed": "Worldwide",
+        "availableChannel": {
+          "@type": "ServiceChannel",
+          "serviceType": "Virtual"
         }
       },
       {
-        "@type": "Question",
-        "name": "What makes your coaching different?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "I'm not a career coach who read about product management — I live it every day as VP Product at one of Asia's largest mental health platforms. I bring 15+ years of hands-on experience, three startups, and ICF certification together."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How are sessions conducted?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "All sessions are virtual via Zoom and last 60 minutes. I work across all time zones. You'll get frameworks, exercises, and accountability between sessions."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What results can I expect?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Clients typically see clarity on their next career move within 2-3 sessions, improved stakeholder management, stronger product intuition, and often a promotion or successful transition within 3-6 months."
-        }
+        "@type": "FAQPage",
+        "@id": "https://protik.info/coaching#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Who is this coaching for?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Product managers at any level (APM to VP), founders scaling their first product team, and leaders transitioning into product or design roles. If you work in tech and want to grow, this is for you."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What makes your coaching different?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "I'm not a career coach who read about product management — I live it every day as VP Product at one of Asia's largest mental health platforms. I bring 15+ years of hands-on experience, three startups, and ICF certification together."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How are sessions conducted?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "All sessions are virtual via Zoom and last 60 minutes. I work across all time zones. You'll get frameworks, exercises, and accountability between sessions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What results can I expect?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Clients typically see clarity on their next career move within 2-3 sessions, improved stakeholder management, stronger product intuition, and often a promotion or successful transition within 3-6 months."
+            }
+          }
+        ]
       }
     ]
   }
@@ -86,12 +90,11 @@
     <div class="container">
       <a href="/" class="nav-logo"><span>P</span><span class="first-rest">rotik</span><span class="logo-space"></span><span>R</span><span class="last-rest">oychowdhury</span></a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/ideas">Ideas</a></li>
-        <li><a href="/speaking">Speaking</a></li>
-        <li><a href="/publications">Publications</a></li>
+        <li><a href="/media">Media</a></li>
         <li><a href="/coaching" class="active">Coaching</a></li>
+        <li><a href="/working-with-me">Manual</a></li>
         <li><a href="/contact" class="nav-cta">Get in Touch</a></li>
       </ul>
       <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">
@@ -333,9 +336,9 @@
           <ul class="footer-links">
             <li><a href="/about">About</a></li>
             <li><a href="/ideas">Ideas</a></li>
-            <li><a href="/speaking">Speaking</a></li>
-            <li><a href="/publications">Publications</a></li>
+            <li><a href="/media">Media</a></li>
             <li><a href="/coaching">Coaching</a></li>
+            <li><a href="/working-with-me">Manual</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>
         </div>

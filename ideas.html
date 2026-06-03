@@ -20,33 +20,94 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "Ideas — Protik Roychowdhury",
-    "description": "Essays on AI product strategy, trust in high-stakes products, product leadership, mental health technology, and marketplace design.",
-    "author": {
-      "@type": "Person",
-      "@id": "https://protik.info/#person",
-      "name": "Protik Roychowdhury",
-      "url": "https://protik.info"
-    },
-    "blogPost": [
+    "@graph": [
       {
-        "@type": "BlogPosting",
-        "headline": "Payments at Scale: What I Learned Leading Fintech Products at Grab",
-        "datePublished": "2026-05-25",
-        "author": { "@type": "Person", "name": "Protik Roychowdhury" },
-        "url": "https://protik.info/ideas/payments-at-scale-lessons-from-grab",
-        "description": "Lessons from leading Growth, Engagement & Loyalty and Driver Rentals at Grab.",
-        "keywords": ["Marketplace & Platforms", "Fintech", "Payments", "Grab"]
+        "@type": "Person",
+        "@id": "https://protik.info/#person",
+        "name": "Protik Roychowdhury",
+        "url": "https://protik.info"
       },
       {
-        "@type": "BlogPosting",
-        "headline": "Marketplace Lessons from Ola: Supply-Demand, Fraud, and Driver Economics",
-        "datePublished": "2026-05-25",
-        "author": { "@type": "Person", "name": "Protik Roychowdhury" },
-        "url": "https://protik.info/ideas/marketplace-lessons-from-ola",
-        "description": "Two-sided marketplace design at India's largest ride-hailing platform.",
-        "keywords": ["Marketplace & Platforms", "Supply-Demand", "Fraud Prevention", "Ola"]
+        "@type": "Blog",
+        "@id": "https://protik.info/ideas",
+        "name": "Ideas — Protik Roychowdhury",
+        "description": "Essays on AI product strategy, trust in high-stakes products, product leadership, and marketplace design.",
+        "mainEntity": { "@id": "https://protik.info/#person" },
+        "author": { "@id": "https://protik.info/#person" },
+        "blogPost": [
+          {
+            "@type": "BlogPosting",
+            "headline": "Payments at Scale: What I Learned Leading Fintech Products at Grab",
+            "datePublished": "2026-05-25",
+            "author": { "@id": "https://protik.info/#person" },
+            "url": "https://protik.info/ideas/payments-at-scale-lessons-from-grab",
+            "description": "Lessons from leading Growth, Engagement & Loyalty and Driver Rentals at Grab.",
+            "keywords": ["Marketplace & Platforms", "Fintech", "Payments", "Grab"]
+          },
+          {
+            "@type": "BlogPosting",
+            "headline": "Marketplace Lessons from Ola: Supply-Demand, Fraud, and Driver Economics",
+            "datePublished": "2026-05-25",
+            "author": { "@id": "https://protik.info/#person" },
+            "url": "https://protik.info/ideas/marketplace-lessons-from-ola",
+            "description": "Two-sided marketplace design at India's largest ride-hailing platform.",
+            "keywords": ["Marketplace & Platforms", "Supply-Demand", "Fraud Prevention", "Ola"]
+          },
+          {
+            "@type": "BlogPosting",
+            "headline": "The Great Unbundling of Product Management: Why 2026 Belongs to the Impact Architect",
+            "datePublished": "2026-01-15",
+            "author": { "@id": "https://protik.info/#person" },
+            "url": "https://protik.info/ideas/the-great-unbundling-of-product-management",
+            "description": "AI is unbundling the mechanical parts of product management. The PMs who thrive will be Impact Architects.",
+            "keywords": ["Product Leadership", "AI", "Future of PM"]
+          },
+          {
+            "@type": "BlogPosting",
+            "headline": "The ROI of Care: Investing in Mental Health as Infrastructure for Performance",
+            "datePublished": "2025-05-20",
+            "author": { "@id": "https://protik.info/#person" },
+            "url": "https://protik.info/ideas/the-roi-of-care",
+            "description": "Mental health isn't a perk — it's infrastructure. How treating care as a system enables performance at scale.",
+            "keywords": ["Mental Health Technology", "Enterprise", "ROI"]
+          },
+          {
+            "@type": "BlogPosting",
+            "headline": "What Humans Still Do Best, And Why That Should Shape the Future of AI in Mental Health",
+            "datePublished": "2025-05-18",
+            "author": { "@id": "https://protik.info/#person" },
+            "url": "https://protik.info/ideas/what-humans-still-do-best",
+            "description": "AI will transform mental health care — not by replacing humans, but by doing what humans can't so humans can do what AI can't.",
+            "keywords": ["AI Product Strategy", "Mental Health", "Human-AI Balance"]
+          },
+          {
+            "@type": "BlogPosting",
+            "headline": "Designing for Trust in Mental Health Apps: Why UX Is Care",
+            "datePublished": "2025-05-15",
+            "author": { "@id": "https://protik.info/#person" },
+            "url": "https://protik.info/ideas/designing-for-trust-in-mental-health-apps",
+            "description": "In mental health products, trust isn't a feature — it's the product. Five UX principles for designing trust.",
+            "keywords": ["Trust & High-Stakes Design", "UX", "Mental Health"]
+          },
+          {
+            "@type": "BlogPosting",
+            "headline": "When AI Becomes an Echo Chamber: The Ethical Risk to Mental Health",
+            "datePublished": "2025-05-10",
+            "author": { "@id": "https://protik.info/#person" },
+            "url": "https://protik.info/ideas/when-ai-becomes-an-echo-chamber",
+            "description": "Empathy without challenge is not therapy — it's an echo chamber. The ethical risks of validation-optimised AI in mental health.",
+            "keywords": ["AI Product Strategy", "Ethics", "Echo Chambers"]
+          },
+          {
+            "@type": "BlogPosting",
+            "headline": "How AI is Personalising Mental Health Support at Scale",
+            "datePublished": "2025-04-15",
+            "author": { "@id": "https://protik.info/#person" },
+            "url": "https://protik.info/ideas/how-ai-is-personalising-mental-health-support",
+            "description": "Three layers of AI-driven personalisation in mental health — from content matching to clinical augmentation.",
+            "keywords": ["AI Product Strategy", "Personalisation", "Mental Health"]
+          }
+        ]
       }
     ]
   }
@@ -132,12 +193,11 @@
     <div class="container">
       <a href="/" class="nav-logo"><span>P</span><span class="first-rest">rotik</span><span class="logo-space"></span><span>R</span><span class="last-rest">oychowdhury</span></a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/ideas" class="active">Ideas</a></li>
-        <li><a href="/speaking">Speaking</a></li>
-        <li><a href="/publications">Publications</a></li>
+        <li><a href="/media">Media</a></li>
         <li><a href="/coaching">Coaching</a></li>
+        <li><a href="/working-with-me">Manual</a></li>
         <li><a href="/contact" class="nav-cta">Get in Touch</a></li>
       </ul>
       <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">
@@ -161,9 +221,6 @@
   <section>
     <div class="container" style="max-width: 760px;">
 
-      <!-- On-Site Essays -->
-      <div class="section-divider">On protik.info</div>
-
       <a href="/ideas/payments-at-scale-lessons-from-grab" class="idea-card">
         <div class="idea-meta"><span class="idea-pillar">Marketplace & Platforms</span> &middot; May 2026 &middot; 8 min read</div>
         <h3>Payments at scale: what I learned leading fintech products at Grab</h3>
@@ -178,49 +235,46 @@
         <span class="read-link">Read &rarr;</span>
       </a>
 
-      <!-- Medium Essays -->
-      <div class="section-divider">On Medium</div>
-
-      <a href="https://medium.com/@protik/the-great-unbundling-of-product-management-why-2026-belongs-to-the-impact-architect-faddb1f6b372" target="_blank" rel="noopener" class="idea-card">
-        <div class="idea-meta"><span class="idea-pillar">Product Leadership</span> &middot; Jan 2026 &middot; 3 min</div>
-        <h3>The Great Unbundling of Product Management</h3>
+      <a href="/ideas/the-great-unbundling-of-product-management" class="idea-card">
+        <div class="idea-meta"><span class="idea-pillar">Product Leadership</span> &middot; Jan 2026 &middot; 3 min read</div>
+        <h3>The Great Unbundling of Product Management: Why 2026 Belongs to the Impact Architect</h3>
         <p class="preview">AI didn't kill Product Management — it exposed the bureaucracy. The PMs who thrive in this decade will move from managing features to architecting outcomes.</p>
-        <span class="read-link">Read on Medium &rarr;</span>
+        <span class="read-link">Read &rarr;</span>
       </a>
 
-      <a href="https://medium.com/@protik/the-roi-of-care-investing-in-mental-health-as-infrastructure-for-performance-607dbb31461c" target="_blank" rel="noopener" class="idea-card">
-        <div class="idea-meta"><span class="idea-pillar">Mental Health Technology</span> &middot; May 2025 &middot; 4 min</div>
-        <h3>The ROI of Care: Mental Health as Performance Infrastructure</h3>
+      <a href="/ideas/the-roi-of-care" class="idea-card">
+        <div class="idea-meta"><span class="idea-pillar">Mental Health Technology</span> &middot; May 2025 &middot; 4 min read</div>
+        <h3>The ROI of Care: Investing in Mental Health as Infrastructure for Performance</h3>
         <p class="preview">Mental health as a performance multiplier, not a cost centre. How care reduces burnout, cuts absenteeism, and lifts teams.</p>
-        <span class="read-link">Read on Medium &rarr;</span>
+        <span class="read-link">Read &rarr;</span>
       </a>
 
-      <a href="https://medium.com/@protik/what-humans-still-do-best-and-why-that-should-shape-the-future-of-ai-in-mental-health-55f846638d79" target="_blank" rel="noopener" class="idea-card">
-        <div class="idea-meta"><span class="idea-pillar">AI Product Strategy</span> &middot; May 2025 &middot; 4 min</div>
-        <h3>What Humans Still Do Best in AI Mental Health</h3>
+      <a href="/ideas/what-humans-still-do-best" class="idea-card">
+        <div class="idea-meta"><span class="idea-pillar">AI Product Strategy</span> &middot; May 2025 &middot; 4 min read</div>
+        <h3>What Humans Still Do Best, And Why That Should Shape the Future of AI in Mental Health</h3>
         <p class="preview">The future of care isn't human vs AI — it's dynamic orchestration. Knowing when AI leads, when it supports, and when it steps aside entirely.</p>
-        <span class="read-link">Read on Medium &rarr;</span>
+        <span class="read-link">Read &rarr;</span>
       </a>
 
-      <a href="https://medium.com/@protik/designing-for-trust-in-mental-health-apps-why-ux-is-care-07fa5191d9e6" target="_blank" rel="noopener" class="idea-card">
-        <div class="idea-meta"><span class="idea-pillar">Trust & High-Stakes Design</span> &middot; May 2025 &middot; 5 min</div>
+      <a href="/ideas/designing-for-trust-in-mental-health-apps" class="idea-card">
+        <div class="idea-meta"><span class="idea-pillar">Trust & High-Stakes Design</span> &middot; May 2025 &middot; 5 min read</div>
         <h3>Designing for Trust in Mental Health Apps: Why UX Is Care</h3>
         <p class="preview">In mental health apps, UX is not a wrapper around care — it is the care. Trust begins the moment someone sees the sign-up button.</p>
-        <span class="read-link">Read on Medium &rarr;</span>
+        <span class="read-link">Read &rarr;</span>
       </a>
 
-      <a href="https://medium.com/@protik/when-ai-becomes-an-echo-chamber-the-ethical-risk-to-mental-health-dd2037f68d16" target="_blank" rel="noopener" class="idea-card">
-        <div class="idea-meta"><span class="idea-pillar">Trust & High-Stakes Design</span> &middot; May 2025 &middot; 4 min</div>
+      <a href="/ideas/when-ai-becomes-an-echo-chamber" class="idea-card">
+        <div class="idea-meta"><span class="idea-pillar">AI Product Strategy</span> &middot; May 2025 &middot; 4 min read</div>
         <h3>When AI Becomes an Echo Chamber: The Ethical Risk to Mental Health</h3>
         <p class="preview">If AI simply affirms users without reflection, it risks doing significant harm. In mental health, AI cannot just be a friendly mirror — it needs to be an ethical guide.</p>
-        <span class="read-link">Read on Medium &rarr;</span>
+        <span class="read-link">Read &rarr;</span>
       </a>
 
-      <a href="https://medium.com/@protik/how-ai-is-personalising-mental-health-support-at-scale-61ffac672eee" target="_blank" rel="noopener" class="idea-card">
-        <div class="idea-meta"><span class="idea-pillar">AI Product Strategy</span> &middot; Apr 2025 &middot; 4 min</div>
+      <a href="/ideas/how-ai-is-personalising-mental-health-support" class="idea-card">
+        <div class="idea-meta"><span class="idea-pillar">AI Product Strategy</span> &middot; Apr 2025 &middot; 4 min read</div>
         <h3>How AI is Personalising Mental Health Support at Scale</h3>
         <p class="preview">Personalisation at scale is the real frontier of AI in mental health. How machine learning enables adaptive interventions across languages and cultures.</p>
-        <span class="read-link">Read on Medium &rarr;</span>
+        <span class="read-link">Read &rarr;</span>
       </a>
 
     </div>
@@ -255,7 +309,7 @@
         <p style="max-width: 540px; margin: 0.5rem auto;">Protik writes and speaks on AI product strategy, product leadership, trust, and high-stakes digital products. For speaking, media, or advisory inquiries:</p>
         <div style="display: flex; gap: 0.8rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap;">
           <a href="/contact" class="btn btn-primary">Get in touch &rarr;</a>
-          <a href="/speaking" class="btn btn-secondary">Speaking topics</a>
+          <a href="/media" class="btn btn-secondary">Speaking topics</a>
         </div>
       </div>
     </div>
@@ -279,9 +333,9 @@
           <ul class="footer-links">
             <li><a href="/about">About</a></li>
             <li><a href="/ideas">Ideas</a></li>
-            <li><a href="/speaking">Speaking</a></li>
-            <li><a href="/publications">Publications</a></li>
+            <li><a href="/media">Media</a></li>
             <li><a href="/coaching">Coaching</a></li>
+            <li><a href="/working-with-me">Manual</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
