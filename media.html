@@ -27,7 +27,12 @@
         "name": "Protik Roychowdhury",
         "url": "https://protik.info",
         "jobTitle": "VP Product",
-        "worksFor": { "@type": "Organization", "name": "Intellect", "url": "https://intellect.co" },
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Intellect",
+          "url": "https://intellect.co",
+          "sameAs": "https://www.wikidata.org/wiki/Q117433953"
+        },
         "knowsAbout": [
           "AI Product Strategy",
           "Trusted AI",
@@ -43,6 +48,13 @@
         ]
       },
       {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://protik.info/" },
+          { "@type": "ListItem", "position": 2, "name": "Media", "item": "https://protik.info/media" }
+        ]
+      },
+      {
         "@type": "CollectionPage",
         "@id": "https://protik.info/media",
         "name": "Media — Protik Roychowdhury | Speaking, Research & Press",
@@ -55,7 +67,11 @@
             "name": "The RISE Protocol: A Proposed Framework to Reduce Time-to-Intervention in AI-Driven Mental Health Risk Detection",
             "author": { "@id": "https://protik.info/#person" },
             "datePublished": "2025-08-26",
-            "publisher": { "@type": "Organization", "name": "JMIR Preprints" },
+            "publisher": {
+              "@type": "Organization",
+              "name": "JMIR Preprints",
+              "sameAs": "https://www.wikidata.org/wiki/Q42603953"
+            },
             "url": "https://doi.org/10.2196/preprints.82983"
           },
           {
@@ -66,7 +82,11 @@
               { "@id": "https://protik.info/#person" }
             ],
             "datePublished": "2025-09-01",
-            "publisher": { "@type": "Organization", "name": "medRxiv" },
+            "publisher": {
+              "@type": "Organization",
+              "name": "medRxiv",
+              "sameAs": "https://www.wikidata.org/wiki/Q58465450"
+            },
             "url": "https://doi.org/10.1101/2025.09.01.25334495"
           },
           {
@@ -81,7 +101,11 @@
               { "@type": "Person", "name": "Sumit Chauhan" }
             ],
             "datePublished": "2025-09-26",
-            "publisher": { "@type": "Organization", "name": "PsyArXiv" },
+            "publisher": {
+              "@type": "Organization",
+              "name": "PsyArXiv",
+              "sameAs": "https://www.wikidata.org/wiki/Q61888250"
+            },
             "url": "https://doi.org/10.31234/osf.io/ykn2c"
           }
         ]
@@ -89,7 +113,11 @@
       {
         "@type": "Event",
         "name": "Martechvibe Unlocked Summit",
-        "location": { "@type": "Place", "name": "Singapore" },
+        "location": {
+          "@type": "Place",
+          "name": "Singapore",
+          "sameAs": "https://www.wikidata.org/wiki/Q334"
+        },
         "startDate": "2024",
         "subEvent": {
           "@type": "Event",
@@ -113,17 +141,20 @@
   <style>
     .talk-card {
       padding: 1.5rem;
-      border: 0.5px solid var(--border-color);
-      border-radius: var(--radius-md);
+      background: var(--bg-card);
+      border-radius: var(--radius);
       transition: var(--transition);
     }
-    .talk-card:hover { border-color: var(--accent); }
+    .talk-card:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
     .talk-format {
       font-size: 0.65rem;
       font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--accent);
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
       margin-bottom: 0.5rem;
     }
     .talk-card h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
@@ -134,12 +165,6 @@
       font-style: italic;
       margin-bottom: 0.6rem;
     }
-    .talk-detail {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-bottom: 0.3rem;
-    }
-    .talk-detail strong { color: var(--text-secondary); font-weight: 500; }
     .takeaways {
       list-style: none;
       padding: 0;
@@ -158,16 +183,30 @@
       left: 0;
       color: var(--text-muted);
     }
+    .format-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    .format-item h3 {
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
+    .format-item p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
     .bio-block {
       padding: 1.5rem;
-      border: 0.5px solid var(--border-color);
-      border-radius: var(--radius-md);
+      background: var(--bg-card);
+      border-radius: var(--radius);
       margin-bottom: 1rem;
     }
     .bio-block h4 {
       font-size: 0.7rem;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.08em;
       color: var(--text-muted);
       margin-bottom: 0.6rem;
     }
@@ -180,7 +219,7 @@
       font-size: 0.7rem;
       color: var(--text-muted);
       text-transform: uppercase;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.08em;
       font-weight: 500;
       margin-bottom: 0.15rem;
     }
@@ -192,33 +231,35 @@
     .appearance-card {
       display: block;
       padding: 1.2rem;
-      border: 0.5px solid var(--border-color);
-      border-radius: var(--radius-md);
+      background: var(--bg-card);
+      border-radius: var(--radius);
       transition: var(--transition);
       text-decoration: none;
     }
-    .appearance-card:hover { border-color: var(--accent); }
+    .appearance-card:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
     .appearance-date {
       font-size: 0.7rem;
       font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.08em;
       color: var(--text-muted);
       margin-bottom: 0.3rem;
     }
     .appearance-card h4 { font-size: 0.95rem; margin-bottom: 0.3rem; }
     .appearance-card p { font-size: 0.8rem; color: var(--text-muted); }
-    .press-index {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 0.4rem 2rem;
+    .press-list {
+      display: flex;
+      flex-direction: column;
     }
     .press-row {
       display: flex;
       align-items: baseline;
       gap: 0.6rem;
       padding: 0.5rem 0;
-      border-bottom: 0.5px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
       text-decoration: none;
       transition: var(--transition);
     }
@@ -230,7 +271,7 @@
       letter-spacing: 0.04em;
       color: var(--text-muted);
       white-space: nowrap;
-      min-width: 100px;
+      min-width: 120px;
     }
     .press-title {
       font-size: 0.85rem;
@@ -238,6 +279,15 @@
       line-height: 1.4;
     }
     .press-row:hover .press-title { color: var(--accent); }
+    .stage-photo {
+      width: 100%;
+      border-radius: var(--radius);
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+    @media (max-width: 768px) {
+      .format-list { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -261,7 +311,7 @@
   </nav>
 
   <!-- Hero -->
-  <section class="hero" style="min-height: auto; padding: 10rem 0 3rem;">
+  <section class="hero" style="padding: 8rem 0 2.5rem;" aria-label="Page introduction">
     <div class="container">
       <div class="hero-content">
         <div class="hero-label"><span class="dot"></span> Media</div>
@@ -271,351 +321,381 @@
     </div>
   </section>
 
+  <main>
+
   <!-- Stage Photos -->
-  <section class="fade-in" style="padding-top: 0;">
+  <section class="gap-tight fade-in" aria-label="Stage photos">
     <div class="container">
       <div class="grid-2">
         <div>
-          <img src="images/speaking.jpg" alt="Protik Roychowdhury speaking on product leadership" width="600" height="338" loading="lazy" style="width: 100%; border-radius: var(--radius-md); border: 0.5px solid var(--border-color); height: 280px; object-fit: cover;">
+          <img src="images/speaking.jpg" alt="Protik Roychowdhury speaking on product leadership" width="600" height="338" loading="lazy" class="stage-photo">
         </div>
         <div>
-          <img src="images/Martechvibe.jpeg" alt="Protik Roychowdhury on fireside chat panel at Martechvibe Unlocked Summit" width="2048" height="1365" loading="lazy" style="width: 100%; border-radius: var(--radius-md); border: 0.5px solid var(--border-color); height: 280px; object-fit: cover;">
+          <img src="images/Martechvibe.jpeg" alt="Protik Roychowdhury on fireside chat panel at Martechvibe Unlocked Summit" width="2048" height="1365" loading="lazy" class="stage-photo">
         </div>
       </div>
     </div>
   </section>
 
   <!-- Signature Talks -->
-  <section class="fade-in">
+  <section class="gap-major fade-in" aria-label="Signature talks">
     <div class="container">
-      <div class="section-header">
-        <div class="overline">Signature talks</div>
-        <h2>What I speak about</h2>
-      </div>
-      <div class="grid-2">
+      <div class="section-layout">
+        <aside class="section-sidebar">
+          <div class="overline">Signature talks</div>
+          <h2>What I speak about</h2>
+        </aside>
+        <div class="section-content">
+          <div class="grid-2">
 
-        <div class="talk-card">
-          <div class="talk-format">Keynote &middot; 30-45 min</div>
-          <h3>From Roadmaps to Judgement: What Product Leaders Need in the AI Era</h3>
-          <div class="talk-audience">For product conferences, leadership summits, and anyone rethinking what PMs actually do now.</div>
-          <p>AI has commoditised execution. The PMs who thrive next won't be the ones with the best frameworks — they'll be the ones with the sharpest judgement. This talk examines what changes and what doesn't when AI reshapes how products get built.</p>
-          <ul class="takeaways">
-            <li>Why process-heavy product management is becoming a liability</li>
-            <li>How to develop product judgement that AI can't replicate</li>
-            <li>A practical framework for deciding what to automate vs. what to protect</li>
-          </ul>
+            <div class="talk-card" data-talk-format="keynote" data-talk-duration="30-45 min">
+              <div class="talk-format">Keynote &middot; 30-45 min</div>
+              <h3>From Roadmaps to Judgement: What Product Leaders Need in the AI Era</h3>
+              <div class="talk-audience">For product conferences, leadership summits, and anyone rethinking what PMs actually do now.</div>
+              <p>AI has commoditised execution. The PMs who thrive next won't be the ones with the best frameworks — they'll be the ones with the sharpest judgement. This talk examines what changes and what doesn't when AI reshapes how products get built.</p>
+              <ul class="takeaways">
+                <li>Why process-heavy product management is becoming a liability</li>
+                <li>How to develop product judgement that AI can't replicate</li>
+                <li>A practical framework for deciding what to automate vs. what to protect</li>
+              </ul>
+            </div>
+
+            <div class="talk-card" data-talk-format="keynote" data-talk-duration="30-45 min">
+              <div class="talk-format">Keynote &middot; 30-45 min</div>
+              <h3>Building AI Products People Can Trust</h3>
+              <div class="talk-audience">For AI conferences, product & design events, and teams shipping AI in regulated or high-stakes domains.</div>
+              <p>Most AI products fail not because the model is wrong, but because the trust design is missing. Drawing from shipping AI features at Intellect for 4M+ users in mental health, this talk provides a product-led framework for building AI that earns — and keeps — user trust.</p>
+              <ul class="takeaways">
+                <li>The three layers of trust in AI products: transparency, control, and recourse</li>
+                <li>Why high-stakes domains reveal trust failures that consumer AI hides</li>
+                <li>Real examples of trust design decisions from mental health AI</li>
+              </ul>
+            </div>
+
+            <div class="talk-card" data-talk-format="keynote" data-talk-duration="30-45 min">
+              <div class="talk-format">Keynote / Panel &middot; 30-45 min</div>
+              <h3>Why UX Is Care: Lessons from Mental Health Product Design</h3>
+              <div class="talk-audience">For design conferences, healthtech events, and anyone building products where getting it wrong causes real harm.</div>
+              <p>In mental health technology, every interface decision is a clinical decision. Every friction point is a potential moment of harm. This talk explores what building products for vulnerable users teaches us about product design everywhere.</p>
+              <ul class="takeaways">
+                <li>How designing for harm-avoidance improves products even outside healthcare</li>
+                <li>The tension between personalisation and safety in AI-driven care</li>
+                <li>What every PM can learn from clinical product governance</li>
+              </ul>
+            </div>
+
+            <div class="talk-card" data-talk-format="workshop" data-talk-duration="45-60 min">
+              <div class="talk-format">Workshop / Panel &middot; 45-60 min</div>
+              <h3>Scaling Product Teams Without Killing Product Judgement</h3>
+              <div class="talk-audience">For VP/CPO audiences, product leadership events, and scaling-stage companies figuring out how to grow without going numb.</div>
+              <p>Most scaling advice optimises for throughput. This talk optimises for judgement — how to grow a product team from 3 to 20+ while keeping the strategic thinking that made the small team effective.</p>
+              <ul class="takeaways">
+                <li>The "admin tax" problem and how to diagnose it early</li>
+                <li>Pod structures that preserve context without creating silos</li>
+                <li>When to hire senior vs. grow junior PMs — and the common mistake</li>
+              </ul>
+            </div>
+
+            <div class="talk-card" data-talk-format="keynote" data-talk-duration="30-45 min">
+              <div class="talk-format">Keynote / Panel &middot; 30-45 min</div>
+              <h3>AI, Personalisation, and the Future of Mental Health Support</h3>
+              <div class="talk-audience">For healthtech events, AI conferences, HR/wellbeing leaders, and investors looking at digital health.</div>
+              <p>How AI is transforming mental health from one-size-fits-all to adaptive, personalised care. Drawing on Intellect's work serving 4M+ users across cultures and languages, this talk examines what works, what's risky, and what's next.</p>
+              <ul class="takeaways">
+                <li>How AI triage and matching improve therapy outcomes at scale</li>
+                <li>The bias problem in LLMs for mental health — real data from 9 models</li>
+                <li>Why the future of care is hybrid, not fully automated</li>
+              </ul>
+            </div>
+
+            <div class="talk-card" data-talk-format="fireside" data-talk-duration="30-45 min">
+              <div class="talk-format">Fireside Chat &middot; 30-45 min</div>
+              <h3>What High-Stakes Products Can Teach Us About Trust</h3>
+              <div class="talk-audience">For product conferences, fintech/healthtech events, and leaders who want trust as a competitive advantage, not a compliance checkbox.</div>
+              <p>From marketplace fraud at Ola to clinical safety at Intellect — a journey through building products where getting it wrong isn't just bad UX, it's real harm. The trust principles that emerge apply to every product category.</p>
+              <ul class="takeaways">
+                <li>How trust compounds — and how quickly it collapses</li>
+                <li>The fraud-to-safety pipeline: marketplace lessons applied to health</li>
+                <li>Why trust is the only moat that survives AI commoditisation</li>
+              </ul>
+            </div>
+
+          </div>
         </div>
-
-        <div class="talk-card">
-          <div class="talk-format">Keynote &middot; 30-45 min</div>
-          <h3>Building AI Products People Can Trust</h3>
-          <div class="talk-audience">For AI conferences, product & design events, and teams shipping AI in regulated or high-stakes domains.</div>
-          <p>Most AI products fail not because the model is wrong, but because the trust design is missing. Drawing from shipping AI features at Intellect for 4M+ users in mental health, this talk provides a product-led framework for building AI that earns — and keeps — user trust.</p>
-          <ul class="takeaways">
-            <li>The three layers of trust in AI products: transparency, control, and recourse</li>
-            <li>Why high-stakes domains reveal trust failures that consumer AI hides</li>
-            <li>Real examples of trust design decisions from mental health AI</li>
-          </ul>
-        </div>
-
-        <div class="talk-card">
-          <div class="talk-format">Keynote / Panel &middot; 30-45 min</div>
-          <h3>Why UX Is Care: Lessons from Mental Health Product Design</h3>
-          <div class="talk-audience">For design conferences, healthtech events, and anyone building products where getting it wrong causes real harm.</div>
-          <p>In mental health technology, every interface decision is a clinical decision. Every friction point is a potential moment of harm. This talk explores what building products for vulnerable users teaches us about product design everywhere.</p>
-          <ul class="takeaways">
-            <li>How designing for harm-avoidance improves products even outside healthcare</li>
-            <li>The tension between personalisation and safety in AI-driven care</li>
-            <li>What every PM can learn from clinical product governance</li>
-          </ul>
-        </div>
-
-        <div class="talk-card">
-          <div class="talk-format">Workshop / Panel &middot; 45-60 min</div>
-          <h3>Scaling Product Teams Without Killing Product Judgement</h3>
-          <div class="talk-audience">For VP/CPO audiences, product leadership events, and scaling-stage companies figuring out how to grow without going numb.</div>
-          <p>Most scaling advice optimises for throughput. This talk optimises for judgement — how to grow a product team from 3 to 20+ while keeping the strategic thinking that made the small team effective.</p>
-          <ul class="takeaways">
-            <li>The "admin tax" problem and how to diagnose it early</li>
-            <li>Pod structures that preserve context without creating silos</li>
-            <li>When to hire senior vs. grow junior PMs — and the common mistake</li>
-          </ul>
-        </div>
-
-        <div class="talk-card">
-          <div class="talk-format">Keynote / Panel &middot; 30-45 min</div>
-          <h3>AI, Personalisation, and the Future of Mental Health Support</h3>
-          <div class="talk-audience">For healthtech events, AI conferences, HR/wellbeing leaders, and investors looking at digital health.</div>
-          <p>How AI is transforming mental health from one-size-fits-all to adaptive, personalised care. Drawing on Intellect's work serving 4M+ users across cultures and languages, this talk examines what works, what's risky, and what's next.</p>
-          <ul class="takeaways">
-            <li>How AI triage and matching improve therapy outcomes at scale</li>
-            <li>The bias problem in LLMs for mental health — real data from 9 models</li>
-            <li>Why the future of care is hybrid, not fully automated</li>
-          </ul>
-        </div>
-
-        <div class="talk-card">
-          <div class="talk-format">Fireside Chat &middot; 30-45 min</div>
-          <h3>What High-Stakes Products Can Teach Us About Trust</h3>
-          <div class="talk-audience">For product conferences, fintech/healthtech events, and leaders who want trust as a competitive advantage, not a compliance checkbox.</div>
-          <p>From marketplace fraud at Ola to clinical safety at Intellect — a journey through building products where getting it wrong isn't just bad UX, it's real harm. The trust principles that emerge apply to every product category.</p>
-          <ul class="takeaways">
-            <li>How trust compounds — and how quickly it collapses</li>
-            <li>The fraud-to-safety pipeline: marketplace lessons applied to health</li>
-            <li>Why trust is the only moat that survives AI commoditisation</li>
-          </ul>
-        </div>
-
       </div>
     </div>
   </section>
 
   <!-- Formats -->
-  <section class="fade-in">
+  <section class="gap-standard fade-in" aria-label="Speaking formats">
     <div class="container">
-      <div class="section-header">
-        <div class="overline">Formats</div>
-        <h2>How I can contribute</h2>
-      </div>
-      <div class="grid-4">
-        <div class="card">
-          <h3>Keynotes</h3>
-          <p>30-45 minute talks with Q&A. In-person or virtual. Can be customised to your event theme.</p>
-        </div>
-        <div class="card">
-          <h3>Panels</h3>
-          <p>Moderated or panelist roles on AI, product, trust, mental health, or marketplace topics.</p>
-        </div>
-        <div class="card">
-          <h3>Workshops</h3>
-          <p>Interactive 60-90 minute sessions. Best for product teams, leadership groups, and offsites.</p>
-        </div>
-        <div class="card">
-          <h3>Podcasts</h3>
-          <p>Guest interviews on product, AI, mental health tech, founder journeys, and leadership.</p>
+      <div class="section-layout">
+        <aside class="section-sidebar">
+          <div class="overline">Formats</div>
+          <h2>How I can contribute</h2>
+        </aside>
+        <div class="section-content">
+          <div class="format-list">
+            <div class="format-item">
+              <h3>Keynotes</h3>
+              <p>30-45 minute talks with Q&A. In-person or virtual. Can be customised to your event theme.</p>
+            </div>
+            <div class="format-item">
+              <h3>Panels</h3>
+              <p>Moderated or panelist roles on AI, product, trust, mental health, or marketplace topics.</p>
+            </div>
+            <div class="format-item">
+              <h3>Workshops</h3>
+              <p>Interactive 60-90 minute sessions. Best for product teams, leadership groups, and offsites.</p>
+            </div>
+            <div class="format-item">
+              <h3>Podcasts</h3>
+              <p>Guest interviews on product, AI, mental health tech, founder journeys, and leadership.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Past Appearances -->
-  <section class="fade-in">
+  <section class="gap-standard fade-in" aria-label="Past appearances">
     <div class="container">
-      <div class="section-header">
-        <div class="overline">Past appearances</div>
-        <h2>Where I've spoken</h2>
-      </div>
-      <div class="grid-2">
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/Km9ek5M0XF4?rel=0" title="Protik Roychowdhury — AI Product Leadership" loading="lazy" allowfullscreen></iframe>
+      <div class="section-layout">
+        <aside class="section-sidebar">
+          <div class="overline">Past appearances</div>
+          <h2>Where I've spoken</h2>
+        </aside>
+        <div class="section-content">
+          <div class="grid-2">
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/Km9ek5M0XF4?rel=0" title="Protik Roychowdhury — AI Product Leadership" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/3qjUFzx-vZE?rel=0" title="Protik Roychowdhury — Product Management Interview" loading="lazy" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="grid-2" style="margin-top: 1rem;">
+            <a href="https://martechvibe.com/video/cross-border-success-through-hyper-localisation-and-geo-targeting/" target="_blank" rel="noopener" class="appearance-card" data-event="Martechvibe Unlocked Summit" data-year="2024" data-format="fireside">
+              <div class="appearance-date">2024 &middot; Fireside Chat</div>
+              <h4>Martechvibe Unlocked Summit</h4>
+              <p>Cross-Border Success Through Hyper-Localisation and Geo-Targeting. Singapore.</p>
+            </a>
+            <a href="https://podcasts.apple.com/ca/podcast/episode-43-protik-roychowdhury-intellect/id1515068055?i=1000652937970" target="_blank" rel="noopener" class="appearance-card" data-event="The Product Un(censored) Show" data-format="podcast">
+              <div class="appearance-date">Podcast &middot; Episode 43</div>
+              <h4>The Product Un(censored) Show</h4>
+              <p>Deep-dive on building AI mental health products and scaling across APAC.</p>
+            </a>
+          </div>
         </div>
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/3qjUFzx-vZE?rel=0" title="Protik Roychowdhury — Product Management Interview" loading="lazy" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="grid-3" style="margin-top: 1rem;">
-        <a href="https://martechvibe.com/video/cross-border-success-through-hyper-localisation-and-geo-targeting/" target="_blank" rel="noopener" class="appearance-card">
-          <div class="appearance-date">2024 &middot; Fireside Chat</div>
-          <h4>Martechvibe Unlocked Summit</h4>
-          <p>Cross-Border Success Through Hyper-Localisation and Geo-Targeting. Singapore.</p>
-        </a>
-        <a href="https://podcasts.apple.com/ca/podcast/episode-43-protik-roychowdhury-intellect/id1515068055?i=1000652937970" target="_blank" rel="noopener" class="appearance-card">
-          <div class="appearance-date">Podcast &middot; Episode 43</div>
-          <h4>The Product Un(censored) Show</h4>
-          <p>Deep-dive on building AI mental health products and scaling across APAC.</p>
-        </a>
       </div>
     </div>
   </section>
 
   <!-- Research -->
-  <section class="fade-in">
+  <section class="gap-standard fade-in" aria-label="Academic research">
     <div class="container">
-      <div class="section-header">
-        <div class="overline">Research</div>
-        <h2>Academic publications</h2>
-        <p>Preprint research on AI safety, therapist quality, and LLM bias — published on JMIR Preprints, medRxiv, and PsyArXiv.</p>
-      </div>
-      <div class="grid-3">
-        <a href="https://doi.org/10.2196/preprints.82983" target="_blank" rel="noopener" class="card" style="text-decoration: none;">
-          <div style="font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.4rem;">JMIR Preprints &middot; Aug 2025</div>
-          <h3>The RISE Protocol: Reducing Time-to-Intervention in AI-Driven Mental Health Risk Detection</h3>
-          <p>A framework addressing the Safety Paradox — where responsible AI safeguards can inadvertently delay intervention in time-critical situations. Proposes a four-stage protocol for reducing detection-to-action latency in AI-assisted risk systems. Sole author.</p>
-        </a>
-        <a href="https://doi.org/10.1101/2025.09.01.25334495" target="_blank" rel="noopener" class="card" style="text-decoration: none;">
-          <div style="font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.4rem;">medRxiv &middot; Sep 2025</div>
-          <h3>The Provider GPA: A Composite Framework for Evaluating Digital Therapist Quality</h3>
-          <p>A multidimensional quality metric combining engagement signals, reliability indicators, and client feedback to evaluate service provider performance at platform scale. Applicable to any two-sided marketplace with quality-sensitive supply. Co-authored with Oliver S&uuml;ndermann.</p>
-        </a>
-        <a href="https://doi.org/10.31234/osf.io/ykn2c" target="_blank" rel="noopener" class="card" style="text-decoration: none;">
-          <div style="font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.4rem;">PsyArXiv &middot; Sep 2025</div>
-          <h3>Bias in Large Language Models for Mental Health: Vignette-Based Evaluation Across Nine Models</h3>
-          <p>Systematic evaluation revealing demographic biases in how large language models assess clinical scenarios. Tests 9 models against standardised vignettes to quantify inconsistencies across age, gender, and ethnicity. Co-authored with Lerh, Fang, S&uuml;ndermann, Sinha &amp; Chauhan.</p>
-        </a>
+      <div class="section-layout">
+        <aside class="section-sidebar">
+          <div class="overline">Research</div>
+          <h2>Academic publications</h2>
+          <p>Preprint research on AI safety, therapist quality, and LLM bias.</p>
+        </aside>
+        <div class="section-content">
+          <div class="grid-3">
+            <a href="https://doi.org/10.2196/preprints.82983" target="_blank" rel="noopener" class="card" style="text-decoration: none;" data-publisher="JMIR Preprints" data-date="2025-08">
+              <div style="font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.4rem;">JMIR Preprints &middot; Aug 2025</div>
+              <h3>The RISE Protocol: Reducing Time-to-Intervention in AI-Driven Mental Health Risk Detection</h3>
+              <p>A framework addressing the Safety Paradox — where responsible AI safeguards can inadvertently delay intervention in time-critical situations. Proposes a four-stage protocol for reducing detection-to-action latency in AI-assisted risk systems. Sole author.</p>
+            </a>
+            <a href="https://doi.org/10.1101/2025.09.01.25334495" target="_blank" rel="noopener" class="card" style="text-decoration: none;" data-publisher="medRxiv" data-date="2025-09">
+              <div style="font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.4rem;">medRxiv &middot; Sep 2025</div>
+              <h3>The Provider GPA: A Composite Framework for Evaluating Digital Therapist Quality</h3>
+              <p>A multidimensional quality metric combining engagement signals, reliability indicators, and client feedback to evaluate service provider performance at platform scale. Applicable to any two-sided marketplace with quality-sensitive supply. Co-authored with Oliver S&uuml;ndermann.</p>
+            </a>
+            <a href="https://doi.org/10.31234/osf.io/ykn2c" target="_blank" rel="noopener" class="card" style="text-decoration: none;" data-publisher="PsyArXiv" data-date="2025-09">
+              <div style="font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.4rem;">PsyArXiv &middot; Sep 2025</div>
+              <h3>Bias in Large Language Models for Mental Health: Vignette-Based Evaluation Across Nine Models</h3>
+              <p>Systematic evaluation revealing demographic biases in how large language models assess clinical scenarios. Tests 9 models against standardised vignettes to quantify inconsistencies across age, gender, and ethnicity. Co-authored with Lerh, Fang, S&uuml;ndermann, Sinha &amp; Chauhan.</p>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Writing -->
-  <section class="fade-in">
+  <section class="gap-standard fade-in" aria-label="Blog and articles">
     <div class="container">
-      <div class="section-header">
-        <div class="overline">Writing</div>
-        <h2>Blog & articles</h2>
-        <p>Original thinking on AI, product leadership, trust, personalisation, and the future of product management.</p>
-      </div>
-      <div class="grid-3">
-        <a href="https://intellect.co/read/ai-mental-health-humanity" target="_blank" rel="noopener" class="card" style="text-decoration: none;">
-          <div style="font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); margin-bottom: 0.4rem;">Intellect &middot; Jun 2025</div>
-          <h3>AI, Mental Health and Humanity</h3>
-          <p>On the responsibility of building AI for mental health — why ethics, clinical alignment, and human oversight aren't optional.</p>
-        </a>
-        <a href="https://intellect.co/read/ai-therapy-echo-chamber" target="_blank" rel="noopener" class="card" style="text-decoration: none;">
-          <div style="font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); margin-bottom: 0.4rem;">Intellect &middot; May 2025</div>
-          <h3>AI Therapy and the Echo Chamber</h3>
-          <p>Why AI therapy risks reinforcing biases instead of challenging them — and what product teams can do about it.</p>
-        </a>
-        <a href="https://intellect.co/read/ai-mental-health-personalisation" target="_blank" rel="noopener" class="card" style="text-decoration: none;">
-          <div style="font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); margin-bottom: 0.4rem;">Intellect &middot; May 2025</div>
-          <h3>AI and Mental Health: Personalisation</h3>
-          <p>How Intellect uses AI to personalise mental health interventions — matching the right care to the right person at the right time.</p>
-        </a>
-        <a href="/ideas/the-great-unbundling-of-product-management" class="card" style="text-decoration: none;">
-          <div style="font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); margin-bottom: 0.4rem;">protik.info &middot; Jan 2026 &middot; 3 min</div>
-          <h3>The Great Unbundling of Product Management</h3>
-          <p>AI didn't kill Product Management. It exposed the bureaucracy. 2026 belongs to PMs who design intent, not process.</p>
-        </a>
-        <a href="/ideas/the-roi-of-care" class="card" style="text-decoration: none;">
-          <div style="font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); margin-bottom: 0.4rem;">protik.info &middot; May 2025 &middot; 4 min</div>
-          <h3>The ROI of Care: Mental Health as Performance Infrastructure</h3>
-          <p>Mental health as a performance multiplier, not a cost centre. How care reduces burnout, cuts absenteeism, and lifts teams.</p>
-        </a>
-        <a href="/ideas/what-humans-still-do-best" class="card" style="text-decoration: none;">
-          <div style="font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); margin-bottom: 0.4rem;">protik.info &middot; May 2025 &middot; 4 min</div>
-          <h3>What Humans Still Do Best in AI Mental Health</h3>
-          <p>The future of care isn't human vs AI — it's dynamic orchestration. Knowing when to step up and when to step back.</p>
-        </a>
-      </div>
-      <div style="text-align: center; margin-top: 2rem;">
-        <a href="/ideas" class="btn btn-secondary">All writing &rarr;</a>
+      <div class="section-layout">
+        <aside class="section-sidebar">
+          <div class="overline">Writing</div>
+          <h2>Blog & articles</h2>
+          <p>Original thinking on AI, product leadership, trust, and the future of product management.</p>
+        </aside>
+        <div class="section-content">
+          <div class="grid-2">
+            <a href="https://intellect.co/read/ai-mental-health-and-humanity/" target="_blank" rel="noopener" class="card" style="text-decoration: none;">
+              <div style="font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.4rem;">Intellect &middot; Jun 2025</div>
+              <h3>AI, Mental Health and Humanity</h3>
+              <p>On the responsibility of building AI for mental health — why ethics, clinical alignment, and human oversight aren't optional.</p>
+            </a>
+            <a href="https://intellect.co/read/ai-therapy-echo-chamber/" target="_blank" rel="noopener" class="card" style="text-decoration: none;">
+              <div style="font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.4rem;">Intellect &middot; May 2025</div>
+              <h3>AI Therapy and the Echo Chamber</h3>
+              <p>Why AI therapy risks reinforcing biases instead of challenging them — and what product teams can do about it.</p>
+            </a>
+            <a href="https://intellect.co/read/ai-and-mental-health-personalisation/" target="_blank" rel="noopener" class="card" style="text-decoration: none;">
+              <div style="font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.4rem;">Intellect &middot; May 2025</div>
+              <h3>AI and Mental Health: Personalisation</h3>
+              <p>How Intellect uses AI to personalise mental health interventions — matching the right care to the right person at the right time.</p>
+            </a>
+            <a href="/ideas/the-great-unbundling-of-product-management" class="card" style="text-decoration: none;">
+              <div style="font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.4rem;">protik.info &middot; Jan 2026 &middot; 3 min</div>
+              <h3>The Great Unbundling of Product Management</h3>
+              <p>AI didn't kill Product Management. It exposed the bureaucracy. 2026 belongs to PMs who design intent, not process.</p>
+            </a>
+            <a href="/ideas/the-roi-of-care" class="card" style="text-decoration: none;">
+              <div style="font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.4rem;">protik.info &middot; May 2025 &middot; 4 min</div>
+              <h3>The ROI of Care: Mental Health as Performance Infrastructure</h3>
+              <p>Mental health as a performance multiplier, not a cost centre. How care reduces burnout, cuts absenteeism, and lifts teams.</p>
+            </a>
+            <a href="/ideas/what-humans-still-do-best" class="card" style="text-decoration: none;">
+              <div style="font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.4rem;">protik.info &middot; May 2025 &middot; 4 min</div>
+              <h3>What Humans Still Do Best in AI Mental Health</h3>
+              <p>The future of care isn't human vs AI — it's dynamic orchestration. Knowing when to step up and when to step back.</p>
+            </a>
+          </div>
+          <div style="margin-top: 2rem;">
+            <a href="/ideas" class="btn btn-secondary">All writing &rarr;</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Press -->
-  <section class="fade-in">
+  <section class="gap-standard fade-in" aria-label="Press coverage">
     <div class="container">
-      <div class="section-header">
-        <div class="overline">In the press</div>
-        <h2>News & media coverage</h2>
-        <p>Features, interviews, and expert commentary in leading technology and business publications.</p>
-      </div>
-      <div class="press-index">
-        <a href="https://economictimes.indiatimes.com/small-biz/startups/exotel-to-buy-singapores-social-media-startup-croak-it/articleshow/46105110.cms" target="_blank" rel="noopener" class="press-row">
-          <span class="press-source">Economic Times</span>
-          <span class="press-title">Exotel Acquires Singapore's Croak.it!</span>
-        </a>
-        <a href="https://www.business-standard.com/article/companies/cloud-telephony-start-up-exotel-acquires-voice-recognition-platform-croak-it-115020401288_1.html" target="_blank" rel="noopener" class="press-row">
-          <span class="press-source">Business Standard</span>
-          <span class="press-title">Exotel Acquires Voice Platform Croak.it!</span>
-        </a>
-        <a href="https://yourstory.com/2012/11/croaking-it-up-with-protik-roychowdhury-a-day-in-the-life-of-an-entrepreneur" target="_blank" rel="noopener" class="press-row">
-          <span class="press-source">YourStory</span>
-          <span class="press-title">A Day in the Life of an Entrepreneur</span>
-        </a>
-        <a href="https://singaporeglobalnetwork.gov.sg/stories/tech/meet-the-28-year-old-whose-mental-health-app-serves-over-3-million-globally/" target="_blank" rel="noopener" class="press-row">
-          <span class="press-source">SG Global Network</span>
-          <span class="press-title">Mental Health App Serves Over 3 Million Globally</span>
-        </a>
-        <a href="https://www.mobihealthnews.com/news/asia/mental-health-startup-intellect-bags-10m-series-funding" target="_blank" rel="noopener" class="press-row">
-          <span class="press-source">MobiHealthNews</span>
-          <span class="press-title">Intellect Bags Series A Funding</span>
-        </a>
-        <a href="https://www.financialexpress.com/business/industry-sporting-spirit-246292/" target="_blank" rel="noopener" class="press-row">
-          <span class="press-source">Financial Express</span>
-          <span class="press-title">Sporting Spirit — Athlete Diaries</span>
-        </a>
-        <a href="https://inc42.com/buzz/exotel-buys-singapore-based-croak-voice-based-social-media-startup/" target="_blank" rel="noopener" class="press-row">
-          <span class="press-source">Inc42</span>
-          <span class="press-title">Exotel Buys Croak.it!</span>
-        </a>
-        <a href="https://www.techinasia.com/exotel-buys-croak-it" target="_blank" rel="noopener" class="press-row">
-          <span class="press-source">Tech in Asia</span>
-          <span class="press-title">Croak.it, a Reddit for Sound Clips, Gets Acquired</span>
-        </a>
-        <a href="https://e27.co/indias-exotel-acquires-singapores-voice-based-social-media-app-croak-20150203" target="_blank" rel="noopener" class="press-row">
-          <span class="press-source">e27</span>
-          <span class="press-title">India's Exotel Acquires Singapore's Croak.it!</span>
-        </a>
-        <a href="https://yourstory.com/2012/01/croak-it-iit-kharagpur-grads-bring-voice-to-an-online-platform-literally" target="_blank" rel="noopener" class="press-row">
-          <span class="press-source">YourStory</span>
-          <span class="press-title">IIT Kharagpur Grads Bring Voice to the Web</span>
-        </a>
-        <a href="https://inc42.com/startups/an-iit-kgp-startup-croak-it-wants-to-be-the-instagram-for-sounds-launches-talk-button-for-websites/" target="_blank" rel="noopener" class="press-row">
-          <span class="press-source">Inc42</span>
-          <span class="press-title">Croak.it! Wants to Be the Instagram for Sounds</span>
-        </a>
-        <a href="https://techwireasia.com/2012/06/croak-it-enables-one-click-voice-to-web-communication/" target="_blank" rel="noopener" class="press-row">
-          <span class="press-source">Tech Wire Asia</span>
-          <span class="press-title">One-Click Voice-to-Web Communication</span>
-        </a>
-        <a href="https://inc42.com/startups/interviews/inc42-gets-candid-with-the-iit-kgp-startup-croak-it/" target="_blank" rel="noopener" class="press-row">
-          <span class="press-source">Inc42</span>
-          <span class="press-title">Candid with the IIT-KGP Startup Croak.it!</span>
-        </a>
-        <a href="https://yourstory.com/2013/06/croak-it-launches-talk-button-will-let-users-speak-with-you-on-the-site" target="_blank" rel="noopener" class="press-row">
-          <span class="press-source">YourStory</span>
-          <span class="press-title">Croak.it! Launches Talk Button</span>
-        </a>
-        <a href="https://martechvibe.com/video/cross-border-success-through-hyper-localisation-and-geo-targeting/" target="_blank" rel="noopener" class="press-row">
-          <span class="press-source">Martechvibe</span>
-          <span class="press-title">Cross-Border Success Through Hyper-Localisation</span>
-        </a>
+      <div class="section-layout">
+        <aside class="section-sidebar">
+          <div class="overline">In the press</div>
+          <h2>News & media coverage</h2>
+          <p>Features, interviews, and expert commentary in leading technology and business publications.</p>
+        </aside>
+        <div class="section-content">
+          <div class="press-list">
+            <a href="https://economictimes.indiatimes.com/small-biz/startups/exotel-to-buy-singapores-social-media-startup-croak-it/articleshow/46105110.cms" target="_blank" rel="noopener" class="press-row">
+              <span class="press-source">Economic Times</span>
+              <span class="press-title">Exotel Acquires Singapore's Croak.it!</span>
+            </a>
+            <a href="https://www.business-standard.com/article/companies/cloud-telephony-start-up-exotel-acquires-voice-recognition-platform-croak-it-115020401288_1.html" target="_blank" rel="noopener" class="press-row">
+              <span class="press-source">Business Standard</span>
+              <span class="press-title">Exotel Acquires Voice Platform Croak.it!</span>
+            </a>
+            <a href="https://yourstory.com/2012/11/croaking-it-up-with-protik-roychowdhury-a-day-in-the-life-of-an-entrepreneur" target="_blank" rel="noopener" class="press-row">
+              <span class="press-source">YourStory</span>
+              <span class="press-title">A Day in the Life of an Entrepreneur</span>
+            </a>
+            <a href="https://singaporeglobalnetwork.gov.sg/stories/tech/meet-the-28-year-old-whose-mental-health-app-serves-over-3-million-globally/" target="_blank" rel="noopener" class="press-row">
+              <span class="press-source">SG Global Network</span>
+              <span class="press-title">Mental Health App Serves Over 3 Million Globally</span>
+            </a>
+            <a href="https://www.mobihealthnews.com/news/asia/mental-health-startup-intellect-bags-10m-series-funding" target="_blank" rel="noopener" class="press-row">
+              <span class="press-source">MobiHealthNews</span>
+              <span class="press-title">Intellect Bags Series A Funding</span>
+            </a>
+            <a href="https://www.financialexpress.com/business/industry-sporting-spirit-246292/" target="_blank" rel="noopener" class="press-row">
+              <span class="press-source">Financial Express</span>
+              <span class="press-title">Sporting Spirit — Athlete Diaries</span>
+            </a>
+            <a href="https://inc42.com/buzz/exotel-buys-singapore-based-croak-voice-based-social-media-startup/" target="_blank" rel="noopener" class="press-row">
+              <span class="press-source">Inc42</span>
+              <span class="press-title">Exotel Buys Croak.it!</span>
+            </a>
+            <a href="https://www.techinasia.com/exotel-buys-croak-it" target="_blank" rel="noopener" class="press-row">
+              <span class="press-source">Tech in Asia</span>
+              <span class="press-title">Croak.it, a Reddit for Sound Clips, Gets Acquired</span>
+            </a>
+            <a href="https://e27.co/indias-exotel-acquires-singapores-voice-based-social-media-app-croak-20150203" target="_blank" rel="noopener" class="press-row">
+              <span class="press-source">e27</span>
+              <span class="press-title">India's Exotel Acquires Singapore's Croak.it!</span>
+            </a>
+            <a href="https://yourstory.com/2012/01/croak-it-iit-kharagpur-grads-bring-voice-to-an-online-platform-literally" target="_blank" rel="noopener" class="press-row">
+              <span class="press-source">YourStory</span>
+              <span class="press-title">IIT Kharagpur Grads Bring Voice to the Web</span>
+            </a>
+            <a href="https://inc42.com/startups/an-iit-kgp-startup-croak-it-wants-to-be-the-instagram-for-sounds-launches-talk-button-for-websites/" target="_blank" rel="noopener" class="press-row">
+              <span class="press-source">Inc42</span>
+              <span class="press-title">Croak.it! Wants to Be the Instagram for Sounds</span>
+            </a>
+            <a href="https://techwireasia.com/2012/06/croak-it-enables-one-click-voice-to-web-communication/" target="_blank" rel="noopener" class="press-row">
+              <span class="press-source">Tech Wire Asia</span>
+              <span class="press-title">One-Click Voice-to-Web Communication</span>
+            </a>
+            <a href="https://inc42.com/startups/interviews/inc42-gets-candid-with-the-iit-kgp-startup-croak-it/" target="_blank" rel="noopener" class="press-row">
+              <span class="press-source">Inc42</span>
+              <span class="press-title">Candid with the IIT-KGP Startup Croak.it!</span>
+            </a>
+            <a href="https://yourstory.com/2013/06/croak-it-launches-talk-button-will-let-users-speak-with-you-on-the-site" target="_blank" rel="noopener" class="press-row">
+              <span class="press-source">YourStory</span>
+              <span class="press-title">Croak.it! Launches Talk Button</span>
+            </a>
+            <a href="https://martechvibe.com/video/cross-border-success-through-hyper-localisation-and-geo-targeting/" target="_blank" rel="noopener" class="press-row">
+              <span class="press-source">Martechvibe</span>
+              <span class="press-title">Cross-Border Success Through Hyper-Localisation</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Speaker Kit -->
-  <section id="speaker-kit" class="fade-in">
+  <section id="speaker-kit" class="gap-standard fade-in" aria-label="Speaker kit">
     <div class="container">
-      <div class="section-header">
-        <div class="overline">Speaker kit</div>
-        <h2>Everything you need to book Protik</h2>
-      </div>
-      <div class="grid-2">
-        <div>
-          <div class="bio-block">
-            <h4>50-word bio</h4>
-            <p>Protik Roychowdhury is VP Product at Intellect, Asia's largest enterprise health platform (4M+ users). He builds trusted AI, marketplace, and high-stakes digital products across Asia. A three-time founder (one exit), published researcher, and ICF-certified coach with 15+ years of experience at Grab, Ola, and Exotel.</p>
-          </div>
-          <div class="bio-block">
-            <h4>100-word bio</h4>
-            <p>Protik Roychowdhury is VP Product at Intellect, where he leads product, design, and AI for Asia's largest enterprise health platform — 4M+ users across APAC, ANZ, China, and Latam at $20M ARR. He builds trusted AI, marketplace, and high-stakes digital products. Before Intellect, he led Growth, Engagement & Loyalty at Grab (Southeast Asia's leading superapp) and marketplace products at Ola (India's largest ride-hailing platform). A three-time founder and IIT Kharagpur alumnus, Protik has co-authored 3 academic papers on AI in mental health and is an ICF-certified career coach. Based in Singapore.</p>
-          </div>
-          <div class="bio-block">
-            <h4>Emcee introduction</h4>
-            <p>Please welcome Protik Roychowdhury — VP Product at Intellect, where he leads product and AI for Asia's largest mental health platform. With 15+ years building products at Grab, Ola, and three startups of his own, Protik speaks and writes about what it takes to build trusted products in the AI era.</p>
-          </div>
-        </div>
-        <div>
-          <div style="text-align: center; margin-bottom: 1.5rem;">
-            <img src="images/HeadShot.jpeg" alt="Protik Roychowdhury headshot" width="400" height="400" loading="lazy" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 0.5px solid var(--border-color);">
-          </div>
-          <dl class="speaker-details">
-            <dt>Current role</dt>
-            <dd>VP Product, Intellect</dd>
-            <dt>Location</dt>
-            <dd>Singapore (SGT, UTC+8)</dd>
-            <dt>Topics</dt>
-            <dd>AI Product Strategy, Trust & High-Stakes Design, Product Leadership, Mental Health Technology, Marketplace & Platforms</dd>
-            <dt>Formats</dt>
-            <dd>Keynotes, panels, fireside chats, workshops, podcasts</dd>
-            <dt>Languages</dt>
-            <dd>English, Hindi, Bengali</dd>
-          </dl>
-          <div style="display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1rem;">
-            <a href="protik-roychowdhury-onepager.pdf" class="btn btn-primary" target="_blank" style="text-align: center;">Download one-pager (PDF) &darr;</a>
-            <a href="https://www.linkedin.com/in/protik001" class="btn btn-secondary" target="_blank" rel="noopener" style="text-align: center;">LinkedIn profile &rarr;</a>
+      <div class="section-layout">
+        <aside class="section-sidebar">
+          <div class="overline">Speaker kit</div>
+          <h2>Everything you need to book Protik</h2>
+        </aside>
+        <div class="section-content">
+          <div class="grid-2">
+            <div>
+              <div class="bio-block">
+                <h4>50-word bio</h4>
+                <p>Protik Roychowdhury is VP Product at Intellect, Asia's largest enterprise health platform (4M+ users). He builds trusted AI, marketplace, and high-stakes digital products across Asia. A three-time founder (one exit), published researcher, and ICF-certified coach with 15+ years of experience at Grab, Ola, and Exotel.</p>
+              </div>
+              <div class="bio-block">
+                <h4>100-word bio</h4>
+                <p>Protik Roychowdhury is VP Product at Intellect, where he leads product, design, and AI for Asia's largest enterprise health platform — 4M+ users across APAC, ANZ, China, and Latam at $20M ARR. He builds trusted AI, marketplace, and high-stakes digital products. Before Intellect, he led Growth, Engagement & Loyalty at Grab (Southeast Asia's leading superapp) and marketplace products at Ola (India's largest ride-hailing platform). A three-time founder and IIT Kharagpur alumnus, Protik has co-authored 3 academic papers on AI in mental health and is an ICF-certified career coach. Based in Singapore.</p>
+              </div>
+              <div class="bio-block">
+                <h4>Emcee introduction</h4>
+                <p>Please welcome Protik Roychowdhury — VP Product at Intellect, where he leads product and AI for Asia's largest mental health platform. With 15+ years building products at Grab, Ola, and three startups of his own, Protik speaks and writes about what it takes to build trusted products in the AI era.</p>
+              </div>
+            </div>
+            <div>
+              <div style="text-align: center; margin-bottom: 1.5rem;">
+                <img src="images/HeadShot.jpeg" alt="Protik Roychowdhury headshot" width="400" height="400" loading="lazy" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover;">
+              </div>
+              <dl class="speaker-details">
+                <dt>Current role</dt>
+                <dd>VP Product, Intellect</dd>
+                <dt>Location</dt>
+                <dd>Singapore (SGT, UTC+8)</dd>
+                <dt>Topics</dt>
+                <dd>AI Product Strategy, Trust & High-Stakes Design, Product Leadership, Regulated Tech & Digital Health, Marketplace & Platforms</dd>
+                <dt>Formats</dt>
+                <dd>Keynotes, panels, fireside chats, workshops, podcasts</dd>
+                <dt>Languages</dt>
+                <dd>English, Hindi, Bengali</dd>
+              </dl>
+              <div style="display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1rem;">
+                <a href="protik-roychowdhury-onepager.pdf" class="btn btn-primary" target="_blank" style="text-align: center;">Download one-pager (PDF) &darr;</a>
+                <a href="https://www.linkedin.com/in/protik001" class="btn btn-secondary" target="_blank" rel="noopener" style="text-align: center;">LinkedIn profile &rarr;</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -623,31 +703,37 @@
   </section>
 
   <!-- Booking Details -->
-  <section class="fade-in">
+  <section class="gap-standard fade-in" aria-label="Booking logistics">
     <div class="container">
-      <div class="section-header">
-        <div class="overline">Logistics</div>
-        <h2>Booking details</h2>
-      </div>
-      <div class="grid-3">
-        <div class="card" data-speaking-geo="Singapore" data-speaking-travel="Global" data-speaking-mode="In-Person, Virtual">
-          <h3>Availability</h3>
-          <p>Based in Singapore. Available globally for in-person and virtual events. Travels regularly across APAC, India, and EMEA.</p>
-        </div>
-        <div class="card" data-speaking-fee="Variable" data-speaking-probono="Available for Nonprofits, Student Events, Mental Health Initiatives">
-          <h3>Fee structure</h3>
-          <p>Fees vary by format, audience size, and travel requirements. Pro-bono and reduced-fee slots are available for nonprofits, student events, and mental health initiatives. Contact for a quote.</p>
-        </div>
-        <div class="card" data-speaking-av="Clicker, Lavalier Mic, HDMI/USB-C" data-speaking-lead-time="48 hours">
-          <h3>A/V & setup</h3>
-          <p>Standard keynote setup: presentation clicker, lavalier or headset mic, HDMI/USB-C connection to projector. Slide decks delivered 48 hours in advance.</p>
+      <div class="section-layout">
+        <aside class="section-sidebar">
+          <div class="overline">Logistics</div>
+          <h2>Booking details</h2>
+        </aside>
+        <div class="section-content">
+          <div class="grid-3">
+            <div class="card" data-speaking-geo="Singapore" data-speaking-travel="Global" data-speaking-mode="In-Person, Virtual">
+              <h3>Availability</h3>
+              <p>Based in Singapore. Available globally for in-person and virtual events. Travels regularly across APAC, India, and EMEA.</p>
+            </div>
+            <div class="card" data-speaking-fee="Variable" data-speaking-probono="Available for Nonprofits, Student Events, Mental Health Initiatives">
+              <h3>Fee structure</h3>
+              <p>Fees vary by format, audience size, and travel requirements. Pro-bono and reduced-fee slots are available for nonprofits, student events, and mental health initiatives. Contact for a quote.</p>
+            </div>
+            <div class="card" data-speaking-av="Clicker, Lavalier Mic, HDMI/USB-C" data-speaking-lead-time="48 hours">
+              <h3>A/V & setup</h3>
+              <p>Standard keynote setup: presentation clicker, lavalier or headset mic, HDMI/USB-C connection to projector. Slide decks delivered 48 hours in advance.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  </main>
+
   <!-- CTA -->
-  <section class="fade-in">
+  <section class="gap-major fade-in" aria-label="Call to action">
     <div class="container">
       <div class="newsletter">
         <h2>Work with Protik</h2>
@@ -690,7 +776,7 @@
             <li><a href="/ideas">AI Product Strategy</a></li>
             <li><a href="/ideas">Trust & High-Stakes Design</a></li>
             <li><a href="/ideas">Product Leadership</a></li>
-            <li><a href="/ideas">Mental Health Tech</a></li>
+            <li><a href="/ideas">Regulated Tech & Digital Health</a></li>
             <li><a href="/ideas">Marketplace & Platforms</a></li>
           </ul>
         </div>

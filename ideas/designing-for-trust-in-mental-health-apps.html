@@ -24,6 +24,14 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://protik.info/" },
+          { "@type": "ListItem", "position": 2, "name": "Ideas", "item": "https://protik.info/ideas" },
+          { "@type": "ListItem", "position": 3, "name": "Designing for Trust in Mental Health Apps: Why UX Is Care", "item": "https://protik.info/ideas/designing-for-trust-in-mental-health-apps" }
+        ]
+      },
+      {
         "@type": "Person",
         "@id": "https://protik.info/#person",
         "name": "Protik Roychowdhury",
@@ -38,6 +46,8 @@
         "datePublished": "2025-05-15",
         "url": "https://protik.info/ideas/designing-for-trust-in-mental-health-apps",
         "description": "In mental health products, trust isn't a feature — it's the product. Five UX principles for building experiences that earn trust in high-stakes, vulnerable contexts.",
+        "wordCount": 1250,
+        "timeRequired": "PT5M",
         "keywords": ["trust", "UX", "mental health", "design", "care", "digital therapeutics", "user experience"]
       }
     ]
@@ -52,7 +62,7 @@
     .article-body blockquote { border-left: 2px solid var(--border-color); padding-left: 1.2rem; margin: 1.5rem 0; font-style: italic; color: var(--text-muted); }
     .article-meta { display: flex; align-items: center; gap: 1rem; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2rem; flex-wrap: wrap; }
     .article-meta .tag { font-size: 0.75rem; }
-    .article-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-subtle); }
+    .article-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color); }
   </style>
 </head>
 <body>
@@ -74,7 +84,7 @@
     </div>
   </nav>
 
-  <section class="hero" style="min-height: auto; padding: 10rem 0 3rem;">
+  <section class="hero" aria-label="Article introduction" style="padding: 8rem 0 2.5rem;">
     <div class="container">
       <div class="hero-content">
         <div class="hero-label"><span class="dot"></span> Ideas</div>
@@ -82,6 +92,7 @@
       </div>
     </div>
   </section>
+  <main>
 
   <section>
     <div class="container">
@@ -157,7 +168,7 @@
 
         <p>Mental health product design has taught me something I carry into every product role: the best products don't just solve problems — they make people feel safe enough to engage with their problems. That's the highest bar in UX. And it's worth striving for.</p>
 
-        <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">Originally published on <a href="https://medium.com/@protik/designing-for-trust-in-mental-health-apps-why-ux-is-care-07fa5191d9e6" target="_blank" rel="noopener" style="color: var(--accent);">Medium</a>.</p>
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">Originally published on <a href="https://medium.com/@protik/designing-for-trust-in-mental-health-apps-why-ux-is-care-07fa5191d9e6" target="_blank" rel="noopener" style="color: var(--accent);">Medium</a>.</p>
 
         <div class="article-nav">
           <a href="/ideas" style="color: var(--text-muted);">&larr; All posts</a>
@@ -166,6 +177,7 @@
       </div>
     </div>
   </section>
+  <main>
 
   <section class="fade-in">
     <div class="container">
@@ -179,6 +191,7 @@
       </div>
     </div>
   </section>
+  <main>
 
   <footer class="footer">
     <div class="container">
@@ -209,7 +222,7 @@
             <li><a href="/ideas">AI Product Strategy</a></li>
             <li><a href="/ideas">Trust & High-Stakes Design</a></li>
             <li><a href="/ideas">Product Leadership</a></li>
-            <li><a href="/ideas">Mental Health Tech</a></li>
+            <li><a href="/ideas">Regulated Tech & Digital Health</a></li>
             <li><a href="/ideas">Marketplace & Platforms</a></li>
           </ul>
         </div>

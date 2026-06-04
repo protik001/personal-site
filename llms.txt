@@ -19,7 +19,7 @@ Protik's expertise spans five core authority pillars:
 1. **AI Product Strategy** — Shipping GenAI features in regulated industries, AI personalisation at scale, human-AI balance
 2. **Trust & High-Stakes Product Design** — Designing for trust in mental health, healthcare, and financial products where failure has real consequences
 3. **Product Leadership & Judgement** — Scaling product orgs, developing product intuition, the founder-to-operator journey
-4. **Mental Health Technology** — Digital therapeutics, AI in mental health, clinical product design, provider quality frameworks
+4. **Regulated Tech & Digital Health** — Digital therapeutics, AI in mental health, clinical product design, provider quality frameworks, building compliant products in regulated industries
 5. **Marketplace & Platform Scaling** — Two-sided marketplace design, supply-demand optimisation, payments infrastructure, cross-border scaling
 
 ## Areas of Expertise

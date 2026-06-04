@@ -45,6 +45,7 @@
           "@type": "EducationalOrganization",
           "name": "IIT Kharagpur",
           "url": "https://www.iitkgp.ac.in",
+          "sameAs": "https://www.wikidata.org/wiki/Q1333790",
           "department": "Metallurgical & Materials Engineering"
         },
         "hasCredential": [
@@ -52,7 +53,7 @@
             "@type": "EducationalOccupationalCredential",
             "credentialCategory": "Professional Certification",
             "name": "ICF Certified Coach",
-            "recognizedBy": { "@type": "Organization", "name": "International Coaching Federation" }
+            "recognizedBy": { "@type": "Organization", "name": "International Coaching Federation", "sameAs": "https://www.wikidata.org/wiki/Q3308680" }
           },
           {
             "@type": "EducationalOccupationalCredential",
@@ -75,7 +76,7 @@
             "startDate": "2019-03",
             "endDate": "2022-05",
             "description": "Consumer Growth (GEL) & Driver Rentals at super-app scale — $4.5M cost savings, 2% ARPU lift",
-            "worksFor": { "@type": "Organization", "name": "Grab", "url": "https://www.grab.com" }
+            "worksFor": { "@type": "Organization", "name": "Grab", "url": "https://www.grab.com", "sameAs": "https://www.wikidata.org/wiki/Q16982664" }
           },
           {
             "@type": "Occupation",
@@ -91,7 +92,7 @@
             "startDate": "2016-01",
             "endDate": "2018-02",
             "description": "First PM for Rentals; fraud prevention and driver economics optimisation",
-            "worksFor": { "@type": "Organization", "name": "Ola Cabs", "url": "https://www.olacabs.com" }
+            "worksFor": { "@type": "Organization", "name": "Ola Cabs", "url": "https://www.olacabs.com", "sameAs": "https://www.wikidata.org/wiki/Q11011811" }
           }
         ],
         "founderOf": [
@@ -125,7 +126,7 @@
         "seeks": {
           "@type": "Offer",
           "name": "Speaking Engagements & Coaching",
-          "description": "Available for speaking on Product Strategy, AI Ethics, Mental Health Tech, and Executive Coaching"
+          "description": "Available for speaking on Product Strategy, AI Ethics, Regulated Tech & Digital Health, and Executive Coaching"
         }
       },
       {
@@ -190,84 +191,93 @@
     </div>
   </nav>
 
-  <!-- Page Header -->
-  <section class="hero" style="min-height: auto; padding: 9rem 0 3rem;">
+  <main>
+
+  <!-- Hero with Metadata Card -->
+  <section class="hero" style="padding: 8rem 0 2.5rem; border-bottom: 1px solid var(--border-color);">
     <div class="container">
-      <div class="hero-content">
-        <div class="hero-label"><span class="dot"></span> About me</div>
-        <h1>Product leader. Builder. Coach.</h1>
-        <p>I lead at the intersection of human intent and machine intelligence. 15 years building and scaling consumer platforms across Southeast Asia and emerging markets — from co-founding startups to leading product organisations serving millions.</p>
-        <div class="hero-buttons" style="margin-top: 1.5rem;">
-          <a href="https://calendly.com/protik001" class="btn btn-primary" target="_blank" rel="noopener">Book a session</a>
-          <a href="https://www.linkedin.com/in/protik001" class="btn btn-secondary" target="_blank" rel="noopener">Connect</a>
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-label"><span class="dot"></span> About me</div>
+          <h1>Product leader. Builder. Coach.</h1>
+          <p>I lead at the intersection of human intent and machine intelligence. 15 years building and scaling consumer platforms across Southeast Asia and emerging markets — from co-founding startups to leading product organisations serving millions.</p>
+          <div class="hero-buttons" style="margin-top: 1.5rem;">
+            <a href="https://calendly.com/protik001" class="btn btn-primary" target="_blank" rel="noopener">Book a session</a>
+            <a href="https://www.linkedin.com/in/protik001" class="btn btn-secondary" target="_blank" rel="noopener">Connect</a>
+          </div>
+        </div>
+        <div class="overview-matrix">
+          <div class="matrix-row"><span class="label">Location</span><span class="val">Singapore (global)</span></div>
+          <div class="matrix-row"><span class="label">Roles</span><span class="val">VP Product, 3x Founder, Coach</span></div>
+          <div class="matrix-row"><span class="label">Specialties</span><span class="val">AI, Marketplace, High-Stakes</span></div>
+          <div class="matrix-row"><span class="label">Credentials</span><span class="val">IIT Kharagpur, ICF Certified</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Snapshot Grid -->
-  <section style="padding: 0 0 4rem;">
+  <!-- Bio -->
+  <section class="gap-major fade-in" aria-label="Background">
     <div class="container">
-      <div class="snapshot-grid">
-        <dl class="snap-item"><dt>Experience</dt><dd>15+ years</dd></dl>
-        <dl class="snap-item"><dt>Roles</dt><dd>VP Product, Coach, 3x Founder</dd></dl>
-        <dl class="snap-item"><dt>Domains</dt><dd>AI, Product, Growth, Mental Health</dd></dl>
-        <dl class="snap-item"><dt>Region</dt><dd>Singapore-based (global)</dd></dl>
-      </div>
-    </div>
-  </section>
-
-  <!-- Bio Section -->
-  <section style="padding: 3rem 0 5rem;">
-    <div class="container">
-      <div class="grid-2">
+      <div class="section-layout">
+        <aside class="section-sidebar">
+          <div class="overline">Background</div>
+          <h2>My story</h2>
+        </aside>
         <div>
-          <img src="images/HeadShot.jpeg" alt="Protik Roychowdhury" width="400" height="400" loading="eager" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 0.5px solid var(--border-color); margin-bottom: 1.5rem;">
-          <h2 style="margin-bottom: 1rem;">My story</h2>
+          <img src="images/HeadShot.jpeg" alt="Protik Roychowdhury" width="64" height="64" loading="eager" style="width: 64px; height: 64px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem;">
           <p>I'm VP Product at Intellect, where I lead product, design, content, localisation, and AI for a regulated, multi-tenant enterprise health platform serving 4M+ users across APAC, ANZ, China, and Latam. I drove enterprise revenue to $20M ARR by pivoting the business from a consumer app to a complete B2B2C care ecosystem — configurable compliance, multi-market deployment, and cross-border infrastructure.</p>
           <p class="mt-2">My career spans enterprise B2B SaaS, two-sided marketplaces, high-stakes regulated technology, and consumer super-apps. As a three-time founder, I know firsthand the exhilaration and the grind of building something from nothing. I've taken products from zero to one, scaled teams across geographies, and navigated everything from seed rounds to public-company growth targets.</p>
           <p class="mt-2">My expertise centres on the orchestration of complex technology and human intent — leveraging advanced machine-learning models, deep personalisation frameworks, and behavioural data systems to scale high-utility digital platforms that deliver verifiable business value.</p>
           <p class="mt-2">Outside of product, I'm an ICF-certified career coach. I work with PMs, founders, and leaders who want a structured, empathetic partner to help them navigate career transitions, scale their impact, and lead with clarity.</p>
         </div>
-        <div>
-          <h3 class="mb-4">Areas of expertise</h3>
-          <div class="tags">
-            <span class="tag">AI Product Management</span>
-            <span class="tag">Marketplace & Supply-Demand</span>
-            <span class="tag">Platform Products</span>
-            <span class="tag">Product Strategy</span>
-            <span class="tag">Product-Led Growth</span>
-            <span class="tag">Personalisation at Scale</span>
-            <span class="tag">Mental Health Technology</span>
-            <span class="tag">Conversational AI</span>
-            <span class="tag">Human-Centred Design</span>
-            <span class="tag">Cross-Border Localisation</span>
-            <span class="tag">Team Scaling (20+)</span>
-            <span class="tag">0-to-1 Products</span>
-            <span class="tag">Startup Founding & Exits</span>
-            <span class="tag">Executive Coaching (ICF)</span>
-            <span class="tag">Regulated Technology</span>
-            <span class="tag">Behavioural Science</span>
-          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise -->
+  <section class="gap-standard fade-in" aria-label="Areas of expertise">
+    <div class="container">
+      <div class="section-layout">
+        <aside class="section-sidebar">
+          <div class="overline">Domains</div>
+          <h2>Expertise</h2>
+        </aside>
+        <div class="tags">
+          <span class="tag">AI Product Management</span>
+          <span class="tag">Marketplace & Supply-Demand</span>
+          <span class="tag">Platform Products</span>
+          <span class="tag">Product Strategy</span>
+          <span class="tag">Product-Led Growth</span>
+          <span class="tag">Personalisation at Scale</span>
+          <span class="tag">Regulated Tech & Digital Health</span>
+          <span class="tag">Conversational AI</span>
+          <span class="tag">Human-Centred Design</span>
+          <span class="tag">Cross-Border Localisation</span>
+          <span class="tag">Team Scaling (20+)</span>
+          <span class="tag">0-to-1 Products</span>
+          <span class="tag">Startup Founding & Exits</span>
+          <span class="tag">Executive Coaching (ICF)</span>
+          <span class="tag">Regulated Technology</span>
+          <span class="tag">Behavioural Science</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Timeline -->
-  <section class="fade-in">
+  <section class="gap-standard fade-in" aria-label="Career timeline">
     <div class="container">
-      <div class="section-header">
-        <div class="overline">The journey</div>
-        <h2>From marketplaces to AI and mental health</h2>
-      </div>
-      <div style="max-width: 640px; margin: 0 auto;">
+      <div class="section-layout">
+        <aside class="section-sidebar">
+          <div class="overline">The journey</div>
+          <h2>From marketplaces to AI and mental health</h2>
+        </aside>
         <div class="timeline">
 
-          <div class="timeline-item">
+          <div class="timeline-item" data-role="VP Product" data-company="Intellect" data-period="2022-present">
             <div class="timeline-year">2022 — Present</div>
             <div class="timeline-title">VP Product at Intellect: Architecting Strategic Intent</div>
-            <div class="timeline-role">2022 — Present</div>
             <div class="timeline-tags">
               <span class="tag">AI</span>
               <span class="tag">Mental Health</span>
@@ -288,7 +298,7 @@
             </div>
           </div>
 
-          <div class="timeline-item">
+          <div class="timeline-item" data-role="Principal PM" data-company="Grab" data-period="2019-2022">
             <div class="timeline-year">2019 — 2022</div>
             <div class="timeline-title">Principal PM at Grab: Scaling Beyond Coordination</div>
             <div class="timeline-role">Growth, Engagement & Loyalty · Driver Rentals</div>
@@ -306,7 +316,7 @@
             </ul>
           </div>
 
-          <div class="timeline-item">
+          <div class="timeline-item" data-role="Group PM" data-company="Fabelio" data-period="2018-2019">
             <div class="timeline-year">2018 — 2019</div>
             <div class="timeline-title">Group PM at Fabelio: Org Build and Commerce</div>
             <div class="timeline-role">First senior product hire, reporting to CEO</div>
@@ -322,7 +332,7 @@
             </ul>
           </div>
 
-          <div class="timeline-item">
+          <div class="timeline-item" data-role="PM" data-company="Ola" data-period="2016-2018">
             <div class="timeline-year">2016 — 2018</div>
             <div class="timeline-title">PM at Ola: Integrity at Scale</div>
             <div class="timeline-role">First PM for Rentals business unit</div>
@@ -338,7 +348,7 @@
             </ul>
           </div>
 
-          <div class="timeline-item">
+          <div class="timeline-item" data-role="PM" data-company="Exotel" data-period="2015-2016">
             <div class="timeline-year">2015 — 2016</div>
             <div class="timeline-title">PM at Exotel: Post-Acquisition Growth</div>
             <div class="timeline-role">Cloud telephony platform</div>
@@ -349,7 +359,7 @@
             <p>Joined Exotel following the acquisition of Croak.it!. Product role at India's leading cloud telephony platform, working on adoption and growth across SMBs and enterprises.</p>
           </div>
 
-          <div class="timeline-item">
+          <div class="timeline-item" data-role="Founder" data-company="Athlete Diaries" data-period="2015-2016">
             <div class="timeline-year">2015 — 2016</div>
             <div class="timeline-title">Founder of Athlete Diaries: Athlete Voices</div>
             <div class="timeline-role">India's version of The Players' Tribune</div>
@@ -361,7 +371,7 @@
             <p>Founded India's version of The Players' Tribune — a platform giving athletes a direct voice to share their stories. Built with IIT-KGP batchmates. Featured in Financial Express.</p>
           </div>
 
-          <div class="timeline-item">
+          <div class="timeline-item" data-role="Founder" data-company="Croak.it!" data-period="2012-2015">
             <div class="timeline-year">2012 — 2015</div>
             <div class="timeline-title">Co-founder & CPO of Croak.it!: The Intuition of 0 to 1</div>
             <div class="timeline-role">Voice social app · Acquired by Exotel</div>
@@ -377,7 +387,7 @@
             </ul>
           </div>
 
-          <div class="timeline-item">
+          <div class="timeline-item" data-role="Founder" data-company="Bhalu.com" data-period="2009-2011">
             <div class="timeline-year">2009 — 2011</div>
             <div class="timeline-title">Founder of Bhalu.com: Where It Started</div>
             <div class="timeline-role">Hyperlocal task marketplace</div>
@@ -389,7 +399,7 @@
             <p>Built in college at IIT Kharagpur. A hyperlocal task marketplace where anyone could post odd jobs — from fixing a ceiling fan to getting a late-night delivery — and anyone else could fulfil them.</p>
           </div>
 
-          <div class="timeline-item">
+          <div class="timeline-item" data-role="Student" data-company="IIT Kharagpur" data-period="2007-2011">
             <div class="timeline-year">2007 — 2011</div>
             <div class="timeline-title">B.Tech at IIT Kharagpur: The Foundation</div>
             <div class="timeline-role">Metallurgical & Materials Engineering</div>
@@ -405,7 +415,7 @@
   </section>
 
   <!-- Logos & Press Strip -->
-  <section class="logos-strip fade-in">
+  <section class="logos-strip fade-in" aria-label="Career span and press">
     <div class="container">
       <div class="logos-label">Career span</div>
       <div class="logos-row">
@@ -430,187 +440,75 @@
   </section>
 
   <!-- Credentials & Advisory -->
-  <section class="fade-in">
+  <section class="gap-standard fade-in" aria-label="Credentials and advisory">
     <div class="container">
-      <div class="grid-2">
-        <div>
-          <div class="section-header" style="margin-bottom: 1.5rem;">
-            <div class="overline">Recognition</div>
-            <h2>Credentials and press</h2>
-          </div>
-          <div class="card" style="margin-bottom: 0.8rem;">
-            <h4>ICF Certified Coach</h4>
-            <p>Accredited by the International Coaching Federation — the global gold standard for professional coaching.</p>
-          </div>
-          <div class="card" style="margin-bottom: 0.8rem;">
-            <h4>IIT Kharagpur Alumnus</h4>
-            <p>B.Tech in Metallurgical & Materials Engineering from one of India's premier engineering institutes.</p>
-          </div>
-          <div class="card">
-            <h4>Featured in</h4>
-            <div class="tags" style="margin-top: 0.6rem;">
-              <span class="tag">YourStory</span>
-              <span class="tag">Economic Times</span>
-              <span class="tag">Tech in Asia</span>
-              <span class="tag">Financial Express</span>
-              <span class="tag">MobiHealthNews</span>
-              <span class="tag">e27</span>
-              <span class="tag">Inc42</span>
-              <span class="tag">Martechvibe</span>
+      <div class="section-layout">
+        <aside class="section-sidebar">
+          <div class="overline">Recognition</div>
+          <h2>Beyond the day job</h2>
+        </aside>
+        <div class="grid-2">
+          <div>
+            <div class="card" style="margin-bottom: 0.8rem;">
+              <h4>ICF Certified Coach</h4>
+              <p>Accredited by the International Coaching Federation — the global gold standard for professional coaching.</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.8rem;">
+              <h4>IIT Kharagpur Alumnus</h4>
+              <p>B.Tech in Metallurgical & Materials Engineering from one of India's premier engineering institutes.</p>
+            </div>
+            <div class="card">
+              <h4>Featured in</h4>
+              <div class="tags" style="margin-top: 0.6rem;">
+                <span class="tag">YourStory</span>
+                <span class="tag">Economic Times</span>
+                <span class="tag">Tech in Asia</span>
+                <span class="tag">Financial Express</span>
+                <span class="tag">MobiHealthNews</span>
+                <span class="tag">e27</span>
+                <span class="tag">Inc42</span>
+                <span class="tag">Martechvibe</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div>
-          <div class="section-header" style="margin-bottom: 1.5rem;">
-            <div class="overline">Advisory</div>
-            <h2>Beyond the day job</h2>
-          </div>
-          <div class="card" style="margin-bottom: 0.8rem;">
-            <h4>Angel Investing & Advisory</h4>
-            <p>I selectively advise and invest in early-stage startups at the intersection of health, AI, and consumer products — particularly in Southeast Asia and India.</p>
-          </div>
-          <div class="card" style="margin-bottom: 0.8rem;">
-            <h4>Mentoring</h4>
-            <p>Active mentor for aspiring and early-career product managers. Regular speaker at product communities and university programmes across APAC.</p>
-          </div>
-          <div class="card">
-            <h4>Open to Board Roles</h4>
-            <p>Interested in advisory board or independent board positions in health tech, AI, and consumer product companies. <a href="/contact" style="color: var(--text-muted);">Reach out &rarr;</a></p>
+          <div>
+            <div class="card" style="margin-bottom: 0.8rem;">
+              <h4>Angel Investing & Advisory</h4>
+              <p>I selectively advise and invest in early-stage startups at the intersection of health, AI, and consumer products — particularly in Southeast Asia and India.</p>
+            </div>
+            <div class="card" style="margin-bottom: 0.8rem;">
+              <h4>Mentoring</h4>
+              <p>Active mentor for aspiring and early-career product managers. Regular speaker at product communities and university programmes across APAC.</p>
+            </div>
+            <div class="card">
+              <h4>Open to Board Roles</h4>
+              <p>Interested in advisory board or independent board positions in health tech, AI, and consumer product companies. <a href="/contact" style="color: var(--text-muted);">Reach out &rarr;</a></p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="fade-in">
+  <!-- Essay Block (replaces FAQ accordion — schema kept in JSON-LD) -->
+  <section class="gap-standard fade-in" aria-label="Operating philosophy">
     <div class="container">
-      <div class="section-header">
-        <div class="overline">FAQ</div>
-        <h2>Frequently asked questions</h2>
-      </div>
-      <div style="max-width: 640px; margin: 0 auto;">
-
-        <div class="faq-category">About Protik</div>
-
-        <div class="faq-item open">
-          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-            Who is Protik Roychowdhury?
-            <span class="icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              <p>Protik is a product leader and ICF-certified coach with 15+ years experience scaling products across Grab, Ola, Intellect, and Fabelio. He specializes in AI-driven platforms that deliver measurable outcomes.</p>
-            </div>
-          </div>
+      <div class="section-layout">
+        <aside class="section-sidebar">
+          <div class="overline">Philosophy</div>
+          <h2>How I think about product</h2>
+        </aside>
+        <div class="profile-essay">
+          <p>My career has been defined by building products where getting it wrong has real consequences — from marketplace fraud at Ola to clinical safety at Intellect. The through-line is trust: how to build it at scale, how to protect it under pressure, and how to make it a competitive advantage rather than a compliance checkbox.</p>
+          <p>I believe the best product leaders are defined not by the frameworks they follow but by the judgment they exercise when those frameworks break down. AI has made this more true, not less. The PMs who thrive in 2026 won't be the ones with the tightest processes — they'll be the ones who know when to break them.</p>
+          <p>As a coach, I bring the same philosophy. I work with PMs, founders, and leaders who want a structured, empathetic partner to help them navigate career transitions, scale their impact, and lead with clarity. I believe everyone has the answers within them — they just need the right questions, frameworks, and space to find them.</p>
         </div>
-
-        <div class="faq-item">
-          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-            What does Protik currently do?
-            <span class="icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              <p>He is VP of Product at Intellect, leading product, design, and AI for Asia's largest mental health platform — 4M+ users across APAC, ANZ, China, and Latam.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-            What industries has Protik worked in?
-            <span class="icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              <p>Mental health tech, mobility, e-commerce, fintech, and marketplace platforms — across Intellect, Grab, Ola, Fabelio, and multiple startups.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-            What are Protik's areas of expertise?
-            <span class="icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              <p>Product strategy, AI, AI in mental health, product leadership, personalisation at scale, growth engineering, coaching and mentorship, globalisation and localisation, and outcomes-driven product development.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-category">Work with Protik</div>
-
-        <div class="faq-item">
-          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-            How can I work with Protik?
-            <span class="icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              <p>Book 1:1 coaching sessions, invite him to speak at your event, or reach out for product advisory. Visit the <a href="/coaching">coaching page</a> or <a href="/contact">contact page</a> to get started.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-            Where can I read his publications?
-            <span class="icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              <p>See <a href="/media">Media</a> for preprint papers, talks, podcasts, and press coverage.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-category">Background & Credentials</div>
-
-        <div class="faq-item">
-          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-            Where is Protik based?
-            <span class="icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              <p>Singapore, partnering with teams globally.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-            What certifications does he hold?
-            <span class="icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              <p>ICF-certified coach and Standard Mental Health First Aider; ongoing CPD in AI, leadership, and product strategy.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-            Has Protik founded any startups?
-            <span class="icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              <p>Yes — Croak.it! (voice social app, acquired by Exotel, App Store Top 10), Athlete Diaries (sports media platform for first-person athlete stories), and Bhalu.com (hyperlocal task marketplace built in college at IIT Kharagpur).</p>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 
   <!-- Coaching CTA -->
-  <section class="fade-in">
+  <section class="gap-major fade-in" aria-label="Coaching">
     <div class="container">
       <div class="newsletter">
         <h2>My coaching philosophy</h2>
@@ -619,6 +517,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
@@ -650,7 +550,7 @@
             <li><a href="/ideas">AI Product Strategy</a></li>
             <li><a href="/ideas">Trust & High-Stakes Design</a></li>
             <li><a href="/ideas">Product Leadership</a></li>
-            <li><a href="/ideas">Mental Health Tech</a></li>
+            <li><a href="/ideas">Regulated Tech & Digital Health</a></li>
             <li><a href="/ideas">Marketplace & Platforms</a></li>
           </ul>
         </div>
@@ -672,7 +572,6 @@
 
   <script>
   (function() {
-    // Scroll progress for logo collapse
     var root = document.documentElement;
     var ticking = false;
     window.addEventListener('scroll', function() {
@@ -685,7 +584,6 @@
       }
     }, { passive: true });
 
-    // Fade-in on scroll
     var fadeEls = document.querySelectorAll('.fade-in');
     if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       var obs = new IntersectionObserver(function(entries) {

@@ -24,6 +24,14 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://protik.info/" },
+          { "@type": "ListItem", "position": 2, "name": "Ideas", "item": "https://protik.info/ideas" },
+          { "@type": "ListItem", "position": 3, "name": "The Great Unbundling of Product Management: Why 2026 Belongs to the Impact Architect", "item": "https://protik.info/ideas/the-great-unbundling-of-product-management" }
+        ]
+      },
+      {
         "@type": "Person",
         "@id": "https://protik.info/#person",
         "name": "Protik Roychowdhury",
@@ -38,6 +46,8 @@
         "datePublished": "2026-01-15",
         "url": "https://protik.info/ideas/the-great-unbundling-of-product-management",
         "description": "AI is absorbing the mechanical parts of product work. The PMs who thrive in 2026 are Impact Architects — people who frame problems, make resource bets, and build conviction in teams.",
+        "wordCount": 750,
+        "timeRequired": "PT3M",
         "keywords": ["product management", "AI", "impact architect", "product leadership", "unbundling", "2026"]
       }
     ]
@@ -52,7 +62,7 @@
     .article-body blockquote { border-left: 2px solid var(--border-color); padding-left: 1.2rem; margin: 1.5rem 0; font-style: italic; color: var(--text-muted); }
     .article-meta { display: flex; align-items: center; gap: 1rem; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2rem; flex-wrap: wrap; }
     .article-meta .tag { font-size: 0.75rem; }
-    .article-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-subtle); }
+    .article-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color); }
   </style>
 </head>
 <body>
@@ -74,7 +84,7 @@
     </div>
   </nav>
 
-  <section class="hero" style="min-height: auto; padding: 10rem 0 3rem;">
+  <section class="hero" aria-label="Article introduction" style="padding: 8rem 0 2.5rem;">
     <div class="container">
       <div class="hero-content">
         <div class="hero-label"><span class="dot"></span> Ideas</div>
@@ -82,6 +92,7 @@
       </div>
     </div>
   </section>
+  <main>
 
   <section>
     <div class="container">
@@ -148,7 +159,7 @@
 
         <p>If that's you, 2026 is your year.</p>
 
-        <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">Originally published on <a href="https://medium.com/@protik/the-great-unbundling-of-product-management-why-2026-belongs-to-the-impact-architect-faddb1f6b372" target="_blank" rel="noopener" style="color: var(--accent);">Medium</a>.</p>
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">Originally published on <a href="https://medium.com/@protik/the-great-unbundling-of-product-management-why-2026-belongs-to-the-impact-architect-faddb1f6b372" target="_blank" rel="noopener" style="color: var(--accent);">Medium</a>.</p>
 
         <div class="article-nav">
           <a href="/ideas" style="color: var(--text-muted);">&larr; All posts</a>
@@ -157,6 +168,7 @@
       </div>
     </div>
   </section>
+  <main>
 
   <section class="fade-in">
     <div class="container">
@@ -170,6 +182,7 @@
       </div>
     </div>
   </section>
+  <main>
 
   <footer class="footer">
     <div class="container">
@@ -200,7 +213,7 @@
             <li><a href="/ideas">AI Product Strategy</a></li>
             <li><a href="/ideas">Trust & High-Stakes Design</a></li>
             <li><a href="/ideas">Product Leadership</a></li>
-            <li><a href="/ideas">Mental Health Tech</a></li>
+            <li><a href="/ideas">Regulated Tech & Digital Health</a></li>
             <li><a href="/ideas">Marketplace & Platforms</a></li>
           </ul>
         </div>

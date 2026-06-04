@@ -22,6 +22,13 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://protik.info/" },
+          { "@type": "ListItem", "position": 2, "name": "Manual", "item": "https://protik.info/working-with-me" }
+        ]
+      },
+      {
         "@type": "Person",
         "@id": "https://protik.info/#person",
         "name": "Protik Roychowdhury",
@@ -73,7 +80,7 @@
       display: flex;
       flex-direction: column;
       gap: 0;
-      border-left: 1px solid var(--border-subtle);
+      border-left: 1px solid var(--border-color);
       padding-left: 0;
     }
 
@@ -110,7 +117,7 @@
       .manual-sidebar {
         position: relative;
         top: 0;
-        border-bottom: 0.5px solid var(--border-subtle);
+        border-bottom: 1px solid var(--border-color);
         padding-bottom: 1.5rem;
         margin-bottom: 2rem;
       }
@@ -183,7 +190,7 @@
     /* Principles */
     .principle-item {
       padding: 1.2rem 0;
-      border-bottom: 0.5px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-color);
     }
 
     .principle-item:last-child { border-bottom: none; }
@@ -251,7 +258,7 @@
     /* AI section */
     .ai-block {
       background: var(--bg-secondary);
-      border-radius: var(--radius-md);
+      border-radius: var(--radius);
       padding: 1.5rem;
       margin-bottom: 1.2rem;
     }
@@ -275,9 +282,9 @@
     .ai-papers a {
       font-size: 0.75rem;
       color: var(--accent);
-      border: 0.5px solid var(--border-color);
+      border: 1px solid var(--border-color);
       padding: 0.3rem 0.7rem;
-      border-radius: var(--radius-pill);
+      border-radius: var(--radius-sm);
       background: var(--bg-card);
       transition: var(--transition);
     }
@@ -287,7 +294,7 @@
     /* Signals */
     .signal-row {
       padding: 1rem 0;
-      border-bottom: 0.5px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-color);
     }
 
     .signal-row:last-child { border-bottom: none; }
@@ -326,7 +333,7 @@
   </nav>
 
   <!-- Hero -->
-  <section class="hero" style="min-height: auto; padding: 10rem 0 3rem;">
+  <section class="hero" style="padding: 8rem 0 2.5rem;" aria-label="Page introduction">
     <div class="container">
       <div class="hero-content">
         <div class="hero-label"><span class="dot"></span> Manual</div>
@@ -336,8 +343,10 @@
     </div>
   </section>
 
+  <main>
+
   <!-- Manual Content with Sidebar -->
-  <section style="padding-top: 1rem;">
+  <section class="gap-tight" aria-label="Working manual">
     <div class="manual-layout">
 
       <!-- Sidebar TOC -->
@@ -511,8 +520,10 @@
     </div>
   </section>
 
+  </main>
+
   <!-- CTA -->
-  <section class="fade-in">
+  <section class="gap-major fade-in" aria-label="Call to action">
     <div class="container">
       <div class="newsletter">
         <h2>Let's work together</h2>
@@ -555,7 +566,7 @@
             <li><a href="/ideas">AI Product Strategy</a></li>
             <li><a href="/ideas">Trust & High-Stakes Design</a></li>
             <li><a href="/ideas">Product Leadership</a></li>
-            <li><a href="/ideas">Mental Health Tech</a></li>
+            <li><a href="/ideas">Regulated Tech & Digital Health</a></li>
             <li><a href="/ideas">Marketplace & Platforms</a></li>
           </ul>
         </div>

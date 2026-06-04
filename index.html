@@ -68,27 +68,60 @@
     ],
     "alumniOf": {
       "@type": "CollegeOrUniversity",
-      "name": "Indian Institute of Technology Kharagpur"
+      "name": "Indian Institute of Technology Kharagpur",
+      "sameAs": "https://www.wikidata.org/wiki/Q1333790"
     }
   }
   </script>
 
   <style>
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    .pillar-grid .pillar-card:nth-child(4),
+    .pillar-grid .pillar-card:nth-child(5) {
+      grid-column: span 1;
+    }
+    /* 5 cards: 3 top row, bottom 2 cards wider */
+    @media (min-width: 769px) {
+      .pillar-grid {
+        grid-template-columns: repeat(6, 1fr);
+      }
+      .pillar-grid .pillar-card:nth-child(1),
+      .pillar-grid .pillar-card:nth-child(2),
+      .pillar-grid .pillar-card:nth-child(3) {
+        grid-column: span 2;
+      }
+      .pillar-grid .pillar-card:nth-child(4) {
+        grid-column: 1 / 4;
+      }
+      .pillar-grid .pillar-card:nth-child(5) {
+        grid-column: 4 / 7;
+      }
+    }
+    @media (max-width: 768px) {
+      .pillar-grid { grid-template-columns: 1fr; }
+    }
     .pillar-card {
       padding: 1.5rem;
-      border: 0.5px solid var(--border-color);
-      border-radius: var(--radius-md);
+      background: var(--bg-card);
+      border-radius: var(--radius);
       transition: var(--transition);
     }
-    .pillar-card:hover { border-color: var(--accent); }
+    .pillar-card:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
     .pillar-card h3 { font-size: 1rem; margin-bottom: 0.5rem; }
     .pillar-card p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; }
     .pillar-label {
       font-size: 0.65rem;
       font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--accent);
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
       margin-bottom: 0.5rem;
     }
     .thinking-list {
@@ -100,11 +133,10 @@
       display: block;
       text-decoration: none;
       padding: 1rem 0;
-      border-bottom: 0.5px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
       transition: var(--transition);
     }
-    .thinking-item:first-child { border-top: 0.5px solid var(--border-color); }
-    .thinking-item:hover { border-bottom-color: var(--accent); }
+    .thinking-item:first-child { border-top: 1px solid var(--border-color); }
     .thinking-item:hover .thinking-title { color: var(--accent); }
     .thinking-header {
       display: flex;
@@ -115,7 +147,7 @@
     }
     .thinking-title {
       font-size: 1rem;
-      font-weight: 600;
+      font-weight: 500;
       color: var(--text-primary);
       transition: color 0.2s;
     }
@@ -123,7 +155,7 @@
       font-size: 0.7rem;
       font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.08em;
       color: var(--text-muted);
       white-space: nowrap;
     }
@@ -154,10 +186,13 @@
     </div>
   </nav>
 
+  <main>
+
   <!-- Hero -->
   <section class="hero">
     <div class="container">
       <div class="hero-split">
+        <img src="images/HeadShot.jpeg" alt="Protik Roychowdhury" width="120" height="120" loading="eager" class="hero-avatar">
         <div class="hero-content">
           <div class="hero-label">
             <span class="dot"></span>
@@ -165,108 +200,114 @@
           </div>
           <h1>Product leadership for the AI era.</h1>
           <p>I'm Protik Roychowdhury. I build trusted AI, marketplace, and high-stakes digital products across Asia. I write and speak about product strategy, trust, personalisation, and scaling teams with judgement.</p>
-          <div class="hero-buttons" style="margin-top: 1.5rem;">
+          <div class="hero-buttons">
             <a href="/ideas" class="btn btn-primary">Read my ideas &rarr;</a>
             <a href="/media" class="btn btn-secondary">Invite me to speak</a>
           </div>
-        </div>
-        <div class="hero-portrait">
-          <img src="images/HeadShot.jpeg" alt="Protik Roychowdhury — VP Product, Intellect" width="400" height="400" loading="eager">
         </div>
       </div>
     </div>
   </section>
 
+
   <!-- Authority Pillars -->
-  <section class="fade-in">
+  <section class="gap-major fade-in" aria-label="Authority pillars">
     <div class="container">
-      <div class="section-header">
-        <div class="overline">What I think about</div>
-        <h2>Authority pillars</h2>
-      </div>
-      <div class="grid-3">
-        <div class="pillar-card">
-          <div class="pillar-label">AI Product Strategy</div>
-          <h3>Building AI products people can trust</h3>
-          <p>How product leaders should build AI products that are useful, safe, trusted, and commercially viable — especially in high-stakes domains like health and finance.</p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-label">Trust & High-Stakes Design</div>
-          <h3>Product design where harm is possible</h3>
-          <p>How to build products in categories where user harm, privacy, safety, and clinical ethics matter. Lessons from mental health, marketplace fraud, and regulated technology.</p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-label">Product Leadership</div>
-          <h3>Judgement over process</h3>
-          <p>How senior product leaders make decisions, tell strategic stories, prioritise under uncertainty, and scale teams without killing the thinking that makes products good.</p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-label">Mental Health Technology</div>
-          <h3>Digital care at scale</h3>
-          <p>Lessons from building Asia's largest mental health platform — AI triage, therapist quality, personalisation, and the tension between scale and clinical rigour.</p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-label">Marketplace & Platforms</div>
-          <h3>Two-sided markets across Asia</h3>
-          <p>Supply-demand optimisation, dynamic pricing, fraud prevention, and driver economics from building marketplace products at Grab, Ola, and Fabelio across 6 countries.</p>
+      <div class="section-layout">
+        <aside class="section-sidebar">
+          <div class="overline">What I think about</div>
+          <h2>Authority pillars</h2>
+          <p>The five domains where I write, speak, and advise.</p>
+        </aside>
+        <div class="pillar-grid">
+          <div class="pillar-card" data-pillar="AI Product Strategy">
+            <div class="pillar-label">AI Product Strategy</div>
+            <h3>Building AI products people can trust</h3>
+            <p>How product leaders should build AI products that are useful, safe, trusted, and commercially viable — especially in high-stakes domains like health and finance.</p>
+          </div>
+          <div class="pillar-card" data-pillar="Trust & High-Stakes Design">
+            <div class="pillar-label">Trust & High-Stakes Design</div>
+            <h3>Product design where harm is possible</h3>
+            <p>How to build products in categories where user harm, privacy, safety, and clinical ethics matter. Lessons from mental health, marketplace fraud, and regulated technology.</p>
+          </div>
+          <div class="pillar-card" data-pillar="Product Leadership">
+            <div class="pillar-label">Product Leadership</div>
+            <h3>Judgement over process</h3>
+            <p>How senior product leaders make decisions, tell strategic stories, prioritise under uncertainty, and scale teams without killing the thinking that makes products good.</p>
+          </div>
+          <div class="pillar-card" data-pillar="Regulated Tech & Digital Health">
+            <div class="pillar-label">Regulated Tech & Digital Health</div>
+            <h3>Digital care at scale</h3>
+            <p>Lessons from building Asia's largest mental health platform — AI triage, therapist quality, personalisation, and the tension between scale and clinical rigour.</p>
+          </div>
+          <div class="pillar-card" data-pillar="Marketplace & Platforms">
+            <div class="pillar-label">Marketplace & Platforms</div>
+            <h3>Two-sided markets across Asia</h3>
+            <p>Supply-demand optimisation, dynamic pricing, fraud prevention, and driver economics from building marketplace products at Grab, Ola, and Fabelio across 6 countries.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Latest Thinking -->
-  <section class="fade-in">
+  <section class="gap-standard fade-in" aria-label="Recent writing">
     <div class="container">
-      <div class="section-header">
-        <div class="overline">Latest thinking</div>
-        <h2>Recent writing</h2>
-      </div>
-      <ul class="thinking-list">
-        <li>
-          <a href="/ideas/payments-at-scale-lessons-from-grab" class="thinking-item">
-            <div class="thinking-header">
-              <span class="thinking-title">Payments at scale: what I learned leading fintech products at Grab</span>
-              <span class="thinking-topic">Marketplace & Platforms</span>
-            </div>
-            <div class="thinking-desc">Building payments infrastructure, engagement monetisation, and driver financial services across Southeast Asia's leading superapp.</div>
-          </a>
-        </li>
-        <li>
-          <a href="/ideas/marketplace-lessons-from-ola" class="thinking-item">
-            <div class="thinking-header">
-              <span class="thinking-title">Marketplace lessons from Ola: supply-demand, fraud, and driver economics</span>
-              <span class="thinking-topic">Marketplace & Platforms</span>
-            </div>
-            <div class="thinking-desc">Two-sided marketplace design at India's largest ride-hailing platform — fraud prevention, incentive design, dynamic pricing, and India-scale complexity.</div>
-          </a>
-        </li>
-        <li>
-          <a href="/ideas/the-great-unbundling-of-product-management" class="thinking-item">
-            <div class="thinking-header">
-              <span class="thinking-title">The great unbundling of product management</span>
-              <span class="thinking-topic">Product Leadership</span>
-            </div>
-            <div class="thinking-desc">AI didn't kill product management. It exposed the bureaucracy. 2026 belongs to PMs who design intent, not process.</div>
-          </a>
-        </li>
-        <li>
-          <a href="/ideas/designing-for-trust-in-mental-health-apps" class="thinking-item">
-            <div class="thinking-header">
-              <span class="thinking-title">Designing for trust in mental health apps: why UX is care</span>
-              <span class="thinking-topic">Trust & High-Stakes Design</span>
-            </div>
-            <div class="thinking-desc">In mental health, every interface decision is a clinical decision. What building for vulnerable users teaches about product design everywhere.</div>
-          </a>
-        </li>
-      </ul>
-      <div style="text-align: center; margin-top: 2rem;">
-        <a href="/ideas" class="btn btn-secondary">All ideas &rarr;</a>
+      <div class="section-layout">
+        <aside class="section-sidebar">
+          <div class="overline">Latest thinking</div>
+          <h2>Recent writing</h2>
+          <p>Essays grounded in operating experience, not theory.</p>
+        </aside>
+        <div>
+          <ul class="thinking-list">
+            <li>
+              <a href="/ideas/payments-at-scale-lessons-from-grab" class="thinking-item">
+                <div class="thinking-header">
+                  <span class="thinking-title">Payments at scale: what I learned leading fintech products at Grab</span>
+                  <span class="thinking-topic">Marketplace & Platforms</span>
+                </div>
+                <div class="thinking-desc">Building payments infrastructure, engagement monetisation, and driver financial services across Southeast Asia's leading superapp.</div>
+              </a>
+            </li>
+            <li>
+              <a href="/ideas/marketplace-lessons-from-ola" class="thinking-item">
+                <div class="thinking-header">
+                  <span class="thinking-title">Marketplace lessons from Ola: supply-demand, fraud, and driver economics</span>
+                  <span class="thinking-topic">Marketplace & Platforms</span>
+                </div>
+                <div class="thinking-desc">Two-sided marketplace design at India's largest ride-hailing platform — fraud prevention, incentive design, dynamic pricing, and India-scale complexity.</div>
+              </a>
+            </li>
+            <li>
+              <a href="/ideas/the-great-unbundling-of-product-management" class="thinking-item">
+                <div class="thinking-header">
+                  <span class="thinking-title">The great unbundling of product management</span>
+                  <span class="thinking-topic">Product Leadership</span>
+                </div>
+                <div class="thinking-desc">AI didn't kill product management. It exposed the bureaucracy. 2026 belongs to PMs who design intent, not process.</div>
+              </a>
+            </li>
+            <li>
+              <a href="/ideas/designing-for-trust-in-mental-health-apps" class="thinking-item">
+                <div class="thinking-header">
+                  <span class="thinking-title">Designing for trust in mental health apps: why UX is care</span>
+                  <span class="thinking-topic">Trust & High-Stakes Design</span>
+                </div>
+                <div class="thinking-desc">In mental health, every interface decision is a clinical decision. What building for vulnerable users teaches about product design everywhere.</div>
+              </a>
+            </li>
+          </ul>
+          <div style="margin-top: 1.5rem;">
+            <a href="/ideas" class="btn btn-secondary">All ideas &rarr;</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="fade-in">
+  <section class="gap-major fade-in" aria-label="Call to action">
     <div class="container">
       <div class="newsletter">
         <h2>Let's talk</h2>
@@ -278,6 +319,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
@@ -309,7 +352,7 @@
             <li><a href="/ideas">AI Product Strategy</a></li>
             <li><a href="/ideas">Trust & High-Stakes Design</a></li>
             <li><a href="/ideas">Product Leadership</a></li>
-            <li><a href="/ideas">Mental Health Tech</a></li>
+            <li><a href="/ideas">Regulated Tech & Digital Health</a></li>
             <li><a href="/ideas">Marketplace & Platforms</a></li>
           </ul>
         </div>
