@@ -62,7 +62,7 @@ Protik speaks at conferences, leadership summits, and product communities on six
 
 ## Ideas (On-Site Articles)
 
-- "Payments at Scale: What I Learned Leading Fintech Products at Grab" — May 2026. Lessons from leading GEL and Driver Rentals at Grab: payments infrastructure, engagement monetisation, $4.5M cost savings, multi-market fintech. https://protik.info/ideas/payments-at-scale-lessons-from-grab
+- "Payments at Scale: What I Learned About Fintech at Grab" — May 2026. Lessons from leading GEL and Driver Rentals at Grab: payments infrastructure, engagement monetisation, $4.5M cost savings, multi-market fintech. https://protik.info/ideas/payments-at-scale-lessons-from-grab
 - "Marketplace Lessons from Ola: Supply-Demand, Fraud, and Driver Economics" — May 2026. Two-sided marketplace design at India's largest ride-hailing platform: fraud prevention (INR 9.7M/month saved), driver incentive redesign (+12% earnings), dynamic pricing, India-scale complexity. https://protik.info/ideas/marketplace-lessons-from-ola
 
 - "The Great Unbundling of Product Management: Why 2026 Belongs to the Impact Architect" — Jan 2026, 3 min. Originally on Medium. https://protik.info/ideas/the-great-unbundling-of-product-management
