@@ -177,73 +177,91 @@
   <style>
     .pillar-filter {
       display: flex;
-      gap: 0.5rem;
+      gap: 0.4rem;
       flex-wrap: wrap;
       margin-bottom: 2rem;
     }
     .pillar-filter button {
       font-family: var(--font-primary);
-      font-size: 0.8rem;
-      padding: 0.4rem 1rem;
+      font-size: 0.75rem;
+      padding: 0.35rem 0.8rem;
       border-radius: var(--radius-sm);
-      border: 1px solid var(--border-color);
-      background: transparent;
-      color: var(--text-secondary);
+      border: none;
+      background: var(--bg-secondary);
+      color: var(--text-muted);
       cursor: pointer;
       transition: var(--transition);
+      font-weight: 400;
     }
-    .pillar-filter button:hover,
+    .pillar-filter button:hover {
+      color: var(--text-primary);
+    }
     .pillar-filter button.active {
       background: var(--accent);
       color: #fff;
-      border-color: var(--accent);
     }
-    .idea-card {
-      display: block;
+    .idea-list { list-style: none; padding: 0; margin: 0; }
+    .idea-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1.5rem;
       text-decoration: none;
+      padding: 0.7rem 0;
       border-bottom: 1px solid var(--border-color);
-      padding: 2rem 0;
-      transition: all 0.2s ease;
+      transition: var(--transition);
     }
-    .idea-card:first-of-type { padding-top: 0; }
-    .idea-card:last-of-type { border-bottom: none; }
-    .idea-card:hover h3 { color: var(--text-muted); }
-    .idea-meta {
-      font-size: 0.75rem;
+    .idea-row:hover .idea-row-title { color: var(--accent); }
+    .idea-row-title {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      transition: color 0.2s;
+      line-height: 1.4;
+      flex: 1;
+      min-width: 0;
+    }
+    .idea-row-right {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+    .idea-row-pillar {
+      font-size: 0.6rem;
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      color: var(--text-muted);
-      margin-bottom: 0.5rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: var(--radius-sm);
     }
-    .idea-pillar {
-      color: var(--accent);
-    }
-    .idea-card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
-      transition: color 0.2s ease;
-    }
-    .idea-card .preview {
-      color: var(--text-secondary);
-      font-size: 0.95rem;
-      line-height: 1.7;
-      margin-bottom: 0.6rem;
-    }
-    .idea-card .read-link {
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: var(--accent);
-    }
-    .section-divider {
+    .idea-row-pillar[data-color="ai"] { background: #e1f5ee; color: #0f6e56; }
+    .idea-row-pillar[data-color="trust"] { background: #faece7; color: #993c1d; }
+    .idea-row-pillar[data-color="leadership"] { background: #e6f1fb; color: #185fa5; }
+    .idea-row-pillar[data-color="regulated"] { background: #eeedfe; color: #534ab7; }
+    .idea-row-pillar[data-color="marketplace"] { background: #faeeda; color: #854f0b; }
+    .idea-row-pillar[data-color="founder"] { background: #fbeaf0; color: #993556; }
+    .idea-row-pillar[data-color="side"] { background: #eaf3de; color: #3b6d11; }
+    .idea-row-pillar[data-color="intellect"] { background: var(--bg-secondary); color: var(--text-muted); }
+    .year-divider {
       font-size: 0.7rem;
       font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
       color: var(--text-muted);
-      padding: 1.5rem 0 0.5rem;
-      border-bottom: 1px solid var(--border-color);
-      margin-bottom: 0;
+      padding: 1.5rem 0 0.4rem;
+      letter-spacing: 0.04em;
+    }
+    .idea-row-time {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      min-width: 36px;
+      text-align: right;
+    }
+    li.hidden { display: none; }
+    @media (max-width: 600px) {
+      .idea-row { flex-wrap: wrap; gap: 0.3rem; }
+      .idea-row-title { width: 100%; font-size: 0.95rem; }
+      .idea-row-right { width: 100%; }
     }
   </style>
 </head>
@@ -284,125 +302,40 @@
   <section class="gap-standard" aria-label="Essays">
     <div class="container" style="max-width: 760px;">
 
-      <a href="/ideas/the-genai-pnl" class="idea-card">
-        <div class="idea-meta"><span class="idea-pillar">AI Product Strategy</span> &middot; Jul 2026 &middot; 7 min read</div>
-        <h3>The meter is always running</h3>
-        <p class="preview">What generative AI actually costs when you are the one signing for it. Token economics, model routing, and the hidden invoice nobody demos.</p>
-        <span class="read-link">Read &rarr;</span>
-      </a>
-
-      <a href="/ideas/how-i-vibe-coded-my-wedding-album" class="idea-card">
-        <div class="idea-meta"><span class="idea-pillar">Side Project</span> &middot; Jun 2026 &middot; 6 min read</div>
-        <h3>Vibe-coding the nuptial archive</h3>
-        <p class="preview">2,000 photos. A year of procrastination. A weekend of vibe-coding. And my wife picked the final 50 anyway.</p>
-        <span class="read-link">Read &rarr;</span>
-      </a>
-
-      <a href="/ideas/payments-at-scale-lessons-from-grab" class="idea-card">
-        <div class="idea-meta"><span class="idea-pillar">Marketplace & Platforms</span> &middot; May 2026 &middot; 8 min read</div>
-        <h3>Payments at scale: what I learned about fintech at Grab</h3>
-        <p class="preview">Between 2019 and 2022, I led Growth, Engagement & Loyalty and Driver Rentals at Grab — Southeast Asia's leading superapp. Five lessons on building payments infrastructure, engagement monetisation, and driver financial services across six markets.</p>
-        <span class="read-link">Read &rarr;</span>
-      </a>
-
-      <a href="/ideas/marketplace-lessons-from-ola" class="idea-card">
-        <div class="idea-meta"><span class="idea-pillar">Marketplace & Platforms</span> &middot; May 2026 &middot; 7 min read</div>
-        <h3>Marketplace lessons from Ola: supply-demand, fraud, and driver economics</h3>
-        <p class="preview">From 2016 to 2018, I was a PM at India's largest ride-hailing platform — 100+ cities, millions of daily rides. Lessons on two-sided marketplace design, fraud prevention, incentive systems, and building products for India-scale complexity.</p>
-        <span class="read-link">Read &rarr;</span>
-      </a>
-
-      <a href="/ideas/what-i-got-wrong-as-a-founder" class="idea-card">
-        <div class="idea-meta"><span class="idea-pillar">Founder</span> &middot; May 2026 &middot; 8 min read</div>
-        <h3>The anatomy of startup blind spots</h3>
-        <p class="preview">Three startups, three different failures, one common thread: the inability to be ruthless with reality. What I got wrong as a three-time founder.</p>
-        <span class="read-link">Read &rarr;</span>
-      </a>
-
-      <a href="/ideas/how-to-build-trust-into-ai-products" class="idea-card">
-        <div class="idea-meta"><span class="idea-pillar">Trust & High-Stakes Design</span> &middot; Apr 2026 &middot; 7 min read</div>
-        <h3>The architecture of algorithmic trust</h3>
-        <p class="preview">Trust is an engineered property with a three-layer architecture: the alibi, the steering wheel, and the safety net. The framework spans classical ML and generative AI alike.</p>
-        <span class="read-link">Read &rarr;</span>
-      </a>
-
-      <a href="/ideas/shipping-ai-in-regulated-industries" class="idea-card">
-        <div class="idea-meta"><span class="idea-pillar">Regulated Tech & Digital Health</span> &middot; Mar 2026 &middot; 7 min read</div>
-        <h3>The architecture of consequential AI</h3>
-        <p class="preview">Regulated AI does not have to be slow AI. It requires that governance be embedded into the architecture — not pasted onto the end as an approval gate.</p>
-        <span class="read-link">Read &rarr;</span>
-      </a>
-
-      <a href="/ideas/what-product-leaders-actually-do" class="idea-card">
-        <div class="idea-meta"><span class="idea-pillar">Product Leadership</span> &middot; Feb 2026 &middot; 6 min read</div>
-        <h3>What product leaders actually do</h3>
-        <p class="preview">The job is judgment. Everything else is overhead. What the actual work of senior product leadership looks like, beyond the frameworks.</p>
-        <span class="read-link">Read &rarr;</span>
-      </a>
-
-      <a href="/ideas/the-great-unbundling-of-product-management" class="idea-card">
-        <div class="idea-meta"><span class="idea-pillar">Product Leadership</span> &middot; Jan 2026 &middot; 3 min read</div>
-        <h3>The great unbundling of product management</h3>
-        <p class="preview">AI didn't kill Product Management — it exposed the bureaucracy. The PMs who thrive in this decade will move from managing features to architecting outcomes.</p>
-        <span class="read-link">Read &rarr;</span>
-      </a>
-
-      <a href="/ideas/the-roi-of-care" class="idea-card">
-        <div class="idea-meta"><span class="idea-pillar">Regulated Tech & Digital Health</span> &middot; May 2025 &middot; 4 min read</div>
-        <h3>The ROI of care</h3>
-        <p class="preview">Mental health as a performance multiplier, not a cost centre. How care reduces burnout, cuts absenteeism, and lifts teams.</p>
-        <span class="read-link">Read &rarr;</span>
-      </a>
-
-      <a href="/ideas/what-humans-still-do-best" class="idea-card">
-        <div class="idea-meta"><span class="idea-pillar">AI Product Strategy</span> &middot; May 2025 &middot; 4 min read</div>
-        <h3>What humans still do best</h3>
-        <p class="preview">The future of care isn't human vs AI — it's dynamic orchestration. Knowing when AI leads, when it supports, and when it steps aside entirely.</p>
-        <span class="read-link">Read &rarr;</span>
-      </a>
-
-      <a href="/ideas/designing-for-trust-in-mental-health-apps" class="idea-card">
-        <div class="idea-meta"><span class="idea-pillar">Trust & High-Stakes Design</span> &middot; May 2025 &middot; 5 min read</div>
-        <h3>Designing for trust in mental health apps</h3>
-        <p class="preview">In mental health apps, UX is not a wrapper around care — it is the care. Trust begins the moment someone sees the sign-up button.</p>
-        <span class="read-link">Read &rarr;</span>
-      </a>
-
-      <a href="/ideas/when-ai-becomes-an-echo-chamber" class="idea-card">
-        <div class="idea-meta"><span class="idea-pillar">AI Product Strategy</span> &middot; May 2025 &middot; 4 min read</div>
-        <h3>When AI becomes an echo chamber</h3>
-        <p class="preview">If AI simply affirms users without reflection, it risks doing significant harm. In mental health, AI cannot just be a friendly mirror — it needs to be an ethical guide.</p>
-        <span class="read-link">Read &rarr;</span>
-      </a>
-
-      <a href="/ideas/how-ai-is-personalising-mental-health-support" class="idea-card">
-        <div class="idea-meta"><span class="idea-pillar">AI Product Strategy</span> &middot; Apr 2025 &middot; 4 min read</div>
-        <h3>How AI is personalising mental health support at scale</h3>
-        <p class="preview">Personalisation at scale is the real frontier of AI in mental health. How machine learning enables adaptive interventions across languages and cultures.</p>
-        <span class="read-link">Read &rarr;</span>
-      </a>
-
-    </div>
-  </section>
-
-  <!-- Also on Intellect -->
-  <section class="gap-standard fade-in" aria-label="Articles on Intellect">
-    <div class="container" style="max-width: 760px;">
-      <div class="section-divider">On Intellect</div>
-      <div class="grid-3" style="margin-top: 1.5rem;">
-        <a href="https://intellect.co/read/ai-mental-health-and-humanity/" target="_blank" rel="noopener" class="card" style="text-decoration: none;">
-          <div style="font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); margin-bottom: 0.4rem;">Intellect &middot; Jun 2025</div>
-          <h3>AI, Mental Health and Humanity</h3>
-        </a>
-        <a href="https://intellect.co/read/ai-therapy-echo-chamber/" target="_blank" rel="noopener" class="card" style="text-decoration: none;">
-          <div style="font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); margin-bottom: 0.4rem;">Intellect &middot; May 2025</div>
-          <h3>AI Therapy and the Echo Chamber</h3>
-        </a>
-        <a href="https://intellect.co/read/ai-and-mental-health-personalisation/" target="_blank" rel="noopener" class="card" style="text-decoration: none;">
-          <div style="font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); margin-bottom: 0.4rem;">Intellect &middot; May 2025</div>
-          <h3>AI and Mental Health: Personalisation</h3>
-        </a>
+      <div class="pillar-filter" id="pillarFilter">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="AI Product Strategy">AI Strategy</button>
+        <button data-filter="Trust & High-Stakes Design">Trust</button>
+        <button data-filter="Product Leadership">Leadership</button>
+        <button data-filter="Regulated Tech & Digital Health">Regulated Tech</button>
+        <button data-filter="Marketplace & Platforms">Marketplace</button>
+        <button data-filter="Founder">Founder</button>
+        <button data-filter="Side Project">Side Project</button>
+        <button data-filter="Intellect">Intellect</button>
       </div>
+
+      <ul class="idea-list" id="ideaList">
+        <li class="year-divider">2026</li>
+        <li><a href="/ideas/the-genai-pnl" class="idea-row" data-pillar="AI Product Strategy"><span class="idea-row-title">The meter is always running</span><span class="idea-row-right"><span class="idea-row-pillar" data-color="ai">AI Strategy</span><span class="idea-row-time">7 min</span></span></a></li>
+        <li><a href="/ideas/how-i-vibe-coded-my-wedding-album" class="idea-row" data-pillar="Side Project"><span class="idea-row-title">Vibe-coding the nuptial archive</span><span class="idea-row-right"><span class="idea-row-pillar" data-color="side">Side Project</span><span class="idea-row-time">6 min</span></span></a></li>
+        <li><a href="/ideas/payments-at-scale-lessons-from-grab" class="idea-row" data-pillar="Marketplace & Platforms"><span class="idea-row-title">Payments at scale: what I learned about fintech at Grab</span><span class="idea-row-right"><span class="idea-row-pillar" data-color="marketplace">Marketplace</span><span class="idea-row-time">8 min</span></span></a></li>
+        <li><a href="/ideas/marketplace-lessons-from-ola" class="idea-row" data-pillar="Marketplace & Platforms"><span class="idea-row-title">Marketplace lessons from Ola</span><span class="idea-row-right"><span class="idea-row-pillar" data-color="marketplace">Marketplace</span><span class="idea-row-time">7 min</span></span></a></li>
+        <li><a href="/ideas/what-i-got-wrong-as-a-founder" class="idea-row" data-pillar="Founder"><span class="idea-row-title">The anatomy of startup blind spots</span><span class="idea-row-right"><span class="idea-row-pillar" data-color="founder">Founder</span><span class="idea-row-time">8 min</span></span></a></li>
+        <li><a href="/ideas/how-to-build-trust-into-ai-products" class="idea-row" data-pillar="Trust & High-Stakes Design"><span class="idea-row-title">The architecture of algorithmic trust</span><span class="idea-row-right"><span class="idea-row-pillar" data-color="trust">Trust</span><span class="idea-row-time">7 min</span></span></a></li>
+        <li><a href="/ideas/shipping-ai-in-regulated-industries" class="idea-row" data-pillar="Regulated Tech & Digital Health"><span class="idea-row-title">The architecture of consequential AI</span><span class="idea-row-right"><span class="idea-row-pillar" data-color="regulated">Regulated Tech</span><span class="idea-row-time">7 min</span></span></a></li>
+        <li><a href="/ideas/what-product-leaders-actually-do" class="idea-row" data-pillar="Product Leadership"><span class="idea-row-title">What product leaders actually do</span><span class="idea-row-right"><span class="idea-row-pillar" data-color="leadership">Leadership</span><span class="idea-row-time">6 min</span></span></a></li>
+        <li><a href="/ideas/the-great-unbundling-of-product-management" class="idea-row" data-pillar="Product Leadership"><span class="idea-row-title">The great unbundling of product management</span><span class="idea-row-right"><span class="idea-row-pillar" data-color="leadership">Leadership</span><span class="idea-row-time">3 min</span></span></a></li>
+        <li class="year-divider">2025</li>
+        <li><a href="https://intellect.co/read/ai-mental-health-and-humanity/" target="_blank" rel="noopener" class="idea-row" data-pillar="Intellect"><span class="idea-row-title">AI, mental health and humanity &nearr;</span><span class="idea-row-right"><span class="idea-row-pillar" data-color="intellect">Intellect</span></span></a></li>
+        <li><a href="/ideas/the-roi-of-care" class="idea-row" data-pillar="Regulated Tech & Digital Health"><span class="idea-row-title">The ROI of care</span><span class="idea-row-right"><span class="idea-row-pillar" data-color="regulated">Regulated Tech</span><span class="idea-row-time">4 min</span></span></a></li>
+        <li><a href="/ideas/what-humans-still-do-best" class="idea-row" data-pillar="AI Product Strategy"><span class="idea-row-title">What humans still do best</span><span class="idea-row-right"><span class="idea-row-pillar" data-color="ai">AI Strategy</span><span class="idea-row-time">4 min</span></span></a></li>
+        <li><a href="https://intellect.co/read/ai-therapy-echo-chamber/" target="_blank" rel="noopener" class="idea-row" data-pillar="Intellect"><span class="idea-row-title">AI therapy and the echo chamber &nearr;</span><span class="idea-row-right"><span class="idea-row-pillar" data-color="intellect">Intellect</span></span></a></li>
+        <li><a href="https://intellect.co/read/ai-and-mental-health-personalisation/" target="_blank" rel="noopener" class="idea-row" data-pillar="Intellect"><span class="idea-row-title">AI and mental health: personalisation &nearr;</span><span class="idea-row-right"><span class="idea-row-pillar" data-color="intellect">Intellect</span></span></a></li>
+        <li><a href="/ideas/designing-for-trust-in-mental-health-apps" class="idea-row" data-pillar="Trust & High-Stakes Design"><span class="idea-row-title">Designing for trust in mental health apps</span><span class="idea-row-right"><span class="idea-row-pillar" data-color="trust">Trust</span><span class="idea-row-time">5 min</span></span></a></li>
+        <li><a href="/ideas/when-ai-becomes-an-echo-chamber" class="idea-row" data-pillar="AI Product Strategy"><span class="idea-row-title">When AI becomes an echo chamber</span><span class="idea-row-right"><span class="idea-row-pillar" data-color="ai">AI Strategy</span><span class="idea-row-time">4 min</span></span></a></li>
+        <li><a href="/ideas/how-ai-is-personalising-mental-health-support" class="idea-row" data-pillar="AI Product Strategy"><span class="idea-row-title">How AI is personalising mental health support at scale</span><span class="idea-row-right"><span class="idea-row-pillar" data-color="ai">AI Strategy</span><span class="idea-row-time">4 min</span></span></a></li>
+      </ul>
+
     </div>
   </section>
 
@@ -497,6 +430,43 @@
     } else {
       fadeEls.forEach(function(el) { el.classList.add('is-visible'); });
     }
+    // Pillar filtering
+    var buttons = document.querySelectorAll('#pillarFilter button');
+    var items = document.querySelectorAll('#ideaList li');
+
+    buttons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        buttons.forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+
+        var filter = btn.getAttribute('data-filter');
+        var anyVisibleIn2026 = false;
+        var anyVisibleIn2025 = false;
+        var currentYear = null;
+
+        items.forEach(function(li) {
+          if (li.classList.contains('year-divider')) {
+            currentYear = li.textContent.trim();
+            return;
+          }
+          var row = li.querySelector('.idea-row');
+          if (!row) return;
+          var pillar = row.getAttribute('data-pillar');
+          var show = (filter === 'all' || pillar === filter);
+          li.classList.toggle('hidden', !show);
+          if (show && currentYear === '2026') anyVisibleIn2026 = true;
+          if (show && currentYear === '2025') anyVisibleIn2025 = true;
+        });
+
+        items.forEach(function(li) {
+          if (li.classList.contains('year-divider')) {
+            var yr = li.textContent.trim();
+            if (yr === '2026') li.classList.toggle('hidden', !anyVisibleIn2026);
+            if (yr === '2025') li.classList.toggle('hidden', !anyVisibleIn2025);
+          }
+        });
+      });
+    });
   })();
   </script>
 
