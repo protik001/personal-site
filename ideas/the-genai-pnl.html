@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Meter Is Always Running | Protik Roychowdhury</title>
+  <meta name="description" content="What generative AI actually costs when you are the one signing for it. A product leader's guide to GenAI unit economics, model routing, and the hidden costs nobody puts in the demo.">
+  <meta name="author" content="Protik Roychowdhury">
+  <link rel="canonical" href="https://protik.info/ideas/the-genai-pnl">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The Meter Is Always Running">
+  <meta property="og:description" content="What generative AI actually costs when you are the one signing for it. Token economics, model routing, and the hidden invoice nobody demos.">
+  <meta property="og:url" content="https://protik.info/ideas/the-genai-pnl">
+  <meta property="og:image" content="https://protik.info/images/og-card.png">
+  <meta property="article:author" content="Protik Roychowdhury">
+  <meta property="article:published_time" content="2026-07-01">
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://protik.info/" },
+          { "@type": "ListItem", "position": 2, "name": "Ideas", "item": "https://protik.info/ideas" },
+          { "@type": "ListItem", "position": 3, "name": "The Meter Is Always Running", "item": "https://protik.info/ideas/the-genai-pnl" }
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://protik.info/#person",
+        "name": "Protik Roychowdhury",
+        "url": "https://protik.info"
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://protik.info/ideas/the-genai-pnl",
+        "headline": "The Meter Is Always Running: What Generative AI Actually Costs",
+        "author": { "@id": "https://protik.info/#person" },
+        "publisher": { "@id": "https://protik.info/#person" },
+        "datePublished": "2026-07-01",
+        "url": "https://protik.info/ideas/the-genai-pnl",
+        "description": "What generative AI actually costs when you are the one signing for it. A product leader's guide to GenAI unit economics, model routing, and the hidden costs nobody puts in the demo.",
+        "wordCount": 1600,
+        "timeRequired": "PT7M",
+        "keywords": ["generative AI", "AI product economics", "token cost", "LLM costs", "AI P&L", "enterprise AI", "model routing", "AI unit economics", "product management", "AI budget"]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .article-body { max-width: 680px; margin: 0 auto; }
+    .article-body p { font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.5rem; }
+    .article-body h2 { font-size: 1.4rem; color: var(--text-primary); margin: 2.5rem 0 1rem; }
+    .article-body blockquote { border-left: 2px solid var(--border-color); padding-left: 1.2rem; margin: 1.5rem 0; font-style: italic; color: var(--text-muted); }
+    .article-meta { display: flex; align-items: center; gap: 1rem; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2rem; flex-wrap: wrap; }
+    .article-meta .tag { font-size: 0.75rem; }
+    .article-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color); }
+    .article-summary { background: var(--bg-secondary); border-radius: var(--radius); padding: 1.2rem 1.5rem; margin-bottom: 2rem; font-size: 0.9rem; line-height: 1.7; color: var(--text-secondary); }
+    .article-summary strong { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="/" class="nav-logo"><span>P</span><span class="first-rest">rotik</span><span class="logo-space"></span><span>R</span><span class="last-rest">oychowdhury</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/about">About</a></li>
+        <li><a href="/ideas" class="active">Ideas</a></li>
+        <li><a href="/media">Media</a></li>
+        <li><a href="/coaching">Coaching</a></li>
+        <li><a href="/working-with-me">Manual</a></li>
+        <li><a href="/contact" class="nav-cta">Get in Touch</a></li>
+      </ul>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero" aria-label="Article introduction" style="padding: 8rem 0 2.5rem;">
+    <div class="container">
+      <div class="hero-content" style="max-width: 680px; margin: 0 auto;">
+        <div class="hero-label"><span class="dot"></span> Ideas</div>
+        <h1>The meter is always running</h1>
+        <p style="font-size: 1.1rem; color: var(--text-secondary); margin-top: 0.5rem;">What generative AI actually costs when you are the one signing for it</p>
+      </div>
+    </div>
+  </section>
+  <main>
+
+  <section>
+    <div class="container">
+      <div class="article-body">
+        <div class="article-meta">
+          <span>July 2026</span>
+          <span>7 min read</span>
+          <span class="tag">AI Product Strategy</span>
+          <span class="tag">Unit Economics</span>
+          <span class="tag">Enterprise AI</span>
+        </div>
+
+        <div class="article-summary">
+          <strong>The short version.</strong> Generative AI swaps software's near-zero marginal cost for the metered economics of a utility — success now scales the bill. Margins survive only if you route each task to the cheapest model that can safely do it, and budget for the invoices nobody demos: automated evaluation, guardrail re-runs, and the regression test every model upgrade drags behind it. The job is not to make the bill small. It is to be the person who can read it.
+        </div>
+
+        <p>Every AI feature has two demos. The first is the one you give the board: the chat companion answering a message at two in the morning with something that sounds like a person who cares. The second is the one finance gives you three months later, which is a spreadsheet.</p>
+
+        <p>The distance between those two demos is the entire subject of this essay.</p>
+
+        <p>There is no shortage of writing about the cost of large language models. Most of it is produced by people optimising token throughput, which is a real and useful craft, and also not the question I get asked in a budget review. The question I get asked is simpler and worse. <strong>How much does it cost to run an AI feature once real people are using it — per user, per month, and is that number going up or down.</strong> That is a P&L question, not an engineering one, and the people who can answer it from the chair where the budget actually gets signed are rarer than you would think.</p>
+
+        <p>I have spent the last few years answering it for a regulated mental health platform — four million users, real enterprise contracts, generative features sitting directly in the path of clinical risk. Here is what I have learnt about the bill.</p>
+
+        <h2>The unit you actually pay in</h2>
+
+        <p>Software people carry a comfortable mental model around with them. You build the thing once, and serving the millionth user costs roughly what serving the thousandth did. Marginal cost drifts towards zero. It is the entire reason software valuations look the way they do, and it is the assumption underneath every gross-margin slide ever shown to an investor.</p>
+
+        <p>Generative AI quietly deletes that assumption while you are looking at the demo.</p>
+
+        <p><strong>Every interaction now has a variable cost, because every interaction spends tokens, and tokens are metered like electricity.</strong> The millionth message is not free. It costs almost exactly what the thousandth cost, and rather more if the conversation runs long, which the good conversations always do. You have, without entirely noticing, rebuilt your software business with the cost structure of a utility. The chat companion that makes the product feel humane is also the line item that scales linearly with success. The better it is, the more people use it, the larger the invoice. This is the first thing nobody puts on the slide.</p>
+
+        <h2>Build versus buy is a margin decision wearing a quality costume</h2>
+
+        <p>In a clinical context the instinct is to reach for the most capable model available and use it everywhere. If a smarter model is marginally less likely to mishandle someone in distress, what kind of person chooses the cheaper one.</p>
+
+        <p>The honest answer is that you would not, for the things that matter, and you absolutely would, for the things that do not — and most of what an AI feature does all day does not matter in that way. Treatment formatting, which turns a clinician's notes into structured output, is a mechanical task; it does not need the frontier. Triage routing needs judgement but not genius. The acute-crisis path — what we call Level 3A, where the system has decided a human being needs to intervene right now — is not the place to economise on a fraction of a cent.</p>
+
+        <p>So you route. The unglamorous discipline of the GenAI P&L is deciding, task by task, which jobs deserve the expensive model and which are perfectly well served by something a tenth of the price.</p>
+
+        <blockquote>The model you choose is not a quality decision or a cost decision. It is the same decision, made separately for every task your product performs.</blockquote>
+
+        <p>Get this wrong in the generous direction and your margins quietly bleed. Get it wrong in the frugal direction and you have saved a few cents per session on the one path where saving money was never the point.</p>
+
+        <h2>The costs nobody puts in the demo</h2>
+
+        <p>The token bill is the part you can see. The part you cannot see is larger.</p>
+
+        <p>Evaluation is not free: to know whether one model is doing its job you generally pay another model to grade it, which means your quality assurance has a metered cost of its own. Guardrails mean you frequently run the same request more than once — a generation, a check, sometimes a regeneration — so a single user-facing reply can quietly cost you two or three times what the demo implied. Observability, logging, the storage of every interaction in a domain where you may later need to prove exactly what was said: all metered, all real, none of it in the pitch.</p>
+
+        <p>And then there is the most expensive token of all, which is a human. In a high-stakes product the escalation path does not end at a cheaper model. It ends at a clinician. <strong>In a low-stakes product, the cost of being wrong is a refund. In ours, the cost of being wrong is a person.</strong> That single fact bends the entire P&L, because past a certain level of risk you are no longer buying inference at all. You are buying confidence, and confidence has a price curve that turns sharply upward exactly where you most need it.</p>
+
+        <p>There is also the tax you pay for moving at all. Every time you swap in a newer model — and you will, because they keep getting better and cheaper — you inherit a regression test across every surface you have ever shipped. The upgrade that shaves a real fraction off your cost per million tokens also costs you a fortnight of re-checking that nothing in the crisis path now behaves slightly differently than it did last week. Nobody warns you that the savings have an invoice attached.</p>
+
+        <h2>How to actually budget the thing</h2>
+
+        <p>This is the AI product P&L, and it has a shape. If you are the person holding the number, here is the work.</p>
+
+        <p>Start with cost per active user per month, and refuse to look at it as one figure. Decompose it by feature, because the chat companion, the triage step, session prep and treatment formatting have wildly different cost profiles, and the blended average hides the one that is about to become a problem. The feature that worries me is never the expensive one I already watch. It is the cheap one whose usage is quietly compounding.</p>
+
+        <p>Then map each feature to what it is actually for. Some of these features exist to lift utilisation — the metric an enterprise buyer renews on, because HR did not purchase a product for employees to ignore. Those features earn their token cost by moving a number that shows up in the renewal conversation. Others are pure cost of doing business in a regulated category; they will never show up in a sales deck, and you pay for them anyway. Knowing which is which is the difference between a budget you can defend and a budget you can only apologise for.</p>
+
+        <p>On build versus buy, the calculus is duller than the debate around it. You fine-tune when volume multiplied by the per-call saving comfortably clears the engineering cost of doing so and maintaining it forever. Below that line you stay with prompt engineering and a hosted model, because the cheapest custom model is the one you never had to keep alive. Most teams fine-tune too early, for the same reason most people buy the professional camera before they have taken the amateur photographs.</p>
+
+        <p>Above all, watch the direction of the number, not its level. A high cost per user that is falling every quarter is a business getting better at its craft. A low cost per user that is creeping upward is a slow leak you have not found yet. The board does not need the cost to be small. It needs you to be the person who already knows which way it is moving, and why, before anyone has to ask.</p>
+
+        <p>The two demos never quite reconcile. The chat companion still answers at two in the morning, and finance still arrives three months later with the spreadsheet. The job is not to make the bill disappear. It is to be the only person in the room who can read it.</p>
+
+        <div class="article-nav">
+          <a href="/ideas" style="color: var(--text-muted);">&larr; All posts</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <section class="gap-major fade-in" aria-label="Call to action">
+    <div class="container">
+      <div class="newsletter">
+        <h2>Let's work together</h2>
+        <p style="max-width: 500px; margin: 0.5rem auto;">Looking for a speaker, coach, or product advisor? I'd love to hear what you're working on.</p>
+        <div style="display: flex; gap: 0.8rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap;">
+          <a href="https://calendly.com/protik001/chat" class="btn btn-primary" target="_blank" rel="noopener">Book a call &rarr;</a>
+          <a href="mailto:protik001@gmail.com" class="btn btn-secondary">Email me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><span>P</span><span class="first-rest">rotik</span><span class="logo-space"></span><span>R</span><span class="last-rest">oychowdhury</span></a>
+          <p>Product leader building trusted AI and platform products across Asia. VP Product at Intellect.</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/protik001" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+            <a href="https://www.x.com/protik" target="_blank" rel="noopener" aria-label="X/Twitter">X</a>
+            <a href="https://medium.com/@protik" target="_blank" rel="noopener" aria-label="Medium">M</a>
+          </div>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul class="footer-links">
+            <li><a href="/about">About</a></li>
+            <li><a href="/ideas">Ideas</a></li>
+            <li><a href="/media">Media</a></li>
+            <li><a href="/coaching">Coaching</a></li>
+            <li><a href="/working-with-me">Manual</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Topics</h4>
+          <ul class="footer-links">
+            <li><a href="/ideas">AI Product Strategy</a></li>
+            <li><a href="/ideas">Trust & High-Stakes Design</a></li>
+            <li><a href="/ideas">Product Leadership</a></li>
+            <li><a href="/ideas">Regulated Tech & Digital Health</a></li>
+            <li><a href="/ideas">Marketplace & Platforms</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.linkedin.com/in/protik001" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.x.com/protik" target="_blank" rel="noopener">X / Twitter</a></li>
+            <li><a href="https://medium.com/@protik" target="_blank" rel="noopener">Medium</a></li>
+            <li><a href="/contact">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Protik Roychowdhury. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function() {
+    var root = document.documentElement;
+    var ticking = false;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        requestAnimationFrame(function() {
+          root.style.setProperty('--scroll-progress', Math.min(window.scrollY / 180, 1));
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    var fadeEls = document.querySelectorAll('.fade-in');
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      fadeEls.forEach(function(el) { obs.observe(el); });
+    } else {
+      fadeEls.forEach(function(el) { el.classList.add('is-visible'); });
+    }
+  })();
+  </script>
+
+</body>
+</html>

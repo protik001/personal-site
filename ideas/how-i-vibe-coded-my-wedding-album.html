@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibe-Coding the Nuptial Archive | Protik Roychowdhury</title>
+  <meta name="description" content="A product person who builds for millions of users couldn't face selecting 200 wedding photos from 2,000. So after a year of procrastinating, he vibe-coded a Tinder-style voting app in a weekend.">
+  <meta name="author" content="Protik Roychowdhury">
+  <link rel="canonical" href="https://protik.info/ideas/how-i-vibe-coded-my-wedding-album">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Vibe-Coding the Nuptial Archive">
+  <meta property="og:description" content="2,000 photos. A year of procrastination. A weekend of vibe-coding. And my wife picked the final 50 anyway.">
+  <meta property="og:url" content="https://protik.info/ideas/how-i-vibe-coded-my-wedding-album">
+  <meta property="og:image" content="https://protik.info/images/og-card.png">
+  <meta property="article:author" content="Protik Roychowdhury">
+  <meta property="article:published_time" content="2026-06-09">
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://protik.info/" },
+          { "@type": "ListItem", "position": 2, "name": "Ideas", "item": "https://protik.info/ideas" },
+          { "@type": "ListItem", "position": 3, "name": "Vibe-Coding the Nuptial Archive", "item": "https://protik.info/ideas/how-i-vibe-coded-my-wedding-album" }
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://protik.info/#person",
+        "name": "Protik Roychowdhury",
+        "url": "https://protik.info"
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://protik.info/ideas/how-i-vibe-coded-my-wedding-album",
+        "headline": "Vibe-Coding the Nuptial Archive",
+        "author": { "@id": "https://protik.info/#person" },
+        "publisher": { "@id": "https://protik.info/#person" },
+        "datePublished": "2026-06-09",
+        "url": "https://protik.info/ideas/how-i-vibe-coded-my-wedding-album",
+        "description": "A product person who builds for millions of users couldn't face selecting 200 wedding photos from 2,000. So after a year of procrastinating, he vibe-coded a Tinder-style voting app in a weekend.",
+        "wordCount": 1500,
+        "timeRequired": "PT6M",
+        "keywords": ["vibe coding", "side project", "product thinking", "wedding", "v0", "weekend project", "Google Drive", "API hacking"]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .article-body { max-width: 680px; margin: 0 auto; }
+    .article-body p { font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.5rem; }
+    .article-body h2 { font-size: 1.4rem; color: var(--text-primary); margin: 2.5rem 0 1rem; }
+    .article-body blockquote { border-left: 2px solid var(--border-color); padding-left: 1.2rem; margin: 1.5rem 0; font-style: italic; color: var(--text-muted); }
+    .article-meta { display: flex; align-items: center; gap: 1rem; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2rem; flex-wrap: wrap; }
+    .article-meta .tag { font-size: 0.75rem; }
+    .article-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color); }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="/" class="nav-logo"><span>P</span><span class="first-rest">rotik</span><span class="logo-space"></span><span>R</span><span class="last-rest">oychowdhury</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/about">About</a></li>
+        <li><a href="/ideas" class="active">Ideas</a></li>
+        <li><a href="/media">Media</a></li>
+        <li><a href="/coaching">Coaching</a></li>
+        <li><a href="/working-with-me">Manual</a></li>
+        <li><a href="/contact" class="nav-cta">Get in Touch</a></li>
+      </ul>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero" aria-label="Article introduction" style="padding: 8rem 0 2.5rem;">
+    <div class="container">
+      <div class="hero-content" style="max-width: 680px; margin: 0 auto;">
+        <div class="hero-label"><span class="dot"></span> Ideas</div>
+        <h1>Vibe-coding the nuptial archive</h1>
+      </div>
+    </div>
+  </section>
+  <main>
+
+  <section>
+    <div class="container">
+      <div class="article-body">
+        <div class="article-meta">
+          <span>June 2026</span>
+          <span>6 min read</span>
+          <span class="tag">Side Project</span>
+          <span class="tag">Vibe Coding</span>
+          <span class="tag">Product Thinking</span>
+        </div>
+
+        <p>There is a distinct brand of terror reserved for a man facing his own wedding leftovers.</p>
+
+        <p>By day, my trade involves steering massive software deployments for millions of souls across Southeast Asia. I am paid to be undaunted by scale. Yet, when confronted in April 2025 with a 2TB hard drive containing 2,000+ RAW images of my own nuptials, my nervous system collapsed.</p>
+
+        <p>Our photographer, a gentleman who clearly believed that quantity trumps quality all day, had dumped this digital continent on my lap with a simple brief: cull it down to 200 for editing, and then to fifty for a physical wedding album.</p>
+
+        <p>For over a year, I did precisely nothing. It wasn't a failure of intellect (no pun intended, though Intellect did keep me busy), but a failure of format. Human beings are not built to scroll through thousands of high-resolution images on a desktop folder; by photo forty, the mind turns to porridge. Meanwhile, the familial and parental units kept inquiring via WhatsApp as to when they might expect the physical album. To involve them in the raw data was unthinkable; it would have triggered a domestic maelstrom of conflicting opinions and emojis from which no man could emerge intact.</p>
+
+        <p>Soon, and by that I mean one whole year later, I decided something needed to be done about this. I had a single weekend, a budget of zero dollars, and an audience of five tech-allergic relatives.</p>
+
+        <h2>Hacking the nuptial stack</h2>
+
+        <p>When you are working under these constraints, you do not build software the way they teach you at work. You do not think about infrastructure, scalability, or clean code architecture. Instead, you look for structural inefficiencies in the tech ecosystem and ruthlessly exploit them.</p>
+
+        <p>The conventional engineering approach would involve AWS S3 buckets, a Node.js backend, a Postgres database, and some bloated authentication library. That path leads to a weekend spent reading API documentation and a marriage on the rocks. I chose the path of the elegant hack.</p>
+
+        <p>The first obstacle was the raw data. The photographer's RAW files were digital behemoths, completely unsuited for casual smartphone scrolling. However, every RAW file carries a compressed JPEG preview nestled inside it like a prize in a box of cereal. I (Claude) whipped up a quick script to strip these out, reducing a terrifying continent of data into a manageable handful of gigabytes.</p>
+
+        <p>Next came the problem of hosting. If you want to host thousands of images on standard cloud infrastructure, Amazon will gladly charge you for the privilege. Google, however, offers fifteen gigabytes of storage to any fresh soul willing to create an account. I minted a throwaway Gmail address — a digital phantom existing solely for this weekend — and flung the JPEGs into Google Drive.</p>
+
+        <p>To bridge the gap between Google Drive and a web application, architectural purists would insist on building a proper Content Delivery Network. But purists do not have an impending deadline with family. I spun up a Google Cloud Console free trial, grabbed an API key, and forced Google's own global network to act as my personal, entirely cost-free media server.</p>
+
+        <h2>Vibe-coding the interface</h2>
+
+        <p>In the ancient days of software development — by which I mean 2023 — building the actual user interface required hours of writing boilerplate React, managing state variables, and wrestling with CSS layout rules. I bypassed this entirely by "vibe-coding" with v0.</p>
+
+        <p>Vibe-coding is the art of refusing to write code yourself, choosing instead to argue with a large language model until it yields to your worldview. I did not care how the machine achieved the result, so long as it compiled. I described the ideal state to the AI:</p>
+
+        <blockquote>"Give me a Tinder-style interface for wedding photos. Swipe right to keep, swipe left to incinerate. Every swipe must record a vote against a user's name, and everything must feed into a live leaderboard. Make it look elegant enough that my family won't realize it was built by a machine on a Sunday afternoon."</blockquote>
+
+        <p>The AI spat out hundreds of lines of complex React code. I did not read any of it. If it compiled and didn't crash my browser, it was production-ready.</p>
+
+        <p>The crowning achievement of the weekend, however, was the complete omission of a security system. Conventional product management dictates that users must create accounts, verify their emails, and select secure passwords. Had I presented my family with a "Sign Up with GitHub" button, the entire enterprise would have foundered on the rocks before the first photo was viewed.</p>
+
+        <p>Instead, I protected the entire application behind a single, universally shared password. Security experts would shudder at the vulnerability. But in the context of a micro-product with an audience of five relatives, it was a perfect design decision. It eliminated 100% of user onboarding friction. It took twenty seconds to implement. It was secure enough to keep out random internet bots, and my family could access it instantly while sitting on the sofa.</p>
+
+        <h2>The admin override</h2>
+
+        <p>This brings us to the aspect of the project where ethics took a back seat to marital harmony: the admin override.</p>
+
+        <p>While the family believed they were participating in a pure democracy, I retained a master key to the database. If my father voted with unbridled enthusiasm for a photo where he looked magnificent but the composition resembled a low-budget horror film, I quietly docked his tally. If my wife favoured a shot that the leaderboard was unfairly burying, I gave it a hefty, invisible shove.</p>
+
+        <p>One of the fundamental truths you learn in software — and, indeed, in marriage — is that pure democracy is a terrible way to build anything. A committee will always average out the quirks that make a thing beautiful. The real value of the tool wasn't the voting algorithm at all; it was simply a mechanism to trick people into doing tedious work in small, dopamine-hit batches on their phones.</p>
+
+        <p>The family used it. They swiped through a few hundred photos each over a couple of evenings. My wife went through all of them. The leaderboard surfaced a consensus top 200 within a week — which was more progress than we'd made in the previous twelve months.</p>
+
+        <p>I spend my day job thinking about personalisation at scale, AI triage systems, and multi-market deployment infrastructure. This was the opposite of that. One weekend, zero budget, five to ten users, no auth system, and an admin override that was basically me rigging the vote for my wife.</p>
+
+        <p>But the product instincts were identical: understand the real constraint (the format, not the indecision), design for the actual users (family, not engineers), scope ruthlessly, and know whose opinion actually matters when the leaderboard disagrees.</p>
+
+        <p>The photographer received his selections. The album is being printed, probably. My parents have ceased their interrogation. And the man who is paid to think about personalisation at scale has confirmed, empirically, that the same instincts work at a table for five — provided you have the good sense to rig the vote for your wife.</p>
+
+        <div class="article-nav">
+          <a href="/ideas" style="color: var(--text-muted);">&larr; All posts</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <section class="gap-major fade-in" aria-label="Call to action">
+    <div class="container">
+      <div class="newsletter">
+        <h2>Let's work together</h2>
+        <p style="max-width: 500px; margin: 0.5rem auto;">Looking for a speaker, coach, or product advisor? I'd love to hear what you're working on.</p>
+        <div style="display: flex; gap: 0.8rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap;">
+          <a href="https://calendly.com/protik001/chat" class="btn btn-primary" target="_blank" rel="noopener">Book a call &rarr;</a>
+          <a href="mailto:protik001@gmail.com" class="btn btn-secondary">Email me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><span>P</span><span class="first-rest">rotik</span><span class="logo-space"></span><span>R</span><span class="last-rest">oychowdhury</span></a>
+          <p>Product leader building trusted AI and platform products across Asia. VP Product at Intellect.</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/protik001" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+            <a href="https://www.x.com/protik" target="_blank" rel="noopener" aria-label="X/Twitter">X</a>
+            <a href="https://medium.com/@protik" target="_blank" rel="noopener" aria-label="Medium">M</a>
+          </div>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul class="footer-links">
+            <li><a href="/about">About</a></li>
+            <li><a href="/ideas">Ideas</a></li>
+            <li><a href="/media">Media</a></li>
+            <li><a href="/coaching">Coaching</a></li>
+            <li><a href="/working-with-me">Manual</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Topics</h4>
+          <ul class="footer-links">
+            <li><a href="/ideas">AI Product Strategy</a></li>
+            <li><a href="/ideas">Trust & High-Stakes Design</a></li>
+            <li><a href="/ideas">Product Leadership</a></li>
+            <li><a href="/ideas">Regulated Tech & Digital Health</a></li>
+            <li><a href="/ideas">Marketplace & Platforms</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.linkedin.com/in/protik001" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.x.com/protik" target="_blank" rel="noopener">X / Twitter</a></li>
+            <li><a href="https://medium.com/@protik" target="_blank" rel="noopener">Medium</a></li>
+            <li><a href="/contact">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Protik Roychowdhury. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function() {
+    var root = document.documentElement;
+    var ticking = false;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        requestAnimationFrame(function() {
+          root.style.setProperty('--scroll-progress', Math.min(window.scrollY / 180, 1));
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    var fadeEls = document.querySelectorAll('.fade-in');
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      fadeEls.forEach(function(el) { obs.observe(el); });
+    } else {
+      fadeEls.forEach(function(el) { el.classList.add('is-visible'); });
+    }
+  })();
+  </script>
+
+</body>
+</html>
