@@ -5,8 +5,9 @@ User-agent: *
 Allow: /
 Disallow:
 
-# Sitemap
+# Sitemaps
 Sitemap: https://protik.info/sitemap.xml
+Sitemap: https://protik.info/sitemap.website.xml
 
 # LLM crawlers - explicitly welcomed
 User-agent: GPTBot
