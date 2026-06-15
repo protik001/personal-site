@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>From Consumer App to $20M Enterprise ARR | Protik Roychowdhury</title>
+  <meta name="description" content="How Intellect pivoted from a consumer mental-health app to a B2B2C enterprise SaaS platform — multi-tenancy, configurable compliance, enterprise billing, and the buyer-versus-user tension, told by the VP Product who ran the platform.">
+  <meta name="author" content="Protik Roychowdhury">
+  <link rel="canonical" href="https://protik.info/ideas/pivoting-to-enterprise-saas">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="From Consumer App to $20M Enterprise ARR">
+  <meta property="og:description" content="The B2B2C pivot from a consumer app to an enterprise SaaS platform — multi-tenancy, configurable compliance, enterprise billing, and serving the buyer and the user at the same time.">
+  <meta property="og:url" content="https://protik.info/ideas/pivoting-to-enterprise-saas">
+  <meta property="og:image" content="https://protik.info/images/og/pivoting-to-enterprise-saas.png">
+  <meta property="og:image:alt" content="From consumer app to $20M enterprise ARR — essay by Protik Roychowdhury on the B2B2C pivot to enterprise SaaS">
+  <meta property="article:author" content="Protik Roychowdhury">
+  <meta property="article:published_time" content="2026-06-15">
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="alternate" type="text/markdown" href="https://protik.info/ideas/pivoting-to-enterprise-saas" title="Markdown version">
+  <link rel="alternate" type="application/atom+xml" href="https://protik.info/feed.xml" title="Protik Roychowdhury — Ideas">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://protik.info/" },
+          { "@type": "ListItem", "position": 2, "name": "Ideas", "item": "https://protik.info/ideas" },
+          { "@type": "ListItem", "position": 3, "name": "From Consumer App to $20M Enterprise ARR", "item": "https://protik.info/ideas/pivoting-to-enterprise-saas" }
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://protik.info/#person",
+        "name": "Protik Roychowdhury",
+        "url": "https://protik.info"
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://protik.info/ideas/pivoting-to-enterprise-saas",
+        "headline": "From Consumer App to $20M Enterprise ARR: Inside a B2B2C Pivot",
+        "author": { "@id": "https://protik.info/#person" },
+        "publisher": { "@id": "https://protik.info/#person" },
+        "datePublished": "2026-06-15",
+        "dateModified": "2026-06-15",
+        "url": "https://protik.info/ideas/pivoting-to-enterprise-saas",
+        "description": "How Intellect pivoted from a consumer mental-health app to a B2B2C enterprise SaaS platform — multi-tenancy, configurable compliance, enterprise billing, and the buyer-versus-user tension, told by the VP Product who ran the platform.",
+        "wordCount": 1800,
+        "timeRequired": "PT8M",
+        "keywords": ["enterprise SaaS", "B2B2C", "consumer to enterprise pivot", "multi-tenant architecture", "enterprise billing", "SaaS compliance", "enterprise ARR", "enterprise software adoption", "multi-market SaaS deployment", "product strategy"]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .article-body { max-width: 680px; margin: 0 auto; }
+    .article-body p { font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.5rem; }
+    .article-body h2 { font-size: 1.4rem; color: var(--text-primary); margin: 2.5rem 0 1rem; }
+    .article-body blockquote { border-left: 2px solid var(--border-color); padding-left: 1.2rem; margin: 1.5rem 0; font-style: italic; color: var(--text-muted); }
+    .article-meta { display: flex; align-items: center; gap: 1rem; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2rem; flex-wrap: wrap; }
+    .article-meta .tag { font-size: 0.75rem; }
+    .article-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color); }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="/" class="nav-logo"><span>P</span><span class="first-rest">rotik</span><span class="logo-space"></span><span>R</span><span class="last-rest">oychowdhury</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/about">About</a></li>
+        <li><a href="/ideas" class="active">Ideas</a></li>
+        <li><a href="/media">Media</a></li>
+        <li><a href="/coaching">Coaching</a></li>
+        <li><a href="/working-with-me">Manual</a></li>
+        <li><a href="/contact" class="nav-cta">Get in Touch</a></li>
+      </ul>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero" aria-label="Article introduction" style="padding: 8rem 0 2.5rem;">
+    <div class="container">
+      <div class="hero-content" style="max-width: 680px; margin: 0 auto;">
+        <div class="hero-label"><span class="dot"></span> Ideas</div>
+        <h1>From consumer app to $20M enterprise ARR</h1>
+        <p style="font-size: 1.1rem; color: var(--text-secondary); margin-top: 0.5rem;">Inside Intellect's B2B2C pivot — what it actually takes to turn a consumer app into an enterprise SaaS platform with $20M ARR, 4M+ users, and a buyer who never opens the product</p>
+      </div>
+    </div>
+  </section>
+  <main>
+
+  <section>
+    <div class="container">
+      <div class="article-body">
+        <div class="article-meta">
+          <span>June 2026</span>
+          <span>8 min read</span>
+          <span class="tag">Enterprise SaaS</span>
+          <span class="tag">B2B2C</span>
+          <span class="tag">Product Strategy</span>
+        </div>
+
+        <div class="article-summary">
+          <strong>The short version.</strong> Intellect pivoted from a consumer mental-health app to a B2B2C enterprise SaaS platform now serving 4M+ users at $20M ARR. The hard work was not clinical but structural: multi-tenant architecture, configurable compliance, enterprise billing, multi-market deployment across APAC, ANZ, China and Latam, and building consumer-grade engagement for end-users who never chose the product.
+        </div>
+
+        <p>A consumer subscription business is a bet that people will pay for what they need. A consumer mental-health app is a bet that people will pay for what they need at the exact moment they are least able to act on anything, which is a bit like opening a gym that only admits people at kilometre thirty-eight of a marathon. The unit economics of that bet are well documented, mostly in post-mortems.</p>
+
+        <p>Intellect started life as a consumer app, and a rather successful one — millions of downloads, lovely reviews, the works. Then it did the thing that sounds simple in a board deck and consumed years of engineering in practice: it stopped selling to the person using the product and started selling to the company employing them. Today the platform serves over four million users under enterprise contracts worth $20M in ARR, deployed across APAC, ANZ, China and Latin America, built by a product and design team that I run as VP Product.</p>
+
+        <p>This post is not about mental health. It is about what happens to a product, an architecture, and a roadmap when the buyer and the user stop being the same person — because that split is the key pivot, and almost everything that made it hard follows from it.</p>
+
+        <h2>Why would anyone abandon a working consumer product?</h2>
+
+        <p>Because <em>working</em> is doing a lot of lifting in that sentence. Consumer subscription apps in categories like ours have a cruel pattern: acquisition is expensive, willingness to pay is thin, and the customer most likely to churn is the one who got better — which is, awkwardly, the point of the product. You are forever refilling a leaky bucket with paid marketing, and the bucket is priced at $14.99 a month.</p>
+
+        <p>The enterprise observation that changes everything is that there is a party with both the budget and the motive sitting one step away: the employer. Companies already pay for employee benefits, they pay annually, they pay in advance, and they renew on evidence rather than mood. One signed contract delivers tens of thousands of users in a single morning — users you did not pay an ad network to find.</p>
+
+        <p><strong>The pivot from consumer to B2B2C is not a pricing change. It is a change in who your product has to convince, and there are now two of them.</strong></p>
+
+        <p>That is the seduction and the trap in one package. The revenue line transforms — fewer, larger, stickier contracts; ARR you can actually forecast. And in exchange you inherit a product problem that consumer companies never face: the person who signs the cheque will almost never open the app.</p>
+
+        <h2>Who is the customer when the user never pays?</h2>
+
+        <p>Both. That is the honest answer, and it is also the daily operating tension of every B2B2C product on earth.</p>
+
+        <p>The buyer — typically an HR or benefits leader — evaluates you on coverage, compliance, reporting, and a number called utilisation, which is the percentage of their employees who actually use the thing they bought. The user evaluates you the way they evaluate every other app on their phone, which is to say ruthlessly and in about eight seconds. Neither audience cares about the other's criteria. Both can kill the contract: the buyer by not renewing, the users by not showing up, which causes the buyer to not renew.</p>
+
+        <blockquote>In consumer software, engagement is the business model. In B2B2C, engagement is the renewal evidence. Same metric, entirely different paymaster.</blockquote>
+
+        <p>Consider how users actually arrive in this model. In consumer software, every user chose you — they searched, downloaded, and crossed your onboarding of their own free will, which means they arrive pre-sold. In B2B2C, ten thousand employees receive an email from HR on a Tuesday announcing a benefit they did not ask for, from a company they have never heard of, in a category they may feel ambivalent about. Your funnel starts below zero. Every engagement mechanism we built — the personalisation, the nudges, the GenAI triage and chat companion that meet people where they actually are — exists to climb out of that hole, because the alternative is a utilisation number that quietly sinks the renewal eighteen months later.</p>
+
+        <p>This forks the roadmap permanently. Half the team is building consumer-grade machinery — onboarding that doesn't leak, personalisation, content matching, the GenAI features that make four million people feel the product was built for them rather than procured for them. The other half is building things no consumer ever sees: admin consoles, eligibility management, utilisation reporting that an HR director can put in front of a CFO at renewal. <strong>The art of B2B2C is refusing to let either roadmap eat the other, because the one you starve is the one that kills you.</strong> Skimp on the buyer-facing surface and you lose the renewal conversation. Skimp on the consumer experience and there is nothing for the renewal conversation to be about.</p>
+
+        <h2>One codebase, hundreds of companies who all want their own</h2>
+
+        <p>A consumer app is one product experienced by everyone. An enterprise platform is one codebase experienced as hundreds of slightly different products, and the difference between those two sentences is most of the engineering bill.</p>
+
+        <p>Every enterprise client arrives with a benefits design of their own: which services are covered, how many sessions an employee is entitled to, what happens when entitlements run out, which family members are included, what the eligibility file looks like, whose logo goes where. Multiply by hundreds of clients and you face the central architectural decision of the pivot: does each demand become code, or configuration?</p>
+
+        <p>Get this wrong and every sales win spawns a custom branch, and within two years you are not a software company but a bespoke tailoring operation with a login page. Get it right and the configuration schema quietly becomes the real product — the thing that lets a new enterprise client go live in weeks instead of quarters, without an engineer in the loop. <strong>Multi-tenancy is not an infrastructure detail. It is the difference between selling software and selling projects.</strong></p>
+
+        <p>The discipline gets sharpest where the stakes are highest. Our clinical risk system tiers every user interaction — Level 1 for standard support, Level 2 for moderate concern, Level 3 for high risk, Level 3A for acute crisis with immediate human intervention. Clients and regulators in different markets need different escalation pathways and response protocols layered on top of it. The non-negotiable rule we held: the tiers themselves are never tenant-configurable. What happens around them — who gets notified, which care pathway opens, in what language, under which jurisdiction — is configuration. Safety logic forks for no one; everything else is a setting.</p>
+
+        <h2>What does <em>enterprise-grade</em> actually mean?</h2>
+
+        <p>Mostly, it means the parts of the product that demo terribly.</p>
+
+        <p>It means billing, which in consumer software is a Stripe integration and in enterprise software is a discipline. Annual contracts with quarterly invoicing. Per-employee-per-month pricing against an eligibility file that changes whenever the client hires or fires anyone. Mid-term headcount true-ups, proration, multi-entity invoicing for the client whose Singapore and Sydney offices bill separately, in different currencies, on different fiscal calendars. None of this is glamorous, and all of it is revenue infrastructure: when billing is wrong, the renewal conversation begins with an apology, which is not where you want it to begin.</p>
+
+        <p>It means procurement, which is the ritual by which an enterprise makes sure you are boring enough to trust. Security questionnaires that run to hundreds of items. Data processing agreements, penetration test reports, certifications, data residency commitments. The first few are an ordeal; eventually the answers become a product surface of their own, maintained as deliberately as any feature, because in enterprise sales the security review is a stage of the funnel with its own conversion rate.</p>
+
+        <p>And it means compliance as configuration rather than aspiration. In a regulated category, every market has opinions about how data is stored, where it lives, and what must happen when a user is at risk. The naive approach treats each requirement as an exception. The platform approach treats the union of all requirements as the spec — build the strictest version once, then configure downward per jurisdiction.</p>
+
+        <h2>Shipping one platform into twenty regulatory opinions</h2>
+
+        <p>Deploying across APAC, ANZ, China and Latam taught us that <em>localisation</em> is the most misleading word in product management. Translation is the easy fifth of it. The other four-fifths: data residency requirements that dictate where infrastructure physically sits — China being, famously, its own deployment universe with its own stack, hosting and ecosystem constraints. Clinical escalation protocols that must respect local emergency systems and local law. Cultural calibration of the product itself, because the way distress is expressed and help is sought does not translate the way strings do. And enterprise buyers whose procurement norms differ as much as their regulators do.</p>
+
+        <p>The multi-tenant machinery earned its keep here twice over. The same configuration layer that absorbs the difference between two clients also absorbs most of the difference between two countries. A new market becomes a new configuration profile — residency, language, escalation pathways, entitlement norms — rather than a new product. Most of the time. The remaining minority is where the actual work lives, and it never fully goes away.</p>
+
+        <h2>The pivot is a rebuild that keeps the logo</h2>
+
+        <p>If a founder asked me whether to make this move, I would say two things. First: the economics are real. Enterprise contracts turned a category where consumer apps go to die into a $20M ARR business with forecastable revenue and four million users we never paid to acquire. Second: do not let anyone describe it as a go-to-market change. <strong>A B2B2C pivot is a product rebuild wearing a sales strategy as a disguise.</strong> Multi-tenancy, entitlements, enterprise billing, compliance configuration, admin tooling — the consumer app you started with survives as roughly the top inch of the iceberg.</p>
+
+        <p>The strangest part is what success looks like afterwards. The buyer renews because the dashboard told a good story. The user opens the app at two in the morning and has no idea a procurement process ever existed. When the platform is working properly, each of them believes the product was built entirely for them — and the entire job, every quarter, is making sure neither finds out about the other.</p>
+
+        <div class="article-nav">
+          <a href="/ideas" style="color: var(--text-muted);">&larr; All posts</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <section class="gap-major fade-in" aria-label="Call to action">
+    <div class="container">
+      <div class="newsletter">
+        <h2>Let's work together</h2>
+        <p style="max-width: 500px; margin: 0.5rem auto;">Looking for a speaker, coach, or product advisor? I'd love to hear what you're working on.</p>
+        <div style="display: flex; gap: 0.8rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap;">
+          <a href="https://calendly.com/protik001/chat" class="btn btn-primary" target="_blank" rel="noopener">Book a call &rarr;</a>
+          <a href="mailto:protik001@gmail.com" class="btn btn-secondary">Email me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><span>P</span><span class="first-rest">rotik</span><span class="logo-space"></span><span>R</span><span class="last-rest">oychowdhury</span></a>
+          <p>Product leader building trusted AI and platform products across Asia. VP Product at Intellect.</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/protik001" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+            <a href="https://www.x.com/protik" target="_blank" rel="noopener" aria-label="X/Twitter">X</a>
+            <a href="https://medium.com/@protik" target="_blank" rel="noopener" aria-label="Medium">M</a>
+          </div>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul class="footer-links">
+            <li><a href="/about">About</a></li>
+            <li><a href="/ideas">Ideas</a></li>
+            <li><a href="/media">Media</a></li>
+            <li><a href="/coaching">Coaching</a></li>
+            <li><a href="/working-with-me">Manual</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/press">Press</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Topics</h4>
+          <ul class="footer-links">
+            <li><a href="/ideas">AI Product Strategy</a></li>
+            <li><a href="/ideas">Trust & High-Stakes Design</a></li>
+            <li><a href="/ideas">Product Leadership</a></li>
+            <li><a href="/ideas">Regulated & High-Compliance Tech</a></li>
+            <li><a href="/ideas">Marketplace & Platforms</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.linkedin.com/in/protik001" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.x.com/protik" target="_blank" rel="noopener">X / Twitter</a></li>
+            <li><a href="https://medium.com/@protik" target="_blank" rel="noopener">Medium</a></li>
+            <li><a href="/contact">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Protik Roychowdhury. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function() {
+    var root = document.documentElement;
+    var ticking = false;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        requestAnimationFrame(function() {
+          root.style.setProperty('--scroll-progress', Math.min(window.scrollY / 180, 1));
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    var fadeEls = document.querySelectorAll('.fade-in');
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      fadeEls.forEach(function(el) { obs.observe(el); });
+    } else {
+      fadeEls.forEach(function(el) { el.classList.add('is-visible'); });
+    }
+  })();
+  </script>
+
+</body>
+</html>

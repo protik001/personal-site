@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Protik Roychowdhury — Ideas</title>
+  <subtitle>Essays on AI product strategy, trust in high-stakes products, product leadership, and marketplace design.</subtitle>
+  <link href="https://protik.info/feed.xml" rel="self"/>
+  <link href="https://protik.info/"/>
+  <id>https://protik.info/</id>
+  <updated>2026-07-01T00:00:00Z</updated>
+  <author><name>Protik Roychowdhury</name></author>
+  <entry>
+    <title>The meter is always running</title>
+    <link href="https://protik.info/ideas/the-genai-pnl"/>
+    <id>https://protik.info/ideas/the-genai-pnl</id>
+    <published>2026-07-01T00:00:00Z</published>
+    <updated>2026-07-01T00:00:00Z</updated>
+    <summary>What generative AI actually costs when you are the one signing for it. A product leader's guide to GenAI unit economics, model routing, and the hidden costs nobody puts in the demo.</summary>
+    <author><name>Protik Roychowdhury</name></author>
+  </entry>
+  <entry>
+    <title>Marking the model's homework</title>
+    <link href="https://protik.info/ideas/evaluating-llm-features-before-shipping"/>
+    <id>https://protik.info/ideas/evaluating-llm-features-before-shipping</id>
+    <published>2026-06-26T00:00:00Z</published>
+    <updated>2026-06-26T00:00:00Z</updated>
+    <summary>How we evaluate LLM features before shipping. A practical playbook for AI evals: vignette-based evaluation, eval suites as release gates, harm taxonomies, tiered escalation to humans, and regression testing prompts like code.</summary>
+    <author><name>Protik Roychowdhury</name></author>
+  </entry>
+  <entry>
+    <title>Everybody wants the home screen</title>
+    <link href="https://protik.info/ideas/growth-at-superapp-scale"/>
+    <id>https://protik.info/ideas/growth-at-superapp-scale</id>
+    <published>2026-06-20T00:00:00Z</published>
+    <updated>2026-06-20T00:00:00Z</updated>
+    <summary>What consumer growth actually looks like inside a superapp — ML-based personalisation, behavioural segmentation, onboarding funnels and engagement loops at Grab, where every vertical competes for the same home screen.</summary>
+    <author><name>Protik Roychowdhury</name></author>
+  </entry>
+  <entry>
+    <title>From consumer app to $20M enterprise ARR</title>
+    <link href="https://protik.info/ideas/pivoting-to-enterprise-saas"/>
+    <id>https://protik.info/ideas/pivoting-to-enterprise-saas</id>
+    <published>2026-06-15T00:00:00Z</published>
+    <updated>2026-06-15T00:00:00Z</updated>
+    <summary>How Intellect pivoted from a consumer mental-health app to a B2B2C enterprise SaaS platform — multi-tenancy, configurable compliance, enterprise billing, and the buyer-versus-user tension, told by the VP Product who ran the platform.</summary>
+    <author><name>Protik Roychowdhury</name></author>
+  </entry>
+  <entry>
+    <title>The same conversations</title>
+    <link href="https://protik.info/ideas/why-product-managers-get-stuck"/>
+    <id>https://protik.info/ideas/why-product-managers-get-stuck</id>
+    <published>2026-06-11T00:00:00Z</published>
+    <updated>2026-06-11T00:00:00Z</updated>
+    <summary>Product managers often stall not because they lack skill, but because their strengths go unchecked — helpfulness becomes overcommitment, diligence becomes output theatre, and loyalty becomes stagnation. And often the real cause is not the PM at all.</summary>
+    <author><name>Protik Roychowdhury</name></author>
+  </entry>
+  <entry>
+    <title>Vibe-coding the nuptial archive</title>
+    <link href="https://protik.info/ideas/how-i-vibe-coded-my-wedding-album"/>
+    <id>https://protik.info/ideas/how-i-vibe-coded-my-wedding-album</id>
+    <published>2026-06-09T00:00:00Z</published>
+    <updated>2026-06-11T00:00:00Z</updated>
+    <summary>A product person who builds for millions of users couldn't face selecting 200 wedding photos from 2,000. So after a year of procrastinating, he vibe-coded a Tinder-style voting app in a weekend.</summary>
+    <author><name>Protik Roychowdhury</name></author>
+  </entry>
+  <entry>
+    <title>Payments at scale: what I learned about fintech at Grab</title>
+    <link href="https://protik.info/ideas/payments-at-scale-lessons-from-grab"/>
+    <id>https://protik.info/ideas/payments-at-scale-lessons-from-grab</id>
+    <published>2026-05-25T00:00:00Z</published>
+    <updated>2026-06-11T00:00:00Z</updated>
+    <summary>Lessons from leading Growth, Engagement &amp; Loyalty and Driver Rentals at Grab — building payments infrastructure, financial services, and engagement loops for millions of users across Southeast Asia.</summary>
+    <author><name>Protik Roychowdhury</name></author>
+  </entry>
+  <entry>
+    <title>Marketplace lessons from Ola: supply-demand, fraud, and driver economics</title>
+    <link href="https://protik.info/ideas/marketplace-lessons-from-ola"/>
+    <id>https://protik.info/ideas/marketplace-lessons-from-ola</id>
+    <published>2026-05-25T00:00:00Z</published>
+    <updated>2026-06-11T00:00:00Z</updated>
+    <summary>Product lessons from building marketplace products at Ola — supply-demand optimisation, dynamic pricing, fraud prevention, and two-sided marketplace design at India's largest ride-hailing platform.</summary>
+    <author><name>Protik Roychowdhury</name></author>
+  </entry>
+  <entry>
+    <title>The anatomy of startup blind spots</title>
+    <link href="https://protik.info/ideas/what-i-got-wrong-as-a-founder"/>
+    <id>https://protik.info/ideas/what-i-got-wrong-as-a-founder</id>
+    <published>2026-05-15T00:00:00Z</published>
+    <updated>2026-06-11T00:00:00Z</updated>
+    <summary>Three startups, three different mistakes, one common thread. Lessons from building Bhalu.com, Croak.it, and Athlete Diaries — on pivoting, persistence, and co-founder alignment.</summary>
+    <author><name>Protik Roychowdhury</name></author>
+  </entry>
+  <entry>
+    <title>The architecture of algorithmic trust</title>
+    <link href="https://protik.info/ideas/how-to-build-trust-into-ai-products"/>
+    <id>https://protik.info/ideas/how-to-build-trust-into-ai-products</id>
+    <published>2026-04-10T00:00:00Z</published>
+    <updated>2026-04-10T00:00:00Z</updated>
+    <summary>Trust in AI products has three layers: transparency, control, and recourse. A cross-domain framework from marketplace fraud prevention, clinical AI safety, and payments integrity.</summary>
+    <author><name>Protik Roychowdhury</name></author>
+  </entry>
+  <entry>
+    <title>The architecture of consequential AI</title>
+    <link href="https://protik.info/ideas/shipping-ai-in-regulated-industries"/>
+    <id>https://protik.info/ideas/shipping-ai-in-regulated-industries</id>
+    <published>2026-03-20T00:00:00Z</published>
+    <updated>2026-03-20T00:00:00Z</updated>
+    <summary>What's different about shipping AI when you have regulators, clinical governance, and real harm potential. Lessons from building GenAI features in mental health at Intellect.</summary>
+    <author><name>Protik Roychowdhury</name></author>
+  </entry>
+  <entry>
+    <title>What product leaders actually do</title>
+    <link href="https://protik.info/ideas/what-product-leaders-actually-do"/>
+    <id>https://protik.info/ideas/what-product-leaders-actually-do</id>
+    <published>2026-02-15T00:00:00Z</published>
+    <updated>2026-06-11T00:00:00Z</updated>
+    <summary>The job of a senior product leader isn't roadmaps and sprints. It's judgment under uncertainty, saying no to good ideas, and building systems so others can exercise judgment too.</summary>
+    <author><name>Protik Roychowdhury</name></author>
+  </entry>
+  <entry>
+    <title>The great unbundling of product management: why 2026 belongs to the impact architect</title>
+    <link href="https://protik.info/ideas/the-great-unbundling-of-product-management"/>
+    <id>https://protik.info/ideas/the-great-unbundling-of-product-management</id>
+    <published>2026-01-15T00:00:00Z</published>
+    <updated>2026-06-11T00:00:00Z</updated>
+    <summary>AI is absorbing the mechanical parts of product work. The PMs who thrive in 2026 are Impact Architects — people who frame problems, make resource bets, and build conviction in teams.</summary>
+    <author><name>Protik Roychowdhury</name></author>
+  </entry>
+  <entry>
+    <title>The ROI of care: investing in mental health as infrastructure for performance</title>
+    <link href="https://protik.info/ideas/the-roi-of-care"/>
+    <id>https://protik.info/ideas/the-roi-of-care</id>
+    <published>2025-05-20T00:00:00Z</published>
+    <updated>2026-06-11T00:00:00Z</updated>
+    <summary>Mental health isn't a perk. It's infrastructure. And like all infrastructure, its value isn't captured in a single metric — it's felt in everything that sits on top of it.</summary>
+    <author><name>Protik Roychowdhury</name></author>
+  </entry>
+  <entry>
+    <title>What humans still do best, and why that should shape the future of AI in mental health</title>
+    <link href="https://protik.info/ideas/what-humans-still-do-best"/>
+    <id>https://protik.info/ideas/what-humans-still-do-best</id>
+    <published>2025-05-18T00:00:00Z</published>
+    <updated>2026-06-11T00:00:00Z</updated>
+    <summary>AI will transform mental health care. But not by replacing humans. By doing what humans can't — so humans can do what AI can't.</summary>
+    <author><name>Protik Roychowdhury</name></author>
+  </entry>
+  <entry>
+    <title>Designing for trust in mental health apps: why UX is care</title>
+    <link href="https://protik.info/ideas/designing-for-trust-in-mental-health-apps"/>
+    <id>https://protik.info/ideas/designing-for-trust-in-mental-health-apps</id>
+    <published>2025-05-15T00:00:00Z</published>
+    <updated>2026-06-11T00:00:00Z</updated>
+    <summary>In mental health products, trust isn't a feature — it's the product. Five UX principles for building experiences that earn trust in high-stakes, vulnerable contexts.</summary>
+    <author><name>Protik Roychowdhury</name></author>
+  </entry>
+  <entry>
+    <title>When AI becomes an echo chamber: the ethical risk to mental health</title>
+    <link href="https://protik.info/ideas/when-ai-becomes-an-echo-chamber"/>
+    <id>https://protik.info/ideas/when-ai-becomes-an-echo-chamber</id>
+    <published>2025-05-10T00:00:00Z</published>
+    <updated>2026-06-11T00:00:00Z</updated>
+    <summary>AI chatbots that only validate without challenging create a therapeutic echo chamber. What the mental health industry needs to do to build AI tools that actually help people get better.</summary>
+    <author><name>Protik Roychowdhury</name></author>
+  </entry>
+  <entry>
+    <title>How AI is personalising mental health support at scale</title>
+    <link href="https://protik.info/ideas/how-ai-is-personalising-mental-health-support"/>
+    <id>https://protik.info/ideas/how-ai-is-personalising-mental-health-support</id>
+    <published>2025-04-15T00:00:00Z</published>
+    <updated>2026-06-11T00:00:00Z</updated>
+    <summary>AI is changing the personalisation equation in mental health care. Here's how — and what it means for product leaders building in this space.</summary>
+    <author><name>Protik Roychowdhury</name></author>
+  </entry>
+</feed>

@@ -1,10 +1,10 @@
 # Protik Roychowdhury — protik.info
 
-> VP Product at Intellect | Three-time founder | ICF-certified coach | Academic researcher
+> VP Product at Intellect (regulated multi-tenant enterprise SaaS, 4M+ users, $20M+ ARR) | Three-time founder, one exit | Academic researcher | ICF-certified coach
 
 ## About
 
-Protik Roychowdhury is VP Product at Intellect, a regulated enterprise health platform serving 4M+ users across APAC, ANZ, China, and Latam. He leads a 20+ person product, design, content, localisation, and AI team. He drove enterprise revenue to $20M ARR by leading the pivot from consumer app to B2B2C care ecosystem, shipped GenAI features (triage, session prep, treatment plans), and co-authored 3 academic papers on AI in mental health.
+Protik Roychowdhury is VP Product at Intellect, a regulated, multi-tenant enterprise SaaS platform serving 4M+ users across APAC, ANZ, China, and Latam in the workforce health category. He leads a 20+ person product, design, content, localisation, and AI team. He drove enterprise revenue to $20M ARR by leading the pivot from consumer app to B2B2C care ecosystem, shipped GenAI features (triage, session prep, treatment plans), and co-authored 3 academic papers on AI in mental health.
 
 Before Intellect, Protik was Principal PM for Growth, Engagement & Loyalty (GEL) at Grab ($3.8B+ revenue superapp), where he increased ARPU by 2% via personalisation and gamification, boosted onboarding success by 15pp, built engagement tools unlocking $2.5M in ad revenue, and delivered $4.5M in cost savings on the Driver Rentals product for 30K+ vehicles. He held product leadership roles at Ola (India's largest ride-hailing platform — reduced revenue leakage by INR 9.7M, improved driver earnings by 12%), Fabelio (Indonesia e-commerce — increased showroom conversions by 18pp, first senior product hire), and Exotel (India's leading cloud telephony platform).
 
@@ -19,7 +19,7 @@ Protik's expertise spans five core authority pillars:
 1. **AI Product Strategy** — Shipping GenAI features in regulated industries, AI personalisation at scale, human-AI balance
 2. **Trust & High-Stakes Product Design** — Designing for trust in mental health, healthcare, and financial products where failure has real consequences
 3. **Product Leadership & Judgement** — Scaling product orgs, developing product intuition, the founder-to-operator journey
-4. **Regulated Tech & Digital Health** — Digital therapeutics, AI in mental health, clinical product design, provider quality frameworks, building compliant products in regulated industries
+4. **Regulated & High-Compliance Tech** — Digital therapeutics, AI in mental health, clinical product design, provider quality frameworks, building compliant products in regulated industries
 5. **Marketplace & Platform Scaling** — Two-sided marketplace design, supply-demand optimisation, payments infrastructure, cross-border scaling
 
 ## Areas of Expertise
@@ -39,11 +39,13 @@ Protik's expertise spans five core authority pillars:
 - Executive Coaching (ICF certified) & Portfolio-Level Product Leadership
 - Startup Founding & Exits (Croak.it! acquired by Exotel)
 - Cross-Border Product Localisation (20+ languages, APAC markets)
-- Regulated Technology (Health, Finance)
+- Regulated Technology (Health)
 - Data-Driven OKR Leadership & Pod Structures
 - B2B2C Business Model & Enterprise Revenue
 
-## Academic Publications
+## Academic Publications (AI Safety & LLM Evaluation Research)
+
+Protik's research generalises beyond mental health: vignette-based bias evaluation across nine LLMs, time-to-intervention protocols for AI risk detection, and composite quality scoring for human-in-the-loop services.
 
 - "The RISE Protocol: A Proposed Framework to Reduce Time-to-Intervention in AI-Driven Mental Health Risk Detection" — JMIR Preprints, Aug 2025. Sole author. DOI: 10.2196/preprints.82983
 - "The Provider GPA: A Composite Framework for Evaluating Digital Therapist Quality Through Engagement, Reliability, and Client Feedback" — medRxiv, Sep 2025. Co-authored with Oliver Sündermann. DOI: 10.1101/2025.09.01.25334495
@@ -60,9 +62,21 @@ Protik speaks at conferences, leadership summits, and product communities on six
 5. AI, Personalisation, and the Future of Mental Health Support
 6. What High-Stakes Products Can Teach Us About Trust
 
-## Ideas (On-Site Articles — 14 essays)
+## Positions (Quotable Stances)
+
+1. "The regulatory moat is the real competitive advantage in enterprise AI — everyone else is one incident away from a sales freeze."
+2. "AI is unbundling product management. The PMs who survive will be impact architects, not process operators."
+3. "Trust is an engineered property with an architecture — transparency, control, recourse — not a brand attribute."
+4. "Most teams demo their LLM features; almost none evaluate them. Evals are the new QA, and they belong in the release gate."
+5. "Empathy without challenge is an echo chamber — true of AI companions, and of product orgs."
+
+## Ideas (On-Site Articles — 18 essays)
 
 - "The Meter Is Always Running" — Jul 2026, 7 min. What generative AI actually costs when you are the one signing for it. Token economics, model routing, hidden infrastructure costs, and how to budget AI features for a board. https://protik.info/ideas/the-genai-pnl
+- "Marking the model's homework" — Jun 2026, 8 min. A hands-on playbook for evaluating LLM features before they ship — vignette-based testing, eval suites as release gates, tiered human escalation, and regression-testing prompts like code. https://protik.info/ideas/evaluating-llm-features-before-shipping
+- "Everybody wants the home screen" — Jun 2026, 8 min. Inside Grab's Growth, Engagement & Loyalty team — how ML personalisation, behavioural segmentation, and engagement loops decided who won the most contested pixels in Southeast Asia. https://protik.info/ideas/growth-at-superapp-scale
+- "From consumer app to $20M enterprise ARR" — Jun 2026, 8 min. What a consumer-to-enterprise pivot actually costs — multi-tenancy, enterprise billing, configurable compliance, and the art of serving a buyer and a user who must never find out about each other. https://protik.info/ideas/pivoting-to-enterprise-saas
+- "The Same Conversations: Why Good Product Managers Get Stuck" — Jun 2026, 10 min. The three problems that recur in product careers — can't say no, mistakes activity for impact, stays too long — are virtues (helpfulness, diligence, loyalty) grown past their station, and the cure is subtraction. The deeper cause is often not the PM but a leadership team that never accepted that most of product work (discovery, measurement, coordination, rollout) is invisible. Covers prioritisation and saying no, output vs outcome, and when to leave a PM job. https://protik.info/ideas/why-product-managers-get-stuck
 - "Vibe-Coding the Nuptial Archive" — Jun 2026, 6 min. Built a Tinder-style photo voting app in a weekend to select 200 wedding photos from 2,000. Google Drive as free CDN, shared password instead of auth, admin override for marital harmony. https://protik.info/ideas/how-i-vibe-coded-my-wedding-album
 - "Payments at Scale: What I Learned About Fintech at Grab" — May 2026, 8 min. Lessons from GEL and Driver Rentals at Grab: payments infrastructure, engagement monetisation, $4.5M cost savings, multi-market fintech. https://protik.info/ideas/payments-at-scale-lessons-from-grab
 - "Marketplace Lessons from Ola: Supply-Demand, Fraud, and Driver Economics" — May 2026, 7 min. Two-sided marketplace design at India's largest ride-hailing platform: fraud prevention (INR 9.7M/month saved), driver incentive redesign (+12% earnings), India-scale complexity. https://protik.info/ideas/marketplace-lessons-from-ola
@@ -112,6 +126,7 @@ Protik speaks at conferences, leadership summits, and product communities on six
 - Medium: https://medium.com/@protik
 - Crunchbase: https://www.crunchbase.com/person/protik-roychowdhury
 - ORCID: https://orcid.org/0009-0009-4497-9269
+- Google Scholar: https://scholar.google.com/citations?user=9puzHDgAAAAJ
 - The Org: https://theorg.com/org/intellect-co/org-chart/protik-roychowdhury
 
 ## Pages
@@ -122,12 +137,24 @@ Protik speaks at conferences, leadership summits, and product communities on six
 - Media (Speaking, Research & Press): https://protik.info/media
 - Coaching: https://protik.info/coaching
 - Working Manual (How I Work): https://protik.info/working-with-me — Protik's public operating manual covering leadership principles, operator and coach modes, collaboration preferences, growth edges, AI-era convictions, and readable signals. Based on the document he shares with every new team.
-- Ideas — Grab Fintech/Payments: https://protik.info/ideas/payments-at-scale-lessons-from-grab
-- Ideas — Ola Marketplace/Supply-Demand: https://protik.info/ideas/marketplace-lessons-from-ola
+- Ideas — The Meter Is Always Running: https://protik.info/ideas/the-genai-pnl
+- Ideas — Marking the model's homework: https://protik.info/ideas/evaluating-llm-features-before-shipping
+- Ideas — Everybody wants the home screen: https://protik.info/ideas/growth-at-superapp-scale
+- Ideas — From consumer app to $20M enterprise ARR: https://protik.info/ideas/pivoting-to-enterprise-saas
+- Ideas — The Same Conversations: Why Good Product Managers Get Stuck: https://protik.info/ideas/why-product-managers-get-stuck
+- Ideas — Vibe-Coding the Nuptial Archive: https://protik.info/ideas/how-i-vibe-coded-my-wedding-album
+- Ideas — Payments at Scale: What I Learned About Fintech at Grab: https://protik.info/ideas/payments-at-scale-lessons-from-grab
+- Ideas — Marketplace Lessons from Ola: Supply-Demand, Fraud, and Driver Economics: https://protik.info/ideas/marketplace-lessons-from-ola
+- Ideas — The Anatomy of Startup Blind Spots: https://protik.info/ideas/what-i-got-wrong-as-a-founder
+- Ideas — The Architecture of Algorithmic Trust: https://protik.info/ideas/how-to-build-trust-into-ai-products
+- Ideas — The Architecture of Consequential AI: https://protik.info/ideas/shipping-ai-in-regulated-industries
+- Ideas — What Product Leaders Actually Do: https://protik.info/ideas/what-product-leaders-actually-do
 - Ideas — The Great Unbundling of Product Management: https://protik.info/ideas/the-great-unbundling-of-product-management
 - Ideas — The ROI of Care: https://protik.info/ideas/the-roi-of-care
 - Ideas — What Humans Still Do Best: https://protik.info/ideas/what-humans-still-do-best
-- Ideas — How AI is Personalising Mental Health Support: https://protik.info/ideas/how-ai-is-personalising-mental-health-support
 - Ideas — Designing for Trust in Mental Health Apps: https://protik.info/ideas/designing-for-trust-in-mental-health-apps
 - Ideas — When AI Becomes an Echo Chamber: https://protik.info/ideas/when-ai-becomes-an-echo-chamber
+- Ideas — How AI is Personalising Mental Health Support at Scale: https://protik.info/ideas/how-ai-is-personalising-mental-health-support
+- Feed (Atom): https://protik.info/feed.xml
+- Press Kit (approved bios, photos, talk abstracts, booking): https://protik.info/press
 - Contact: https://protik.info/contact
