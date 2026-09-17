@@ -11,10 +11,10 @@
   // Workers Logs (dashboard: Workers & Pages → personal-site → Logs). The worker emits one JSON
   // line per AI-crawler hit: {"event":"ai-crawl","bot":…,"path":…}.
   "observability": { "enabled": true },
-  // Same hits, queryable: SELECT blob1 AS bot, count() FROM protik_ai_crawl WHERE timestamp > NOW() - INTERVAL '7' DAY GROUP BY bot
-  "analytics_engine_datasets": [
-    { "binding": "AI_CRAWL", "dataset": "protik_ai_crawl" }
-  ],
+  // Queryable crawler counts need Analytics Engine enabled on the account first (dashboard:
+  // Workers & Pages → Analytics Engine → Enable). Then add and the worker starts writing to it:
+  //   "analytics_engine_datasets": [{ "binding": "AI_CRAWL", "dataset": "protik_ai_crawl" }],
+  // Until then the worker's console lines in Workers Logs are the record.
   "assets": {
     "run_worker_first": true,
     "directory": ".",
