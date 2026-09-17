@@ -53,6 +53,51 @@
         "wordCount": 1765,
         "timeRequired": "PT8M",
         "keywords": ["LLM evaluation", "AI evals", "evaluation suite", "vignette-based evaluation", "release gates", "harm taxonomy", "model routing", "human in the loop", "regression testing prompts", "shipping AI features"]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do you evaluate LLM features before shipping?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Use standardised vignettes to expose hidden inconsistencies, define a harm taxonomy with severity-based pass thresholds, and run automated eval suites as mandatory release gates. Regression-test prompts like code — version them, run the full suite on every change, and treat a regression as a failed build."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is vignette-based evaluation for AI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Vignette-based evaluation holds everything in a scenario constant and varies one attribute — such as a demographic detail — then measures response deltas at volume. It catches inconsistency that casual testing misses, as demonstrated in a PsyArXiv study evaluating nine LLMs where identical situations drew materially different responses when only a single demographic detail changed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you build a release gate for LLM features?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Build a golden set of hundreds of curated inputs spanning your harm taxonomy, add an automated grading layer where a stronger model judges the feature model's outputs against rubrics, and set pass thresholds per severity tier. The rule has no exceptions: if the suite fails, the feature does not ship."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When should humans review AI output instead of automated checks?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Human review is mandatory in three places: the top severity tier (Level 3A) in production always triggers immediate human intervention, a large hand-graded sample is required before any genuinely new feature class launches, and standing sampled audits of production outputs run forever. This tiered system (L1 through L3A) ensures automation confidence runs inversely to severity."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why should you treat prompts like code?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A one-word change to a system prompt alters production behaviour exactly like a code change, so prompts must be versioned with the full eval suite run on every change and regressions treated as failed builds. The eval suite is the only institutional memory an AI product has — it remembers every way the product has previously failed and checks, every release, that it has not started failing those ways again."
+            }
+          }
+        ]
       }
     ]
   }

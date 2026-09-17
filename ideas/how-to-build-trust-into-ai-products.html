@@ -53,6 +53,51 @@
         "wordCount": 1700,
         "timeRequired": "PT7M",
         "keywords": ["trust", "AI", "product design", "high-stakes", "transparency", "fraud prevention", "clinical safety"]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the three-layer trust architecture for AI products?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The three-layer trust architecture consists of Transparency (the alibi), Control (the steering wheel), and Recourse (the safety net). These layers build temporally: transparency earns initial trust by surfacing the machine's reasoning, control deepens trust by giving users the right to override or reject AI conclusions, and recourse maintains trust through failure by providing deterministic fallbacks when the model stumbles."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you build transparency into AI features?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Transparency means surfacing the AI's reasoning in clean, human-readable terms rather than forcing users to understand the underlying mathematics. At Grab, the personalisation engine introduced explicit copy and micro-animations explaining causal links such as 'Because you ordered from this neighbourhood last week' or 'Popular near your office right now.' The goal is giving users just enough context to determine whether the machine has misunderstood their situation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does recourse mean in AI product design?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Recourse is the deterministic protocol that triggers when the AI inevitably fails, providing a reliable fallback to human intervention. At Intellect, clinical AI operates within a tiered risk taxonomy where Level 1 covers standard wellbeing, Level 3 denotes high-risk clinical needs, and Level 3A indicates acute crisis. When the model misclassifies severity, hard-coded guardrails including keyword triggers, behavioural thresholds, and clinical escalation rules override the AI entirely and connect the user to a live human clinician."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is trust an engineered property, not a feature?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Trust must be built into the system architecture from day one rather than bolted on afterward, because trust that depends on the model being right is trust that fails the moment the model is wrong. Every probabilistic system will eventually fail, and users calibrate their trust to a system's worst possible failure rather than its average performance. The defining metric of a brand is not average uptime but how the product handles tail-end disasters."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do transparency, control, and recourse work together in AI products?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The three layers build on each other temporally: transparency earns initial trust, control deepens trust over time through satisfying feedback loops, and recourse maintains trust through failure with deterministic safety nets. Transparency without control is frustrating, control without transparency is confusing, and either without recourse is fragile. The durable competitive moat belongs to teams that build robust trust architectures, because model capabilities are commoditising while human trust remains the scarcest asset in the ecosystem."
+            }
+          }
+        ]
       }
     ]
   }

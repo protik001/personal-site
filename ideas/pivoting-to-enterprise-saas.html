@@ -53,6 +53,51 @@
         "wordCount": 1800,
         "timeRequired": "PT8M",
         "keywords": ["enterprise SaaS", "B2B2C", "consumer to enterprise pivot", "multi-tenant architecture", "enterprise billing", "SaaS compliance", "enterprise ARR", "enterprise software adoption", "multi-market SaaS deployment", "product strategy"]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do you pivot a consumer app to enterprise SaaS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Intellect pivoted from a consumer mental health app to a B2B2C enterprise platform reaching $20M ARR and 4M+ users. The pivot is a product rebuild, not a go-to-market change — it requires multi-tenancy, configurable compliance, enterprise billing, and resolving the fundamental buyer-versus-user tension where the person signing the contract never opens the app."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the buyer-versus-user tension in B2B2C products?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The HR buyer evaluates on coverage, compliance, reporting, and utilisation rates, while the employee user evaluates the product ruthlessly in about eight seconds like any other app on their phone. The product must convince both simultaneously — skimp on the buyer-facing surface and you lose the renewal conversation, skimp on the consumer experience and there is nothing for the renewal conversation to be about."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does multi-tenant architecture differ from custom deployments?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Multi-tenancy means one codebase with configuration per tenant, not custom code per customer — the configuration schema quietly becomes the real product. Safety logic (such as the L1 through L3A clinical risk tiers) forks for no one; everything else is a setting. The difference is between selling software and selling projects."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What makes enterprise billing complex for SaaS products?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Enterprise billing involves annual contracts with quarterly invoicing, per-employee-per-month (PEPM) pricing against shifting eligibility files, mid-term headcount true-ups, proration, and multi-entity invoicing for clients whose offices bill separately in different currencies on different fiscal calendars. The security review is itself a funnel stage with its own conversion rate, requiring hundreds of questionnaire items, DPAs, and penetration test reports."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you deploy one product across multiple regulatory jurisdictions?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Treat compliance as configuration: build the strictest version once, then configure downward per jurisdiction rather than treating each requirement as an exception. Intellect deployed across APAC, ANZ, China, and Latam from one codebase, with the multi-tenant configuration layer absorbing most differences between countries — data residency, escalation protocols, language, and entitlement norms become configuration profiles rather than separate products."
+            }
+          }
+        ]
       }
     ]
   }

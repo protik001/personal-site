@@ -1,5 +1,18 @@
-_worker.js
-wrangler.jsonc
+# Not served as static assets by Cloudflare (mirrors .gitignore, plus build tooling that is committed but never deployed)
 node_modules
+.DS_Store
+_archive
 .git
 .gitignore
+.claude
+ops
+drafts
+*.md
+_worker.js
+worker.js
+wrangler.jsonc
+site-data.json
+build.js
+check.js
+templates
+scripts

@@ -1,0 +1,649 @@
+{
+  "site": {
+    "url": "https://protik.info",
+    "name": "Protik Roychowdhury",
+    "feedTitle": "Protik Roychowdhury — Ideas",
+    "feedSubtitle": "Essays on AI product strategy, trust in high-stakes products, product leadership, and marketplace design."
+  },
+  "person": {
+    "@type": "Person",
+    "@id": "https://protik.info/#person",
+    "name": "Protik Roychowdhury",
+    "url": "https://protik.info",
+    "knowsAbout": [
+      "AI Product Strategy",
+      "Trusted AI",
+      "High-Stakes Product Design",
+      "Product Judgement over Process",
+      "Product-Led Growth",
+      "Two-Sided Marketplace Architecture",
+      "Scaling Product Teams",
+      "Shipping AI Features in Regulated Industries",
+      "Personalisation at Scale",
+      "Enterprise B2B SaaS",
+      "Cross-Border Localisation",
+      "Consumer Super-Apps",
+      "Marketplace Design",
+      "Platform Products",
+      "GenAI",
+      "LLMs",
+      "Conversational AI",
+      "Product Governance",
+      "Experimentation & A/B Testing",
+      "0-to-1 Product Development",
+      "Startup Founding",
+      "Executive Coaching",
+      "Regulated Technology",
+      "Product Leadership"
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/in/protik001",
+      "https://www.x.com/protik",
+      "https://medium.com/@protik",
+      "https://www.crunchbase.com/person/protik-roychowdhury",
+      "https://orcid.org/0009-0009-4497-9269",
+      "https://scholar.google.com/citations?user=9puzHDgAAAAJ",
+      "https://theorg.com/org/intellect-co/org-chart/protik-roychowdhury"
+    ],
+    "jobTitle": "VP Product",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Intellect",
+      "url": "https://intellect.co"
+    },
+    "description": "Singapore-based product leader building trusted AI, marketplace, and high-stakes digital products across Asia. VP Product at Intellect. Previously led Growth, Engagement & Loyalty at Grab and marketplace products at Ola. Three-time founder (one exit), published researcher, keynote speaker, ICF-certified coach.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Singapore",
+      "addressCountry": "SG"
+    },
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Professional Certification",
+        "name": "ICF Certified Coach",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "International Coaching Federation",
+          "sameAs": "https://www.wikidata.org/wiki/Q3308680"
+        }
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Professional Certification",
+        "name": "Standard Mental Health First Aider"
+      }
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Indian Institute of Technology Kharagpur",
+      "url": "https://www.iitkgp.ac.in",
+      "sameAs": "https://www.wikidata.org/wiki/Q1333790",
+      "department": "Metallurgical & Materials Engineering"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Professional Inquiries",
+      "email": "protik001@gmail.com",
+      "url": "https://calendly.com/protik001/chat",
+      "availableLanguage": [
+        "English",
+        "Hindi",
+        "Bengali"
+      ]
+    },
+    "givenName": "Protik",
+    "familyName": "Roychowdhury",
+    "image": "https://protik.info/images/HeadShot.jpeg",
+    "hasOccupation": [
+      {
+        "@type": "Occupation",
+        "name": "VP Product",
+        "startDate": "2022-01",
+        "description": "Leading product, design, content, localisation, and AI for a regulated, multi-tenant enterprise SaaS platform (Asia's largest in workforce mental health) — 4M+ users, $20M+ ARR",
+        "occupationLocation": {
+          "@type": "Place",
+          "name": "Singapore"
+        },
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Intellect",
+          "url": "https://intellect.co"
+        }
+      },
+      {
+        "@type": "Occupation",
+        "name": "Principal Product Manager",
+        "startDate": "2019-03",
+        "endDate": "2022-05",
+        "description": "Consumer Growth (GEL) & Driver Rentals at super-app scale — $4.5M cost savings, 2% ARPU lift",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Grab",
+          "url": "https://www.grab.com",
+          "sameAs": "https://www.wikidata.org/wiki/Q16982664"
+        }
+      },
+      {
+        "@type": "Occupation",
+        "name": "Group Product Manager",
+        "startDate": "2018-02",
+        "endDate": "2019-03",
+        "description": "Built product org from scratch; showroom conversion +18pp, NPS +2",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Fabelio"
+        }
+      },
+      {
+        "@type": "Occupation",
+        "name": "Product Manager",
+        "startDate": "2016-01",
+        "endDate": "2018-02",
+        "description": "First PM for Rentals; fraud prevention and driver economics optimisation",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Ola Cabs",
+          "url": "https://www.olacabs.com",
+          "sameAs": "https://www.wikidata.org/wiki/Q11011811"
+        }
+      }
+    ],
+    "founderOf": [
+      {
+        "@type": "Organization",
+        "name": "Croak.it!",
+        "description": "Voice-first social app. Apple App Store Top 10. Acquired by Exotel.",
+        "foundingDate": "2012",
+        "dissolutionDate": "2015"
+      },
+      {
+        "@type": "Organization",
+        "name": "Athlete Diaries",
+        "description": "Sports media startup — first-person stories from athletes",
+        "foundingDate": "2015"
+      },
+      {
+        "@type": "Organization",
+        "name": "Bhalu.com",
+        "description": "Hyperlocal task marketplace — post odd jobs, anyone can fulfil them",
+        "foundingDate": "2009",
+        "dissolutionDate": "2011"
+      }
+    ],
+    "seeks": {
+      "@type": "Offer",
+      "name": "Speaking Engagements & Coaching",
+      "description": "Available for speaking on Product Strategy, AI Ethics, Regulated & High-Compliance Tech, and Executive Coaching"
+    },
+    "email": "mailto:protik001@gmail.com"
+  },
+  "essays": [
+    {
+      "slug": "why-product-managers-get-stuck",
+      "title": "The same conversations",
+      "rowTitle": "The same conversations",
+      "headline": "The same conversations",
+      "pillar": "Product Leadership",
+      "pillarColor": "leadership",
+      "pillarLabel": "Leadership",
+      "readTime": "10 min",
+      "datePublished": "2026-06-11",
+      "dateModified": "2026-06-11",
+      "description": "Product managers often stall not because they lack skill, but because their strengths go unchecked — helpfulness becomes overcommitment, diligence becomes output theatre, and loyalty becomes stagnation. And often the real cause is not the PM at all.",
+      "llmsTitle": "The Same Conversations: Why Good Product Managers Get Stuck",
+      "llmsDesc": "The three problems that recur in product careers — can't say no, mistakes activity for impact, stays too long — are virtues (helpfulness, diligence, loyalty) grown past their station, and the cure is subtraction. The deeper cause is often not the PM but a leadership team that never accepted that most of product work (discovery, measurement, coordination, rollout) is invisible. Covers prioritisation and saying no, output vs outcome, and when to leave a PM job.",
+      "keywords": [],
+      "scheduled": false
+    },
+    {
+      "slug": "the-genai-pnl",
+      "title": "The meter is always running",
+      "rowTitle": "The meter is always running",
+      "headline": "The Meter Is Always Running: What Generative AI Actually Costs",
+      "pillar": "AI Product Strategy",
+      "pillarColor": "ai",
+      "pillarLabel": "AI Strategy",
+      "readTime": "7 min",
+      "datePublished": "2026-07-01",
+      "dateModified": "2026-07-01",
+      "description": "What generative AI actually costs when you are the one signing for it. A product leader's guide to GenAI unit economics, model routing, and the hidden costs nobody puts in the demo.",
+      "llmsTitle": "The Meter Is Always Running",
+      "llmsDesc": "What generative AI actually costs when you are the one signing for it. Token economics, model routing, hidden infrastructure costs, and how to budget AI features for a board.",
+      "keywords": [
+        "AI Product Strategy",
+        "Unit Economics",
+        "GenAI",
+        "Enterprise AI"
+      ],
+      "scheduled": true
+    },
+    {
+      "slug": "evaluating-llm-features-before-shipping",
+      "title": "Marking the model's homework",
+      "rowTitle": "Marking the model's homework",
+      "headline": "Marking the model's homework",
+      "pillar": "AI Product Strategy",
+      "pillarColor": "ai",
+      "pillarLabel": "AI Strategy",
+      "readTime": "8 min",
+      "datePublished": "2026-06-26",
+      "dateModified": "2026-06-26",
+      "description": "How we evaluate LLM features before shipping. A practical playbook for AI evals: vignette-based evaluation, eval suites as release gates, harm taxonomies, tiered escalation to humans, and regression testing prompts like code.",
+      "llmsTitle": "Marking the model's homework",
+      "llmsDesc": "A hands-on playbook for evaluating LLM features before they ship — vignette-based testing, eval suites as release gates, tiered human escalation, and regression-testing prompts like code.",
+      "keywords": [
+        "LLM evaluation",
+        "AI evals",
+        "AI Product Strategy",
+        "Release gates"
+      ],
+      "scheduled": true
+    },
+    {
+      "slug": "growth-at-superapp-scale",
+      "title": "Everybody wants the home screen",
+      "rowTitle": "Everybody wants the home screen",
+      "headline": "Everybody wants the home screen",
+      "pillar": "Marketplace & Platforms",
+      "pillarColor": "marketplace",
+      "pillarLabel": "Growth",
+      "readTime": "8 min",
+      "datePublished": "2026-06-20",
+      "dateModified": "2026-06-20",
+      "description": "What consumer growth actually looks like inside a superapp — ML-based personalisation, behavioural segmentation, onboarding funnels and engagement loops at Grab, where every vertical competes for the same home screen.",
+      "llmsTitle": "Everybody wants the home screen",
+      "llmsDesc": "Inside Grab's Growth, Engagement & Loyalty team — how ML personalisation, behavioural segmentation, and engagement loops decided who won the most contested pixels in Southeast Asia.",
+      "keywords": [
+        "Consumer Growth",
+        "Personalisation",
+        "Superapp",
+        "Engagement"
+      ],
+      "scheduled": true
+    },
+    {
+      "slug": "pivoting-to-enterprise-saas",
+      "title": "From consumer app to $20M enterprise ARR",
+      "rowTitle": "From consumer app to $20M enterprise ARR",
+      "headline": "From consumer app to $20M enterprise ARR",
+      "pillar": "Product Leadership",
+      "pillarColor": "leadership",
+      "pillarLabel": "Enterprise SaaS",
+      "readTime": "8 min",
+      "datePublished": "2026-06-15",
+      "dateModified": "2026-06-15",
+      "description": "How Intellect pivoted from a consumer mental-health app to a B2B2C enterprise SaaS platform — multi-tenancy, configurable compliance, enterprise billing, and the buyer-versus-user tension, told by the VP Product who ran the platform.",
+      "llmsTitle": "From consumer app to $20M enterprise ARR",
+      "llmsDesc": "What a consumer-to-enterprise pivot actually costs — multi-tenancy, enterprise billing, configurable compliance, and the art of serving a buyer and a user who must never find out about each other.",
+      "keywords": [
+        "Enterprise SaaS",
+        "B2B2C",
+        "Multi-tenancy",
+        "Product Strategy"
+      ],
+      "scheduled": true
+    },
+    {
+      "slug": "how-i-vibe-coded-my-wedding-album",
+      "title": "Vibe-coding the nuptial archive",
+      "rowTitle": "Vibe-coding the nuptial archive",
+      "headline": "Vibe-Coding the Nuptial Archive",
+      "pillar": "Side Project",
+      "pillarColor": "side",
+      "pillarLabel": "Side Project",
+      "readTime": "6 min",
+      "datePublished": "2026-06-09",
+      "dateModified": "2026-06-11",
+      "description": "A product person who builds for millions of users couldn't face selecting 200 wedding photos from 2,000. So after a year of procrastinating, he vibe-coded a Tinder-style voting app in a weekend.",
+      "llmsTitle": "Vibe-Coding the Nuptial Archive",
+      "llmsDesc": "Built a Tinder-style photo voting app in a weekend to select 200 wedding photos from 2,000. Google Drive as free CDN, shared password instead of auth, admin override for marital harmony.",
+      "keywords": [
+        "Side Project",
+        "Vibe Coding",
+        "Product Thinking"
+      ],
+      "scheduled": false
+    },
+    {
+      "slug": "payments-at-scale-lessons-from-grab",
+      "title": "Payments at scale: what I learned about fintech at Grab",
+      "rowTitle": "Payments at scale: what I learned about fintech at Grab",
+      "headline": "Payments at Scale: What I Learned About Fintech at Grab",
+      "pillar": "Marketplace & Platforms",
+      "pillarColor": "marketplace",
+      "pillarLabel": "Marketplace",
+      "readTime": "8 min",
+      "datePublished": "2026-05-25",
+      "dateModified": "2026-06-11",
+      "description": "Lessons from leading Growth, Engagement & Loyalty and Driver Rentals at Grab — building payments infrastructure, financial services, and engagement loops for millions of users across Southeast Asia.",
+      "llmsTitle": "Payments at Scale: What I Learned About Fintech at Grab",
+      "llmsDesc": "Lessons from GEL and Driver Rentals at Grab: payments infrastructure, engagement monetisation, $4.5M cost savings, multi-market fintech.",
+      "keywords": [
+        "Marketplace & Platforms",
+        "Fintech",
+        "Payments",
+        "Grab"
+      ],
+      "scheduled": false
+    },
+    {
+      "slug": "marketplace-lessons-from-ola",
+      "title": "Marketplace lessons from Ola: supply-demand, fraud, and driver economics",
+      "rowTitle": "Marketplace lessons from Ola",
+      "headline": "Marketplace Lessons from Ola: Supply-Demand, Fraud, and Driver Economics",
+      "pillar": "Marketplace & Platforms",
+      "pillarColor": "marketplace",
+      "pillarLabel": "Marketplace",
+      "readTime": "7 min",
+      "datePublished": "2026-05-25",
+      "dateModified": "2026-06-11",
+      "description": "Product lessons from building marketplace products at Ola — supply-demand optimisation, dynamic pricing, fraud prevention, and two-sided marketplace design at India's largest ride-hailing platform.",
+      "llmsTitle": "Marketplace Lessons from Ola: Supply-Demand, Fraud, and Driver Economics",
+      "llmsDesc": "Two-sided marketplace design at India's largest ride-hailing platform: fraud prevention (INR 9.7M/month saved), driver incentive redesign (+12% earnings), India-scale complexity.",
+      "keywords": [
+        "Marketplace & Platforms",
+        "Supply-Demand",
+        "Fraud Prevention",
+        "Ola"
+      ],
+      "scheduled": false
+    },
+    {
+      "slug": "what-i-got-wrong-as-a-founder",
+      "title": "The anatomy of startup blind spots",
+      "rowTitle": "The anatomy of startup blind spots",
+      "headline": "The Anatomy of Startup Blind Spots: What I Got Wrong as a Three-Time Founder",
+      "pillar": "Founder",
+      "pillarColor": "founder",
+      "pillarLabel": "Founder",
+      "readTime": "8 min",
+      "datePublished": "2026-05-15",
+      "dateModified": "2026-06-11",
+      "description": "Three startups, three different mistakes, one common thread. Lessons from building Bhalu.com, Croak.it, and Athlete Diaries — on pivoting, persistence, and co-founder alignment.",
+      "llmsTitle": "The Anatomy of Startup Blind Spots",
+      "llmsDesc": "What I got wrong as a three-time founder: Bhalu.com (false binary thinking), Croak.it! (emotional attachment to audio when market moved to video), Athlete Diaries (co-founder misalignment under pressure).",
+      "keywords": [
+        "Founder",
+        "Startups",
+        "Lessons",
+        "Career"
+      ],
+      "scheduled": false
+    },
+    {
+      "slug": "how-to-build-trust-into-ai-products",
+      "title": "The architecture of algorithmic trust",
+      "rowTitle": "The architecture of algorithmic trust",
+      "headline": "The Architecture of Algorithmic Trust: How to Build Trust Into AI Products",
+      "pillar": "Trust & High-Stakes Design",
+      "pillarColor": "trust",
+      "pillarLabel": "Trust",
+      "readTime": "7 min",
+      "datePublished": "2026-04-10",
+      "dateModified": "2026-04-10",
+      "description": "Trust in AI products has three layers: transparency, control, and recourse. A cross-domain framework from marketplace fraud prevention, clinical AI safety, and payments integrity.",
+      "llmsTitle": "The Architecture of Algorithmic Trust",
+      "llmsDesc": "Trust in AI products has a three-layer architecture: Transparency (the alibi), Control (the steering wheel), Recourse (the safety net). Framework applies to classical ML and GenAI alike.",
+      "keywords": [
+        "Trust",
+        "AI",
+        "Product Design",
+        "High-Stakes"
+      ],
+      "scheduled": false
+    },
+    {
+      "slug": "shipping-ai-in-regulated-industries",
+      "title": "The architecture of consequential AI",
+      "rowTitle": "The architecture of consequential AI",
+      "headline": "The Architecture of Consequential AI: Shipping AI Features in Regulated Industries",
+      "pillar": "Regulated & High-Compliance Tech",
+      "pillarColor": "regulated",
+      "pillarLabel": "Regulated Tech",
+      "readTime": "7 min",
+      "datePublished": "2026-03-20",
+      "dateModified": "2026-03-20",
+      "description": "What's different about shipping AI when you have regulators, clinical governance, and real harm potential. Lessons from building GenAI features in mental health at Intellect.",
+      "llmsTitle": "The Architecture of Consequential AI",
+      "llmsDesc": "Shipping AI features in regulated industries. Embedded governance vs. approval gates, harm taxonomies, clinical co-design, and why the regulatory moat is the real competitive advantage.",
+      "keywords": [
+        "AI",
+        "Regulated Tech",
+        "Product Management",
+        "Healthcare"
+      ],
+      "scheduled": false
+    },
+    {
+      "slug": "what-product-leaders-actually-do",
+      "title": "What product leaders actually do",
+      "rowTitle": "What product leaders actually do",
+      "headline": "What Product Leaders Actually Do",
+      "pillar": "Product Leadership",
+      "pillarColor": "leadership",
+      "pillarLabel": "Leadership",
+      "readTime": "6 min",
+      "datePublished": "2026-02-15",
+      "dateModified": "2026-06-11",
+      "description": "The job of a senior product leader isn't roadmaps and sprints. It's judgment under uncertainty, saying no to good ideas, and building systems so others can exercise judgment too.",
+      "llmsTitle": "What Product Leaders Actually Do",
+      "llmsDesc": "The job is judgment, not process. Saying no to good ideas, holding the line on quality, navigating politics without becoming political, and encoding taste into the org.",
+      "keywords": [
+        "Product Leadership",
+        "Management",
+        "Strategy"
+      ],
+      "scheduled": false
+    },
+    {
+      "slug": "the-great-unbundling-of-product-management",
+      "title": "The great unbundling of product management: why 2026 belongs to the impact architect",
+      "rowTitle": "The great unbundling of product management",
+      "headline": "The Great Unbundling of Product Management",
+      "pillar": "Product Leadership",
+      "pillarColor": "leadership",
+      "pillarLabel": "Leadership",
+      "readTime": "3 min",
+      "datePublished": "2026-01-15",
+      "dateModified": "2026-06-11",
+      "description": "AI is absorbing the mechanical parts of product work. The PMs who thrive in 2026 are Impact Architects — people who frame problems, make resource bets, and build conviction in teams.",
+      "llmsTitle": "The Great Unbundling of Product Management",
+      "llmsDesc": "AI is unbundling the mechanical parts of PM. The PMs who thrive will be Impact Architects.",
+      "keywords": [
+        "Product Leadership",
+        "AI",
+        "Future of PM"
+      ],
+      "scheduled": false
+    },
+    {
+      "slug": "the-roi-of-care",
+      "title": "The ROI of care: investing in mental health as infrastructure for performance",
+      "rowTitle": "The ROI of care",
+      "headline": "The ROI of Care: Investing in Mental Health as Infrastructure for Performance",
+      "pillar": "Regulated & High-Compliance Tech",
+      "pillarColor": "regulated",
+      "pillarLabel": "Regulated Tech",
+      "readTime": "4 min",
+      "datePublished": "2025-05-20",
+      "dateModified": "2026-06-11",
+      "description": "Mental health isn't a perk. It's infrastructure. And like all infrastructure, its value isn't captured in a single metric — it's felt in everything that sits on top of it.",
+      "llmsTitle": "The ROI of Care",
+      "llmsDesc": "Mental health isn't a perk — it's infrastructure.",
+      "keywords": [
+        "Regulated & High-Compliance Tech",
+        "Enterprise",
+        "ROI"
+      ],
+      "scheduled": false
+    },
+    {
+      "slug": "what-humans-still-do-best",
+      "title": "What humans still do best, and why that should shape the future of AI in mental health",
+      "rowTitle": "What humans still do best",
+      "headline": "What Humans Still Do Best",
+      "pillar": "AI Product Strategy",
+      "pillarColor": "ai",
+      "pillarLabel": "AI Strategy",
+      "readTime": "4 min",
+      "datePublished": "2025-05-18",
+      "dateModified": "2026-06-11",
+      "description": "AI will transform mental health care. But not by replacing humans. By doing what humans can't — so humans can do what AI can't.",
+      "llmsTitle": "What Humans Still Do Best",
+      "llmsDesc": "AI will transform mental health care — not by replacing humans, but by doing what humans can't so humans can do what AI can't.",
+      "keywords": [
+        "AI Product Strategy",
+        "Mental Health",
+        "Human-AI Balance"
+      ],
+      "scheduled": false
+    },
+    {
+      "slug": "designing-for-trust-in-mental-health-apps",
+      "title": "Designing for trust in mental health apps: why UX is care",
+      "rowTitle": "Designing for trust in mental health apps",
+      "headline": "Designing for Trust in Mental Health Apps: Why UX Is Care",
+      "pillar": "Trust & High-Stakes Design",
+      "pillarColor": "trust",
+      "pillarLabel": "Trust",
+      "readTime": "5 min",
+      "datePublished": "2025-05-15",
+      "dateModified": "2026-06-11",
+      "description": "In mental health products, trust isn't a feature — it's the product. Five UX principles for building experiences that earn trust in high-stakes, vulnerable contexts.",
+      "llmsTitle": "Designing for Trust in Mental Health Apps",
+      "llmsDesc": "In mental health products, trust isn't a feature — it's the product.",
+      "keywords": [
+        "Trust & High-Stakes Design",
+        "UX",
+        "Mental Health"
+      ],
+      "scheduled": false
+    },
+    {
+      "slug": "when-ai-becomes-an-echo-chamber",
+      "title": "When AI becomes an echo chamber: the ethical risk to mental health",
+      "rowTitle": "When AI becomes an echo chamber",
+      "headline": "When AI Becomes an Echo Chamber: The Ethical Risk to Mental Health",
+      "pillar": "AI Product Strategy",
+      "pillarColor": "ai",
+      "pillarLabel": "AI Strategy",
+      "readTime": "4 min",
+      "datePublished": "2025-05-10",
+      "dateModified": "2026-06-11",
+      "description": "AI chatbots that only validate without challenging create a therapeutic echo chamber. What the mental health industry needs to do to build AI tools that actually help people get better.",
+      "llmsTitle": "When AI Becomes an Echo Chamber",
+      "llmsDesc": "Empathy without challenge is not therapy — it's an echo chamber.",
+      "keywords": [
+        "AI Product Strategy",
+        "Ethics",
+        "Echo Chambers"
+      ],
+      "scheduled": false
+    },
+    {
+      "slug": "how-ai-is-personalising-mental-health-support",
+      "title": "How AI is personalising mental health support at scale",
+      "rowTitle": "How AI is personalising mental health support at scale",
+      "headline": "How AI is Personalising Mental Health Support at Scale",
+      "pillar": "AI Product Strategy",
+      "pillarColor": "ai",
+      "pillarLabel": "AI Strategy",
+      "readTime": "4 min",
+      "datePublished": "2025-04-15",
+      "dateModified": "2026-06-11",
+      "description": "AI is changing the personalisation equation in mental health care. Here's how — and what it means for product leaders building in this space.",
+      "llmsTitle": "How AI is Personalising Mental Health Support at Scale",
+      "llmsDesc": "Three layers of AI-driven personalisation in mental health.",
+      "keywords": [
+        "AI Product Strategy",
+        "Personalisation",
+        "Mental Health"
+      ],
+      "scheduled": false
+    }
+  ],
+  "externalArticles": [
+    {
+      "url": "https://intellect.co/read/ai-mental-health-and-humanity/",
+      "rowTitle": "AI, mental health and humanity",
+      "pillar": "Intellect",
+      "pillarColor": "intellect",
+      "pillarLabel": "Intellect",
+      "sortDate": "2025-06-15"
+    },
+    {
+      "url": "https://intellect.co/read/ai-therapy-echo-chamber/",
+      "rowTitle": "AI therapy and the echo chamber",
+      "pillar": "Intellect",
+      "pillarColor": "intellect",
+      "pillarLabel": "Intellect",
+      "sortDate": "2025-05-21"
+    },
+    {
+      "url": "https://intellect.co/read/ai-and-mental-health-personalisation/",
+      "rowTitle": "AI and mental health: personalisation",
+      "pillar": "Intellect",
+      "pillarColor": "intellect",
+      "pillarLabel": "Intellect",
+      "sortDate": "2025-05-11"
+    }
+  ],
+  "pages": [
+    {
+      "path": "/",
+      "lastmod": "2026-06-10",
+      "changefreq": "monthly",
+      "priority": "1.0"
+    },
+    {
+      "path": "/about",
+      "lastmod": "2026-06-10",
+      "changefreq": "monthly",
+      "priority": "0.9"
+    },
+    {
+      "path": "/media",
+      "lastmod": "2026-06-10",
+      "changefreq": "monthly",
+      "priority": "0.9"
+    },
+    {
+      "path": "/ideas",
+      "lastmod": "2026-06-11",
+      "changefreq": "weekly",
+      "priority": "0.8"
+    },
+    {
+      "path": "/coaching",
+      "lastmod": "2026-06-10",
+      "changefreq": "monthly",
+      "priority": "0.7"
+    },
+    {
+      "path": "/working-with-me",
+      "lastmod": "2026-06-10",
+      "changefreq": "monthly",
+      "priority": "0.7"
+    },
+    {
+      "path": "/contact",
+      "lastmod": "2026-06-10",
+      "changefreq": "monthly",
+      "priority": "0.6"
+    },
+    {
+      "path": "/press",
+      "lastmod": "2026-06-11",
+      "changefreq": "monthly",
+      "priority": "0.6"
+    }
+  ],
+  "positions": [
+    "The regulatory moat is the real competitive advantage in enterprise AI — everyone else is one incident away from a sales freeze.",
+    "AI is unbundling product management. The PMs who survive will be impact architects, not process operators.",
+    "Trust is an engineered property with an architecture — transparency, control, recourse — not a brand attribute.",
+    "Most teams demo their LLM features; almost none evaluate them. Evals are the new QA, and they belong in the release gate.",
+    "Empathy without challenge is an echo chamber — true of AI companions, and of product orgs."
+  ]
+}

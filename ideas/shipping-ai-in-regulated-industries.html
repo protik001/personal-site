@@ -53,6 +53,51 @@
         "wordCount": 1700,
         "timeRequired": "PT7M",
         "keywords": ["AI", "regulated tech", "product management", "healthcare", "clinical governance", "GenAI"]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do you ship AI features in regulated industries?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You ship AI in regulated industries through embedded governance: co-designing features with clinical and compliance teams from day one, documenting every failure mode before engineering begins, and optimising the system for safety under failure rather than accuracy under ideal conditions. At Intellect, every feature brief begins with a joint session between product managers, engineers, and clinical psychologists, so defensive guardrails are shaped by regulatory reality before a single line of code is written."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is embedded governance vs approval gates in AI development?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "An approval gate is the standard corporate approach where a committee sits in judgment of a finished product, achieving safety by killing velocity. Embedded governance instead brings clinical and compliance teams into the initial design phase so they help design the defensive guardrails before code is written. Because design criteria are shaped by regulatory and clinical reality from day one, teams rarely encounter catastrophic delays at the deployment stage."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you design a harm taxonomy for AI products?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A harm taxonomy maps every interaction through three questions: What is the specific failure mode? What is the severity of the real-world outcome? What is the deterministic fallback mechanism that catches it? At Intellect, the triage taxonomy identified 12 distinct failure states ranging from benign misclassifications to the ultimate failure mode of a user expressing subtle, coded self-harm language that the model fails to escalate. Severity-based thresholds then determine which failures trigger automatic clinical escalation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is the regulatory moat a competitive advantage in AI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Clinical safety infrastructure cannot be bought with a credit card or copy-pasted from a competitor's codebase. It must be built through the slow accumulation of operational scar tissue, including institutional governance culture and a discipline of defensive design. With the EU AI Act, evolving digital healthcare frameworks, and stricter regional data mandates tightening globally, companies that spent years avoiding governance will find themselves paralysed when these legal realities arrive."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How should AI products handle failure in high-stakes domains?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AI products in high-stakes domains must optimise for safety under failure, not accuracy under ideal conditions. The AI's role should be strictly recommendation-engine infrastructure that surfaces options, while a human clinician always retains the final validation switch. A tiered risk taxonomy (L1 for standard wellbeing, L3 for high-risk clinical needs, L3A for acute crisis) determines escalation paths, with deterministic hard-coded guardrails that override the model entirely and connect users to live human clinicians when needed."
+            }
+          }
+        ]
       }
     ]
   }

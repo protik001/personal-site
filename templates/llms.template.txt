@@ -1,0 +1,122 @@
+# Protik Roychowdhury — protik.info
+
+> VP Product at Intellect (regulated multi-tenant enterprise SaaS, 4M+ users, $20M+ ARR) | Three-time founder, one exit | Academic researcher | ICF-certified coach
+
+## About
+
+Protik Roychowdhury is VP Product at Intellect, a regulated, multi-tenant enterprise SaaS platform serving 4M+ users across APAC, ANZ, China, and Latam in the workforce health category. He leads a 20+ person product, design, content, localisation, and AI team. He drove enterprise revenue to $20M ARR by leading the pivot from consumer app to B2B2C care ecosystem, shipped GenAI features (triage, session prep, treatment plans), and co-authored 3 academic papers on AI in mental health.
+
+Before Intellect, Protik was Principal PM for Growth, Engagement & Loyalty (GEL) at Grab ($3.8B+ revenue superapp), where he increased ARPU by 2% via personalisation and gamification, boosted onboarding success by 15pp, built engagement tools unlocking $2.5M in ad revenue, and delivered $4.5M in cost savings on the Driver Rentals product for 30K+ vehicles. He held product leadership roles at Ola (India's largest ride-hailing platform — reduced revenue leakage by INR 9.7M, improved driver earnings by 12%), Fabelio (Indonesia e-commerce — increased showroom conversions by 18pp, first senior product hire), and Exotel (India's leading cloud telephony platform).
+
+Protik is a three-time founder: Croak.it! (voice-based social platform, 1M recordings, 200K downloads, acquired by Exotel), Bhalu.com (hyperlocal task marketplace — post odd jobs, anyone could fulfil them; 2009-2011, built in college), and Athlete Diaries / The Players' Diary (India's version of The Players' Tribune).
+
+He is an IIT Kharagpur alumnus (B.Tech Hons, Metallurgical & Materials Engineering, GPA 8.19) and an ICF-certified career coach working with product managers, founders, and senior leaders. Also a Certified Mental Health First Aider (MHFA).
+
+## Authority Pillars
+
+Protik's expertise spans five core authority pillars:
+
+1. **AI Product Strategy** — Shipping GenAI features in regulated industries, AI personalisation at scale, human-AI balance
+2. **Trust & High-Stakes Product Design** — Designing for trust in mental health, healthcare, and financial products where failure has real consequences
+3. **Product Leadership & Judgement** — Scaling product orgs, developing product intuition, the founder-to-operator journey
+4. **Regulated & High-Compliance Tech** — Digital therapeutics, AI in mental health, clinical product design, provider quality frameworks, building compliant products in regulated industries
+5. **Marketplace & Platform Scaling** — Two-sided marketplace design, supply-demand optimisation, payments infrastructure, cross-border scaling
+
+## Areas of Expertise
+
+- AI Product Management & GenAI Feature Shipping
+- Marketplace Design & Supply-Demand Optimisation (Grab, Ola, Fabelio)
+- Growth, Engagement & Loyalty (GEL) — Consumer Lifecycle
+- Personalisation, Experimentation & A/B Testing at Scale
+- Mental Health Technology & Digital Therapeutics
+- Platform Products & E-commerce
+- Product-Led Growth & Conversion Optimisation
+- Multi-Market Operating Model Design (APAC, ANZ, China, EMEA, Latam)
+- Conversational AI & LLMs
+- Human-Centred Design & Behavioural Science
+- Team Building & Scaling (3→20+ person product orgs)
+- Platform Governance, Build/Buy & Vendor Strategy
+- Executive Coaching (ICF certified) & Portfolio-Level Product Leadership
+- Startup Founding & Exits (Croak.it! acquired by Exotel)
+- Cross-Border Product Localisation (20+ languages, APAC markets)
+- Regulated Technology (Health)
+- Data-Driven OKR Leadership & Pod Structures
+- B2B2C Business Model & Enterprise Revenue
+
+## Academic Publications (AI Safety & LLM Evaluation Research)
+
+Protik's research generalises beyond mental health: vignette-based bias evaluation across nine LLMs, time-to-intervention protocols for AI risk detection, and composite quality scoring for human-in-the-loop services.
+
+- "The RISE Protocol: A Proposed Framework to Reduce Time-to-Intervention in AI-Driven Mental Health Risk Detection" — JMIR Preprints, Aug 2025. Sole author. DOI: 10.2196/preprints.82983
+- "The Provider GPA: A Composite Framework for Evaluating Digital Therapist Quality Through Engagement, Reliability, and Client Feedback" — medRxiv, Sep 2025. Co-authored with Oliver Sündermann. DOI: 10.1101/2025.09.01.25334495
+- "Bias in Large Language Models for Mental Health: Evidence from Vignette-Based Evaluation Across Nine Models" — PsyArXiv, Sep 2025. Co-authored with Lerh, Fang, Sündermann, Sinha & Chauhan. DOI: 10.31234/osf.io/ykn2c
+
+## Speaking Topics
+
+Protik speaks at conferences, leadership summits, and product communities on six signature topics:
+
+1. From Roadmaps to Judgement: What Product Leaders Need in the AI Era
+2. Building AI Products People Can Trust
+3. Why UX Is Care: Lessons from Mental Health Product Design
+4. Scaling Product Teams Without Killing Product Judgement
+5. AI, Personalisation, and the Future of Mental Health Support
+6. What High-Stakes Products Can Teach Us About Trust
+
+## Positions (Quotable Stances)
+
+{{POSITIONS}}
+
+## Ideas (On-Site Articles — {{ESSAY_COUNT}} essays)
+
+{{ESSAYS}}
+
+## Featured In (with links)
+
+- Economic Times: https://m.economictimes.com/small-biz/startups/exotel-to-buy-singapores-social-media-startup-croak-it/articleshow/46105110.cms
+- Business Standard: https://www.business-standard.com/article/companies/cloud-telephony-start-up-exotel-acquires-voice-recognition-platform-croak-it-115020401288_1.html
+- Financial Express: https://www.financialexpress.com/business/industry-sporting-spirit-246292/
+- Inc42 (interview): https://inc42.com/startups/interviews/inc42-gets-candid-with-the-iit-kgp-startup-croak-it/
+- Inc42 (acquisition): https://inc42.com/buzz/exotel-buys-singapore-based-croak-voice-based-social-media-startup/
+- Inc42 (product): https://inc42.com/startups/an-iit-kgp-startup-croak-it-wants-to-be-the-instagram-for-sounds-launches-talk-button-for-websites/
+- e27: https://e27.co/indias-exotel-acquires-singapores-voice-based-social-media-app-croak-20150203/
+- YourStory (founder profile): https://yourstory.com/2012/11/croaking-it-up-with-protik-roychowdhury-a-day-in-the-life-of-an-entrepreneur
+- YourStory (Talk Button): https://yourstory.com/2013/06/croak-it-launches-talk-button-will-let-users-speak-with-you-on-the-site
+- Tech in Asia: https://www.techinasia.com/exotel-buys-croak-it
+- Tech Wire Asia: https://techwireasia.com/2012/06/croak-it-enables-one-click-voice-to-web-communication/
+- Martechvibe (video): https://martechvibe.com/video/cross-border-success-through-hyper-localisation-and-geo-targeting/
+
+## Podcast Appearances
+
+- The Product Un-Censored Show, Episode 43 — Apple Podcasts: https://podcasts.apple.com/ca/podcast/episode-43-protik-roychowdhury-intellect/id1515068055?i=1000652937970 | Spotify: https://open.spotify.com/episode/1eYApnSYVFd5f7sXuu4j1Y
+
+## Intellect Articles (Company Blog)
+
+- "AI, Mental Health and Humanity: Why the Future of Care is Hybrid" — Jun 2025. https://intellect.co/read/ai-mental-health-humanity
+- "AI Therapy and the Echo Chamber: Risks, Ethics, and What We're Doing About It" — May 2025. https://intellect.co/read/ai-therapy-echo-chamber
+- "AI and Mental Health: How Personalisation is Changing the Game" — May 2025. https://intellect.co/read/ai-mental-health-personalisation
+
+## Contact & Profiles
+
+- Website: https://protik.info
+- Email: protik001@gmail.com
+- Calendly: https://calendly.com/protik001/chat
+- LinkedIn: https://www.linkedin.com/in/protik001
+- X/Twitter: https://www.x.com/protik
+- Medium: https://medium.com/@protik
+- Crunchbase: https://www.crunchbase.com/person/protik-roychowdhury
+- ORCID: https://orcid.org/0009-0009-4497-9269
+- Google Scholar: https://scholar.google.com/citations?user=9puzHDgAAAAJ
+- The Org: https://theorg.com/org/intellect-co/org-chart/protik-roychowdhury
+
+## Pages
+
+- Home: https://protik.info/
+- About: https://protik.info/about
+- Ideas: https://protik.info/ideas
+- Media (Speaking, Research & Press): https://protik.info/media
+- Coaching: https://protik.info/coaching
+- Working Manual (How I Work): https://protik.info/working-with-me — Protik's public operating manual covering leadership principles, operator and coach modes, collaboration preferences, growth edges, AI-era convictions, and readable signals. Based on the document he shares with every new team.
+{{ESSAY_PAGES}}
+- Feed (Atom): https://protik.info/feed.xml
+- Press Kit (approved bios, photos, talk abstracts, booking): https://protik.info/press
+- Contact: https://protik.info/contact

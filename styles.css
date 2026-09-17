@@ -1385,3 +1385,7 @@ a.logo-item:hover {
 .article-nav a:hover {
   color: var(--accent);
 }
+
+/* Article summary (The short version) — extractable TL;DR block on essays */
+.article-summary { background: var(--bg-secondary); border-radius: var(--radius); padding: 1.2rem 1.5rem; margin-bottom: 2rem; font-size: 0.9rem; line-height: 1.7; color: var(--text-secondary); }
+.article-summary strong { color: var(--text-primary); }

@@ -53,6 +53,51 @@
         "wordCount": 1600,
         "timeRequired": "PT7M",
         "keywords": ["generative AI", "AI product economics", "token cost", "LLM costs", "AI P&L", "enterprise AI", "model routing", "AI unit economics", "product management", "AI budget"]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do you budget for generative AI features?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Start by decomposing cost per active user per month by feature rather than looking at a single blended figure, because chat companions, triage, session prep, and treatment formatting have wildly different cost profiles. Map each feature to its purpose: some exist to lift utilisation (the metric enterprise buyers renew on), while others are pure cost of doing business in a regulated category. Watch the direction of the number, not its level, because a high cost per user that falls every quarter is a business getting better at its craft."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the hidden costs of shipping LLM features?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The visible token bill is only part of the real cost. Evaluation requires paying another model to grade the first model's output. Guardrails mean running the same request two to three times (generation, check, sometimes regeneration), so a single user-facing reply can cost two to three times the demo price. Additional hidden costs include observability and logging storage, human clinician escalation for high-risk interactions, and regression testing every time you swap in a newer model across every surface you have shipped."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does model routing reduce AI costs?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Model routing means deciding task by task which jobs deserve the expensive frontier model and which are safely served by something a tenth of the price. Treatment formatting is a mechanical task that does not need the frontier model. Triage routing needs judgement but not genius. The acute-crisis path (Level 3A, where a human must intervene immediately) is never the place to economise. Getting routing wrong in the generous direction bleeds margins quietly, while getting it wrong in the frugal direction saves cents on the one path where saving money was never the point."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does generative AI change software unit economics?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Traditional software has near-zero marginal cost where serving the millionth user costs roughly what serving the thousandth did. Generative AI quietly replaces this with metered utility economics, because every interaction spends tokens and tokens are metered like electricity. The millionth message costs almost exactly what the thousandth cost, and more if conversations run long. Success now scales the bill linearly, meaning the chat companion that makes the product feel humane is also the line item that grows with every new user."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you calculate cost per active user for AI features?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Decompose cost per active user per month by individual feature rather than relying on a blended average that hides the one feature about to become a problem. Map each feature to its purpose (utilisation lift versus cost of doing business) to build a budget you can defend. For build-versus-buy decisions, fine-tune only when volume multiplied by per-call saving comfortably clears the engineering cost of building and maintaining the custom model forever; below that threshold, stay with prompt engineering and a hosted model."
+            }
+          }
+        ]
       }
     ]
   }
