@@ -3,6 +3,11 @@
   "name": "personal-site",
   "compatibility_date": "2026-05-28",
   "main": "_worker.js",
+  // www has a proxied DNS record but nothing bound to it (522). This route binds the worker,
+  // whose fetch() then 301s www → https://protik.info. The apex binding is unchanged.
+  "routes": [
+    { "pattern": "www.protik.info/*", "zone_name": "protik.info" }
+  ],
   "assets": {
     "run_worker_first": true,
     "directory": ".",
