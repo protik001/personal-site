@@ -17,7 +17,9 @@ llms.txt essay list, sitemap.website.xml, feed.xml, the BUILD:-marked zones in i
 ## Deploy facts
 - This folder IS the git clone of `protik001/personal-site` (since 17 Sep 2026). Cloudflare Workers Builds deploys `main`.
 - `_worker.js` + `wrangler.jsonc` must stay in the repo: they provide the 301s, https/www redirect, security headers, markdown negotiation and the 404 page. `.assetsignore` keeps them from being served as files.
-- Team-internal files (`.claude/`, `ops/`, `drafts/`, `CLAUDE.md`, audits, strategy docs) are gitignored on purpose; the repo is public.
+- Team-internal files (`.claude/`, `ops/`, `drafts/`, `CLAUDE.md`, `docs/`) are gitignored on purpose; the repo is public.
+- CI: `.github/workflows/check.yml` runs `node build.js` (must produce no diff) and `node check.js` on every push. A red check means the push shipped something the gate would have caught; fix and push again.
+- AI-crawler hits are logged by the worker: Workers & Pages → personal-site → Logs (`event: ai-crawl`), and in Analytics Engine dataset `protik_ai_crawl`.
 
 ## Notes
 - An essay with a future date needs `"scheduled": true` or check.js fails.

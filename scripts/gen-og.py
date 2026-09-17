@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
-"""Generate OG card PNGs for any essay missing one. Run from site root:
+"""Generate OG card PNGs. Run from site root:
    python3 scripts/gen-og.py            (needs: pip install pillow)
-Reads site-data.json; writes images/og/<slug>.png for missing/changed titles."""
-import json, textwrap, os
+   python3 scripts/gen-og.py --force    regenerate every card
+Reads site-data.json; writes images/og/<slug>.png when the PNG is missing or the
+title/label changed since the last run (tracked in images/og/.manifest.json)."""
+import json, textwrap, os, sys
 from PIL import Image, ImageDraw, ImageFont
 
 SERIF = "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
@@ -35,7 +37,15 @@ def make(slug, title, label):
     print("generated:", slug)
 
 data = json.load(open("site-data.json"))
+MANIFEST = "images/og/.manifest.json"
+manifest = json.load(open(MANIFEST)) if os.path.exists(MANIFEST) else {}
+force = "--force" in sys.argv
 for e in data["essays"]:
-    if not os.path.exists(f"images/og/{e['slug']}.png"):
+    key = f"{e['title']}|{e['pillarLabel']}"
+    png = f"images/og/{e['slug']}.png"
+    if force or not os.path.exists(png) or manifest.get(e["slug"]) != key:
         make(e["slug"], e["title"], e["pillarLabel"])
+        manifest[e["slug"]] = key
+os.makedirs("images/og", exist_ok=True)
+json.dump(manifest, open(MANIFEST, "w"), indent=1, sort_keys=True)
 print("done")

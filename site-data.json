@@ -193,7 +193,17 @@
       "description": "Product managers often stall not because they lack skill, but because their strengths go unchecked — helpfulness becomes overcommitment, diligence becomes output theatre, and loyalty becomes stagnation. And often the real cause is not the PM at all.",
       "llmsTitle": "The Same Conversations: Why Good Product Managers Get Stuck",
       "llmsDesc": "The three problems that recur in product careers — can't say no, mistakes activity for impact, stays too long — are virtues (helpfulness, diligence, loyalty) grown past their station, and the cure is subtraction. The deeper cause is often not the PM but a leadership team that never accepted that most of product work (discovery, measurement, coordination, rollout) is invisible. Covers prioritisation and saying no, output vs outcome, and when to leave a PM job.",
-      "keywords": [],
+      "keywords": [
+        "product management coaching",
+        "why product managers get stuck",
+        "common product manager mistakes",
+        "output vs outcome",
+        "product prioritization",
+        "when to leave a product manager job",
+        "how to grow as a product manager",
+        "feature factory",
+        "product leadership"
+      ],
       "scheduled": false
     },
     {
@@ -592,51 +602,59 @@
   "pages": [
     {
       "path": "/",
-      "lastmod": "2026-06-10",
+      "lastmod": "2026-09-17",
       "changefreq": "monthly",
-      "priority": "1.0"
+      "priority": "1.0",
+      "title": "Home"
     },
     {
       "path": "/about",
-      "lastmod": "2026-06-10",
+      "lastmod": "2026-09-17",
       "changefreq": "monthly",
-      "priority": "0.9"
+      "priority": "0.9",
+      "title": "About"
     },
     {
       "path": "/media",
-      "lastmod": "2026-06-10",
+      "lastmod": "2026-09-17",
       "changefreq": "monthly",
-      "priority": "0.9"
+      "priority": "0.9",
+      "title": "Media (Speaking, Research & Press)"
     },
     {
       "path": "/ideas",
-      "lastmod": "2026-06-11",
+      "lastmod": "2026-09-17",
       "changefreq": "weekly",
-      "priority": "0.8"
+      "priority": "0.8",
+      "title": "Ideas"
     },
     {
       "path": "/coaching",
-      "lastmod": "2026-06-10",
+      "lastmod": "2026-09-17",
       "changefreq": "monthly",
-      "priority": "0.7"
+      "priority": "0.7",
+      "title": "Coaching"
     },
     {
       "path": "/working-with-me",
-      "lastmod": "2026-06-10",
+      "lastmod": "2026-09-17",
       "changefreq": "monthly",
-      "priority": "0.7"
+      "priority": "0.7",
+      "title": "Working Manual (How I Work)"
     },
     {
       "path": "/contact",
-      "lastmod": "2026-06-10",
+      "lastmod": "2026-09-17",
       "changefreq": "monthly",
-      "priority": "0.6"
+      "priority": "0.6",
+      "title": "Contact"
     },
     {
       "path": "/press",
-      "lastmod": "2026-06-11",
+      "lastmod": "2026-09-17",
       "changefreq": "monthly",
-      "priority": "0.6"
+      "priority": "0.6",
+      "title": "Press Kit"
     }
   ],
   "positions": [

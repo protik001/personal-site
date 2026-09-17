@@ -198,4 +198,38 @@ const fillZone = (src, name, body, file) => {
   console.log(`canonical Person injected on ${MAIN_PAGES.length} pages`);
 }
 
+// ---------- essays: BlogPosting keywords + dates from site-data (single source) ----------
+{
+  let n = 0;
+  for (const e of data.essays) {
+    const f = `ideas/${e.slug}.html`;
+    let src = fs.readFileSync(f, 'utf8');
+    src = src.replace(BLOCK_RE, (full, open, body, close) => {
+      const json = JSON.parse(body);
+      const nodes = json['@graph'] || [json];
+      const bp = nodes.find(x => x['@type'] === 'BlogPosting');
+      if (!bp) return full;
+      bp.datePublished = e.datePublished;
+      bp.dateModified = e.dateModified;
+      if (Array.isArray(e.keywords) && e.keywords.length) bp.keywords = e.keywords;
+      n++;
+      return open + serialize(json) + close;
+    });
+    fs.writeFileSync(f, src);
+  }
+  console.log(`essay BlogPosting synced (dates, keywords) on ${n} essays`);
+}
+
+// ---------- _worker.js: markdown nav list from site-data pages ----------
+{
+  let src = fs.readFileSync('_worker.js', 'utf8');
+  const lines = data.pages.map(p => `  parts.push('- [${p.title}](${SITE}${p.path === '/' ? '/' : p.path})');`);
+  lines.push(`  parts.push('- [LLM Context](${SITE}/llms.txt)');`);
+  const re = /( *\/\/ BUILD:WORKER-NAV[^\n]*\n)[\s\S]*?( *\/\/ \/BUILD:WORKER-NAV)/;
+  if (!re.test(src)) throw new Error('_worker.js: BUILD:WORKER-NAV markers missing');
+  src = src.replace(re, (m, a, b) => a + lines.join('\n') + '\n' + b);
+  fs.writeFileSync('_worker.js', src);
+  console.log(`_worker.js: nav list = ${data.pages.length} pages + llms.txt`);
+}
+
 console.log('\nBuild complete. Now run: node check.js');

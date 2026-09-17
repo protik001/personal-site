@@ -1,0 +1,16 @@
+name: check
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: build is idempotent (committed files match what build.js produces)
+        run: |
+          node build.js
+          git diff --exit-code --stat || (echo "::error::build.js output differs from the committed files — run node build.js and commit" && exit 1)
+      - name: site gate
+        run: node check.js

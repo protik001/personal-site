@@ -10,6 +10,7 @@ const SITE = data.site.url;
 const issues = [];
 const today = new Date().toISOString().slice(0, 10);
 const PAGES = ['index.html', 'about.html', 'media.html', 'coaching.html', 'contact.html', 'working-with-me.html', 'ideas.html', 'press.html'];
+const { execSync } = require('child_process');
 const essayFiles = fs.readdirSync('ideas').filter(f => f.endsWith('.html'));
 const BLOCK_RE = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/g;
 
@@ -23,6 +24,18 @@ for (const e of data.essays) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(e.datePublished) || !/^\d{4}-\d{2}-\d{2}$/.test(e.dateModified)) issues.push(`bad date format: ${e.slug}`);
   if (e.dateModified < e.datePublished) issues.push(`dateModified < datePublished: ${e.slug}`);
   if (e.datePublished > today && !e.scheduled) issues.push(`future datePublished without scheduled flag: ${e.slug} (${e.datePublished})`);
+}
+
+// 2b. every essay has keywords in site-data (the single source for BlogPosting keywords)
+for (const e of data.essays) if (!Array.isArray(e.keywords) || e.keywords.length === 0) issues.push(`site-data essay has no keywords: ${e.slug}`);
+
+// 2c. page lastmod must not predate the file's last commit (chrome changes count; content changes certainly do)
+for (const p of data.pages) {
+  const f = p.path === '/' ? 'index.html' : p.path.slice(1) + '.html';
+  let last = '';
+  try { last = execSync(`git log -1 --format=%cs -- ${f}`, { stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim(); } catch {}
+  if (last && p.lastmod < last) issues.push(`site-data page ${p.path} lastmod ${p.lastmod} predates last commit ${last}`);
+  if (p.lastmod > today) issues.push(`site-data page ${p.path} lastmod in the future`);
 }
 
 // 3. JSON-LD validity + Person integrity
@@ -81,7 +94,7 @@ for (const p of ['about.html', 'media.html', 'coaching.html']) {
 }
 
 // 7. internal links resolve
-const allHtml = [...PAGES, 'press.html', ...essayFiles.map(x => 'ideas/' + x)].filter((v, i, a) => a.indexOf(v) === i);
+const allHtml = [...PAGES, ...essayFiles.map(x => 'ideas/' + x)];
 for (const f of allHtml) {
   const src = fs.readFileSync(f, 'utf8');
   for (const m2 of src.matchAll(/href="(\/[a-z0-9-]+(?:\.[a-z]+)?(?:\/[a-z0-9-]+)?)"/g)) {
@@ -102,6 +115,15 @@ for (const f of chromePages) {
   if (src.includes('<style>')) issues.push(`${f}: page-level <style> block — move it into a named section of styles.css`);
   if (!src.includes('fonts.googleapis.com/css2')) issues.push(`${f}: no font stylesheet link in head`);
   if (!src.includes('rel="preconnect"')) issues.push(`${f}: no font preconnect in head`);
+}
+
+// 8b. the worker's nav list is generated, and the essay BlogPosting matches site-data
+const worker = fs.readFileSync('_worker.js', 'utf8');
+if (!worker.includes('// BUILD:WORKER-NAV')) issues.push('_worker.js: BUILD:WORKER-NAV markers missing');
+for (const p of data.pages) if (!worker.includes(`[${p.title}](${SITE}${p.path === '/' ? '/' : p.path})`)) issues.push(`_worker.js nav missing ${p.path} (run build.js)`);
+for (const e of data.essays) {
+  const src = fs.readFileSync(`ideas/${e.slug}.html`, 'utf8');
+  if (!src.includes(`"dateModified": "${e.dateModified}"`)) issues.push(`essay dateModified drift: ${e.slug} (run build.js)`);
 }
 
 // 9. first paint: nothing rests hidden, fonts are not chained through the CSS

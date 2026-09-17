@@ -3,19 +3,9 @@ node_modules/
 .DS_Store
 _archive/
 
-# Team-internal (agents, ops, drafts, session rules, audits) — live on Protik's machine only
+# Team-internal (agents, ops, drafts, session rules) and planning docs — live on Protik's machine only
 .claude/
 ops/
 drafts/
 CLAUDE.md
-AUDIT-10-10-PLAN.md
-AUDIT-2026-09-17.md
-
-# Strategy and writing docs — keep out of the repo
-EXECUTION-PLAN.md
-CONTENT-ROADMAP.md
-DESIGN-SPEC.md
-RESTRUCTURE-SPEC.md
-ESSAY-WRITING-PROMPT.md
-PHASE4-COPY-PROPOSALS.md
-cloudflare-community-post.md
+docs/
