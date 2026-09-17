@@ -16,6 +16,11 @@
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="alternate" type="application/atom+xml" href="https://protik.info/feed.xml" title="Protik Roychowdhury — Ideas">
+  <!-- BUILD:FONTS (build.js) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@300;400;500;600&amp;display=swap">
+  <!-- /BUILD:FONTS -->
   <link rel="stylesheet" href="styles.css">
 
   <script type="application/ld+json">
@@ -369,180 +374,31 @@
   }
   </script>
 
-  <style>
-    .talk-card {
-      padding: 1.5rem;
-      background: var(--bg-card);
-      border-radius: var(--radius);
-      transition: var(--transition);
-    }
-    .talk-card:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    }
-    .talk-format {
-      font-size: 0.65rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-      margin-bottom: 0.5rem;
-    }
-    .talk-card h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
-    .talk-card p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 0.8rem; }
-    .talk-audience {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      font-style: italic;
-      margin-bottom: 0.6rem;
-    }
-    .takeaways {
-      list-style: none;
-      padding: 0;
-      margin: 0.8rem 0 0;
-    }
-    .takeaways li {
-      font-size: 0.8rem;
-      color: var(--text-secondary);
-      padding: 0.2rem 0 0.2rem 1.2rem;
-      position: relative;
-      line-height: 1.5;
-    }
-    .takeaways li::before {
-      content: "\2192";
-      position: absolute;
-      left: 0;
-      color: var(--text-muted);
-    }
-    .format-list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-    }
-    .format-item h3 {
-      font-size: 1rem;
-      margin-bottom: 0.3rem;
-    }
-    .format-item p {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
-    .bio-block {
-      padding: 1.5rem;
-      background: var(--bg-card);
-      border-radius: var(--radius);
-      margin-bottom: 1rem;
-    }
-    .bio-block h4 {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-      margin-bottom: 0.6rem;
-    }
-    .bio-block p {
-      font-size: 0.85rem;
-      line-height: 1.7;
-      color: var(--text-secondary);
-    }
-    .speaker-details dt {
-      font-size: 0.7rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-weight: 500;
-      margin-bottom: 0.15rem;
-    }
-    .speaker-details dd {
-      margin: 0 0 1rem;
-      font-size: 0.9rem;
-      color: var(--text-primary);
-    }
-    .appearance-card {
-      display: block;
-      padding: 1.2rem;
-      background: var(--bg-card);
-      border-radius: var(--radius);
-      transition: var(--transition);
-      text-decoration: none;
-    }
-    .appearance-card:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    }
-    .appearance-date {
-      font-size: 0.7rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-      margin-bottom: 0.3rem;
-    }
-    .appearance-card h4 { font-size: 0.95rem; margin-bottom: 0.3rem; }
-    .appearance-card p { font-size: 0.8rem; color: var(--text-muted); }
-    .press-list {
-      display: flex;
-      flex-direction: column;
-    }
-    .press-row {
-      display: flex;
-      align-items: baseline;
-      gap: 0.6rem;
-      padding: 0.5rem 0;
-      border-bottom: 1px solid var(--border-color);
-      text-decoration: none;
-      transition: var(--transition);
-    }
-    .press-row:hover { border-bottom-color: var(--accent); }
-    .press-source {
-      font-size: 0.7rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      color: var(--text-muted);
-      white-space: nowrap;
-      min-width: 120px;
-    }
-    .press-title {
-      font-size: 0.85rem;
-      color: var(--text-primary);
-      line-height: 1.4;
-    }
-    .press-row:hover .press-title { color: var(--accent); }
-    .stage-photo {
-      width: 100%;
-      border-radius: var(--radius);
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-    }
-    @media (max-width: 768px) {
-      .format-list { grid-template-columns: 1fr; }
-    }
-  </style>
 </head>
 <body>
 
   <!-- Navigation -->
-  <nav class="nav">
+  <!-- BUILD:NAV (build.js) -->
+  <nav class="nav" aria-label="Primary">
     <div class="container">
       <a href="/" class="nav-logo"><span>P</span><span class="first-rest">rotik</span><span class="logo-space"></span><span>R</span><span class="last-rest">oychowdhury</span></a>
       <ul class="nav-links" id="navLinks">
         <li><a href="/about">About</a></li>
         <li><a href="/ideas">Ideas</a></li>
-        <li><a href="/media" class="active">Media</a></li>
+        <li><a href="/media" class="active" aria-current="page">Media</a></li>
         <li><a href="/coaching">Coaching</a></li>
         <li><a href="/working-with-me">Manual</a></li>
         <li><a href="/contact" class="nav-cta">Get in Touch</a></li>
       </ul>
-      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
+  <!-- /BUILD:NAV -->
 
   <!-- Hero -->
-  <section class="hero" style="padding: 8rem 0 2.5rem;" aria-label="Page introduction">
+  <section class="hero" aria-label="Page introduction">
     <div class="container">
       <div class="hero-content">
         <div class="hero-label"><span class="dot"></span> Media</div>
@@ -559,10 +415,10 @@
     <div class="container">
       <div class="grid-2">
         <div>
-          <img src="images/speaking.jpg" alt="Protik Roychowdhury speaking on product leadership" width="600" height="338" loading="lazy" class="stage-photo">
+          <img src="images/speaking.webp" alt="Protik Roychowdhury speaking on product leadership" width="600" height="338" loading="lazy" class="stage-photo">
         </div>
         <div>
-          <img src="images/Martechvibe.jpeg" alt="Protik Roychowdhury on fireside chat panel at Martechvibe Unlocked Summit" width="2048" height="1365" loading="lazy" class="stage-photo">
+          <img src="images/Martechvibe.jpeg" alt="Protik Roychowdhury on fireside chat panel at Martechvibe Unlocked Summit" width="940" height="626" loading="lazy" class="stage-photo">
         </div>
       </div>
     </div>
@@ -667,12 +523,12 @@
           <h2>Positions</h2>
           <p>Stances, not topics. Journalists and producers: quote freely with attribution.</p>
         </aside>
-        <ul style="margin: 0; padding: 0;">
-            <li style="padding: 1rem 0 1rem 1.4rem; border-left: 2px solid var(--accent); margin-bottom: 1rem; font-size: 1.02rem; line-height: 1.7; color: var(--text-primary); list-style: none;">“The regulatory moat is the real competitive advantage in enterprise AI — everyone else is one incident away from a sales freeze.”</li>
-            <li style="padding: 1rem 0 1rem 1.4rem; border-left: 2px solid var(--accent); margin-bottom: 1rem; font-size: 1.02rem; line-height: 1.7; color: var(--text-primary); list-style: none;">“AI is unbundling product management. The PMs who survive will be impact architects, not process operators.”</li>
-            <li style="padding: 1rem 0 1rem 1.4rem; border-left: 2px solid var(--accent); margin-bottom: 1rem; font-size: 1.02rem; line-height: 1.7; color: var(--text-primary); list-style: none;">“Trust is an engineered property with an architecture — transparency, control, recourse — not a brand attribute.”</li>
-            <li style="padding: 1rem 0 1rem 1.4rem; border-left: 2px solid var(--accent); margin-bottom: 1rem; font-size: 1.02rem; line-height: 1.7; color: var(--text-primary); list-style: none;">“Most teams demo their LLM features; almost none evaluate them. Evals are the new QA, and they belong in the release gate.”</li>
-            <li style="padding: 1rem 0 1rem 1.4rem; border-left: 2px solid var(--accent); margin-bottom: 1rem; font-size: 1.02rem; line-height: 1.7; color: var(--text-primary); list-style: none;">“Empathy without challenge is an echo chamber — true of AI companions, and of product orgs.”</li>
+        <ul class="quote-list">
+            <li>“The regulatory moat is the real competitive advantage in enterprise AI — everyone else is one incident away from a sales freeze.”</li>
+            <li>“AI is unbundling product management. The PMs who survive will be impact architects, not process operators.”</li>
+            <li>“Trust is an engineered property with an architecture — transparency, control, recourse — not a brand attribute.”</li>
+            <li>“Most teams demo their LLM features; almost none evaluate them. Evals are the new QA, and they belong in the release gate.”</li>
+            <li>“Empathy without challenge is an echo chamber — true of AI companions, and of product orgs.”</li>
         </ul>
       </div>
     </div>
@@ -726,7 +582,7 @@
               <iframe src="https://www.youtube.com/embed/3qjUFzx-vZE?rel=0" title="Protik Roychowdhury — Product Management Interview" loading="lazy" allowfullscreen></iframe>
             </div>
           </div>
-          <div class="grid-2" style="margin-top: 1rem;">
+          <div class="grid-2 mt-2">
             <a href="https://martechvibe.com/video/cross-border-success-through-hyper-localisation-and-geo-targeting/" target="_blank" rel="noopener" class="appearance-card" data-event="Martechvibe Unlocked Summit" data-year="2024" data-format="fireside">
               <div class="appearance-date">2024 &middot; Fireside Chat</div>
               <h4>Martechvibe Unlocked Summit</h4>
@@ -754,18 +610,18 @@
         </aside>
         <div class="section-content">
           <div class="grid-3">
-            <a href="https://doi.org/10.2196/preprints.82983" target="_blank" rel="noopener" class="card" style="text-decoration: none;" data-publisher="JMIR Preprints" data-date="2025-08">
-              <div style="font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.4rem;">JMIR Preprints &middot; Aug 2025</div>
+            <a href="https://doi.org/10.2196/preprints.82983" target="_blank" rel="noopener" class="card" data-publisher="JMIR Preprints" data-date="2025-08">
+              <div class="overline">JMIR Preprints &middot; Aug 2025</div>
               <h3>The RISE Protocol: Reducing Time-to-Intervention in AI-Driven Mental Health Risk Detection</h3>
               <p>A framework addressing the Safety Paradox — where responsible AI safeguards can inadvertently delay intervention in time-critical situations. Proposes a four-stage protocol for reducing detection-to-action latency in AI-assisted risk systems. Sole author.</p>
             </a>
-            <a href="https://doi.org/10.1101/2025.09.01.25334495" target="_blank" rel="noopener" class="card" style="text-decoration: none;" data-publisher="medRxiv" data-date="2025-09">
-              <div style="font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.4rem;">medRxiv &middot; Sep 2025</div>
+            <a href="https://doi.org/10.1101/2025.09.01.25334495" target="_blank" rel="noopener" class="card" data-publisher="medRxiv" data-date="2025-09">
+              <div class="overline">medRxiv &middot; Sep 2025</div>
               <h3>The Provider GPA: A Composite Framework for Evaluating Digital Therapist Quality</h3>
               <p>A multidimensional quality metric combining engagement signals, reliability indicators, and client feedback to evaluate service provider performance at platform scale. Applicable to any two-sided marketplace with quality-sensitive supply. Co-authored with Oliver S&uuml;ndermann.</p>
             </a>
-            <a href="https://doi.org/10.31234/osf.io/ykn2c" target="_blank" rel="noopener" class="card" style="text-decoration: none;" data-publisher="PsyArXiv" data-date="2025-09">
-              <div style="font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.4rem;">PsyArXiv &middot; Sep 2025</div>
+            <a href="https://doi.org/10.31234/osf.io/ykn2c" target="_blank" rel="noopener" class="card" data-publisher="PsyArXiv" data-date="2025-09">
+              <div class="overline">PsyArXiv &middot; Sep 2025</div>
               <h3>Bias in Large Language Models for Mental Health: Vignette-Based Evaluation Across Nine Models</h3>
               <p>Systematic evaluation revealing demographic biases in how large language models assess clinical scenarios. Tests 9 models against standardised vignettes to quantify inconsistencies across age, gender, and ethnicity. Co-authored with Lerh, Fang, S&uuml;ndermann, Sinha &amp; Chauhan.</p>
             </a>
@@ -786,38 +642,38 @@
         </aside>
         <div class="section-content">
           <div class="grid-2">
-            <a href="/ideas/how-to-build-trust-into-ai-products" class="card" style="text-decoration: none;">
-              <div style="font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.4rem;">protik.info &middot; Apr 2026 &middot; 7 min</div>
+            <a href="/ideas/how-to-build-trust-into-ai-products" class="card">
+              <div class="overline">protik.info &middot; Apr 2026 &middot; 7 min</div>
               <h3>The Architecture of Algorithmic Trust</h3>
               <p>Trust is an engineered property with a three-layer architecture: the alibi, the steering wheel, and the safety net.</p>
             </a>
-            <a href="/ideas/shipping-ai-in-regulated-industries" class="card" style="text-decoration: none;">
-              <div style="font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.4rem;">protik.info &middot; Mar 2026 &middot; 7 min</div>
+            <a href="/ideas/shipping-ai-in-regulated-industries" class="card">
+              <div class="overline">protik.info &middot; Mar 2026 &middot; 7 min</div>
               <h3>The Architecture of Consequential AI</h3>
               <p>Regulated AI does not have to be slow AI. Embedded governance, harm taxonomies, and clinical co-design.</p>
             </a>
-            <a href="/ideas/what-product-leaders-actually-do" class="card" style="text-decoration: none;">
-              <div style="font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.4rem;">protik.info &middot; Feb 2026 &middot; 6 min</div>
+            <a href="/ideas/what-product-leaders-actually-do" class="card">
+              <div class="overline">protik.info &middot; Feb 2026 &middot; 6 min</div>
               <h3>What Product Leaders Actually Do</h3>
               <p>The job is judgment. Everything else is overhead.</p>
             </a>
-            <a href="/ideas/the-genai-pnl" class="card" style="text-decoration: none;">
-              <div style="font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.4rem;">protik.info &middot; Jul 2026 &middot; 7 min</div>
+            <a href="/ideas/the-genai-pnl" class="card">
+              <div class="overline">protik.info &middot; Jul 2026 &middot; 7 min</div>
               <h3>The Meter Is Always Running</h3>
               <p>What generative AI actually costs when you are the one signing for it.</p>
             </a>
-            <a href="/ideas/what-i-got-wrong-as-a-founder" class="card" style="text-decoration: none;">
-              <div style="font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.4rem;">protik.info &middot; May 2026 &middot; 8 min</div>
+            <a href="/ideas/what-i-got-wrong-as-a-founder" class="card">
+              <div class="overline">protik.info &middot; May 2026 &middot; 8 min</div>
               <h3>The Anatomy of Startup Blind Spots</h3>
               <p>Three startups, three different failures, one common thread.</p>
             </a>
-            <a href="/ideas/payments-at-scale-lessons-from-grab" class="card" style="text-decoration: none;">
-              <div style="font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.4rem;">protik.info &middot; May 2026 &middot; 8 min</div>
+            <a href="/ideas/payments-at-scale-lessons-from-grab" class="card">
+              <div class="overline">protik.info &middot; May 2026 &middot; 8 min</div>
               <h3>Payments at Scale: Grab</h3>
               <p>Building payments infrastructure, engagement monetisation, and driver financial services across Southeast Asia.</p>
             </a>
           </div>
-          <div style="margin-top: 2rem;">
+          <div class="mt-4">
             <a href="/ideas" class="btn btn-secondary">All writing &rarr;</a>
           </div>
         </div>
@@ -927,8 +783,8 @@
               </div>
             </div>
             <div>
-              <div style="text-align: center; margin-bottom: 1.5rem;">
-                <img src="images/HeadShot.jpeg" alt="Protik Roychowdhury headshot" width="400" height="400" loading="lazy" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover;">
+              <div class="kit-portrait">
+                <img src="images/HeadShot.jpeg" alt="Protik Roychowdhury headshot" width="400" height="400" loading="lazy" class="portrait-round">
               </div>
               <dl class="speaker-details">
                 <dt>Current role</dt>
@@ -942,9 +798,9 @@
                 <dt>Languages</dt>
                 <dd>English, Hindi, Bengali</dd>
               </dl>
-              <div style="display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1rem;">
-                <a href="protik-roychowdhury-onepager.pdf" class="btn btn-primary" target="_blank" style="text-align: center;">Download one-pager (PDF) &darr;</a>
-                <a href="https://www.linkedin.com/in/protik001" class="btn btn-secondary" target="_blank" rel="noopener" style="text-align: center;">LinkedIn profile &rarr;</a>
+              <div class="btn-stack">
+                <a href="protik-roychowdhury-onepager.pdf" class="btn btn-primary btn-block" target="_blank">Download one-pager (PDF) &darr;</a>
+                <a href="https://www.linkedin.com/in/protik001" class="btn btn-secondary btn-block" target="_blank" rel="noopener">LinkedIn profile &rarr;</a>
               </div>
             </div>
           </div>
@@ -990,7 +846,7 @@
         <div class="overline">FAQ</div>
         <h2>Common questions</h2>
       </div>
-      <div style="max-width: 700px; margin: 0 auto;">
+      <div class="faq-list">
         <div class="faq-item open">
           <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
             What topics does Protik Roychowdhury speak about?
@@ -1044,8 +900,8 @@
     <div class="container">
       <div class="newsletter">
         <h2>Work with Protik</h2>
-        <p style="max-width: 540px; margin: 0.5rem auto;">For speaking, research collaboration, media interviews, advisory, and executive coaching.</p>
-        <div style="display: flex; gap: 0.8rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap;">
+        <p>For speaking, research collaboration, media interviews, advisory, and executive coaching.</p>
+        <div class="newsletter-actions">
           <a href="/contact" class="btn btn-primary">Submit an inquiry &rarr;</a>
           <a href="mailto:protik001@gmail.com" class="btn btn-secondary">Email directly</a>
         </div>
@@ -1054,6 +910,7 @@
   </section>
 
   <!-- Footer -->
+  <!-- BUILD:FOOTER (build.js) -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -1103,34 +960,37 @@
       </div>
     </div>
   </footer>
+  <!-- /BUILD:FOOTER -->
 
+  <!-- BUILD:SCRIPTS (build.js) -->
   <script>
-  (function() {
+  /* Shared chrome behaviour. Entrance motion is CSS-only — see styles.css. */
+  (function () {
     var root = document.documentElement;
+
+    // Logo collapse on scroll
     var ticking = false;
-    window.addEventListener('scroll', function() {
-      if (!ticking) {
-        requestAnimationFrame(function() {
-          root.style.setProperty('--scroll-progress', Math.min(window.scrollY / 180, 1));
-          ticking = false;
-        });
-        ticking = true;
-      }
+    window.addEventListener('scroll', function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () {
+        root.style.setProperty('--scroll-progress', Math.min(window.scrollY / 180, 1));
+        ticking = false;
+      });
     }, { passive: true });
 
-    var fadeEls = document.querySelectorAll('.fade-in');
-    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      var obs = new IntersectionObserver(function(entries) {
-        entries.forEach(function(e) {
-          if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); }
-        });
-      }, { threshold: 0.12 });
-      fadeEls.forEach(function(el) { obs.observe(el); });
-    } else {
-      fadeEls.forEach(function(el) { el.classList.add('is-visible'); });
+    // Mobile nav
+    var toggle = document.getElementById('navToggle');
+    var links = document.getElementById('navLinks');
+    if (toggle && links) {
+      toggle.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
     }
   })();
   </script>
+  <!-- /BUILD:SCRIPTS -->
 
 </body>
 </html>

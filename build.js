@@ -3,8 +3,9 @@
  * build.js — regenerates all derived files for protik.info from site-data.json.
  *
  * Regenerates: llms.txt, sitemap.website.xml, feed.xml,
- *              ideas.html rows + Blog schema, index.html "Latest thinking",
- *              canonical Person JSON-LD on all main pages.
+ *              shared chrome (nav / footer / font links / shared script) on every page
+ *              from templates/, ideas.html rows + Blog schema,
+ *              index.html "Latest thinking", canonical Person JSON-LD on all main pages.
  * Never touches: essay body HTML, page copy, styles.
  *
  * Usage: node build.js   (then: node check.js)
@@ -13,6 +14,11 @@ const fs = require('fs');
 
 const data = JSON.parse(fs.readFileSync('site-data.json', 'utf8'));
 const SITE = data.site.url;
+const MAIN_PAGES = ['index.html', 'about.html', 'media.html', 'coaching.html', 'contact.html', 'working-with-me.html', 'ideas.html', 'press.html'];
+const ALL_PAGES = [
+  ...MAIN_PAGES, '404.html',
+  ...fs.readdirSync('ideas').filter(f => f.endsWith('.html')).sort().map(f => 'ideas/' + f),
+];
 const essays = [...data.essays].sort((a, b) => b.datePublished.localeCompare(a.datePublished));
 const MONTHS = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const monYear = d => `${MONTHS[parseInt(d.slice(5, 7), 10)]} ${d.slice(0, 4)}`;
@@ -78,6 +84,46 @@ ${items}
 const BLOCK_RE = /(<script type="application\/ld\+json">)([\s\S]*?)(<\/script>)/g;
 const serialize = obj => '\n  ' + JSON.stringify(obj, null, 2).replace(/\n/g, '\n  ') + '\n  ';
 
+// ---------- shared chrome: font links, nav, footer, shared script ----------
+// One copy of each lives in templates/. Every page carries the four BUILD zones.
+const ZONES = ['FONTS', 'NAV', 'FOOTER', 'SCRIPTS'];
+const fillZone = (src, name, body, file) => {
+  const re = new RegExp(`( *<!-- BUILD:${name}\\b[^>]*-->)[\\s\\S]*?( *<!-- /BUILD:${name} -->)`);
+  if (!re.test(src)) throw new Error(`${file}: missing BUILD:${name} zone`);
+  return src.replace(re, (m, open, close) => `${open}\n${body}\n${close}`);
+};
+{
+  const tpl = n => fs.readFileSync(`templates/${n}.html`, 'utf8').replace(/\n+$/, '');
+  const parts = { FONTS: tpl('fonts'), NAV: tpl('nav'), FOOTER: tpl('footer'), SCRIPTS: tpl('scripts') };
+
+  // Which nav item is current, derived from the filename. Pages absent from the
+  // nav (home, press, 404) get no active state.
+  const NAV_ACTIVE = {
+    'about.html': '/about',
+    'ideas.html': '/ideas',
+    'media.html': '/media',
+    'coaching.html': '/coaching',
+    'working-with-me.html': '/working-with-me',
+    'contact.html': '/contact',
+  };
+  const navFor = file => {
+    const href = file.startsWith('ideas/') ? '/ideas' : NAV_ACTIVE[file];
+    if (!href) return parts.NAV;
+    const cta = href === '/contact';
+    const from = `<a href="${href}"${cta ? ' class="nav-cta"' : ''}>`;
+    const to = `<a href="${href}" class="${cta ? 'nav-cta active' : 'active'}" aria-current="page">`;
+    if (!parts.NAV.includes(from)) throw new Error(`templates/nav.html has no link for ${href}`);
+    return parts.NAV.replace(from, to);
+  };
+
+  for (const f of ALL_PAGES) {
+    let src = fs.readFileSync(f, 'utf8');
+    for (const z of ZONES) src = fillZone(src, z, z === 'NAV' ? navFor(f) : parts[z], f);
+    fs.writeFileSync(f, src);
+  }
+  console.log(`shared chrome injected on ${ALL_PAGES.length} pages (${ZONES.join(', ')})`);
+}
+
 // ---------- ideas.html: rows + Blog schema ----------
 {
   let src = fs.readFileSync('ideas.html', 'utf8');
@@ -134,8 +180,7 @@ const serialize = obj => '\n  ' + JSON.stringify(obj, null, 2).replace(/\n/g, '\
 
 // ---------- canonical Person on all main pages ----------
 {
-  const pages = ['index.html', 'about.html', 'media.html', 'coaching.html', 'contact.html', 'working-with-me.html', 'ideas.html', 'press.html'];
-  for (const p of pages) {
+  for (const p of MAIN_PAGES) {
     let src = fs.readFileSync(p, 'utf8');
     let done = false;
     src = src.replace(BLOCK_RE, (full, open, body, close) => {
@@ -150,7 +195,7 @@ const serialize = obj => '\n  ' + JSON.stringify(obj, null, 2).replace(/\n/g, '\
     });
     fs.writeFileSync(p, src);
   }
-  console.log(`canonical Person injected on ${pages.length} pages`);
+  console.log(`canonical Person injected on ${MAIN_PAGES.length} pages`);
 }
 
 console.log('\nBuild complete. Now run: node check.js');

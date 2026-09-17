@@ -91,6 +91,28 @@ for (const f of allHtml) {
   }
 }
 
+// 8. shared chrome: every page carries all four BUILD zones, no page-level CSS
+const ZONES = ['FONTS', 'NAV', 'FOOTER', 'SCRIPTS'];
+const chromePages = [...PAGES, '404.html', ...essayFiles.map(x => 'ideas/' + x)];
+for (const f of chromePages) {
+  const src = fs.readFileSync(f, 'utf8');
+  for (const z of ZONES) {
+    if (!src.includes(`<!-- BUILD:${z} `) || !src.includes(`<!-- /BUILD:${z} -->`)) issues.push(`${f}: missing BUILD:${z} zone`);
+  }
+  if (src.includes('<style>')) issues.push(`${f}: page-level <style> block — move it into a named section of styles.css`);
+  if (!src.includes('fonts.googleapis.com/css2')) issues.push(`${f}: no font stylesheet link in head`);
+  if (!src.includes('rel="preconnect"')) issues.push(`${f}: no font preconnect in head`);
+}
+
+// 9. first paint: nothing rests hidden, fonts are not chained through the CSS
+const css = fs.readFileSync('styles.css', 'utf8');
+if (/@import/.test(css)) issues.push('styles.css: @import — fonts must load via <link> in the page head');
+if (/\.fade-in[^{]*\{[^}]*opacity:\s*0/.test(css)) issues.push('styles.css: .fade-in rests at opacity 0 — content must be visible at first paint');
+const cssKb = Buffer.byteLength(css) / 1024;
+if (cssKb > 40) issues.push(`styles.css is ${cssKb.toFixed(1)} KB (budget 40 KB)`);
+const homeKb = fs.statSync('index.html').size / 1024;
+if (homeKb > 40) issues.push(`index.html is ${homeKb.toFixed(1)} KB (budget 40 KB)`);
+
 if (issues.length) {
   console.error(`CHECK FAILED — ${issues.length} issue(s):`);
   [...new Set(issues)].forEach(i => console.error(' - ' + i));

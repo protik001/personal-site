@@ -1,0 +1,27 @@
+  <script>
+  /* Shared chrome behaviour. Entrance motion is CSS-only — see styles.css. */
+  (function () {
+    var root = document.documentElement;
+
+    // Logo collapse on scroll
+    var ticking = false;
+    window.addEventListener('scroll', function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () {
+        root.style.setProperty('--scroll-progress', Math.min(window.scrollY / 180, 1));
+        ticking = false;
+      });
+    }, { passive: true });
+
+    // Mobile nav
+    var toggle = document.getElementById('navToggle');
+    var links = document.getElementById('navLinks');
+    if (toggle && links) {
+      toggle.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+  })();
+  </script>

@@ -17,6 +17,11 @@
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="alternate" type="application/atom+xml" href="https://protik.info/feed.xml" title="Protik Roychowdhury — Ideas">
+  <!-- BUILD:FONTS (build.js) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@300;400;500;600&amp;display=swap">
+  <!-- /BUILD:FONTS -->
   <link rel="stylesheet" href="styles.css">
 
   <script type="application/ld+json">
@@ -227,26 +232,12 @@
   }
   </script>
 
-  <style>
-    .bio-card { position: relative; background: var(--bg-card); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1rem; }
-    .bio-card h3 { font-size: 0.95rem; margin-bottom: 0.8rem; }
-    .bio-card p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 0.8rem; }
-    .copy-btn { font-size: 0.75rem; font-weight: 500; padding: 0.35rem 0.8rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background: var(--bg-secondary); color: var(--text-secondary); cursor: pointer; transition: var(--transition); }
-    .copy-btn:hover { color: var(--accent); border-color: var(--accent); }
-    .talk-card { background: var(--bg-card); border-radius: var(--radius); padding: 1.5rem; }
-    .talk-card h3 { font-size: 1rem; margin-bottom: 0.6rem; }
-    .talk-card p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 0.8rem; }
-    .talk-card ul { list-style: none; padding: 0; margin: 0; }
-    .talk-card li { font-size: 0.82rem; color: var(--text-secondary); padding: 0.12rem 0 0.12rem 1.2rem; position: relative; line-height: 1.5; }
-    .talk-card li::before { content: "\2192"; position: absolute; left: 0; color: var(--text-muted); }
-    .press-photo { border-radius: var(--radius); width: 100%; height: auto; display: block; }
-    .photo-note { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem; }
-  </style>
 </head>
 <body>
 
   <!-- Navigation -->
-  <nav class="nav">
+  <!-- BUILD:NAV (build.js) -->
+  <nav class="nav" aria-label="Primary">
     <div class="container">
       <a href="/" class="nav-logo"><span>P</span><span class="first-rest">rotik</span><span class="logo-space"></span><span>R</span><span class="last-rest">oychowdhury</span></a>
       <ul class="nav-links" id="navLinks">
@@ -257,22 +248,23 @@
         <li><a href="/working-with-me">Manual</a></li>
         <li><a href="/contact" class="nav-cta">Get in Touch</a></li>
       </ul>
-      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
+  <!-- /BUILD:NAV -->
 
   <main>
 
   <!-- Hero -->
-  <section class="hero" style="padding: 8rem 0 2.5rem; border-bottom: 1px solid var(--border-color);">
+  <section class="hero hero-ruled">
     <div class="container">
-      <div class="hero-content" style="max-width: 720px;">
+      <div class="hero-content hero-wide">
         <div class="hero-label"><span class="dot"></span> Press kit</div>
         <h1>Everything you need, one page.</h1>
         <p>Approved bios, hi-res photos, talk abstracts, and booking details. I reply to media and booking requests within 24 hours.</p>
-        <div class="hero-buttons" style="margin-top: 1.5rem;">
+        <div class="hero-buttons mt-3">
           <a href="/press-kit.zip" class="btn btn-primary" download>Download press kit (ZIP) &darr;</a>
           <a href="/protik-roychowdhury-onepager.pdf" class="btn btn-secondary" download>Speaker one-pager (PDF) &darr;</a>
         </div>
@@ -326,7 +318,7 @@
           </div>
           <div>
             <img src="images/speaking.webp" alt="Protik Roychowdhury speaking on stage" class="press-photo" loading="lazy">
-            <p class="photo-note">On stage. Credit: courtesy of Protik Roychowdhury. <a href="images/speaking.jpg" download>Download &darr;</a></p>
+            <p class="photo-note">On stage. Credit: courtesy of Protik Roychowdhury. <a href="images/speaking.webp" download>Download &darr;</a></p>
           </div>
         </div>
       </div>
@@ -342,7 +334,7 @@
           <h2>Talk abstracts</h2>
           <p>Six signature talks. Each adapts to keynote, panel, or workshop format.</p>
         </aside>
-        <div class="grid-2" style="gap: 1rem;">
+        <div class="grid-2 grid-tight">
           <div class="talk-card">
             <h3>From roadmaps to judgement: what product leaders need in the AI era</h3>
             <p>AI is absorbing the mechanical parts of product work. What remains — and what organisations now hire for — is judgement. What that looks like in practice, and how to build it in a team.</p>
@@ -430,8 +422,8 @@
     <div class="container">
       <div class="newsletter">
         <h2>Need something else?</h2>
-        <p style="max-width: 540px; margin: 0.5rem auto;">For interview requests, expert commentary, or anything not covered here — email me directly.</p>
-        <div style="display: flex; gap: 0.8rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap;">
+        <p>For interview requests, expert commentary, or anything not covered here — email me directly.</p>
+        <div class="newsletter-actions">
           <a href="mailto:protik001@gmail.com?subject=Press%20request" class="btn btn-primary">Email me &rarr;</a>
           <a href="/media" class="btn btn-secondary">Speaking & research</a>
         </div>
@@ -440,6 +432,7 @@
   </section>
 
   <!-- Footer -->
+  <!-- BUILD:FOOTER (build.js) -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -489,42 +482,48 @@
       </div>
     </div>
   </footer>
+  <!-- /BUILD:FOOTER -->
 
   <script>
+  /* Copy-to-clipboard for the press bios (this page only) */
   function copyBio(id, btn) {
     var text = document.getElementById(id).innerText;
-    navigator.clipboard.writeText(text).then(function() {
+    navigator.clipboard.writeText(text).then(function () {
       var orig = btn.textContent;
       btn.textContent = 'Copied';
-      setTimeout(function() { btn.textContent = orig; }, 1500);
+      setTimeout(function () { btn.textContent = orig; }, 1500);
     });
   }
-  (function() {
+  </script>
+  <!-- BUILD:SCRIPTS (build.js) -->
+  <script>
+  /* Shared chrome behaviour. Entrance motion is CSS-only — see styles.css. */
+  (function () {
     var root = document.documentElement;
+
+    // Logo collapse on scroll
     var ticking = false;
-    window.addEventListener('scroll', function() {
-      if (!ticking) {
-        requestAnimationFrame(function() {
-          root.style.setProperty('--scroll-progress', Math.min(window.scrollY / 180, 1));
-          ticking = false;
-        });
-        ticking = true;
-      }
+    window.addEventListener('scroll', function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () {
+        root.style.setProperty('--scroll-progress', Math.min(window.scrollY / 180, 1));
+        ticking = false;
+      });
     }, { passive: true });
 
-    var fadeEls = document.querySelectorAll('.fade-in');
-    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      var obs = new IntersectionObserver(function(entries) {
-        entries.forEach(function(e) {
-          if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); }
-        });
-      }, { threshold: 0.12 });
-      fadeEls.forEach(function(el) { obs.observe(el); });
-    } else {
-      fadeEls.forEach(function(el) { el.classList.add('is-visible'); });
+    // Mobile nav
+    var toggle = document.getElementById('navToggle');
+    var links = document.getElementById('navLinks');
+    if (toggle && links) {
+      toggle.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
     }
   })();
   </script>
+  <!-- /BUILD:SCRIPTS -->
 
 </body>
 </html>

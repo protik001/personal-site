@@ -7,11 +7,17 @@
   <meta name="description" content="That page does not exist on protik.info. The essays, media, coaching and contact pages are one click away.">
   <meta name="robots" content="noindex, follow">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <!-- BUILD:FONTS (build.js) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@300;400;500;600&amp;display=swap">
+  <!-- /BUILD:FONTS -->
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
-  <nav class="nav">
+  <!-- BUILD:NAV (build.js) -->
+  <nav class="nav" aria-label="Primary">
     <div class="container">
       <a href="/" class="nav-logo"><span>P</span><span class="first-rest">rotik</span><span class="logo-space"></span><span>R</span><span class="last-rest">oychowdhury</span></a>
       <ul class="nav-links" id="navLinks">
@@ -22,13 +28,16 @@
         <li><a href="/working-with-me">Manual</a></li>
         <li><a href="/contact" class="nav-cta">Get in Touch</a></li>
       </ul>
-      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
+  <!-- /BUILD:NAV -->
 
-  <section class="hero" style="padding: 8rem 0 2.5rem;" aria-label="Page not found">
+  <main>
+
+  <section class="hero" aria-label="Page not found">
     <div class="container">
       <div class="hero-content">
         <div class="hero-label"><span class="dot"></span> 404</div>
@@ -44,7 +53,7 @@
 
   <section class="gap-standard" aria-label="Site pages">
     <div class="container">
-      <ul class="footer-links" style="columns: 2; max-width: 32rem;">
+      <ul class="footer-links sitemap-columns">
         <li><a href="/about">About</a></li>
         <li><a href="/ideas">Ideas</a></li>
         <li><a href="/media">Media</a></li>
@@ -57,6 +66,9 @@
     </div>
   </section>
 
+  </main>
+
+  <!-- BUILD:FOOTER (build.js) -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -106,6 +118,37 @@
       </div>
     </div>
   </footer>
+  <!-- /BUILD:FOOTER -->
+
+  <!-- BUILD:SCRIPTS (build.js) -->
+  <script>
+  /* Shared chrome behaviour. Entrance motion is CSS-only — see styles.css. */
+  (function () {
+    var root = document.documentElement;
+
+    // Logo collapse on scroll
+    var ticking = false;
+    window.addEventListener('scroll', function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () {
+        root.style.setProperty('--scroll-progress', Math.min(window.scrollY / 180, 1));
+        ticking = false;
+      });
+    }, { passive: true });
+
+    // Mobile nav
+    var toggle = document.getElementById('navToggle');
+    var links = document.getElementById('navLinks');
+    if (toggle && links) {
+      toggle.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+  })();
+  </script>
+  <!-- /BUILD:SCRIPTS -->
 
 </body>
 </html>

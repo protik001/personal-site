@@ -16,6 +16,11 @@
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="alternate" type="application/atom+xml" href="https://protik.info/feed.xml" title="Protik Roychowdhury — Ideas">
+  <!-- BUILD:FONTS (build.js) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@300;400;500;600&amp;display=swap">
+  <!-- /BUILD:FONTS -->
   <link rel="stylesheet" href="styles.css">
 
   <script type="application/ld+json">
@@ -226,265 +231,12 @@
   }
   </script>
 
-  <style>
-    /* --- Manual Page Layout --- */
-    .manual-layout {
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: 3rem;
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 clamp(1.2rem, 4vw, 2rem);
-    }
-
-    .manual-sidebar {
-      position: sticky;
-      top: 5rem;
-      align-self: start;
-      max-height: calc(100vh - 6rem);
-      overflow-y: auto;
-    }
-
-    .manual-sidebar nav {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      border-left: 1px solid var(--border-color);
-      padding-left: 0;
-    }
-
-    .manual-sidebar a {
-      display: block;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      padding: 0.45rem 0 0.45rem 1rem;
-      border-left: 2px solid transparent;
-      margin-left: -1px;
-      line-height: 1.4;
-      transition: color 0.15s ease, border-color 0.15s ease;
-    }
-
-    .manual-sidebar a:hover {
-      color: var(--text-primary);
-    }
-
-    .manual-sidebar a.active {
-      color: var(--accent);
-      border-left-color: var(--accent);
-      font-weight: 500;
-    }
-
-    .manual-content {
-      max-width: 680px;
-    }
-
-    @media (max-width: 900px) {
-      .manual-layout {
-        grid-template-columns: 1fr;
-        gap: 0;
-      }
-      .manual-sidebar {
-        position: relative;
-        top: 0;
-        border-bottom: 1px solid var(--border-color);
-        padding-bottom: 1.5rem;
-        margin-bottom: 2rem;
-      }
-      .manual-sidebar nav {
-        flex-direction: row;
-        flex-wrap: wrap;
-        border-left: none;
-        gap: 0;
-      }
-      .manual-sidebar a {
-        border-left: none;
-        border-bottom: 2px solid transparent;
-        margin-left: 0;
-        padding: 0.4rem 0.8rem;
-        font-size: 0.75rem;
-      }
-      .manual-sidebar a.active {
-        border-bottom-color: var(--accent);
-        border-left-color: transparent;
-      }
-    }
-
-    /* --- Manual Content Styles --- */
-    .manual-section {
-      margin-bottom: 3.5rem;
-      scroll-margin-top: 5.5rem;
-    }
-
-    .manual-section:last-child {
-      margin-bottom: 2rem;
-    }
-
-    .manual-overline {
-      font-size: 0.65rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--accent);
-      margin-bottom: 0.6rem;
-    }
-
-    .manual-section h2 {
-      font-size: clamp(1.4rem, 3vw, 1.8rem);
-      margin-bottom: 1rem;
-    }
-
-    .manual-section > p {
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-      line-height: 1.8;
-      margin-bottom: 1.2rem;
-    }
-
-    .mode-block {
-      margin-bottom: 1.2rem;
-    }
-
-    .mode-block h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.3rem;
-    }
-
-    .mode-block p {
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-      line-height: 1.8;
-    }
-
-    /* Principles */
-    .principle-item {
-      padding: 1.2rem 0;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .principle-item:last-child { border-bottom: none; }
-
-    .principle-item h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.35rem;
-    }
-
-    .principle-item p {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      line-height: 1.75;
-    }
-
-    /* What I bring — trait rows */
-    .trait-row {
-      margin-bottom: 1.2rem;
-    }
-
-    .trait-label {
-      font-size: 0.65rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--accent);
-      margin-bottom: 0.3rem;
-    }
-
-    .trait-row p {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      line-height: 1.75;
-    }
-
-    /* Growth edges */
-    .growth-item {
-      margin-bottom: 1.2rem;
-    }
-
-    .growth-item p {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      line-height: 1.75;
-    }
-
-    /* Collaboration */
-    .collab-item {
-      margin-bottom: 1.2rem;
-    }
-
-    .collab-item h3 {
-      font-size: 0.95rem;
-      font-weight: 600;
-      margin-bottom: 0.3rem;
-    }
-
-    .collab-item p {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      line-height: 1.75;
-    }
-
-    /* AI section */
-    .ai-block {
-      background: var(--bg-secondary);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .ai-block p {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      line-height: 1.75;
-      margin-bottom: 1rem;
-    }
-
-    .ai-block p:last-child { margin-bottom: 0; }
-
-    .ai-papers {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 1rem;
-    }
-
-    .ai-papers a {
-      font-size: 0.75rem;
-      color: var(--accent);
-      border: 1px solid var(--border-color);
-      padding: 0.3rem 0.7rem;
-      border-radius: var(--radius-sm);
-      background: var(--bg-card);
-      transition: var(--transition);
-    }
-
-    .ai-papers a:hover { border-color: var(--accent); }
-
-    /* Signals */
-    .signal-row {
-      padding: 1rem 0;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .signal-row:last-child { border-bottom: none; }
-
-    .signal-row h4 {
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-bottom: 0.3rem;
-    }
-
-    .signal-row p {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      line-height: 1.7;
-    }
-  </style>
 </head>
 <body>
 
   <!-- Navigation -->
-  <nav class="nav">
+  <!-- BUILD:NAV (build.js) -->
+  <nav class="nav" aria-label="Primary">
     <div class="container">
       <a href="/" class="nav-logo"><span>P</span><span class="first-rest">rotik</span><span class="logo-space"></span><span>R</span><span class="last-rest">oychowdhury</span></a>
       <ul class="nav-links" id="navLinks">
@@ -492,17 +244,18 @@
         <li><a href="/ideas">Ideas</a></li>
         <li><a href="/media">Media</a></li>
         <li><a href="/coaching">Coaching</a></li>
-        <li><a href="/working-with-me" class="active">Manual</a></li>
+        <li><a href="/working-with-me" class="active" aria-current="page">Manual</a></li>
         <li><a href="/contact" class="nav-cta">Get in Touch</a></li>
       </ul>
-      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
+  <!-- /BUILD:NAV -->
 
   <!-- Hero -->
-  <section class="hero" style="padding: 8rem 0 2.5rem;" aria-label="Page introduction">
+  <section class="hero" aria-label="Page introduction">
     <div class="container">
       <div class="hero-content">
         <div class="hero-label"><span class="dot"></span> Manual</div>
@@ -696,8 +449,8 @@
     <div class="container">
       <div class="newsletter">
         <h2>Let's work together</h2>
-        <p style="max-width: 500px; margin: 0.5rem auto;">If this sounds like someone you'd want to work with — on a product team, in a coaching engagement, as an advisor, or on a stage — I'd like to hear from you.</p>
-        <div style="display: flex; gap: 0.8rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap;">
+        <p>If this sounds like someone you'd want to work with — on a product team, in a coaching engagement, as an advisor, or on a stage — I'd like to hear from you.</p>
+        <div class="newsletter-actions">
           <a href="https://calendly.com/protik001/chat" class="btn btn-primary" target="_blank" rel="noopener">Book a conversation &rarr;</a>
           <a href="mailto:protik001@gmail.com" class="btn btn-secondary">Email me</a>
         </div>
@@ -706,6 +459,7 @@
   </section>
 
   <!-- Footer -->
+  <!-- BUILD:FOOTER (build.js) -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -755,70 +509,64 @@
       </div>
     </div>
   </footer>
+  <!-- /BUILD:FOOTER -->
 
+  <!-- BUILD:SCRIPTS (build.js) -->
   <script>
-  (function() {
-    // Scroll progress for logo collapse
+  /* Shared chrome behaviour. Entrance motion is CSS-only — see styles.css. */
+  (function () {
     var root = document.documentElement;
+
+    // Logo collapse on scroll
     var ticking = false;
-    window.addEventListener('scroll', function() {
-      if (!ticking) {
-        requestAnimationFrame(function() {
-          root.style.setProperty('--scroll-progress', Math.min(window.scrollY / 180, 1));
-          ticking = false;
-        });
-        ticking = true;
-      }
+    window.addEventListener('scroll', function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () {
+        root.style.setProperty('--scroll-progress', Math.min(window.scrollY / 180, 1));
+        ticking = false;
+      });
     }, { passive: true });
 
-    // Fade-in on scroll
-    var fadeEls = document.querySelectorAll('.fade-in');
-    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      var obs = new IntersectionObserver(function(entries) {
-        entries.forEach(function(e) {
-          if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); }
-        });
-      }, { threshold: 0.12 });
-      fadeEls.forEach(function(el) { obs.observe(el); });
-    } else {
-      fadeEls.forEach(function(el) { el.classList.add('is-visible'); });
+    // Mobile nav
+    var toggle = document.getElementById('navToggle');
+    var links = document.getElementById('navLinks');
+    if (toggle && links) {
+      toggle.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
     }
-
-    // Sidebar active section tracking
+  })();
+  </script>
+  <!-- /BUILD:SCRIPTS -->
+  <script>
+  /* Manual sidebar: active-section tracking and smooth scroll (this page only) */
+  (function () {
     var sections = document.querySelectorAll('.manual-section');
     var navLinks = document.querySelectorAll('#manualNav a');
+    if (!sections.length || !navLinks.length) return;
 
-    if (sections.length && navLinks.length) {
-      var sectionObs = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            var id = entry.target.getAttribute('id');
-            navLinks.forEach(function(link) {
-              link.classList.toggle('active', link.getAttribute('href') === '#' + id);
-            });
-          }
-        });
-      }, {
-        rootMargin: '-20% 0px -60% 0px',
-        threshold: 0
-      });
-
-      sections.forEach(function(section) {
-        sectionObs.observe(section);
-      });
-
-      // Smooth scroll for sidebar links
-      navLinks.forEach(function(link) {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          var target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            history.replaceState(null, '', this.getAttribute('href'));
-          }
+    var sectionObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var id = entry.target.getAttribute('id');
+        navLinks.forEach(function (link) {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + id);
         });
       });
-    }
+    }, { rootMargin: '-20% 0px -60% 0px', threshold: 0 });
+    sections.forEach(function (section) { sectionObs.observe(section); });
+
+    navLinks.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        var target = document.querySelector(this.getAttribute('href'));
+        if (!target) return;
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.replaceState(null, '', this.getAttribute('href'));
+      });
+    });
   })();
   </script>
 
