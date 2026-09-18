@@ -7,7 +7,7 @@
  * 3. Returns markdown when agents send Accept: text/markdown
  * 4. Passes everything else through to the ASSETS binding
  * 5. Adds security headers (HSTS, nosniff, referrer, frame, permissions) to every response
- * 6. Logs AI crawler and AI-agent fetches (structured console line + Analytics Engine if bound)
+ * 6. Logs AI crawler and AI-agent fetches: structured console line + a row in D1 (METRICS_DB.ai_crawl)
  *
  * NOTE: requires "run_worker_first": true in wrangler.jsonc — without it,
  * Cloudflare serves matching static assets before this worker runs and
@@ -120,7 +120,16 @@ function logAiCrawl(request, env, ctx, status, kind) {
   if (!m) return;
   const bot = AI_BOTS.find(b => b.toLowerCase() === m[0].toLowerCase()) || m[0];
   const path = new URL(request.url).pathname;
-  console.log(JSON.stringify({ event: 'ai-crawl', bot, path, status, kind, ua: ua.slice(0, 200) }));
+  const ts = new Date().toISOString();
+  console.log(JSON.stringify({ event: 'ai-crawl', ts, bot, path, status, kind, ua: ua.slice(0, 200) }));
+  // Queryable record: D1 (binding METRICS_DB, table ai_crawl). Written after the response is sent.
+  if (env.METRICS_DB && ctx && typeof ctx.waitUntil === 'function') {
+    ctx.waitUntil(
+      env.METRICS_DB.prepare('INSERT INTO ai_crawl (ts, bot, path, status, kind, ua) VALUES (?1, ?2, ?3, ?4, ?5, ?6)')
+        .bind(ts, bot, path, status, kind, ua.slice(0, 200)).run().catch(() => {})
+    );
+  }
+  // Analytics Engine, if the account ever enables it (binding AI_CRAWL).
   if (env.AI_CRAWL && typeof env.AI_CRAWL.writeDataPoint === 'function') {
     try { env.AI_CRAWL.writeDataPoint({ blobs: [bot, path, kind], doubles: [status], indexes: [bot] }); } catch {}
   }

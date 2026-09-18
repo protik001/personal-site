@@ -14,10 +14,15 @@
   // Queryable crawler counts. Dataset created in the dashboard 18 Sep 2026 (Workers & Pages →
   // Analytics Engine). Query: SELECT blob1 AS bot, count() FROM protik_ai_crawl
   //   WHERE timestamp > NOW() - INTERVAL '7' DAY GROUP BY bot ORDER BY count() DESC
-  // BLOCKED 18 Sep 2026: with this binding present, Workers Builds fails and the worker is not
-  // updated (twice). Re-enable once the build log error is known. The worker code guards on
-  // env.AI_CRAWL, so it is safe to add back without code changes.
-  //   "analytics_engine_datasets": [{ "binding": "AI_CRAWL", "dataset": "protik_ai_crawl" }],
+  // Queryable crawler record: D1 database protik-site-metrics, table ai_crawl (created 18 Sep 2026
+  // via the Cloudflare connector). Query from any session with the connector's d1_database_query:
+  //   SELECT bot, count(*) n FROM ai_crawl WHERE ts > datetime('now','-7 days') GROUP BY bot ORDER BY n DESC
+  "d1_databases": [
+    { "binding": "METRICS_DB", "database_name": "protik-site-metrics", "database_id": "ba170f1d-0e85-42a2-a3d8-6f49a38d47f1" }
+  ],
+  // Analytics Engine is NOT enabled on this account (API error 10089 on deploy, and the dashboard
+  // offers no enable control). Do not add "analytics_engine_datasets" until that changes; it blocks
+  // the whole Workers Build silently. The worker code already handles an AI_CRAWL binding if present.
   "assets": {
     "run_worker_first": true,
     "directory": ".",

@@ -18,3 +18,4 @@ templates
 scripts
 .github
 images/og/.manifest.json
+.wrangler
