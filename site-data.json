@@ -602,14 +602,14 @@
   "pages": [
     {
       "path": "/",
-      "lastmod": "2026-09-17",
+      "lastmod": "2026-09-18",
       "changefreq": "monthly",
       "priority": "1.0",
       "title": "Home"
     },
     {
       "path": "/about",
-      "lastmod": "2026-09-17",
+      "lastmod": "2026-09-18",
       "changefreq": "monthly",
       "priority": "0.9",
       "title": "About"
@@ -623,35 +623,35 @@
     },
     {
       "path": "/ideas",
-      "lastmod": "2026-09-17",
+      "lastmod": "2026-09-18",
       "changefreq": "weekly",
       "priority": "0.8",
       "title": "Ideas"
     },
     {
       "path": "/coaching",
-      "lastmod": "2026-09-17",
+      "lastmod": "2026-09-18",
       "changefreq": "monthly",
       "priority": "0.7",
       "title": "Coaching"
     },
     {
       "path": "/working-with-me",
-      "lastmod": "2026-09-17",
+      "lastmod": "2026-09-18",
       "changefreq": "monthly",
       "priority": "0.7",
       "title": "Working Manual (How I Work)"
     },
     {
       "path": "/contact",
-      "lastmod": "2026-09-17",
+      "lastmod": "2026-09-18",
       "changefreq": "monthly",
       "priority": "0.6",
       "title": "Contact"
     },
     {
       "path": "/press",
-      "lastmod": "2026-09-17",
+      "lastmod": "2026-09-18",
       "changefreq": "monthly",
       "priority": "0.6",
       "title": "Press Kit"
