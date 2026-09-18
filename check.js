@@ -119,6 +119,9 @@ for (const f of chromePages) {
   if (src.includes('<style>')) issues.push(`${f}: page-level <style> block — move it into a named section of styles.css`);
   if (!src.includes('fonts.googleapis.com/css2')) issues.push(`${f}: no font stylesheet link in head`);
   if (!src.includes('rel="preconnect"')) issues.push(`${f}: no font preconnect in head`);
+  if (!src.includes('static.cloudflareinsights.com/beacon.min.js')) issues.push(`${f}: analytics beacon missing (run build.js)`);
+  const thirdParty = [...src.matchAll(/<script[^>]+src="(https?:\/\/[^"]+)"/g)].map(m => m[1]).filter(u => !u.startsWith('https://static.cloudflareinsights.com/'));
+  if (thirdParty.length) issues.push(`${f}: unsanctioned third-party script: ${thirdParty.join(', ')}`);
 }
 
 // 8b. the worker's nav list is generated, and the essay BlogPosting matches site-data
