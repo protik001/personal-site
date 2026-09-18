@@ -4,7 +4,7 @@
 
 ## About
 
-Protik Roychowdhury is VP Product at Intellect, a regulated, multi-tenant enterprise SaaS platform serving 4M+ users across APAC, ANZ, China, and Latam in the workforce health category. He leads a 20+ person product, design, content, localisation, and AI team. He drove enterprise revenue to $20M ARR by leading the pivot from consumer app to B2B2C care ecosystem, shipped GenAI features (triage, session prep, treatment plans), and co-authored 3 academic papers on AI in mental health.
+Protik Roychowdhury is VP Product at Intellect, a regulated, multi-tenant enterprise SaaS platform serving 4M+ users across APAC, ANZ, China, and Latam in the workforce health category. He leads a 20+ person product, design, content, localisation, and AI team. He drove enterprise revenue to $20M ARR by leading the pivot from consumer app to B2B2C care ecosystem, shipped GenAI features (triage, session prep, treatment plans), and co-authored 3 academic papers on AI safety and LLM evaluation.
 
 Before Intellect, Protik was Principal PM for Growth, Engagement & Loyalty (GEL) at Grab ($3.8B+ revenue superapp), where he increased ARPU by 2% via personalisation and gamification, boosted onboarding success by 15pp, built engagement tools unlocking $2.5M in ad revenue, and delivered $4.5M in cost savings on the Driver Rentals product for 30K+ vehicles. He held product leadership roles at Ola (India's largest ride-hailing platform — reduced revenue leakage by INR 9.7M, improved driver earnings by 12%), Fabelio (Indonesia e-commerce — increased showroom conversions by 18pp, first senior product hire), and Exotel (India's leading cloud telephony platform).
 
@@ -49,7 +49,7 @@ Protik's research generalises beyond mental health: vignette-based bias evaluati
 
 - "The RISE Protocol: A Proposed Framework to Reduce Time-to-Intervention in AI-Driven Mental Health Risk Detection" — JMIR Preprints, Aug 2025. Sole author. DOI: 10.2196/preprints.82983
 - "The Provider GPA: A Composite Framework for Evaluating Digital Therapist Quality Through Engagement, Reliability, and Client Feedback" — medRxiv, Sep 2025. Co-authored with Oliver Sündermann. DOI: 10.1101/2025.09.01.25334495
-- "Bias in Large Language Models for Mental Health: Evidence from Vignette-Based Evaluation Across Nine Models" — PsyArXiv, Sep 2025. Co-authored with Lerh, Fang, Sündermann, Sinha & Chauhan. DOI: 10.31234/osf.io/ykn2c
+- "Bias in Large Language Models for Mental Health: Evidence from Vignette-Based Evaluation Across Nine Models" — PsyArXiv, Oct 2025. Co-authored with Wei, Fang, Sündermann, Sinha & Chauhan. DOI: 10.31234/osf.io/ykn2c_v2
 
 ## Speaking Topics
 
@@ -91,9 +91,9 @@ Protik speaks at conferences, leadership summits, and product communities on six
 
 ## Intellect Articles (Company Blog)
 
-- "AI, Mental Health and Humanity: Why the Future of Care is Hybrid" — Jun 2025. https://intellect.co/read/ai-mental-health-humanity
-- "AI Therapy and the Echo Chamber: Risks, Ethics, and What We're Doing About It" — May 2025. https://intellect.co/read/ai-therapy-echo-chamber
-- "AI and Mental Health: How Personalisation is Changing the Game" — May 2025. https://intellect.co/read/ai-mental-health-personalisation
+- "AI, Mental Health and Humanity: Why the Future of Care is Hybrid" — Jun 2025. https://intellect.co/read/ai-mental-health-and-humanity/
+- "AI Therapy and the Echo Chamber: Risks, Ethics, and What We're Doing About It" — May 2025. https://intellect.co/read/ai-therapy-echo-chamber/
+- "AI and Mental Health: How Personalisation is Changing the Game" — May 2025. https://intellect.co/read/ai-and-mental-health-personalisation/
 
 ## Contact & Profiles
 

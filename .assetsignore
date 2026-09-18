@@ -16,3 +16,5 @@ build.js
 check.js
 templates
 scripts
+.github
+images/og/.manifest.json
