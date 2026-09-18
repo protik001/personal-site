@@ -14,9 +14,10 @@
   // Queryable crawler counts. Dataset created in the dashboard 18 Sep 2026 (Workers & Pages →
   // Analytics Engine). Query: SELECT blob1 AS bot, count() FROM protik_ai_crawl
   //   WHERE timestamp > NOW() - INTERVAL '7' DAY GROUP BY bot ORDER BY count() DESC
-  "analytics_engine_datasets": [
-    { "binding": "AI_CRAWL", "dataset": "protik_ai_crawl" }
-  ],
+  // BLOCKED 18 Sep 2026: with this binding present, Workers Builds fails and the worker is not
+  // updated (twice). Re-enable once the build log error is known. The worker code guards on
+  // env.AI_CRAWL, so it is safe to add back without code changes.
+  //   "analytics_engine_datasets": [{ "binding": "AI_CRAWL", "dataset": "protik_ai_crawl" }],
   "assets": {
     "run_worker_first": true,
     "directory": ".",
