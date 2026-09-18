@@ -615,13 +615,6 @@
       "title": "About"
     },
     {
-      "path": "/media",
-      "lastmod": "2026-09-18",
-      "changefreq": "monthly",
-      "priority": "0.9",
-      "title": "Media (Speaking, Research & Press)"
-    },
-    {
       "path": "/ideas",
       "lastmod": "2026-09-18",
       "changefreq": "weekly",
@@ -629,11 +622,11 @@
       "title": "Ideas"
     },
     {
-      "path": "/coaching",
+      "path": "/media",
       "lastmod": "2026-09-18",
       "changefreq": "monthly",
-      "priority": "0.7",
-      "title": "Coaching"
+      "priority": "0.9",
+      "title": "Media (Speaking, Research & Press)"
     },
     {
       "path": "/working-with-me",
@@ -655,6 +648,13 @@
       "changefreq": "monthly",
       "priority": "0.6",
       "title": "Press Kit"
+    },
+    {
+      "path": "/coaching",
+      "lastmod": "2026-09-18",
+      "changefreq": "monthly",
+      "priority": "0.7",
+      "title": "Coaching"
     }
   ],
   "positions": [

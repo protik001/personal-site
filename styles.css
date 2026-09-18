@@ -850,7 +850,7 @@ a.logo-item:hover {
   color: var(--text-muted);
 }
 
-.footer h4 {
+.footer .footer-heading {
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -911,6 +911,13 @@ a.logo-item:hover {
 /* --- Utilities --- */
 .mt-2 { margin-top: 1rem; }
 .mt-4 { margin-top: 2rem; }
+
+/* --- Essay extras (subtitle line, footnotes) --- */
+.article-body .h2-sub { font-size: 1rem; font-style: italic; color: var(--text-muted); margin: 0 0 1.2rem; }
+.footnotes { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); font-size: 0.9rem; color: var(--text-muted); }
+.footnotes ol { padding-left: 1.2rem; margin: 0; }
+.footnotes li { margin-bottom: 0.9rem; line-height: 1.7; }
+.footnotes a.fn-back { text-decoration: none; color: var(--text-muted); margin-left: 0.3rem; }
 
 /* --- Entrance motion ---
    `.fade-in` marks a section that MAY animate as it scrolls in. It never hides

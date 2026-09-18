@@ -133,8 +133,15 @@ const fillZone = (src, name, body, file) => {
     ...data.externalArticles.map(x => ({ sort: x.sortDate, html:
       `        <li><a href="${x.url}" target="_blank" rel="noopener" class="idea-row" data-pillar="${x.pillar}"><span class="idea-row-title">${x.rowTitle} &nearr;</span><span class="idea-row-right"><span class="idea-row-pillar" data-color="${x.pillarColor}">${x.pillarLabel}</span></span></a></li>` })),
   ].sort((a, b) => b.sort.localeCompare(a.sort));
+  // A year divider before the first row of each year (the June design had this; keep it generated)
+  const rowsWithYears = []; let year = '';
+  for (const r of rowsAll) {
+    const y = r.sort.slice(0, 4);
+    if (y !== year) { rowsWithYears.push(`        <li class="year-divider">${y}</li>`); year = y; }
+    rowsWithYears.push(r.html);
+  }
   src = src.replace(/( *<!-- BUILD:IDEAS-ROWS[^>]*-->)[\s\S]*?( *<!-- \/BUILD:IDEAS-ROWS -->)/,
-    (m, a, b) => a + '\n' + rowsAll.map(r => r.html).join('\n') + '\n' + b);
+    (m, a, b) => a + '\n' + rowsWithYears.join('\n') + '\n' + b);
 
   // Blog schema: rebuild the BlogPosting array in place
   src = src.replace(BLOCK_RE, (full, open, body, close) => {

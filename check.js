@@ -133,6 +133,19 @@ for (const e of data.essays) {
   if (!src.includes(`"dateModified": "${e.dateModified}"`)) issues.push(`essay dateModified drift: ${e.slug} (run build.js)`);
 }
 
+// 8c. every class used in the markup has a rule in styles.css (catches CSS dropped in a consolidation)
+{
+  const cssText = fs.readFileSync('styles.css', 'utf8').replace(/\/\*[\s\S]*?\*\//g, '');
+  const defined = new Set([...cssText.matchAll(/\.([a-zA-Z][\w-]*)/g)].map(m => m[1]));
+  const STATE = new Set(['open', 'active']);
+  const missing = new Set();
+  for (const f of chromePages) {
+    const src = fs.readFileSync(f, 'utf8');
+    for (const m of src.matchAll(/class="([^"]*)"/g)) for (const c of m[1].split(/\s+/)) if (c && !defined.has(c) && !STATE.has(c) && !c.startsWith('is-')) missing.add(`${c} (${f})`);
+  }
+  if (missing.size) issues.push(`classes without a rule in styles.css: ${[...missing].slice(0, 8).join(', ')}`);
+}
+
 // 9. first paint: nothing rests hidden, fonts are not chained through the CSS
 const css = fs.readFileSync('styles.css', 'utf8');
 if (/@import/.test(css)) issues.push('styles.css: @import — fonts must load via <link> in the page head');
