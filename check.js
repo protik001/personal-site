@@ -32,8 +32,12 @@ for (const e of data.essays) if (!Array.isArray(e.keywords) || e.keywords.length
 // 2c. page lastmod must not predate the file's last commit (chrome changes count; content changes certainly do)
 for (const p of data.pages) {
   const f = p.path === '/' ? 'index.html' : p.path.slice(1) + '.html';
+  // last change = today if the file has uncommitted edits (so this catches it before the commit), else its last commit date
   let last = '';
-  try { last = execSync(`git log -1 --format=%cs -- ${f}`, { stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim(); } catch {}
+  try {
+    const dirty = execSync(`git status --porcelain -- ${f}`, { stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
+    last = dirty ? today : execSync(`git log -1 --format=%cs -- ${f}`, { stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
+  } catch {}
   if (last && p.lastmod < last) issues.push(`site-data page ${p.path} lastmod ${p.lastmod} predates last commit ${last}`);
   if (p.lastmod > today) issues.push(`site-data page ${p.path} lastmod in the future`);
 }
