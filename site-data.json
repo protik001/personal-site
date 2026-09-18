@@ -23,6 +23,7 @@
       "Enterprise B2B SaaS",
       "Cross-Border Localisation",
       "Consumer Super-Apps",
+      "Executive Coaching",
       "Marketplace Design",
       "Platform Products",
       "GenAI",
@@ -32,7 +33,6 @@
       "Experimentation & A/B Testing",
       "0-to-1 Product Development",
       "Startup Founding",
-      "Executive Coaching",
       "Regulated Technology",
       "Product Leadership"
     ],
@@ -51,7 +51,7 @@
       "name": "Intellect",
       "url": "https://intellect.co"
     },
-    "description": "Singapore-based product leader building trusted AI, marketplace, and high-stakes digital products across Asia. VP Product at Intellect. Previously led Growth, Engagement & Loyalty at Grab and marketplace products at Ola. Three-time founder (one exit), published researcher, keynote speaker, ICF-certified coach.",
+    "description": "Protik Roychowdhury is VP Product at Intellect, a regulated enterprise SaaS platform in workforce mental health (4.5M+ covered lives, $20M+ ARR), where he leads a team of 20+. Previously Principal PM at Grab, leading Growth, Engagement & Loyalty for the consumer experience, and first PM for Rentals at Ola. Three-time founder, one exit. Author of three papers on AI safety and LLM evaluation. Singapore.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Singapore",
@@ -100,7 +100,7 @@
         "@type": "Occupation",
         "name": "VP Product",
         "startDate": "2022-01",
-        "description": "Leading product, design, content, localisation, and AI for a regulated, multi-tenant enterprise SaaS platform (Asia's largest in workforce mental health) — 4M+ users, $20M+ ARR",
+        "description": "Leading product, design, content, localisation, and AI for a regulated, multi-tenant enterprise SaaS platform in workforce mental health: 4.5M+ covered lives, $20M+ ARR, team grown from 3 to 20+.",
         "occupationLocation": {
           "@type": "Place",
           "name": "Singapore"
@@ -173,8 +173,8 @@
     ],
     "seeks": {
       "@type": "Offer",
-      "name": "Speaking Engagements & Coaching",
-      "description": "Available for speaking on Product Strategy, AI Ethics, Regulated & High-Compliance Tech, and Executive Coaching"
+      "name": "Speaking and advisory",
+      "description": "Keynotes and panels on AI product strategy and trust in high-stakes products; advisory and independent board work in enterprise SaaS, AI, marketplace, and health tech companies."
     },
     "email": "mailto:protik001@gmail.com"
   },
@@ -640,7 +640,7 @@
       "lastmod": "2026-09-18",
       "changefreq": "monthly",
       "priority": "0.7",
-      "title": "Working Manual (How I Work)"
+      "title": "How I work"
     },
     {
       "path": "/contact",

@@ -112,7 +112,7 @@ const fillZone = (src, name, body, file) => {
     const cta = href === '/contact';
     const from = `<a href="${href}"${cta ? ' class="nav-cta"' : ''}>`;
     const to = `<a href="${href}" class="${cta ? 'nav-cta active' : 'active'}" aria-current="page">`;
-    if (!parts.NAV.includes(from)) throw new Error(`templates/nav.html has no link for ${href}`);
+    if (!parts.NAV.includes(from)) return parts.NAV; // page has no nav slot (e.g. coaching): no active state
     return parts.NAV.replace(from, to);
   };
 

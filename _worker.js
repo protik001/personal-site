@@ -250,7 +250,7 @@ async function handleMarkdownRequest(request, url, env) {
   parts.push('- [Media (Speaking, Research & Press)](https://protik.info/media)');
   parts.push('- [Ideas](https://protik.info/ideas)');
   parts.push('- [Coaching](https://protik.info/coaching)');
-  parts.push('- [Working Manual (How I Work)](https://protik.info/working-with-me)');
+  parts.push('- [How I work](https://protik.info/working-with-me)');
   parts.push('- [Contact](https://protik.info/contact)');
   parts.push('- [Press Kit](https://protik.info/press)');
   parts.push('- [LLM Context](https://protik.info/llms.txt)');

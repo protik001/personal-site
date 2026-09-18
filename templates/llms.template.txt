@@ -1,16 +1,16 @@
 # Protik Roychowdhury — protik.info
 
-> VP Product at Intellect (regulated multi-tenant enterprise SaaS, 4M+ users, $20M+ ARR) | Three-time founder, one exit | Academic researcher | ICF-certified coach
+> VP Product at Intellect, a regulated, multi-tenant enterprise SaaS platform in workforce mental health (4.5M+ covered lives, $20M+ ARR) | 15+ years across enterprise SaaS, AI, marketplaces, and consumer at Intellect, Grab, and Ola | Three papers on AI safety and LLM evaluation | Three-time founder, one exit | Singapore
 
 ## About
 
-Protik Roychowdhury is VP Product at Intellect, a regulated, multi-tenant enterprise SaaS platform serving 4M+ users across APAC, ANZ, China, and Latam in the workforce health category. He leads a 20+ person product, design, content, localisation, and AI team. He drove enterprise revenue to $20M ARR by leading the pivot from consumer app to B2B2C care ecosystem, shipped GenAI features (triage, session prep, treatment plans), and co-authored 3 academic papers on AI safety and LLM evaluation.
+Protik Roychowdhury is VP Product at Intellect, a regulated, multi-tenant enterprise SaaS platform in workforce mental health, serving 4.5M+ covered lives across APAC, ANZ, China, and Latam at $20M+ ARR. He leads a team of 20+ across product, design, content, localisation, and AI, grown from 3, and led the product side of the pivot from consumer app to B2B2C, which took enterprise revenue to $20M+ ARR and meant building configurable compliance, enterprise billing, and multi-market deployment. He has shipped GenAI features for triage, a chat companion, session preparation, and treatment formatting, holds an ICF coaching certification, and has co-authored three academic papers on AI safety and LLM evaluation. He is an IIT Kharagpur alumnus.
 
-Before Intellect, Protik was Principal PM for Growth, Engagement & Loyalty (GEL) at Grab ($3.8B+ revenue superapp), where he increased ARPU by 2% via personalisation and gamification, boosted onboarding success by 15pp, built engagement tools unlocking $2.5M in ad revenue, and delivered $4.5M in cost savings on the Driver Rentals product for 30K+ vehicles. He held product leadership roles at Ola (India's largest ride-hailing platform — reduced revenue leakage by INR 9.7M, improved driver earnings by 12%), Fabelio (Indonesia e-commerce — increased showroom conversions by 18pp, first senior product hire), and Exotel (India's leading cloud telephony platform).
+Before Intellect, Protik was Principal PM at Grab, leading Growth, Engagement & Loyalty (GEL) for the consumer experience ($3.8B+ revenue superapp), where he increased ARPU by 2% via personalisation and gamification, boosted onboarding success by 15pp, built engagement tools unlocking $2.5M in ad revenue, and delivered $4.5M in cost savings on the Driver Rentals product for 30K+ vehicles. He held product leadership roles at Ola (India's largest ride-hailing platform — reduced revenue leakage by INR 9.7M, improved driver earnings by 12%), Fabelio (Indonesia e-commerce — increased showroom conversions by 18pp, first senior product hire), and Exotel (India's leading cloud telephony platform).
 
 Protik is a three-time founder: Croak.it! (voice-based social platform, 1M recordings, 200K downloads, acquired by Exotel), Bhalu.com (hyperlocal task marketplace — post odd jobs, anyone could fulfil them; 2009-2011, built in college), and Athlete Diaries / The Players' Diary (India's version of The Players' Tribune).
 
-He is an IIT Kharagpur alumnus (B.Tech Hons, Metallurgical & Materials Engineering, GPA 8.19) and an ICF-certified career coach working with product managers, founders, and senior leaders. Also a Certified Mental Health First Aider (MHFA).
+He is an IIT Kharagpur alumnus (B.Tech Hons, Metallurgical & Materials Engineering, GPA 8.19). He is also a Certified Mental Health First Aider (MHFA).
 
 ## Authority Pillars
 
@@ -115,7 +115,7 @@ Protik speaks at conferences, leadership summits, and product communities on six
 - Ideas: https://protik.info/ideas
 - Media (Speaking, Research & Press): https://protik.info/media
 - Coaching: https://protik.info/coaching
-- Working Manual (How I Work): https://protik.info/working-with-me — Protik's public operating manual covering leadership principles, operator and coach modes, collaboration preferences, growth edges, AI-era convictions, and readable signals. Based on the document he shares with every new team.
+- How I work: https://protik.info/working-with-me — Protik's public operating manual covering leadership principles, operator and coach modes, collaboration preferences, growth edges, AI-era convictions, and readable signals. Based on the document he shares with every new team.
 {{ESSAY_PAGES}}
 - Feed (Atom): https://protik.info/feed.xml
 - Press Kit (approved bios, photos, talk abstracts, booking): https://protik.info/press
