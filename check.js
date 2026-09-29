@@ -155,9 +155,45 @@ if (cssKb > 40) issues.push(`styles.css is ${cssKb.toFixed(1)} KB (budget 40 KB)
 const homeKb = fs.statSync('index.html').size / 1024;
 if (homeKb > 40) issues.push(`index.html is ${homeKb.toFixed(1)} KB (budget 40 KB)`);
 
-if (issues.length) {
-  console.error(`CHECK FAILED — ${issues.length} issue(s):`);
-  [...new Set(issues)].forEach(i => console.error(' - ' + i));
-  process.exit(1);
+// 10. the worker, run against the files here: each markdown twin keeps its whole description and
+//     has no raw entities, only HTML is converted, HTML varies on Accept, legacy URLs 301 in one hop
+async function checkWorker() {
+  const { default: worker } = await import('data:text/javascript;base64,' + fs.readFileSync('_worker.js').toString('base64'));
+  const TYPES = { html: 'text/html; charset=utf-8', txt: 'text/plain; charset=utf-8', css: 'text/css; charset=utf-8' };
+  const ASSETS = { fetch: async req => {
+    if (req.headers.has('If-None-Match')) return new Response(null, { status: 304 }); // as ASSETS would, for a cached page
+    const p = new URL(req.url).pathname.slice(1);
+    const f = [p ? p + '.html' : 'index.html', p].find(x => x && fs.existsSync(x) && fs.statSync(x).isFile());
+    return f ? new Response(fs.readFileSync(f), { headers: { 'Content-Type': TYPES[f.split('.').pop()] || 'application/octet-stream' } }) : new Response('not found', { status: 404 });
+  } };
+  const get = (u, headers = {}) => worker.fetch(new Request(u.startsWith('http') ? u : SITE + u, { headers }), { ASSETS }, { waitUntil() {} });
+  const MD = { Accept: 'text/markdown', 'If-None-Match': '"cached-html"' };
+  const tail = s => s.replace(/&[#a-z0-9]+;/gi, '').replace(/[^a-z0-9]/gi, '').slice(-16);
+  for (const f of allHtml) {
+    const path = f === 'index.html' ? '/' : '/' + f.replace(/\.html$/, '');
+    const meta = (fs.readFileSync(f, 'utf8').match(/<meta name="description" content="([^"]*)"/) || [])[1] || '';
+    const r = await get(path, MD);
+    const md = (await r.text()).split('\n## Structured Data')[0];
+    const desc = (md.match(/^description: "(.*)"$/m) || [])[1] || '';
+    if (r.status !== 200 || !String(r.headers.get('Content-Type')).startsWith('text/markdown')) issues.push(`_worker.js: ${path} as markdown gave ${r.status} ${r.headers.get('Content-Type')}`);
+    else if (tail(desc) !== tail(meta)) issues.push(`_worker.js: markdown description cut short on ${path}`);
+    const raw = [...new Set(md.match(/&(#\d+|#x[0-9a-f]+|[a-z][a-z0-9]*);/gi) || [])];
+    if (raw.length) issues.push(`_worker.js: ${path} markdown has raw entities ${raw.join(' ')} (use the character, or add it to ENTITIES)`);
+    if (!String((await get(path)).headers.get('Vary')).includes('Accept')) issues.push(`_worker.js: ${path} HTML lacks Vary: Accept`);
+  }
+  if (await (await get('/llms.txt', MD)).text() !== llms) issues.push('_worker.js: llms.txt is altered when fetched as markdown');
+  if (String((await get('/styles.css', MD)).headers.get('Content-Type')).includes('markdown')) issues.push('_worker.js: styles.css converted to markdown');
+  for (const [from, to] of [['http://www.protik.info/blog/?ref=x', `${SITE}/ideas?ref=x`], ['/speaking', `${SITE}/media`], ['http://protik.info/about', `${SITE}/about`]]) {
+    const r = await get(from);
+    if (r.status !== 301 || r.headers.get('Location') !== to) issues.push(`_worker.js: ${from} gave ${r.status} ${r.headers.get('Location')} (want 301 ${to})`);
+  }
 }
-console.log(`ALL CHECKS PASS ✓  (${data.essays.length} essays, ${allHtml.length} HTML files)`);
+
+checkWorker().catch(err => issues.push(`_worker.js: check crashed (${err.message})`)).then(() => {
+  if (issues.length) {
+    console.error(`CHECK FAILED — ${issues.length} issue(s):`);
+    [...new Set(issues)].forEach(i => console.error(' - ' + i));
+    process.exit(1);
+  }
+  console.log(`ALL CHECKS PASS ✓  (${data.essays.length} essays, ${allHtml.length} HTML files)`);
+});

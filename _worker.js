@@ -2,9 +2,11 @@
  * Cloudflare Worker for protik.info
  *
  * 0. Forces https and the apex host (http:// and www. → https://protik.info)
- * 1. 301-redirects legacy URLs (/speaking, /publications, /blog, /sitemap.xml)
+ * 1. 301-redirects legacy URLs (/speaking, /publications, /blog, /sitemap.xml), in the same
+ *    single hop as 0, trailing slash ignored, query string kept
  * 2. Serves a clean robots.txt (bypasses Cloudflare's managed injection)
- * 3. Returns markdown when agents send Accept: text/markdown
+ * 3. Returns markdown when agents send Accept: text/markdown (HTML pages only; llms.txt and
+ *    other files pass through untouched). HTML responses carry Vary: Accept to match.
  * 4. Passes everything else through to the ASSETS binding
  * 5. Adds security headers (HSTS, nosniff, referrer, frame, permissions) to every response
  * 6. Logs AI crawler and AI-agent fetches: structured console line + a row in D1 (METRICS_DB.ai_crawl)
@@ -153,16 +155,11 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
-    // 0a. Canonical scheme + host: http:// and www. → https://protik.info
-    if (url.protocol === 'http:' || url.hostname === 'www.protik.info') {
-      url.protocol = 'https:';
-      url.hostname = 'protik.info';
-      return Response.redirect(url.toString(), 301);
-    }
-
-    // 0b. Permanent redirects for legacy URLs
-    if (REDIRECTS[url.pathname]) {
-      return Response.redirect('https://protik.info' + REDIRECTS[url.pathname], 301);
+    // 0. One 301 to the canonical URL: https, apex host, legacy path mapped (so
+    //    http://www.protik.info/blog/ lands on /ideas in a single hop)
+    const legacy = REDIRECTS[url.pathname.length > 1 ? url.pathname.replace(/\/+$/, '') : url.pathname];
+    if (legacy || url.protocol === 'http:' || url.hostname === 'www.protik.info') {
+      return withSecurityHeaders(Response.redirect('https://protik.info' + (legacy || url.pathname) + url.search, 301));
     }
 
     // 1. Serve clean robots.txt
@@ -180,23 +177,27 @@ export default {
     const wantsMarkdown = accept.includes('text/markdown');
 
     if (wantsMarkdown) {
-      const md = withSecurityHeaders(await handleMarkdownRequest(request, url, env));
+      const md = withSecurityHeaders(await handleMarkdownRequest(url, env));
       logAiCrawl(request, env, ctx, md.status, 'markdown');
       return md;
     }
 
     // 3. Pass everything else through via ASSETS binding (not fetch, which loops through Cloudflare)
     const res = withSecurityHeaders(await env.ASSETS.fetch(request));
+    // Every HTML page has a markdown twin at the same URL, so caches must key on Accept
+    if ((res.headers.get('Content-Type') || '').includes('text/html')) res.headers.append('Vary', 'Accept');
     logAiCrawl(request, env, ctx, res.status, 'html');
     return res;
   },
 };
 
-async function handleMarkdownRequest(request, url, env) {
-  // Fetch the original HTML from local assets (not external fetch)
-  const response = await env.ASSETS.fetch(request);
+async function handleMarkdownRequest(url, env) {
+  // Fetch the original HTML from local assets (not external fetch). A clean GET: the client's
+  // If-None-Match or Range would get a 304 or 206 from ASSETS instead of the whole page.
+  const response = await env.ASSETS.fetch(new Request(url.toString()));
 
-  if (!response.ok) {
+  // Only HTML is converted; llms.txt (already markdown), CSS, feeds and images pass through
+  if (!response.ok || !(response.headers.get('Content-Type') || '').includes('text/html')) {
     return response;
   }
 
@@ -271,7 +272,8 @@ async function handleMarkdownRequest(request, url, env) {
 }
 
 /**
- * Extract metadata from HTML
+ * Extract metadata from HTML. Attribute values run to their own closing quote, so an
+ * apostrophe inside content="..." does not cut the value short.
  */
 function extractMeta(html, type) {
   if (type === 'title') {
@@ -279,16 +281,16 @@ function extractMeta(html, type) {
     return match ? match[1].trim() : '';
   }
   if (type === 'description') {
-    const match = html.match(/<meta\s+name=["']description["']\s+content=["'](.*?)["']/is);
-    return match ? match[1].trim() : '';
+    const match = html.match(/<meta\s+name=["']description["']\s+content=(["'])(.*?)\1/is);
+    return match ? match[2].trim() : '';
   }
   if (type === 'canonical') {
-    const match = html.match(/<link\s+rel=["']canonical["']\s+href=["'](.*?)["']/is);
-    return match ? match[1].trim() : '';
+    const match = html.match(/<link\s+rel=["']canonical["']\s+href=(["'])(.*?)\1/is);
+    return match ? match[2].trim() : '';
   }
   if (type === 'author') {
-    const match = html.match(/<meta\s+name=["']author["']\s+content=["'](.*?)["']/is);
-    return match ? match[1].trim() : '';
+    const match = html.match(/<meta\s+name=["']author["']\s+content=(["'])(.*?)\1/is);
+    return match ? match[2].trim() : '';
   }
   return '';
 }
@@ -398,30 +400,20 @@ function stripTags(str) {
 }
 
 /**
- * Decode common HTML entities
+ * Decode HTML entities: numeric ones in full, named ones from the list below (check.js fails
+ * if a page uses a named entity missing from it). One pass, so &amp;lt; stays &lt;.
  */
+const ENTITIES = {
+  amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ',
+  rsquo: "'", lsquo: "'", rdquo: '"', ldquo: '"', mdash: '—', ndash: '–', hellip: '…',
+  rarr: '→', larr: '←', darr: '↓', nearr: '↗', bull: '•', middot: '·', copy: '©', uuml: 'ü',
+};
 function decodeEntities(str) {
-  return str
-    .replace(/&amp;/g, '&')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/&rsquo;/g, "'")
-    .replace(/&lsquo;/g, "'")
-    .replace(/&rdquo;/g, '"')
-    .replace(/&ldquo;/g, '"')
-    .replace(/&mdash;/g, '—')
-    .replace(/&ndash;/g, '–')
-    .replace(/&rarr;/g, '→')
-    .replace(/&larr;/g, '←')
-    .replace(/&bull;/g, '•')
-    .replace(/&nbsp;/g, ' ')
-    .replace(/&copy;/g, '©')
-    .replace(/&hellip;/g, '…')
-    .replace(/&#8217;/g, "'")
-    .replace(/&#8220;/g, '"')
-    .replace(/&#8221;/g, '"');
+  return str.replace(/&(?:#(\d+)|#x([0-9a-f]+)|([a-z][a-z0-9]*));/gi, (m, dec, hex, name) => {
+    const cp = dec ? parseInt(dec, 10) : hex ? parseInt(hex, 16) : -1;
+    if (cp >= 0) return cp <= 0x10ffff ? String.fromCodePoint(cp) : m;
+    return Object.hasOwn(ENTITIES, name) ? ENTITIES[name] : m;
+  });
 }
 
 /**
