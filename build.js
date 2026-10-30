@@ -5,7 +5,9 @@
  * Regenerates: llms.txt, sitemap.website.xml, feed.xml,
  *              shared chrome (nav / footer / font links / shared script) on every page
  *              from templates/, ideas.html rows + Blog schema,
- *              index.html "Latest thinking", canonical Person JSON-LD on all main pages.
+ *              index.html "Latest thinking", canonical Person JSON-LD on all main pages,
+ *              twitter: card tags (mirrored from each page's og: tags).
+ * Not here: the one-pager PDF — scripts/gen-onepager.py (check.js flags it when stale).
  * Never touches: essay body HTML, page copy, styles.
  *
  * Usage: node build.js   (then: node check.js)
@@ -122,6 +124,30 @@ const fillZone = (src, name, body, file) => {
     fs.writeFileSync(f, src);
   }
   console.log(`shared chrome injected on ${ALL_PAGES.length} pages (${ZONES.join(', ')})`);
+}
+
+// ---------- Twitter/X card tags, mirrored from each page's og: tags ----------
+// X falls back to og: unreliably, so every page with an og:image gets its own card block.
+{
+  let n = 0;
+  for (const f of ALL_PAGES) {
+    let src = fs.readFileSync(f, 'utf8');
+    const og = {};
+    for (const m of src.matchAll(/<meta property="og:([a-z:_]+)" content="([^"]*)">/g)) og[m[1]] = m[2];
+    if (!og.image) continue;
+    src = src.replace(/^[ \t]*<meta name="twitter:[^\n]*\n/gm, '');
+    const tags = [
+      ['card', 'summary_large_image'], ['site', '@protik'],
+      ['title', og.title], ['description', og.description], ['image', og.image], ['image:alt', og['image:alt']],
+    ].filter(([, v]) => v).map(([k, v]) => `  <meta name="twitter:${k}" content="${v}">`);
+    const ogLines = [...src.matchAll(/^[ \t]*<meta property="og:[^\n]*\n/gm)];
+    const last = ogLines[ogLines.length - 1];
+    const at = last.index + last[0].length;
+    src = src.slice(0, at) + tags.join('\n') + '\n' + src.slice(at);
+    fs.writeFileSync(f, src);
+    n++;
+  }
+  console.log(`twitter card tags mirrored from og: on ${n} pages`);
 }
 
 // ---------- ideas.html: rows + Blog schema ----------

@@ -13,6 +13,11 @@
   <meta property="og:description" content="Essays on AI product strategy, trust in high-stakes products, product leadership, mental health tech, and marketplace design.">
   <meta property="og:url" content="https://protik.info/ideas">
   <meta property="og:image" content="https://protik.info/images/og-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@protik">
+  <meta name="twitter:title" content="Ideas — Protik Roychowdhury">
+  <meta name="twitter:description" content="Essays on AI product strategy, trust in high-stakes products, product leadership, mental health tech, and marketplace design.">
+  <meta name="twitter:image" content="https://protik.info/images/og-card.png">
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="alternate" type="application/atom+xml" href="https://protik.info/feed.xml" title="Protik Roychowdhury — Ideas">
@@ -233,7 +238,7 @@
             "@type": "BlogPosting",
             "headline": "The Meter Is Always Running: What Generative AI Actually Costs",
             "datePublished": "2026-07-01",
-            "dateModified": "2026-07-01",
+            "dateModified": "2026-10-30",
             "author": {
               "@id": "https://protik.info/#person"
             },
@@ -250,7 +255,7 @@
             "@type": "BlogPosting",
             "headline": "Marking the model's homework",
             "datePublished": "2026-06-26",
-            "dateModified": "2026-06-26",
+            "dateModified": "2026-10-30",
             "author": {
               "@id": "https://protik.info/#person"
             },
@@ -284,7 +289,7 @@
             "@type": "BlogPosting",
             "headline": "From consumer app to $20M enterprise ARR",
             "datePublished": "2026-06-15",
-            "dateModified": "2026-06-15",
+            "dateModified": "2026-10-30",
             "author": {
               "@id": "https://protik.info/#person"
             },
@@ -407,7 +412,7 @@
             "@type": "BlogPosting",
             "headline": "The Architecture of Consequential AI: Shipping AI Features in Regulated Industries",
             "datePublished": "2026-03-20",
-            "dateModified": "2026-03-20",
+            "dateModified": "2026-10-30",
             "author": {
               "@id": "https://protik.info/#person"
             },
@@ -665,11 +670,11 @@
         <div>
           <p class="footer-heading">Topics</p>
           <ul class="footer-links">
-            <li><a href="/ideas">AI Product Strategy</a></li>
-            <li><a href="/ideas">Trust & High-Stakes Design</a></li>
-            <li><a href="/ideas">Product Leadership</a></li>
-            <li><a href="/ideas">Regulated & High-Compliance Tech</a></li>
-            <li><a href="/ideas">Marketplace & Platforms</a></li>
+            <li><a href="/ideas#ai-product-strategy">AI Product Strategy</a></li>
+            <li><a href="/ideas#trust-high-stakes-design">Trust & High-Stakes Design</a></li>
+            <li><a href="/ideas#product-leadership">Product Leadership</a></li>
+            <li><a href="/ideas#regulated-high-compliance-tech">Regulated & High-Compliance Tech</a></li>
+            <li><a href="/ideas#marketplace-platforms">Marketplace & Platforms</a></li>
           </ul>
         </div>
         <div>
@@ -725,19 +730,35 @@
   (function () {
     var buttons = document.querySelectorAll('#pillarFilter button');
     var items = document.querySelectorAll('#ideaList li');
+    // Each pillar is linkable as /ideas#<slug>, e.g. "Trust & High-Stakes Design" → #trust-high-stakes-design
+    var slug = function (s) { return s.toLowerCase().replace(/&/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); };
+    var apply = function (btn) {
+      buttons.forEach(function (b) { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
+      var filter = btn.getAttribute('data-filter');
+      items.forEach(function (li) {
+        var row = li.querySelector('.idea-row');
+        if (!row) { li.classList.toggle('hidden', filter !== 'all'); return; } // year divider
+        li.classList.toggle('hidden', !(filter === 'all' || row.getAttribute('data-pillar') === filter));
+      });
+    };
+    var fromHash = function () {
+      var want = decodeURIComponent(location.hash.slice(1));
+      buttons.forEach(function (b) {
+        var f = b.getAttribute('data-filter');
+        if (want ? slug(f) === want : f === 'all') apply(b);
+      });
+    };
     buttons.forEach(function (btn) {
       btn.addEventListener('click', function () {
-        buttons.forEach(function (b) { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
-        btn.classList.add('active');
-        btn.setAttribute('aria-pressed', 'true');
-        var filter = btn.getAttribute('data-filter');
-        items.forEach(function (li) {
-          var row = li.querySelector('.idea-row');
-          if (!row) { li.classList.toggle('hidden', filter !== 'all'); return; } // year divider
-          li.classList.toggle('hidden', !(filter === 'all' || row.getAttribute('data-pillar') === filter));
-        });
+        apply(btn);
+        var f = btn.getAttribute('data-filter');
+        history.replaceState(null, '', f === 'all' ? location.pathname : '#' + slug(f));
       });
     });
+    window.addEventListener('hashchange', fromHash);
+    fromHash();
   })();
   </script>
 

@@ -8,7 +8,7 @@
  * 3. Returns markdown when agents send Accept: text/markdown (HTML pages only; llms.txt and
  *    other files pass through untouched). HTML responses carry Vary: Accept to match.
  * 4. Passes everything else through to the ASSETS binding
- * 5. Adds security headers (HSTS, nosniff, referrer, frame, permissions) to every response
+ * 5. Adds security headers (HSTS, CSP, nosniff, referrer, frame, permissions) to every response
  * 6. Logs AI crawler and AI-agent fetches: structured console line + a row in D1 (METRICS_DB.ai_crawl)
  *
  * NOTE: requires "run_worker_first": true in wrangler.jsonc — without it,
@@ -137,8 +137,27 @@ function logAiCrawl(request, env, ctx, status, kind) {
   }
 }
 
+// CSP: everything the pages load. 'unsafe-inline' for scripts covers the shared inline script and
+// the onclick FAQ toggles; it still blocks script from any other origin. Add a host here before
+// embedding anything new (check.js fails on an external script, frame or font host missing from it).
+const CSP = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com",
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+  "font-src 'self' https://fonts.gstatic.com",
+  "img-src 'self' data:",
+  "connect-src 'self' https://cloudflareinsights.com",
+  "frame-src https://calendly.com https://www.youtube.com",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  "frame-ancestors 'self'",
+  'upgrade-insecure-requests',
+].join('; ');
+
 const SECURITY_HEADERS = {
-  'Strict-Transport-Security': 'max-age=31536000',
+  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
+  'Content-Security-Policy': CSP,
   'X-Content-Type-Options': 'nosniff',
   'Referrer-Policy': 'strict-origin-when-cross-origin',
   'X-Frame-Options': 'SAMEORIGIN',
