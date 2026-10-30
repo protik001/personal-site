@@ -10,7 +10,7 @@
   --bg-card: #ffffff;
   --text-primary: #111111;
   --text-secondary: #4a4a4a;
-  --text-muted: #8a8a8a;
+  --text-muted: #6b6b6b;
   --accent: #2a7d6e;
   --accent-hover: #227263;
   --font-heading: 'Instrument Serif', Georgia, 'Times New Roman', serif;
@@ -531,7 +531,8 @@ a.logo-item:hover {
   margin-bottom: 0.5rem;
 }
 
-.card h4 {
+.card h4,
+.card .card-kicker {
   color: var(--text-muted);
   font-size: 0.7rem;
   text-transform: uppercase;
@@ -822,7 +823,8 @@ a.logo-item:hover {
   margin: 0 auto 1rem;
 }
 
-.process-step h4 {
+.process-step h3 {
+  font-size: 0.95rem;
   margin-bottom: 0.4rem;
 }
 
@@ -917,7 +919,7 @@ a.logo-item:hover {
 .footnotes { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); font-size: 0.9rem; color: var(--text-muted); }
 .footnotes ol { padding-left: 1.2rem; margin: 0; }
 .footnotes li { margin-bottom: 0.9rem; line-height: 1.7; }
-.footnotes a.fn-back { text-decoration: none; color: var(--text-muted); margin-left: 0.3rem; }
+.footnotes a.fn-back { text-decoration: underline; text-underline-offset: 2px; color: var(--text-muted); margin-left: 0.3rem; }
 
 /* --- Entrance motion ---
    `.fade-in` marks a section that MAY animate as it scrolls in. It never hides
@@ -1049,7 +1051,7 @@ a.logo-item:hover {
 
 /* Footnote / source line at the end of an essay body */
 .article-note { font-size: 0.9rem; color: var(--text-muted); margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); }
-.article-note a { color: var(--accent); }
+.article-note a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
 
 
 /* ============================================================
@@ -1068,8 +1070,9 @@ a.logo-item:hover {
 .grid-2.grid-tight { gap: 1rem; }
 .section-flush { padding-top: 0.5rem; }
 .btn-block { width: 100%; justify-content: center; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 .btn-stack { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1rem; }
-.link-muted { color: var(--text-muted); }
+.link-muted { color: var(--text-muted); text-decoration: underline; text-underline-offset: 2px; }
 .link-muted:hover { color: var(--accent); }
 .plain-list { list-style: none; margin: 0; padding: 0; }
 .card-stack > .card:not(:last-child) { margin-bottom: 0.8rem; }
@@ -1097,7 +1100,7 @@ a.logo-item:hover {
 .pillar-grid > :first-child { grid-column: 1 / -1; }
 @media (max-width: 900px) { .pillar-grid { grid-template-columns: 1fr; } }
 
-.pillar-card { padding: 1.5rem; background: var(--bg-card); border-radius: var(--radius); transition: var(--transition); }
+.pillar-card { display: block; padding: 1.5rem; background: var(--bg-card); border-radius: var(--radius); transition: var(--transition); }
 .pillar-card:hover { transform: translateY(-1px); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); }
 .pillar-card h3 { font-size: 1rem; margin-bottom: 0.5rem; }
 .pillar-card p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; }
@@ -1161,7 +1164,7 @@ a.logo-item:hover {
 @media (max-width: 768px) { .format-list { grid-template-columns: 1fr; } }
 
 .bio-block { padding: 1.5rem; background: var(--bg-card); border-radius: var(--radius); margin-bottom: 1rem; }
-.bio-block h4 { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.6rem; }
+.bio-block h3 { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.6rem; }
 .bio-block p { font-size: 0.85rem; line-height: 1.7; color: var(--text-secondary); }
 
 .speaker-details dt { font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.15rem; }
@@ -1170,7 +1173,7 @@ a.logo-item:hover {
 
 .appearance-card { display: block; padding: 1.2rem; background: var(--bg-card); border-radius: var(--radius); transition: var(--transition); }
 .appearance-card:hover { transform: translateY(-1px); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); }
-.appearance-card h4 { font-size: 0.95rem; margin-bottom: 0.3rem; }
+.appearance-card h3 { font-size: 0.95rem; margin-bottom: 0.3rem; }
 .appearance-card p { font-size: 0.8rem; color: var(--text-muted); }
 .appearance-date { font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.3rem; }
 
@@ -1288,7 +1291,7 @@ a.logo-item:hover {
 
 .signal-row { padding: 1rem 0; border-bottom: 1px solid var(--border-color); }
 .signal-row:last-child { border-bottom: none; }
-.signal-row h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.3rem; }
+.signal-row h3 { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.3rem; }
 .signal-row p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; }
 
 /* --- 404 --- */

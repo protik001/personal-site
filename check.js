@@ -155,6 +155,15 @@ if (cssKb > 40) issues.push(`styles.css is ${cssKb.toFixed(1)} KB (budget 40 KB)
 const homeKb = fs.statSync('index.html').size / 1024;
 if (homeKb > 40) issues.push(`index.html is ${homeKb.toFixed(1)} KB (budget 40 KB)`);
 
+// 9b. the speaker one-pager is built from current site-data, and the press kit carries that same PDF
+{
+  const crypto = require('crypto');
+  const digest = crypto.createHash('sha256').update(data.person.description + '\n' + JSON.stringify(data.onepager)).digest('hex').slice(0, 16);
+  const pdf = fs.readFileSync('protik-roychowdhury-onepager.pdf');
+  if (!pdf.includes(`protik.info one-pager ${digest}`)) issues.push('one-pager PDF is stale against site-data.json (run: python3 scripts/gen-onepager.py)');
+  if (!fs.readFileSync('press-kit.zip').includes(pdf)) issues.push('press-kit.zip holds a different one-pager PDF (run: python3 scripts/gen-onepager.py)');
+}
+
 // 10. the worker, run against the files here: each markdown twin keeps its whole description and
 //     has no raw entities, only HTML is converted, HTML varies on Accept, legacy URLs 301 in one hop
 async function checkWorker() {
@@ -183,6 +192,21 @@ async function checkWorker() {
   }
   if (await (await get('/llms.txt', MD)).text() !== llms) issues.push('_worker.js: llms.txt is altered when fetched as markdown');
   if (String((await get('/styles.css', MD)).headers.get('Content-Type')).includes('markdown')) issues.push('_worker.js: styles.css converted to markdown');
+  // CSP: every external host a page loads (script, frame, stylesheet) is allowed by the worker's policy
+  const csp = String((await get('/')).headers.get('Content-Security-Policy') || '');
+  if (!csp.includes("object-src 'none'")) issues.push('_worker.js: Content-Security-Policy header missing');
+  const directive = d => (csp.split(';').map(s => s.trim()).find(s => s.startsWith(d + ' ')) || '').split(' ');
+  for (const f of chromePages) {
+    const src = fs.readFileSync(f, 'utf8');
+    const loads = [
+      ['script-src', /<script[^>]+src="(https?:\/\/[^/"]+)/g],
+      ['frame-src', /<iframe[^>]+src="(https?:\/\/[^/"]+)/g],
+      ['style-src', /<link rel="stylesheet" href="(https?:\/\/[^/"]+)/g],
+    ];
+    for (const [d, re] of loads) for (const m of src.matchAll(re)) {
+      if (!directive(d).includes(m[1])) issues.push(`${f}: ${m[1]} is not in the CSP ${d} (add it in _worker.js)`);
+    }
+  }
   for (const [from, to] of [['http://www.protik.info/blog/?ref=x', `${SITE}/ideas?ref=x`], ['/speaking', `${SITE}/media`], ['http://protik.info/about', `${SITE}/about`]]) {
     const r = await get(from);
     if (r.status !== 301 || r.headers.get('Location') !== to) issues.push(`_worker.js: ${from} gave ${r.status} ${r.headers.get('Location')} (want 301 ${to})`);

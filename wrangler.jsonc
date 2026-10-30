@@ -11,9 +11,6 @@
   // Workers Logs (dashboard: Workers & Pages → personal-site → Logs). The worker emits one JSON
   // line per AI-crawler hit: {"event":"ai-crawl","bot":…,"path":…}.
   "observability": { "enabled": true },
-  // Queryable crawler counts. Dataset created in the dashboard 18 Sep 2026 (Workers & Pages →
-  // Analytics Engine). Query: SELECT blob1 AS bot, count() FROM protik_ai_crawl
-  //   WHERE timestamp > NOW() - INTERVAL '7' DAY GROUP BY bot ORDER BY count() DESC
   // Queryable crawler record: D1 database protik-site-metrics, table ai_crawl (created 18 Sep 2026
   // via the Cloudflare connector). Query from any session with the connector's d1_database_query:
   //   SELECT bot, count(*) n FROM ai_crawl WHERE ts > datetime('now','-7 days') GROUP BY bot ORDER BY n DESC
